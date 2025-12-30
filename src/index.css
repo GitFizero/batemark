@@ -8,36 +8,36 @@
   :root {
     /* Premium Dark Theme */
     --background: 220 15% 5%;
-    --foreground: 40 15% 95%;
+    --foreground: 36 20% 98%;
 
-    --card: 220 15% 8%;
-    --card-foreground: 40 15% 95%;
+    --card: 220 12% 10%;
+    --card-foreground: 36 20% 98%;
 
-    --popover: 220 15% 8%;
-    --popover-foreground: 40 15% 95%;
+    --popover: 220 12% 10%;
+    --popover-foreground: 36 20% 98%;
 
     /* Copper/Bronze Primary */
-    --primary: 25 65% 50%;
+    --primary: 25 45% 62%;
     --primary-foreground: 220 15% 5%;
 
     /* Gold Accent */
-    --accent: 38 75% 55%;
-    --accent-foreground: 220 15% 5%;
+    --accent: 210 25% 30%;
+    --accent-foreground: 36 20% 98%;
 
-    --secondary: 220 15% 12%;
-    --secondary-foreground: 40 15% 90%;
+    --secondary: 210 25% 30%;
+    --secondary-foreground: 36 20% 98%;
 
-    --muted: 220 15% 15%;
-    --muted-foreground: 220 10% 55%;
+    --muted: 220 10% 20%;
+    --muted-foreground: 0 0% 65%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 18%;
-    --input: 220 15% 18%;
-    --ring: 25 65% 50%;
+    --border: 25 45% 62% / 0.2;
+    --input: 220 12% 15%;
+    --ring: 25 45% 62%;
 
-    --radius: 0.75rem;
+    --radius: 0.25rem;
 
     /* Custom Tokens */
     --copper: 25 65% 50%;
@@ -56,6 +56,26 @@
     --sidebar-accent-foreground: 40 15% 95%;
     --sidebar-border: 220 15% 18%;
     --sidebar-ring: 25 65% 50%;
+    --background-alt: 220 12% 8%;
+    --background-deep: 210 30% 25%;
+    --foreground-muted: 0 0% 70%;
+    --primary-light: 28 40% 70%;
+    --primary-dark: 22 45% 50%;
+    --primary-accent: 25 50% 55%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 10%;
+    --gradient-primary: linear-gradient(135deg, hsl(22 45% 50%) 0%, hsl(28 40% 70%) 100%);
+    --gradient-sand: linear-gradient(135deg, hsl(25 45% 62%) 0%, hsl(28 40% 70%) 100%);
+    --gradient-sand-subtle: linear-gradient(180deg, hsl(22 45% 50%) 0%, hsl(25 45% 62%) 100%);
+    --gradient-hero: radial-gradient(ellipse at top, hsl(25 45% 62% / 0.12) 0%, transparent 60%);
+    --gradient-subtle: linear-gradient(180deg, hsl(220 15% 5%), hsl(220 12% 8%));
+    --shadow-elegant: 0 20px 60px hsl(0 0% 0% / 0.6);
+    --shadow-lift: 0 8px 24px hsl(0 0% 0% / 0.5);
+    --shadow-sand: 0 10px 40px hsl(25 45% 62% / 0.25);
+    --shadow-sand-glow: 0 0 60px hsl(25 45% 62% / 0.3);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
