@@ -1,33 +1,64 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
-const testimonials = [
-  {
-    name: "Marie Dupont",
-    company: "Studio Pilates Lyon",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face",
-    content: "En 3 mois, j'ai doublé mon nombre de clients. Les leads sont vraiment qualifiés et le suivi est impeccable.",
-    rating: 5,
-  },
-  {
-    name: "Thomas Martin",
-    company: "Cabinet d'ostéopathie Paris",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-    content: "Enfin quelqu'un qui comprend les enjeux d'un cabinet paramédical. Résultats dès le premier mois.",
-    rating: 5,
-  },
-  {
-    name: "Sophie Bernard",
-    company: "Coaching Business Bordeaux",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-    content: "La transparence des rapports est un vrai plus. Je sais exactement combien me coûte chaque client.",
-    rating: 5,
-  },
-];
+interface Testimonial {
+  id: string;
+  name: string;
+  company: string;
+  image_url: string;
+  content: string;
+  rating: number;
+}
 
 export const TestimonialsSection = () => {
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      const { data, error } = await supabase
+        .from("testimonials")
+        .select("*")
+        .eq("is_active", true)
+        .order("display_order", { ascending: true });
+
+      if (!error && data) {
+        setTestimonials(data);
+      }
+      setLoading(false);
+    };
+
+    fetchTestimonials();
+  }, []);
+
+  if (loading) {
+    return (
+      <section className="section-padding bg-secondary/30">
+        <div className="container-custom">
+          <div className="grid md:grid-cols-3 gap-8">
+            {[1, 2, 3].map((i) => (
+              <div key={i} className="card-premium animate-pulse">
+                <div className="h-4 bg-muted rounded w-24 mb-4" />
+                <div className="h-20 bg-muted rounded mb-6" />
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-muted rounded-full" />
+                  <div>
+                    <div className="h-4 bg-muted rounded w-24 mb-2" />
+                    <div className="h-3 bg-muted rounded w-32" />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
-    <section className="section-padding bg-secondary/30">
+    <section id="testimonials" className="section-padding bg-secondary/30">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -47,7 +78,7 @@ export const TestimonialsSection = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
-              key={testimonial.name}
+              key={testimonial.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -71,7 +102,7 @@ export const TestimonialsSection = () => {
               {/* Author */}
               <div className="flex items-center gap-4">
                 <img
-                  src={testimonial.image}
+                  src={testimonial.image_url}
                   alt={testimonial.name}
                   className="w-12 h-12 rounded-full object-cover border-2 border-copper/30"
                 />

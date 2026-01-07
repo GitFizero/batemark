@@ -1,34 +1,73 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { supabase } from "@/integrations/supabase/client";
 
-const articles = [
-  {
-    title: "Comment générer des leads qualifiés pour votre salle de sport",
-    excerpt: "Découvrez les stratégies Meta Ads qui fonctionnent pour les salles de sport et studios fitness.",
-    category: "Fitness",
-    date: "15 Jan 2025",
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=250&fit=crop",
-  },
-  {
-    title: "Facebook Ads pour ostéopathes : le guide complet",
-    excerpt: "Attirez de nouveaux patients qualifiés grâce à la publicité Facebook, dans le respect réglementaire.",
-    category: "Paramédical",
-    date: "10 Jan 2025",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=250&fit=crop",
-  },
-  {
-    title: "Meta Ads local : cibler Paris et sa banlieue efficacement",
-    excerpt: "Les bonnes pratiques pour un ciblage géographique précis en Île-de-France.",
-    category: "SEO Local",
-    date: "5 Jan 2025",
-    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400&h=250&fit=crop",
-  },
-];
+interface Article {
+  id: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  category: string;
+  image_url: string;
+  published_at: string | null;
+}
 
 export const BlogSection = () => {
+  const [articles, setArticles] = useState<Article[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchArticles = async () => {
+      const { data, error } = await supabase
+        .from("articles")
+        .select("*")
+        .eq("is_published", true)
+        .order("published_at", { ascending: false })
+        .limit(3);
+
+      if (!error && data) {
+        setArticles(data);
+      }
+      setLoading(false);
+    };
+
+    fetchArticles();
+  }, []);
+
+  const formatDate = (dateString: string | null) => {
+    if (!dateString) return "";
+    return new Date(dateString).toLocaleDateString("fr-FR", {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+    });
+  };
+
+  if (loading) {
+    return (
+      <section id="journal" className="section-padding">
+        <div className="container-custom">
+          <div className="grid md:grid-cols-3 gap-8">
+            {[1, 2, 3].map((i) => (
+              <div key={i} className="card-premium p-0 overflow-hidden animate-pulse">
+                <div className="h-48 bg-muted" />
+                <div className="p-6">
+                  <div className="h-4 bg-muted rounded w-20 mb-4" />
+                  <div className="h-6 bg-muted rounded w-full mb-3" />
+                  <div className="h-16 bg-muted rounded w-full" />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
-    <section className="section-padding">
+    <section id="journal" className="section-padding">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -54,7 +93,7 @@ export const BlogSection = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {articles.map((article, index) => (
             <motion.article
-              key={article.title}
+              key={article.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -63,7 +102,7 @@ export const BlogSection = () => {
             >
               <div className="relative h-48 overflow-hidden">
                 <img
-                  src={article.image}
+                  src={article.image_url}
                   alt={article.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -76,7 +115,7 @@ export const BlogSection = () => {
               <div className="p-6">
                 <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
                   <Calendar className="w-4 h-4" />
-                  {article.date}
+                  {formatDate(article.published_at)}
                 </div>
                 <h3 className="text-lg font-semibold mb-2 group-hover:text-copper transition-colors line-clamp-2">
                   {article.title}

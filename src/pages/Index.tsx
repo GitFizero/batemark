@@ -1,6 +1,7 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { CalEmbed } from "@/components/sections/CalEmbed";
 import { ProblemsSection } from "@/components/sections/ProblemsSection";
 import { OpportunitySection } from "@/components/sections/OpportunitySection";
 import { SolutionSection } from "@/components/sections/SolutionSection";
@@ -96,6 +97,7 @@ const Index = () => {
       
       <main>
         <HeroSection />
+        <CalEmbed />
         <section id="problems">
           <ProblemsSection />
         </section>
@@ -104,16 +106,14 @@ const Index = () => {
           <SolutionSection />
         </section>
         <AuthoritySection />
-        <section id="testimonials">
-          <TestimonialsSection />
-        </section>
+        <TestimonialsSection />
         <section id="pricing">
           <PricingSection />
         </section>
+        <BlogSection />
         <section id="faq">
           <FAQSection />
         </section>
-        <BlogSection />
         <CTASection />
       </main>
 
