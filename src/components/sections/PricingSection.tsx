@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Zap } from "lucide-react";
 
+const CAL_LINK = "https://cal.com/gaetan-batemark/15min";
+
 const features = [
   "Accompagnement complet A à Z",
   "Création et gestion des campagnes Meta Ads",
@@ -83,9 +85,11 @@ export const PricingSection = () => {
                 ))}
               </ul>
 
-              <Button variant="hero" size="xl" className="w-full group">
-                Réserver mon audit gratuit
-                <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+              <Button variant="hero" size="xl" className="w-full group" asChild>
+                <a href={CAL_LINK} target="_blank" rel="noopener noreferrer">
+                  Réserver mon audit gratuit
+                  <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
               <p className="text-center text-sm text-muted-foreground mt-4">
                 Offre valable jusqu'à fin janvier

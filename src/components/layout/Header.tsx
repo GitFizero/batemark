@@ -9,8 +9,11 @@ const navLinks = [
   { label: "Solution", href: "#solution" },
   { label: "Témoignages", href: "#testimonials" },
   { label: "Tarifs", href: "#pricing" },
+  { label: "Journal", href: "#journal" },
   { label: "FAQ", href: "#faq" },
 ];
+
+const CAL_LINK = "https://cal.com/gaetan-batemark/15min";
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -57,8 +60,10 @@ export const Header = () => {
 
           {/* CTA */}
           <div className="hidden lg:block">
-            <Button variant="hero" size="lg">
-              Audit gratuit
+            <Button variant="hero" size="lg" asChild>
+              <a href={CAL_LINK} target="_blank" rel="noopener noreferrer">
+                Audit gratuit
+              </a>
             </Button>
           </div>
 
@@ -94,8 +99,10 @@ export const Header = () => {
                   {link.label}
                 </a>
               ))}
-              <Button variant="hero" size="lg" className="mt-4">
-                Audit gratuit
+              <Button variant="hero" size="lg" className="mt-4" asChild>
+                <a href={CAL_LINK} target="_blank" rel="noopener noreferrer">
+                  Audit gratuit
+                </a>
               </Button>
             </nav>
           </motion.div>

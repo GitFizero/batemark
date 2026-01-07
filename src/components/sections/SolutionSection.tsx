@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Search, Target, Video, Megaphone, TrendingUp, MessageSquare, FileText } from "lucide-react";
 
+const CAL_LINK = "https://cal.com/gaetan-batemark/15min";
+
 const steps = [
   {
     icon: Search,
@@ -94,11 +96,13 @@ export const SolutionSection = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center"
         >
-          <Button variant="hero" size="xl" className="group">
-            Réserver mon audit gratuit
-            <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+          <Button variant="hero" size="xl" className="group" asChild>
+            <a href={CAL_LINK} target="_blank" rel="noopener noreferrer">
+              Réserver mon audit gratuit
+              <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+            </a>
           </Button>
-          <p className="text-sm text-muted-foreground mt-4">Sans engagement • 20 minutes</p>
+          <p className="text-sm text-muted-foreground mt-4">Sans engagement • 15 minutes</p>
         </motion.div>
       </div>
     </section>

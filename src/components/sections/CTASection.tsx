@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Clock, ShieldCheck } from "lucide-react";
 
+const CAL_LINK = "https://cal.com/gaetan-batemark/15min";
+
 export const CTASection = () => {
   return (
     <section className="section-padding relative overflow-hidden">
@@ -23,7 +25,7 @@ export const CTASection = () => {
             <span className="text-gradient-copper">leads qualifiés</span> ?
           </h2>
           <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Réservez votre audit gratuit de 20 minutes et découvrez comment 
+            Réservez votre audit gratuit de 15 minutes et découvrez comment 
             Meta Ads peut transformer votre acquisition client.
           </p>
 
@@ -31,7 +33,7 @@ export const CTASection = () => {
           <div className="flex flex-wrap justify-center gap-6 mb-10">
             <div className="flex items-center gap-2 text-muted-foreground">
               <Clock className="w-5 h-5 text-copper" />
-              <span>20 min d'audit offert</span>
+              <span>15 min d'audit offert</span>
             </div>
             <div className="flex items-center gap-2 text-muted-foreground">
               <ShieldCheck className="w-5 h-5 text-copper" />
@@ -43,9 +45,11 @@ export const CTASection = () => {
             </div>
           </div>
 
-          <Button variant="hero" size="xl" className="group animate-pulse-glow">
-            Réserver mon audit gratuit
-            <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+          <Button variant="hero" size="xl" className="group animate-pulse-glow" asChild>
+            <a href={CAL_LINK} target="_blank" rel="noopener noreferrer">
+              Réserver mon audit gratuit
+              <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+            </a>
           </Button>
 
           <p className="text-sm text-muted-foreground mt-6">
