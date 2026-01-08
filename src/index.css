@@ -39,10 +39,10 @@
 
     --radius: 0.25rem;
 
-    /* Custom Tokens */
-    --copper: 25 65% 50%;
-    --copper-light: 28 70% 60%;
-    --copper-dark: 22 60% 40%;
+    /* Custom Tokens - #D0977B */
+    --copper: 19 42% 65%;
+    --copper-light: 22 48% 75%;
+    --copper-dark: 16 38% 55%;
     --bronze: 30 55% 45%;
     --gold: 38 75% 55%;
     --dark-surface: 220 15% 10%;
