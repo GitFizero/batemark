@@ -84,9 +84,11 @@ export const BlogSection = () => {
               Apprenez les meilleures pratiques Meta Ads
             </p>
           </div>
-          <Button variant="heroOutline" size="lg" className="mt-6 md:mt-0 group">
-            Voir tous les articles
-            <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+          <Button variant="heroOutline" size="lg" className="mt-6 md:mt-0 group" asChild>
+            <a href="/journal">
+              Voir tous les articles
+              <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+            </a>
           </Button>
         </motion.div>
 

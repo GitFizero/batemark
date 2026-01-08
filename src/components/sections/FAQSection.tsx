@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     question: "Comment se passe l'audit gratuit ?",
-    answer: "C'est un appel de 20 minutes où nous analysons votre situation actuelle, vos objectifs et je vous donne déjà des premières recommandations concrètes. Sans engagement, évidemment.",
+    answer: "C'est un appel de 15 minutes où nous analysons votre situation actuelle, vos objectifs et je vous donne déjà des premières recommandations concrètes. Sans engagement, évidemment.",
   },
 ];
 

@@ -1,29 +1,25 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
+import { cities } from "@/data/cities";
 
 const footerLinks = {
   services: [
-    { label: "Génération de leads", href: "#" },
-    { label: "Meta Ads local", href: "#" },
-    { label: "Accompagnement", href: "#" },
-    { label: "Audit gratuit", href: "#" },
+    { label: "Génération de leads", href: "/#solution" },
+    { label: "Meta Ads local", href: "/#solution" },
+    { label: "Accompagnement", href: "/#pricing" },
+    { label: "Audit gratuit", href: "https://cal.com/music-music-brtqjg/audit", external: true },
   ],
   secteurs: [
-    { label: "Fitness & Bien-être", href: "#" },
-    { label: "Paramédical", href: "#" },
-    { label: "Coaching", href: "#" },
-    { label: "Services B2B", href: "#" },
-  ],
-  villes: [
-    { label: "Paris", href: "#" },
-    { label: "Lyon", href: "#" },
-    { label: "Marseille", href: "#" },
-    { label: "Bordeaux", href: "#" },
+    { label: "Fitness & Bien-être", href: "/#solution" },
+    { label: "Paramédical", href: "/#solution" },
+    { label: "Coaching", href: "/#solution" },
+    { label: "Services B2B", href: "/#solution" },
   ],
   legal: [
-    { label: "Mentions légales", href: "#" },
-    { label: "Politique de confidentialité", href: "#" },
-    { label: "CGV", href: "#" },
+    { label: "Mentions légales", href: "/mentions-legales" },
+    { label: "Politique de confidentialité", href: "/confidentialite" },
+    { label: "CGV", href: "/cgv" },
   ],
 };
 
@@ -31,9 +27,9 @@ export const Footer = () => {
   return (
     <footer className="bg-secondary/50 border-t border-border">
       <div className="container-custom section-padding">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-1">
             <img src={logo} alt="BATEMARK" className="h-16 w-auto mb-4" />
             <p className="text-muted-foreground mb-6 max-w-sm">
               Expert senior en acquisition digitale. Génération de leads qualifiés 
@@ -41,7 +37,9 @@ export const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-copper/20 transition-colors"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -49,7 +47,9 @@ export const Footer = () => {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-copper/20 transition-colors"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -57,7 +57,9 @@ export const Footer = () => {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-copper/20 transition-colors"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -67,23 +69,35 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Links */}
+          {/* Services */}
           <div>
             <h4 className="font-semibold mb-4">Services</h4>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-muted-foreground hover:text-copper transition-colors text-sm"
-                  >
-                    {link.label}
-                  </a>
+                  {link.external ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-copper transition-colors text-sm"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <a
+                      href={link.href}
+                      className="text-muted-foreground hover:text-copper transition-colors text-sm"
+                    >
+                      {link.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
           </div>
 
+          {/* Secteurs */}
           <div>
             <h4 className="font-semibold mb-4">Secteurs</h4>
             <ul className="space-y-3">
@@ -100,17 +114,18 @@ export const Footer = () => {
             </ul>
           </div>
 
+          {/* Villes - 20 cities */}
           <div>
             <h4 className="font-semibold mb-4">Villes</h4>
-            <ul className="space-y-3">
-              {footerLinks.villes.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
+              {cities.map((city) => (
+                <li key={city.slug}>
+                  <Link
+                    to={`/meta-ads-${city.slug}`}
                     className="text-muted-foreground hover:text-copper transition-colors text-sm"
                   >
-                    {link.label}
-                  </a>
+                    {city.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -124,13 +139,13 @@ export const Footer = () => {
           </p>
           <div className="flex gap-6">
             {footerLinks.legal.map((link) => (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
+                to={link.href}
                 className="text-sm text-muted-foreground hover:text-copper transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
