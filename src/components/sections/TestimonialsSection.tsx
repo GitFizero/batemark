@@ -58,7 +58,7 @@ export const TestimonialsSection = () => {
   }
 
   return (
-    <section id="testimonials" className="section-padding bg-secondary/30">
+    <section id="testimonials" className="section-padding">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Users, Award, Zap } from "lucide-react";
+import montagne from "@/assets/montagne.svg";
 
 const stats = [
   { icon: Award, value: "+7 ans", label: "d'expérience" },
@@ -45,10 +46,16 @@ export const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center section-padding overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-secondary/20" />
-      <div className="absolute top-1/4 -left-1/4 w-1/2 h-1/2 bg-copper/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-gold/5 rounded-full blur-3xl" />
+      {/* Background Image with Dark Overlay */}
+      <div className="absolute inset-0">
+        <img 
+          src={montagne} 
+          alt="" 
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-background/85" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+      </div>
       
       <div className="container-custom relative z-10">
         <div className="max-w-5xl mx-auto text-center">
@@ -101,11 +108,11 @@ export const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="inline-flex flex-col sm:flex-row items-center gap-3 px-5 py-3 rounded-2xl bg-copper/10 border border-copper/30 mb-16"
+            className="inline-flex flex-col sm:flex-row items-center gap-3 px-5 py-3 rounded-2xl bg-card/80 border border-primary/30 backdrop-blur-sm mb-16"
           >
             <div className="flex items-center gap-2">
-              <Zap className="w-5 h-5 text-copper" />
-              <span className="text-copper font-bold">Offre Flash -100€</span>
+              <Zap className="w-5 h-5 text-primary" />
+              <span className="text-primary font-bold">Offre Flash -100€</span>
             </div>
             <div className="flex items-center gap-2 text-sm">
               <span className="text-muted-foreground">Expire dans</span>
@@ -131,9 +138,9 @@ export const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                className="card-premium text-center group hover:border-copper/30 transition-all duration-300"
+                className="card-premium text-center group hover:border-primary/30 transition-all duration-300"
               >
-                <stat.icon className="w-6 h-6 text-copper mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                <stat.icon className="w-6 h-6 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
                 <div className="text-2xl md:text-3xl font-bold text-gradient-copper mb-1">
                   {stat.value}
                 </div>
