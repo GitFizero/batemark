@@ -13,7 +13,7 @@ const steps = [
   {
     icon: Target,
     title: "Tracking & Data",
-    description: "Mise en place du pixel Meta et configuration du tracking pour mesurer chaque conversion.",
+    description: "Mise en place du tracking complet et configuration pour mesurer chaque conversion.",
   },
   {
     icon: Video,
@@ -23,7 +23,7 @@ const steps = [
   {
     icon: Megaphone,
     title: "Création & gestion campagnes",
-    description: "Configuration et gestion complète de vos campagnes Meta Ads avec ciblage précis.",
+    description: "Configuration et gestion complète de vos campagnes publicitaires avec ciblage précis.",
   },
   {
     icon: TrendingUp,

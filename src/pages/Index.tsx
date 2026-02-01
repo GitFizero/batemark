@@ -4,12 +4,13 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { CalEmbed } from "@/components/sections/CalEmbed";
 import { ProblemsSection } from "@/components/sections/ProblemsSection";
 import { OpportunitySection } from "@/components/sections/OpportunitySection";
+import { MethodSection } from "@/components/sections/MethodSection";
+import { RetroplanningSection } from "@/components/sections/RetroplanningSection";
 import { SolutionSection } from "@/components/sections/SolutionSection";
 import { AuthoritySection } from "@/components/sections/AuthoritySection";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { PricingSection } from "@/components/sections/PricingSection";
 import { FAQSection } from "@/components/sections/FAQSection";
-import { BlogSection } from "@/components/sections/BlogSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { Helmet } from "react-helmet-async";
 
@@ -17,14 +18,14 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>BATEMARK | Expert Meta Ads - Génération de Leads Locaux</title>
+        <title>BATEMARK | Expert Publicité Digitale Locale - Génération de Leads</title>
         <meta 
           name="description" 
-          content="Expert senior en acquisition digitale. Générez des leads qualifiés pour votre entreprise locale grâce à Meta Ads. +7 ans d'expérience, +300 campagnes, sans engagement." 
+          content="Expert senior en acquisition digitale. Générez des leads qualifiés pour votre entreprise locale. +7 ans d'expérience, +300 campagnes, sans engagement." 
         />
-        <meta name="keywords" content="meta ads, facebook ads, génération de leads, publicité locale, acquisition digitale, leads qualifiés" />
-        <meta property="og:title" content="BATEMARK | Expert Meta Ads - Génération de Leads Locaux" />
-        <meta property="og:description" content="Générez des leads qualifiés pour votre entreprise locale grâce à Meta Ads. Accompagnement complet, sans engagement." />
+        <meta name="keywords" content="publicité digitale, génération de leads, publicité locale, acquisition digitale, leads qualifiés, facebook ads, google ads" />
+        <meta property="og:title" content="BATEMARK | Expert Publicité Digitale Locale - Génération de Leads" />
+        <meta property="og:description" content="Générez des leads qualifiés pour votre entreprise locale. Accompagnement complet, sans engagement." />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://batemark.fr" />
         
@@ -34,7 +35,7 @@ const Index = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "BATEMARK",
-            "description": "Expert en génération de leads locaux via Meta Ads",
+            "description": "Expert en génération de leads locaux via publicité digitale",
             "url": "https://batemark.fr",
             "priceRange": "€€",
             "areaServed": {
@@ -43,14 +44,14 @@ const Index = () => {
             },
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
-              "name": "Services Meta Ads",
+              "name": "Services Publicité Digitale",
               "itemListElement": [
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Accompagnement Meta Ads",
-                    "description": "Gestion complète de vos campagnes publicitaires Meta"
+                    "name": "Accompagnement Publicité Digitale",
+                    "description": "Gestion complète de vos campagnes publicitaires digitales"
                   }
                 }
               ]
@@ -102,15 +103,18 @@ const Index = () => {
           <ProblemsSection />
         </section>
         <OpportunitySection />
+        <MethodSection />
+        <RetroplanningSection />
         <section id="solution">
           <SolutionSection />
         </section>
         <AuthoritySection />
-        <TestimonialsSection />
+        <section id="testimonials">
+          <TestimonialsSection />
+        </section>
         <section id="pricing">
           <PricingSection />
         </section>
-        <BlogSection />
         <section id="faq">
           <FAQSection />
         </section>
