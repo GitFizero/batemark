@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Search, Settings, BarChart3, Rocket, TrendingUp } from "lucide-react";
+import { SectionFade } from "@/components/ui/SectionFade";
 
 const steps = [
   {
@@ -39,6 +40,10 @@ export const MethodSection = () => {
     <section className="section-padding relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
+      
+      {/* Fade Effects */}
+      <SectionFade position="top" />
+      <SectionFade position="bottom" />
       
       {/* Animated Particles */}
       <div className="absolute inset-0 overflow-hidden">

@@ -98,37 +98,26 @@ const Index = () => {
       
       <main>
         <HeroSection />
-        <div className="h-24 bg-gradient-to-b from-transparent to-background" />
         <CalEmbed />
-        <div className="h-24 bg-gradient-to-b from-background via-background to-transparent" />
         <section id="problems">
           <ProblemsSection />
         </section>
-        <div className="h-24 bg-gradient-to-b from-background via-background/50 to-transparent" />
         <OpportunitySection />
-        <div className="h-24 bg-gradient-to-b from-transparent via-background/50 to-background" />
         <MethodSection />
-        <div className="h-24 bg-gradient-to-b from-background via-background/50 to-transparent" />
         <RetroplanningSection />
-        <div className="h-24 bg-gradient-to-b from-transparent via-background/50 to-background" />
         <section id="solution">
           <SolutionSection />
         </section>
-        <div className="h-24 bg-gradient-to-b from-background via-background/50 to-transparent" />
         <AuthoritySection />
-        <div className="h-24 bg-gradient-to-b from-transparent via-background/50 to-background" />
         <section id="testimonials">
           <TestimonialsSection />
         </section>
-        <div className="h-24 bg-gradient-to-b from-background via-background/50 to-transparent" />
         <section id="pricing">
           <PricingSection />
         </section>
-        <div className="h-24 bg-gradient-to-b from-background via-background/50 to-transparent" />
         <section id="faq">
           <FAQSection />
         </section>
-        <div className="h-24 bg-gradient-to-b from-transparent via-background/50 to-background" />
         <CTASection />
       </main>
 

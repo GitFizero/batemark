@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { AlertTriangle, TrendingDown, Users, Clock } from "lucide-react";
+import { SectionFade } from "@/components/ui/SectionFade";
 
 const problems = [
   {
@@ -26,8 +27,12 @@ const problems = [
 
 export const ProblemsSection = () => {
   return (
-    <section className="section-padding">
-      <div className="container-custom">
+    <section className="section-padding relative overflow-hidden">
+      {/* Fade Effects */}
+      <SectionFade position="top" />
+      <SectionFade position="bottom" />
+
+      <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

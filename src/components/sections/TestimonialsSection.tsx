@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { SectionFade } from "@/components/ui/SectionFade";
 
 interface Testimonial {
   id: string;
@@ -35,8 +36,10 @@ export const TestimonialsSection = () => {
 
   if (loading) {
     return (
-      <section className="section-padding bg-secondary/30">
-        <div className="container-custom">
+      <section className="section-padding relative overflow-hidden">
+        <SectionFade position="top" />
+        <SectionFade position="bottom" />
+        <div className="container-custom relative z-10">
           <div className="grid md:grid-cols-3 gap-8">
             {[1, 2, 3].map((i) => (
               <div key={i} className="card-premium animate-pulse">
@@ -58,8 +61,12 @@ export const TestimonialsSection = () => {
   }
 
   return (
-    <section id="testimonials" className="section-padding">
-      <div className="container-custom">
+    <section id="testimonials" className="section-padding relative overflow-hidden">
+      {/* Fade Effects */}
+      <SectionFade position="top" />
+      <SectionFade position="bottom" />
+
+      <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -90,7 +97,7 @@ export const TestimonialsSection = () => {
               {/* Stars */}
               <div className="flex gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-gold fill-gold" />
+                  <Star key={i} className="w-5 h-5 text-copper fill-copper" />
                 ))}
               </div>
 
