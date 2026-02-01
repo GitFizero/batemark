@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Award, TrendingUp, Users, Code, CheckCircle } from "lucide-react";
+import { SectionFade } from "@/components/ui/SectionFade";
 import bgImage from "@/assets/bg-3.svg";
 
 const highlights = [
@@ -45,6 +46,10 @@ export const AuthoritySection = () => {
         />
         <div className="absolute inset-0 bg-background/85" />
       </div>
+
+      {/* Fade Effects */}
+      <SectionFade position="top" />
+      <SectionFade position="bottom" />
 
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">

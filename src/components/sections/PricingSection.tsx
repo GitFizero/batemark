@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Zap, Clock, Star } from "lucide-react";
+import { SectionFade } from "@/components/ui/SectionFade";
 
 const CAL_LINK = "https://cal.com/gaetan-batemark/15min";
 
@@ -53,8 +54,12 @@ export const PricingSection = () => {
   }, []);
 
   return (
-    <section className="section-padding">
-      <div className="container-custom">
+    <section className="section-padding relative overflow-hidden">
+      {/* Fade Effects */}
+      <SectionFade position="top" />
+      <SectionFade position="bottom" />
+
+      <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

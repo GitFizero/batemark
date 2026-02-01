@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Users, Folder, MessageCircle, Video, Settings, BarChart3, Link, FileCheck, Rocket, TrendingUp, Calendar, ClipboardCheck } from "lucide-react";
+import { SectionFade } from "@/components/ui/SectionFade";
 import bgImage from "@/assets/bg-2.svg";
 
 const weeks = [
@@ -59,6 +60,10 @@ export const RetroplanningSection = () => {
         />
         <div className="absolute inset-0 bg-background/85" />
       </div>
+
+      {/* Fade Effects */}
+      <SectionFade position="top" />
+      <SectionFade position="bottom" />
 
       {/* Animated Stars */}
       <div className="absolute inset-0 overflow-hidden">

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Check, X, Target, MapPin, BarChart3, RefreshCw } from "lucide-react";
+import { SectionFade } from "@/components/ui/SectionFade";
 import bgImage from "@/assets/bg-1.svg";
 
 const benefits = [
@@ -30,6 +31,10 @@ export const OpportunitySection = () => {
         />
         <div className="absolute inset-0 bg-background/85" />
       </div>
+
+      {/* Fade Effects */}
+      <SectionFade position="top" />
+      <SectionFade position="bottom" />
 
       <div className="container-custom relative z-10">
         <motion.div

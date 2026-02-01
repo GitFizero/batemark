@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { SectionFade } from "@/components/ui/SectionFade";
 import bgImage from "@/assets/bg-4.svg";
 
 const faqs = [
@@ -46,6 +47,10 @@ export const FAQSection = () => {
         />
         <div className="absolute inset-0 bg-background/85" />
       </div>
+
+      {/* Fade Effects */}
+      <SectionFade position="top" />
+      <SectionFade position="bottom" />
 
       <div className="container-custom relative z-10">
         <motion.div
