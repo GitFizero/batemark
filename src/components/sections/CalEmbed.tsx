@@ -54,7 +54,7 @@ export const CalEmbed = () => {
     window.Cal.ns["15min"]("ui", {
       cssVarsPerTheme: {
         light: { "cal-brand": "#292929" },
-        dark: { "cal-brand": "#B4836D" },
+        dark: { "cal-brand": "#d0977b" },
       },
       hideEventTypeDetails: true,
       layout: "week_view",
