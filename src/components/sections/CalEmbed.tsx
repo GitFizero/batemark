@@ -47,7 +47,7 @@ export const CalEmbed = () => {
 
     window.Cal.ns["15min"]("inline", {
       elementOrSelector: "#my-cal-inline-15min",
-      config: { layout: "week_view", useSlotsViewOnSmallScreen: "true" },
+      config: { layout: "month_view" },
       calLink: "gaetan-batemark/15min",
     });
 
@@ -57,7 +57,7 @@ export const CalEmbed = () => {
         dark: { "cal-brand": "#d0977b" },
       },
       hideEventTypeDetails: true,
-      layout: "week_view",
+      layout: "month_view",
     });
   }, []);
 
