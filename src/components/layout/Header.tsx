@@ -13,6 +13,7 @@ const navLinks = [
 ];
 
 const CAL_LINK = "https://cal.com/gaetan-batemark/15min";
+const PROGRAMME_LINK = "https://programme.batemark.com/";
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -57,8 +58,13 @@ export const Header = () => {
             ))}
           </nav>
 
-          {/* CTA */}
-          <div className="hidden lg:block">
+          {/* CTA Buttons */}
+          <div className="hidden lg:flex items-center gap-3">
+            <Button variant="tertiary" size="lg" asChild>
+              <a href={PROGRAMME_LINK} target="_blank" rel="noopener noreferrer">
+                Programme Batemark
+              </a>
+            </Button>
             <Button variant="hero" size="lg" asChild>
               <a href={CAL_LINK} target="_blank" rel="noopener noreferrer">
                 Audit gratuit
@@ -98,11 +104,18 @@ export const Header = () => {
                   {link.label}
                 </a>
               ))}
-              <Button variant="hero" size="lg" className="mt-4" asChild>
-                <a href={CAL_LINK} target="_blank" rel="noopener noreferrer">
-                  Audit gratuit
-                </a>
-              </Button>
+              <div className="flex flex-col gap-3 mt-4">
+                <Button variant="tertiary" size="lg" asChild>
+                  <a href={PROGRAMME_LINK} target="_blank" rel="noopener noreferrer">
+                    Programme Batemark
+                  </a>
+                </Button>
+                <Button variant="hero" size="lg" asChild>
+                  <a href={CAL_LINK} target="_blank" rel="noopener noreferrer">
+                    Audit gratuit
+                  </a>
+                </Button>
+              </div>
             </nav>
           </motion.div>
         )}

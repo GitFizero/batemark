@@ -44,7 +44,7 @@ const steps = [
 
 export const SolutionSection = () => {
   return (
-    <section className="section-padding bg-secondary/30">
+    <section className="section-padding">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

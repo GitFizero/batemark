@@ -9,7 +9,7 @@ declare global {
 
 export const CalEmbed = () => {
   useEffect(() => {
-    // Load Cal.com embed script
+    // Load Cal.com embed script - exact code from user
     (function (C: any, A: string, L: string) {
       let p = function (a: any, ar: any) {
         a.q.push(ar);
@@ -54,7 +54,7 @@ export const CalEmbed = () => {
     window.Cal.ns["15min"]("ui", {
       cssVarsPerTheme: {
         light: { "cal-brand": "#292929" },
-        dark: { "cal-brand": "#d0977b" },
+        dark: { "cal-brand": "#B4836D" },
       },
       hideEventTypeDetails: true,
       layout: "week_view",
@@ -62,7 +62,7 @@ export const CalEmbed = () => {
   }, []);
 
   return (
-    <section className="section-padding bg-secondary/30">
+    <section className="section-padding">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -88,7 +88,8 @@ export const CalEmbed = () => {
         >
           <div
             id="my-cal-inline-15min"
-            className="w-full min-h-[600px] rounded-2xl overflow-hidden bg-card border border-border"
+            style={{ width: "100%", height: "100%", overflow: "scroll" }}
+            className="min-h-[600px] rounded-2xl overflow-hidden bg-card border border-border"
           />
         </motion.div>
       </div>

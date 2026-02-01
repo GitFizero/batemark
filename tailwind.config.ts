@@ -27,6 +27,10 @@ export default {
   				DEFAULT: 'hsl(var(--secondary))',
   				foreground: 'hsl(var(--secondary-foreground))'
   			},
+  			tertiary: {
+  				DEFAULT: 'hsl(var(--tertiary))',
+  				foreground: 'hsl(var(--tertiary-foreground))'
+  			},
   			destructive: {
   				DEFAULT: 'hsl(var(--destructive))',
   				foreground: 'hsl(var(--destructive-foreground))'
@@ -52,8 +56,6 @@ export default {
   				light: 'hsl(var(--copper-light))',
   				dark: 'hsl(var(--copper-dark))'
   			},
-  			bronze: 'hsl(var(--bronze))',
-  			gold: 'hsl(var(--gold))',
   			sidebar: {
   				DEFAULT: 'hsl(var(--sidebar-background))',
   				foreground: 'hsl(var(--sidebar-foreground))',
