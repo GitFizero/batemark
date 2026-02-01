@@ -1,190 +1,142 @@
 
-## Plan de modifications BATEMARK
+## Plan de modifications
 
-### 1. Mise a jour du Cal.com Embed
+### 1. Correction de l'embed Cal.com (vue semaine)
 
 **Fichier**: `src/components/sections/CalEmbed.tsx`
 
-Ajouter la configuration `useSlotsViewOnSmallScreen: "true"` dans le config object pour ameliorer l'affichage mobile.
+Le code actuel semble correct, mais il manque potentiellement la gestion d'un cas ou l'objet Cal.ns n'est pas pret. Je vais utiliser exactement le code embed fourni avec :
+- ID container : `#my-cal-inline-15min`
+- Layout : `week_view`
+- `useSlotsViewOnSmallScreen: "true"`
+- Theme CSS : light `#292929`, dark `#d0977b`
 
 ---
 
-### 2. Nouvelle structure de tarification avec timer hebdomadaire
+### 2. Ajout bouton "Programme Batemark" dans le Header
 
-**Fichier**: `src/components/sections/PricingSection.tsx`
+**Fichier**: `src/components/layout/Header.tsx`
 
-Refonte complete avec deux offres :
+Ajouter un second bouton a cote de "Audit gratuit" :
+- Texte : "Programme Batemark"
+- Lien : `https://programme.batemark.com/`
+- Couleur : Utiliser la couleur tertiaire `#25414B` (nouveau variant de bouton)
+- Position : A droite du bouton "Audit gratuit"
 
-**Offre Sans Engagement :**
-- Prix barre : 490 euros
-- Prix actuel : 390 euros/mois
-- Badge "Offre Flash -100 euros" avec timer jusqu'a dimanche minuit (se reinitialise chaque semaine)
-- Liste des fonctionnalites actuelles (sans "Meta Ads" specifiquement)
+**Fichier**: `src/components/ui/button.tsx`
 
-**Offre Engagement 3 mois :**
-- Prix : 350 euros/mois
-- Mention "Paiement trimestriel de 1050 euros"
-- Memes fonctionnalites + 2 bonus :
-  - Automation Marketing
-  - Point Strategique
-
-**Timer hebdomadaire** : Calcul dynamique du temps restant jusqu'au prochain dimanche 23:59:59, avec compteur jours/heures/minutes/secondes.
-
----
-
-### 3. Modification de la section Autorite
-
-**Fichier**: `src/components/sections/AuthoritySection.tsx`
-
-Changer le texte "Management de 6 traffic managers" pour :
-- Titre : "Dirigeant de pole en agence"
-- Description : "Management d'une equipe de 6 traffic managers"
-
-Cela sous-entend l'experience passee sans affirmer que c'est actuel.
-
----
-
-### 4. Generaliser le positionnement (sans Meta specifique)
-
-Rendre le site agnostique sur la plateforme publicitaire - l'audit determinera la meilleure approche.
-
-**Fichiers a modifier :**
-- `HeroSection.tsx` : Retirer "Expert Meta Ads", generaliser en "Expert en publicite digitale locale"
-- `CTASection.tsx` : Retirer mention "Meta Ads"
-- `PricingSection.tsx` : Retirer "Meta Ads" dans les features
-- `OpportunitySection.tsx` : Generaliser "Meta Ads" en "Publicite digitale"
-- `SolutionSection.tsx` : Adapter les references
-- `Index.tsx` : Mettre a jour les meta tags SEO
-- `Header.tsx` : Pas de changement (deja generique)
-
----
-
-### 5. Nouvelle section "La Methode BATEMARK"
-
-**Nouveau fichier**: `src/components/sections/MethodSection.tsx`
-
-Design inspire de l'image 2 avec une timeline verticale et des icones numerotees :
-
-1. **Audit et Diagnostic** - Analyse complete du parcours client et identification des points de friction
-2. **Configuration Campagnes** - Structure, ciblage, parametres et visuels optimises pour la conversion  
-3. **Tracking Avance** - Installation du suivi pour mesurer chaque euro investi avec precision
-4. **Lancement et Test** - Demarrage des campagnes avec phase de test A/B intensive
-5. **Optimisation Continue** - Analyse quotidienne des KPI et ajustements pour maximiser votre ROI
-
-Style : Fond sombre avec des particules/etoiles animees, icones sur fond colore (#D0977B), numerotation sur badges, ligne de connexion verticale.
-
----
-
-### 6. Nouvelle section "Retroplanning BATEMARK"
-
-**Nouveau fichier**: `src/components/sections/RetroplanningSection.tsx`
-
-Design inspire de l'image 3 avec 4 colonnes representant les semaines :
-
-**Semaine 1 :**
-- Onboarding et Objectifs
-- Partage des acces
-- Point Media
-
-**Semaine 2 :**
-- Montage contenus
-- Creation campagnes
-- Tracking conversions
-- Connexion outils tiers
-- Rapport de validation
-
-**Semaine 3 :**
-- Lancement campagnes
-- Optimisation continue
-- Point J+7
-
-**Semaine 4+ :**
-- Optimisation KPI
-- Point J+14
-- Bilan J+30
-
-Style : Cartes avec badges numerotes, fond sombre avec effets de particules, icones pour chaque etape.
-
----
-
-### 7. Background dynamique avec particules
-
-**Nouveau fichier**: `src/components/ui/AnimatedBackground.tsx`
-
-Composant de fond anime avec :
-- Particules flottantes subtiles
-- Gradients animes
-- Effets d'etoiles scintillantes
-- Compatible avec le theme sombre
-
-A utiliser dans les sections principales pour moderniser l'apparence.
-
-**Mise a jour de `src/index.css`** pour ajouter les animations de particules.
-
----
-
-### 8. Cacher la section Blog temporairement
-
-**Fichier**: `src/pages/Index.tsx`
-
-Commenter ou retirer temporairement le composant `<BlogSection />` de la page d'accueil.
-Garder le lien "Journal" dans le menu mais pointer vers une ancre vide ou retirer temporairement.
-
----
-
-### 9. Retirer les mentions "Offre Nouvelle Annee"
-
-**Fichiers a modifier :**
-- `HeroSection.tsx` : Remplacer le badge promo par "Offre Flash -100 euros" avec timer
-- `CTASection.tsx` : Retirer "Offre -26% valable jusqu'a fin janvier"
-
----
-
-### 10. Structure de la page Index mise a jour
-
-```
-<Header />
-<HeroSection /> - Avec background anime
-<CalEmbed />
-<ProblemsSection />
-<OpportunitySection /> - Generalise
-<MethodSection /> - NOUVELLE SECTION
-<RetroplanningSection /> - NOUVELLE SECTION
-<SolutionSection />
-<AuthoritySection />
-<TestimonialsSection />
-<PricingSection /> - Deux offres + timer
-<FAQSection />
-<CTASection />
-<Footer />
+Ajouter un nouveau variant `tertiary` pour le bouton Programme :
+```css
+tertiary: "bg-[#25414B] text-white font-semibold hover:bg-[#1d333c] transition-all duration-300"
 ```
 
 ---
 
-### Resume des fichiers
+### 3. Image de montagne en hero avec overlay sombre
 
-| Fichier | Action |
-|---------|--------|
-| `src/components/sections/CalEmbed.tsx` | Modifier config |
-| `src/components/sections/PricingSection.tsx` | Refonte complete |
-| `src/components/sections/AuthoritySection.tsx` | Modifier texte management |
-| `src/components/sections/HeroSection.tsx` | Generaliser + nouveau promo badge |
-| `src/components/sections/CTASection.tsx` | Generaliser + retirer promo |
-| `src/components/sections/OpportunitySection.tsx` | Generaliser |
-| `src/components/sections/SolutionSection.tsx` | Generaliser |
-| `src/pages/Index.tsx` | Ajouter sections + cacher blog |
-| `src/components/sections/MethodSection.tsx` | Creer nouveau |
-| `src/components/sections/RetroplanningSection.tsx` | Creer nouveau |
-| `src/components/ui/AnimatedBackground.tsx` | Creer nouveau |
-| `src/index.css` | Ajouter animations particules |
-| `src/components/layout/Header.tsx` | Retirer Journal du menu |
+**Actions** :
+1. Copier l'image `user-uploads://Montagne.svg` vers `src/assets/montagne.svg`
+2. Modifier `src/components/sections/HeroSection.tsx` pour :
+   - Ajouter l'image en arriere-plan
+   - Appliquer un overlay sombre semi-transparent
+   - Positionner le contenu par-dessus
 
 ---
 
-### Details techniques
+### 4. Nouvelle palette de couleurs stricte
 
-**Timer hebdomadaire** : Implementation avec `useState` et `useEffect`, calcul du prochain dimanche 23:59:59, mise a jour toutes les secondes via `setInterval`.
+**Fichier**: `src/index.css`
 
-**Animations de particules** : CSS keyframes pour mouvement subtil, opacity pulsing, et position aleatoire via inline styles calcules.
+Remplacer toutes les variables de couleur par :
 
-**Design modernise** : Utilisation de `framer-motion` pour les animations d'entree, gradients sur fond sombre avec la couleur #D0977B comme accent.
+| Couleur | Hex | Utilisation |
+|---------|-----|-------------|
+| Primaire | `#B4836D` | Couleur principale (boutons, accents) |
+| Secondaire | `#896B60` | Couleur secondaire (hover, elements) |
+| Tertiaire | `#25414B` | Couleur de contraste (bouton Programme) |
+| Noir | `#0a0a0a` | Background |
+| Blanc | `#f5f5f5` | Texte |
+
+Supprimer :
+- `--gold` (jaune)
+- `--bronze`
+
+Convertir en HSL :
+- `#B4836D` = hsl(18, 31%, 57%)
+- `#896B60` = hsl(15, 19%, 46%)
+- `#25414B` = hsl(193, 33%, 22%)
+
+**Fichier**: `tailwind.config.ts`
+
+Mettre a jour les couleurs Tailwind pour correspondre.
+
+---
+
+### 5. Sections fluides sans coupures abruptes
+
+**Approche** : Retirer les fonds colores distincts (`bg-secondary/30`, etc.) et utiliser un fond noir uniforme avec des effets de gradient subtils entre sections.
+
+**Fichiers a modifier** :
+- `src/components/sections/CalEmbed.tsx` : Retirer `bg-secondary/30`
+- `src/components/sections/ProblemsSection.tsx` : Retirer `bg-secondary/30`
+- `src/components/sections/SolutionSection.tsx` : Retirer `bg-secondary/30`
+- `src/components/sections/TestimonialsSection.tsx` : Retirer `bg-secondary/30`
+- `src/components/layout/Footer.tsx` : Retirer `bg-secondary/50`
+
+**Nouvelle approche** : Ajouter des separateurs de gradient subtils entre sections avec des transitions douces.
+
+---
+
+### 6. Simplification du Footer
+
+**Fichier**: `src/components/layout/Footer.tsx`
+
+Retirer :
+- Icones reseaux sociaux (Facebook, Instagram, LinkedIn)
+- Section "Services"
+- Section "Secteurs"
+- Section "Villes" (20 villes)
+
+Garder :
+- Logo Batemark
+- Description courte
+- Liens legaux (Mentions legales, Confidentialite, CGV)
+- Copyright
+
+Le footer sera minimal et elegant.
+
+---
+
+### 7. Mise a jour des gradients de texte
+
+**Fichier**: `src/index.css`
+
+Modifier `.text-gradient-copper` pour utiliser uniquement les nouvelles couleurs (#B4836D et #896B60), sans jaune.
+
+---
+
+### Resume des modifications
+
+| Fichier | Modifications |
+|---------|---------------|
+| `src/assets/montagne.svg` | Copie de l'image |
+| `src/index.css` | Nouvelle palette #B4836D, #896B60, #25414B, suppression jaune |
+| `tailwind.config.ts` | Mise a jour couleurs Tailwind |
+| `src/components/ui/button.tsx` | Nouveau variant `tertiary` |
+| `src/components/layout/Header.tsx` | Bouton "Programme Batemark" |
+| `src/components/sections/HeroSection.tsx` | Image montagne + overlay |
+| `src/components/sections/CalEmbed.tsx` | Code embed Cal.com exact + retrait bg |
+| `src/components/sections/ProblemsSection.tsx` | Retrait bg-secondary/30 |
+| `src/components/sections/SolutionSection.tsx` | Retrait bg-secondary/30 |
+| `src/components/sections/TestimonialsSection.tsx` | Retrait bg-secondary/30 |
+| `src/components/layout/Footer.tsx` | Simplification (retrait reseaux, services, secteurs, villes) |
+
+---
+
+### Rendu visuel attendu
+
+- Hero : Image de montagne en fond avec overlay sombre, contenu centre par-dessus
+- Transitions : Sections qui s'enchainent de maniere fluide sur fond noir
+- Couleurs : Palette restreinte a 3 couleurs + noir/blanc
+- Footer : Minimaliste avec logo et liens legaux uniquement
+- Header : Deux boutons CTA (Audit gratuit en primaire, Programme Batemark en tertiaire)
