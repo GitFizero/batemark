@@ -2,19 +2,19 @@ import { motion } from "framer-motion";
 import { Check, X, Target, MapPin, BarChart3, RefreshCw } from "lucide-react";
 
 const benefits = [
-  { icon: Target, title: "Audience massive locale", description: "Des millions de Français sur Facebook & Instagram chaque jour" },
+  { icon: Target, title: "Audience massive locale", description: "Des millions de Français sur les réseaux sociaux chaque jour" },
   { icon: MapPin, title: "Ciblage géographique précis", description: "Ciblez par ville, code postal ou rayon autour de votre établissement" },
   { icon: BarChart3, title: "Données en temps réel", description: "Suivez chaque euro dépensé et chaque lead généré" },
   { icon: RefreshCw, title: "Optimisation continue", description: "Améliorez vos résultats semaine après semaine grâce aux données" },
 ];
 
 const comparison = [
-  { feature: "Mesure précise du ROI", meta: true, traditional: false },
-  { feature: "Ciblage géographique précis", meta: true, traditional: false },
-  { feature: "Coût par lead connu", meta: true, traditional: false },
-  { feature: "Optimisation en temps réel", meta: true, traditional: false },
-  { feature: "Arrêt/modification instantané", meta: true, traditional: false },
-  { feature: "Visibilité locale", meta: true, traditional: true },
+  { feature: "Mesure précise du ROI", digital: true, traditional: false },
+  { feature: "Ciblage géographique précis", digital: true, traditional: false },
+  { feature: "Coût par lead connu", digital: true, traditional: false },
+  { feature: "Optimisation en temps réel", digital: true, traditional: false },
+  { feature: "Arrêt/modification instantané", digital: true, traditional: false },
+  { feature: "Visibilité locale", digital: true, traditional: true },
 ];
 
 export const OpportunitySection = () => {
@@ -29,7 +29,7 @@ export const OpportunitySection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            L'opportunité <span className="text-gradient-copper">Meta Ads</span> local
+            L'opportunité <span className="text-gradient-copper">publicité digitale</span> locale
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             La publicité digitale locale qui mesure vraiment vos résultats
@@ -65,12 +65,12 @@ export const OpportunitySection = () => {
           className="max-w-3xl mx-auto"
         >
           <h3 className="text-2xl font-bold text-center mb-8">
-            Meta Ads vs Publicité traditionnelle
+            Publicité digitale vs Traditionnelle
           </h3>
           <div className="card-premium overflow-hidden">
             <div className="grid grid-cols-3 gap-4 p-4 border-b border-border">
               <div className="font-semibold text-muted-foreground"></div>
-              <div className="text-center font-bold text-gradient-copper">Meta Ads</div>
+              <div className="text-center font-bold text-gradient-copper">Digitale</div>
               <div className="text-center font-semibold text-muted-foreground">Traditionnel</div>
             </div>
             {comparison.map((item, index) => (
@@ -82,7 +82,7 @@ export const OpportunitySection = () => {
               >
                 <div className="text-sm md:text-base">{item.feature}</div>
                 <div className="flex justify-center">
-                  {item.meta ? (
+                  {item.digital ? (
                     <div className="w-8 h-8 rounded-full bg-copper/20 flex items-center justify-center">
                       <Check className="w-5 h-5 text-copper" />
                     </div>

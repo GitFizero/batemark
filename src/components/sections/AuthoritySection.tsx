@@ -14,8 +14,8 @@ const highlights = [
   },
   {
     icon: Users,
-    title: "Management de 6 traffic managers",
-    description: "Une équipe formée aux meilleures pratiques Meta Ads",
+    title: "Dirigeant de pôle en agence",
+    description: "Management d'une équipe de 6 traffic managers",
   },
   {
     icon: Code,

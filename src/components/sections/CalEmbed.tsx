@@ -47,7 +47,7 @@ export const CalEmbed = () => {
 
     window.Cal.ns["15min"]("inline", {
       elementOrSelector: "#my-cal-inline-15min",
-      config: { layout: "week_view" },
+      config: { layout: "week_view", useSlotsViewOnSmallScreen: "true" },
       calLink: "gaetan-batemark/15min",
     });
 

@@ -26,7 +26,7 @@ export const CTASection = () => {
           </h2>
           <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
             Réservez votre audit gratuit de 15 minutes et découvrez comment 
-            Meta Ads peut transformer votre acquisition client.
+            la publicité digitale peut transformer votre acquisition client.
           </p>
 
           {/* Trust Badges */}
@@ -51,10 +51,6 @@ export const CTASection = () => {
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
             </a>
           </Button>
-
-          <p className="text-sm text-muted-foreground mt-6">
-            <span className="text-copper font-semibold">Offre -26%</span> valable jusqu'à fin janvier
-          </p>
         </motion.div>
       </div>
     </section>

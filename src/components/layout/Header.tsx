@@ -9,7 +9,6 @@ const navLinks = [
   { label: "Solution", href: "#solution" },
   { label: "Témoignages", href: "#testimonials" },
   { label: "Tarifs", href: "#pricing" },
-  { label: "Journal", href: "#journal" },
   { label: "FAQ", href: "#faq" },
 ];
 

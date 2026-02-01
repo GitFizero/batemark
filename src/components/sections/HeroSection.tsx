@@ -1,6 +1,7 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, TrendingUp, Users, Award } from "lucide-react";
+import { ArrowRight, TrendingUp, Users, Award, Zap } from "lucide-react";
 
 const stats = [
   { icon: Award, value: "+7 ans", label: "d'expérience" },
@@ -11,7 +12,37 @@ const stats = [
 
 const CAL_LINK = "https://cal.com/gaetan-batemark/15min";
 
+// Calculate time until next Sunday midnight
+const getTimeUntilSunday = () => {
+  const now = new Date();
+  const dayOfWeek = now.getDay();
+  const daysUntilSunday = dayOfWeek === 0 ? 0 : 7 - dayOfWeek;
+  
+  const nextSunday = new Date(now);
+  nextSunday.setDate(now.getDate() + daysUntilSunday);
+  nextSunday.setHours(23, 59, 59, 999);
+  
+  const diff = nextSunday.getTime() - now.getTime();
+  
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+  
+  return { days, hours, minutes, seconds };
+};
+
 export const HeroSection = () => {
+  const [timeLeft, setTimeLeft] = useState(getTimeUntilSunday());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(getTimeUntilSunday());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center section-padding overflow-hidden">
       {/* Background gradient */}
@@ -41,8 +72,8 @@ export const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto"
           >
-            Expert Meta Ads avec +7 ans d'expérience. Accompagnement complet, 
-            statistiques claires, aucun engagement.
+            Expert en publicité digitale locale avec +7 ans d'expérience. 
+            Accompagnement complet, statistiques claires, aucun engagement.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -65,15 +96,26 @@ export const HeroSection = () => {
             </Button>
           </motion.div>
 
-          {/* Promo Badge - Moved below buttons */}
+          {/* Flash Offer Badge with Timer */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-copper/10 border border-copper/30 mb-16"
+            className="inline-flex flex-col sm:flex-row items-center gap-3 px-5 py-3 rounded-2xl bg-copper/10 border border-copper/30 mb-16"
           >
-            <span className="text-copper font-semibold">-26%</span>
-            <span className="text-muted-foreground">Offre Nouvelle Année — valable jusqu'à fin janvier</span>
+            <div className="flex items-center gap-2">
+              <Zap className="w-5 h-5 text-copper" />
+              <span className="text-copper font-bold">Offre Flash -100€</span>
+            </div>
+            <div className="flex items-center gap-2 text-sm">
+              <span className="text-muted-foreground">Expire dans</span>
+              <div className="flex gap-1">
+                <span className="bg-background px-2 py-1 rounded font-mono font-bold text-foreground">{timeLeft.days}j</span>
+                <span className="bg-background px-2 py-1 rounded font-mono font-bold text-foreground">{String(timeLeft.hours).padStart(2, '0')}h</span>
+                <span className="bg-background px-2 py-1 rounded font-mono font-bold text-foreground">{String(timeLeft.minutes).padStart(2, '0')}m</span>
+                <span className="bg-background px-2 py-1 rounded font-mono font-bold text-foreground">{String(timeLeft.seconds).padStart(2, '0')}s</span>
+              </div>
+            </div>
           </motion.div>
 
           {/* Proof Bar */}
