@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Award, TrendingUp, Users, Code, CheckCircle } from "lucide-react";
+import bgImage from "@/assets/bg-3.svg";
 
 const highlights = [
   {
@@ -34,8 +35,18 @@ const differentiators = [
 
 export const AuthoritySection = () => {
   return (
-    <section className="section-padding">
-      <div className="container-custom">
+    <section className="section-padding relative overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
+        <img 
+          src={bgImage} 
+          alt="" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-background/85" />
+      </div>
+
+      <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - Text */}
           <motion.div
@@ -49,7 +60,7 @@ export const AuthoritySection = () => {
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
               Je ne suis pas une agence générique. Je suis un expert senior spécialisé 
-              exclusivement dans la génération de leads locaux via Meta Ads.
+              exclusivement dans la génération de leads locaux via la publicité digitale.
             </p>
 
             <ul className="space-y-4">

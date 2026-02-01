@@ -60,14 +60,14 @@ export const Header = () => {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
-            <Button variant="tertiary" size="lg" asChild>
-              <a href={PROGRAMME_LINK} target="_blank" rel="noopener noreferrer">
-                Programme Batemark
-              </a>
-            </Button>
             <Button variant="hero" size="lg" asChild>
               <a href={CAL_LINK} target="_blank" rel="noopener noreferrer">
                 Audit gratuit
+              </a>
+            </Button>
+            <Button variant="tertiary" size="lg" asChild>
+              <a href={PROGRAMME_LINK} target="_blank" rel="noopener noreferrer">
+                Programme Batemark
               </a>
             </Button>
           </div>
@@ -105,14 +105,14 @@ export const Header = () => {
                 </a>
               ))}
               <div className="flex flex-col gap-3 mt-4">
-                <Button variant="tertiary" size="lg" asChild>
-                  <a href={PROGRAMME_LINK} target="_blank" rel="noopener noreferrer">
-                    Programme Batemark
-                  </a>
-                </Button>
                 <Button variant="hero" size="lg" asChild>
                   <a href={CAL_LINK} target="_blank" rel="noopener noreferrer">
                     Audit gratuit
+                  </a>
+                </Button>
+                <Button variant="tertiary" size="lg" asChild>
+                  <a href={PROGRAMME_LINK} target="_blank" rel="noopener noreferrer">
+                    Programme Batemark
                   </a>
                 </Button>
               </div>

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Check, X, Target, MapPin, BarChart3, RefreshCw } from "lucide-react";
+import bgImage from "@/assets/bg-1.svg";
 
 const benefits = [
   { icon: Target, title: "Audience massive locale", description: "Des millions de Français sur les réseaux sociaux chaque jour" },
@@ -19,8 +20,18 @@ const comparison = [
 
 export const OpportunitySection = () => {
   return (
-    <section className="section-padding">
-      <div className="container-custom">
+    <section className="section-padding relative overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
+        <img 
+          src={bgImage} 
+          alt="" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-background/85" />
+      </div>
+
+      <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
