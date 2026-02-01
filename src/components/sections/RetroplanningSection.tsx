@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Users, Folder, MessageCircle, Video, Settings, BarChart3, Link, FileCheck, Rocket, TrendingUp, Calendar, ClipboardCheck } from "lucide-react";
+import bgImage from "@/assets/bg-2.svg";
 
 const weeks = [
   {
@@ -48,11 +49,15 @@ const weeks = [
 
 export const RetroplanningSection = () => {
   return (
-    <section className="section-padding relative overflow-hidden bg-secondary/30">
-      {/* Background Effects */}
+    <section className="section-padding relative overflow-hidden">
+      {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-copper/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-copper/5 rounded-full blur-3xl" />
+        <img 
+          src={bgImage} 
+          alt="" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-background/85" />
       </div>
 
       {/* Animated Stars */}

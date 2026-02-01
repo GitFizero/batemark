@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import bgImage from "@/assets/bg-4.svg";
 
 const faqs = [
   {
@@ -17,11 +18,11 @@ const faqs = [
   },
   {
     question: "Est-ce adapté à mon activité ?",
-    answer: "Meta Ads fonctionne particulièrement bien pour les entreprises locales avec une forte valeur client : fitness, bien-être, paramédical, coaching, services premium, immobilier, B2B local. Lors de l'audit gratuit, nous analyserons ensemble si c'est pertinent pour vous.",
+    answer: "La publicité digitale fonctionne particulièrement bien pour les entreprises locales avec une forte valeur client : fitness, bien-être, paramédical, coaching, services premium, immobilier, B2B local. Lors de l'audit gratuit, nous analyserons ensemble si c'est pertinent pour vous.",
   },
   {
     question: "Quel budget publicitaire prévoir ?",
-    answer: "Je recommande un budget de 20 à 30€/jour minimum pour des résultats significatifs, soit 600 à 900€/mois de dépenses publicitaires. Ce budget s'ajoute à mes honoraires de 280€/mois.",
+    answer: "Je recommande un budget de 20 à 30€/jour minimum pour des résultats significatifs, soit 600 à 900€/mois de dépenses publicitaires. Ce budget s'ajoute à mes honoraires.",
   },
   {
     question: "À qui appartiennent les comptes publicitaires ?",
@@ -35,8 +36,18 @@ const faqs = [
 
 export const FAQSection = () => {
   return (
-    <section className="section-padding bg-secondary/30">
-      <div className="container-custom">
+    <section className="section-padding relative overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
+        <img 
+          src={bgImage} 
+          alt="" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-background/85" />
+      </div>
+
+      <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
