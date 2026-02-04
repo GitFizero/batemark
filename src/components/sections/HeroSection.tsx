@@ -81,21 +81,19 @@ export const HeroSection = () => {
             <span className="text-gradient-copper">leads qualifiés</span>
             <br />
             pour votre{" "}
-            <span className="relative inline-block">
-              <span className="relative px-3 py-1 border-2 border-dashed border-copper/60 rounded-lg">
-                <AnimatePresence mode="wait">
-                  <motion.span
-                    key={wordIndex}
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: -20, opacity: 0 }}
-                    transition={{ duration: 0.4, ease: "easeInOut" }}
-                    className="inline-block text-gradient-copper"
-                  >
-                    {rotatingWords[wordIndex]}
-                  </motion.span>
-                </AnimatePresence>
-              </span>
+            <span className="relative inline-block align-bottom h-[1.2em] overflow-hidden">
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={wordIndex}
+                  initial={{ y: 40, opacity: 0, filter: "blur(8px)" }}
+                  animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+                  exit={{ y: -40, opacity: 0, filter: "blur(8px)" }}
+                  transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
+                  className="absolute left-0 text-gradient-copper"
+                >
+                  {rotatingWords[wordIndex]}
+                </motion.span>
+              </AnimatePresence>
             </span>{" "}
             locale
           </motion.h1>
