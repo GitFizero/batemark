@@ -7,6 +7,9 @@ import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import CityPage from "./pages/CityPage";
 import ProjectPage from "./pages/ProjectPage";
+import CGV from "./pages/CGV";
+import Confidentialite from "./pages/Confidentialite";
+import MentionsLegales from "./pages/MentionsLegales";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +25,9 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/meta-ads-:city" element={<CityPage />} />
             <Route path="/projets/:slug" element={<ProjectPage />} />
+            <Route path="/cgv" element={<CGV />} />
+            <Route path="/confidentialite" element={<Confidentialite />} />
+            <Route path="/mentions-legales" element={<MentionsLegales />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
