@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Users, Award, Zap } from "lucide-react";
 import montagne from "@/assets/montagne.svg";
@@ -12,6 +12,8 @@ const stats = [
 ];
 
 const CAL_LINK = "https://cal.com/gaetan-batemark/15min";
+
+const rotatingWords = ["Entreprise", "Commerce", "Agence", "Boutique"];
 
 // Calculate time until next Sunday midnight
 const getTimeUntilSunday = () => {
@@ -35,6 +37,7 @@ const getTimeUntilSunday = () => {
 
 export const HeroSection = () => {
   const [timeLeft, setTimeLeft] = useState(getTimeUntilSunday());
+  const [wordIndex, setWordIndex] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -42,6 +45,14 @@ export const HeroSection = () => {
     }, 1000);
 
     return () => clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
+    const wordTimer = setInterval(() => {
+      setWordIndex((prev) => (prev + 1) % rotatingWords.length);
+    }, 2500);
+
+    return () => clearInterval(wordTimer);
   }, []);
 
   return (
@@ -69,7 +80,24 @@ export const HeroSection = () => {
             Générez des{" "}
             <span className="text-gradient-copper">leads qualifiés</span>
             <br />
-            pour votre entreprise locale
+            pour votre{" "}
+            <span className="relative inline-block">
+              <span className="relative px-3 py-1 border-2 border-dashed border-copper/60 rounded-lg">
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={wordIndex}
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: -20, opacity: 0 }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                    className="inline-block text-gradient-copper"
+                  >
+                    {rotatingWords[wordIndex]}
+                  </motion.span>
+                </AnimatePresence>
+              </span>
+            </span>{" "}
+            locale
           </motion.h1>
 
           {/* Subtitle */}

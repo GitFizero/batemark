@@ -9,6 +9,7 @@ import { RetroplanningSection } from "@/components/sections/RetroplanningSection
 import { SolutionSection } from "@/components/sections/SolutionSection";
 import { AuthoritySection } from "@/components/sections/AuthoritySection";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
+import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { PricingSection } from "@/components/sections/PricingSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
@@ -111,6 +112,9 @@ const Index = () => {
         <AuthoritySection />
         <section id="testimonials">
           <TestimonialsSection />
+        </section>
+        <section id="projects">
+          <ProjectsSection />
         </section>
         <section id="pricing">
           <PricingSection />
