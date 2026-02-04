@@ -51,7 +51,7 @@ const MentionsLegales = () => {
                 <li><strong className="text-foreground">SIRET :</strong> 853 749 406 00023</li>
                 <li><strong className="text-foreground">Numéro de TVA intracommunautaire :</strong> FR90853749406</li>
                 <li><strong className="text-foreground">Adresse du siège social :</strong> 11 Impasse Panisse, 13400 Aubagne, France</li>
-                <li><strong className="text-foreground">Email :</strong> contact@batemark.com</li>
+                <li><strong className="text-foreground">Email :</strong> gaetan@batemark.com</li>
                 <li><strong className="text-foreground">Téléphone :</strong> +33 6 49 67 50 82</li>
                 <li><strong className="text-foreground">Activité :</strong> Conseil pour les affaires et autres conseils de gestion (NAF 7022Z)</li>
                 <li><strong className="text-foreground">Date de création :</strong> 10 septembre 2019</li>
@@ -146,7 +146,7 @@ const MentionsLegales = () => {
                 Pour toute question ou réclamation concernant ce site, vous pouvez nous contacter :
               </p>
               <ul className="text-muted-foreground space-y-2 mt-4">
-                <li><strong className="text-foreground">Email :</strong> contact@batemark.com</li>
+                <li><strong className="text-foreground">Email :</strong> gaetan@batemark.com</li>
                 <li><strong className="text-foreground">Téléphone :</strong> +33 6 49 67 50 82</li>
                 <li><strong className="text-foreground">Adresse :</strong> 11 Impasse Panisse, 13400 Aubagne, France</li>
               </ul>
