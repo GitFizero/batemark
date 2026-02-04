@@ -81,15 +81,15 @@ export const HeroSection = () => {
             <span className="text-gradient-copper">leads qualifiés</span>
             <br />
             pour votre{" "}
-            <span className="relative inline-block align-bottom h-[1.2em] overflow-hidden">
+            <span className="relative inline-flex min-w-[180px] md:min-w-[260px] lg:min-w-[320px] justify-center">
               <AnimatePresence mode="wait">
                 <motion.span
                   key={wordIndex}
-                  initial={{ y: 40, opacity: 0, filter: "blur(8px)" }}
+                  initial={{ y: 30, opacity: 0, filter: "blur(6px)" }}
                   animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
-                  exit={{ y: -40, opacity: 0, filter: "blur(8px)" }}
-                  transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
-                  className="absolute left-0 text-gradient-copper"
+                  exit={{ y: -30, opacity: 0, filter: "blur(6px)" }}
+                  transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+                  className="text-gradient-copper"
                 >
                   {rotatingWords[wordIndex]}
                 </motion.span>
