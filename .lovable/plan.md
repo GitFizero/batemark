@@ -1,142 +1,184 @@
 
-## Plan de modifications
 
-### 1. Correction de l'embed Cal.com (vue semaine)
+## Plan d'ameliorations dynamiques du site BATEMARK
 
-**Fichier**: `src/components/sections/CalEmbed.tsx`
+### 1. Titre dynamique dans la Hero Section
 
-Le code actuel semble correct, mais il manque potentiellement la gestion d'un cas ou l'objet Cal.ns n'est pas pret. Je vais utiliser exactement le code embed fourni avec :
-- ID container : `#my-cal-inline-15min`
-- Layout : `week_view`
-- `useSlotsViewOnSmallScreen: "true"`
-- Theme CSS : light `#292929`, dark `#d0977b`
+**Fichier**: `src/components/sections/HeroSection.tsx`
+
+Ajouter une animation de texte rotatif qui alterne entre differents termes cibles, similaire au site Clickway. Le titre passera de statique a dynamique:
+
+```
+"pour votre entreprise locale"
+```
+
+Devient:
+
+```
+"pour votre [Entreprise / Commerce / Agence / Boutique] locale"
+```
+
+**Implementation technique**:
+- Creer un state avec les mots a alterner: `["Entreprise", "Commerce", "Agence", "Boutique"]`
+- Utiliser `useState` et `useEffect` avec un intervalle de 2-3 secondes
+- Animation avec Framer Motion pour:
+  - Effet de fade-out vers le haut du mot sortant
+  - Effet de fade-in depuis le bas du nouveau mot
+  - Border/highlight style autour du mot actif (similaire au style Clickway avec le cadre en pointilles)
 
 ---
 
-### 2. Ajout bouton "Programme Batemark" dans le Header
+### 2. Bouton WhatsApp dans le Header
 
 **Fichier**: `src/components/layout/Header.tsx`
 
-Ajouter un second bouton a cote de "Audit gratuit" :
-- Texte : "Programme Batemark"
-- Lien : `https://programme.batemark.com/`
-- Couleur : Utiliser la couleur tertiaire `#25414B` (nouveau variant de bouton)
-- Position : A droite du bouton "Audit gratuit"
+Ajouter un bouton WhatsApp circulaire a droite des CTA buttons:
 
-**Fichier**: `src/components/ui/button.tsx`
+- Icone WhatsApp (lucide-react n'a pas WhatsApp, donc utiliser un SVG inline ou MessageCircle avec style vert)
+- Lien vers: `https://wa.me/33649675082`
+- Style: cercle vert avec icone blanche, similaire au modele Clickway
+- Position: apres le bouton "Programme Batemark" sur desktop, dans le menu mobile aussi
 
-Ajouter un nouveau variant `tertiary` pour le bouton Programme :
-```css
-tertiary: "bg-[#25414B] text-white font-semibold hover:bg-[#1d333c] transition-all duration-300"
+---
+
+### 3. Nouveau design du Retroplanning (style calendrier)
+
+**Fichier**: `src/components/sections/RetroplanningSection.tsx`
+
+Refonte complete pour un design de type calendrier interactif, adapte au contexte BATEMARK (accompagnement sur 4 semaines):
+
+**Nouvelle structure visuelle**:
+- Grille de 4 semaines (28 jours) avec des cercles/icones
+- Chaque jour actif a une icone ou emoji representant l'action
+- Les jours inactifs sont gris
+- Annotations fleches avec labels explicatifs autour du calendrier
+
+**Mapping des etapes BATEMARK sur le calendrier**:
+- Jours 1-3: Onboarding (icones: cafe, checklist, reunion)
+- Jours 4-7: Montage (icones: video, settings, graphiques)
+- Jours 8-14: Lancement (icones: fusee, optimisation)
+- Jours 15-28: Optimisation (icones: trending, rapports)
+
+**4 annotations fleches**:
+- "On brainstorm" (Jour 1)
+- "Configuration technique" (Jours 4-7)
+- "Lancement campagnes" (Jour 8)
+- "Livraison resultats" (Jour 28)
+
+---
+
+### 4. Ameliorations globales d'animations (plus dynamique)
+
+**Fichiers a modifier**:
+- Toutes les sections existantes
+
+**Ameliorations**:
+- Augmenter les effets de parallax sur les backgrounds
+- Ajouter des micro-animations au hover sur les cartes (scale, glow)
+- Ajouter des effets de "stagger" plus prononces sur les listes
+- Animations d'entree plus fluides avec des delays progressifs
+- Effet de "floating" sur certains elements decoratifs
+
+---
+
+### 5. Section Projets Realises avec pages individuelles
+
+**Nouveaux fichiers**:
+- `src/components/sections/ProjectsSection.tsx` (galerie de projets)
+- `src/pages/ProjectPage.tsx` (page detail d'un projet)
+- `src/data/projects.ts` (donnees des projets)
+
+**Structure de la galerie** (ProjectsSection.tsx):
+- Titre: "Nos meilleurs projets"
+- Grille de cartes projet avec:
+  - Image principale du projet
+  - Logo client (petit)
+  - Nom du projet
+  - Courte description
+  - Tag (ex: "Meta Ads", "Google Ads")
+- Animation au hover avec zoom sur l'image
+- Lien vers la page individuelle
+
+**Structure de la page projet** (ProjectPage.tsx):
+- Header avec bouton "Revenir au portfolio"
+- Grande galerie d'images du projet
+- Bloc info lateral:
+  - Logo client
+  - Titre du projet
+  - Description courte
+  - Tag categorie
+  - Secteur
+  - "Le defi"
+  - "L'approche BATEMARK"
+  - "L'impact"
+- CTA en bas: "C'est a votre tour ?"
+
+**Routing** (App.tsx):
+- Ajouter route: `/projets/:slug`
+- Pages accessibles comme: `/projets/client-fitness`, `/projets/restaurant-paris`
+
+**Note**: Les donnees reelles des projets seront ajoutees par la suite selon les informations fournies.
+
+---
+
+### 6. Integration dans Index.tsx
+
+**Fichier**: `src/pages/Index.tsx`
+
+Ajouter la nouvelle section ProjectsSection entre les sections existantes (apres TestimonialsSection par exemple).
+
+---
+
+### Resume des fichiers a creer/modifier
+
+| Action | Fichier |
+|--------|---------|
+| Modifier | `src/components/sections/HeroSection.tsx` |
+| Modifier | `src/components/layout/Header.tsx` |
+| Refonte | `src/components/sections/RetroplanningSection.tsx` |
+| Creer | `src/components/sections/ProjectsSection.tsx` |
+| Creer | `src/pages/ProjectPage.tsx` |
+| Creer | `src/data/projects.ts` |
+| Modifier | `src/App.tsx` |
+| Modifier | `src/pages/Index.tsx` |
+
+---
+
+### Details techniques
+
+**Animation du titre rotatif**:
+```tsx
+const words = ["Entreprise", "Commerce", "Agence", "Boutique"];
+const [currentIndex, setCurrentIndex] = useState(0);
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentIndex((prev) => (prev + 1) % words.length);
+  }, 2500);
+  return () => clearInterval(interval);
+}, []);
 ```
 
----
+Avec Framer Motion AnimatePresence pour les transitions douces.
 
-### 3. Image de montagne en hero avec overlay sombre
+**Bouton WhatsApp**:
+Style circulaire vert (#25D366) avec icone SVG WhatsApp integree.
 
-**Actions** :
-1. Copier l'image `user-uploads://Montagne.svg` vers `src/assets/montagne.svg`
-2. Modifier `src/components/sections/HeroSection.tsx` pour :
-   - Ajouter l'image en arriere-plan
-   - Appliquer un overlay sombre semi-transparent
-   - Positionner le contenu par-dessus
+**Calendrier Retroplanning**:
+Grille CSS de 7 colonnes x 4 lignes pour les 28 jours, avec des cercles animes et des annotations positionnees en absolu.
 
----
-
-### 4. Nouvelle palette de couleurs stricte
-
-**Fichier**: `src/index.css`
-
-Remplacer toutes les variables de couleur par :
-
-| Couleur | Hex | Utilisation |
-|---------|-----|-------------|
-| Primaire | `#B4836D` | Couleur principale (boutons, accents) |
-| Secondaire | `#896B60` | Couleur secondaire (hover, elements) |
-| Tertiaire | `#25414B` | Couleur de contraste (bouton Programme) |
-| Noir | `#0a0a0a` | Background |
-| Blanc | `#f5f5f5` | Texte |
-
-Supprimer :
-- `--gold` (jaune)
-- `--bronze`
-
-Convertir en HSL :
-- `#B4836D` = hsl(18, 31%, 57%)
-- `#896B60` = hsl(15, 19%, 46%)
-- `#25414B` = hsl(193, 33%, 22%)
-
-**Fichier**: `tailwind.config.ts`
-
-Mettre a jour les couleurs Tailwind pour correspondre.
-
----
-
-### 5. Sections fluides sans coupures abruptes
-
-**Approche** : Retirer les fonds colores distincts (`bg-secondary/30`, etc.) et utiliser un fond noir uniforme avec des effets de gradient subtils entre sections.
-
-**Fichiers a modifier** :
-- `src/components/sections/CalEmbed.tsx` : Retirer `bg-secondary/30`
-- `src/components/sections/ProblemsSection.tsx` : Retirer `bg-secondary/30`
-- `src/components/sections/SolutionSection.tsx` : Retirer `bg-secondary/30`
-- `src/components/sections/TestimonialsSection.tsx` : Retirer `bg-secondary/30`
-- `src/components/layout/Footer.tsx` : Retirer `bg-secondary/50`
-
-**Nouvelle approche** : Ajouter des separateurs de gradient subtils entre sections avec des transitions douces.
-
----
-
-### 6. Simplification du Footer
-
-**Fichier**: `src/components/layout/Footer.tsx`
-
-Retirer :
-- Icones reseaux sociaux (Facebook, Instagram, LinkedIn)
-- Section "Services"
-- Section "Secteurs"
-- Section "Villes" (20 villes)
-
-Garder :
-- Logo Batemark
-- Description courte
-- Liens legaux (Mentions legales, Confidentialite, CGV)
-- Copyright
-
-Le footer sera minimal et elegant.
-
----
-
-### 7. Mise a jour des gradients de texte
-
-**Fichier**: `src/index.css`
-
-Modifier `.text-gradient-copper` pour utiliser uniquement les nouvelles couleurs (#B4836D et #896B60), sans jaune.
-
----
-
-### Resume des modifications
-
-| Fichier | Modifications |
-|---------|---------------|
-| `src/assets/montagne.svg` | Copie de l'image |
-| `src/index.css` | Nouvelle palette #B4836D, #896B60, #25414B, suppression jaune |
-| `tailwind.config.ts` | Mise a jour couleurs Tailwind |
-| `src/components/ui/button.tsx` | Nouveau variant `tertiary` |
-| `src/components/layout/Header.tsx` | Bouton "Programme Batemark" |
-| `src/components/sections/HeroSection.tsx` | Image montagne + overlay |
-| `src/components/sections/CalEmbed.tsx` | Code embed Cal.com exact + retrait bg |
-| `src/components/sections/ProblemsSection.tsx` | Retrait bg-secondary/30 |
-| `src/components/sections/SolutionSection.tsx` | Retrait bg-secondary/30 |
-| `src/components/sections/TestimonialsSection.tsx` | Retrait bg-secondary/30 |
-| `src/components/layout/Footer.tsx` | Simplification (retrait reseaux, services, secteurs, villes) |
+**Routing projets**:
+```tsx
+<Route path="/projets/:slug" element={<ProjectPage />} />
+```
 
 ---
 
 ### Rendu visuel attendu
 
-- Hero : Image de montagne en fond avec overlay sombre, contenu centre par-dessus
-- Transitions : Sections qui s'enchainent de maniere fluide sur fond noir
-- Couleurs : Palette restreinte a 3 couleurs + noir/blanc
-- Footer : Minimaliste avec logo et liens legaux uniquement
-- Header : Deux boutons CTA (Audit gratuit en primaire, Programme Batemark en tertiaire)
+- **Hero**: Mot "Entreprise" qui change avec animation de slide vertical, entoure d'un cadre cuivre/dore
+- **Header**: Bouton WhatsApp vert circulaire a droite des boutons CTA
+- **Retroplanning**: Calendrier visuel avec cercles animes, fleches et annotations explicatives
+- **Projets**: Grille de cartes cliquables menant vers des pages individuelles detaillees
+- **Global**: Site beaucoup plus anime et interactif avec des transitions fluides
+
