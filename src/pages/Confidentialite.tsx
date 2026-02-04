@@ -48,7 +48,7 @@ const Confidentialite = () => {
                 <li><strong className="text-foreground">Responsable :</strong> Gaëtan Fizero</li>
                 <li><strong className="text-foreground">Adresse :</strong> 11 Impasse Panisse, 13400 Aubagne, France</li>
                 <li><strong className="text-foreground">SIREN :</strong> 853 749 406</li>
-                <li><strong className="text-foreground">Email :</strong> contact@batemark.com</li>
+                <li><strong className="text-foreground">Email :</strong> gaetan@batemark.com</li>
               </ul>
             </section>
 
@@ -188,7 +188,7 @@ const Confidentialite = () => {
                 <li><strong className="text-foreground">Droit de retirer votre consentement :</strong> à tout moment pour les traitements basés sur le consentement</li>
               </ul>
               <p className="text-muted-foreground leading-relaxed mt-4">
-                Pour exercer ces droits, contactez-nous à l'adresse : <strong className="text-primary">contact@batemark.com</strong>
+                Pour exercer ces droits, contactez-nous à l'adresse : <strong className="text-primary">gaetan@batemark.com</strong>
               </p>
             </section>
 
@@ -237,7 +237,7 @@ const Confidentialite = () => {
                 Pour toute question concernant cette politique de confidentialité ou le traitement de vos données personnelles, contactez-nous :
               </p>
               <ul className="text-muted-foreground space-y-2 mt-4">
-                <li><strong className="text-foreground">Email :</strong> contact@batemark.com</li>
+                <li><strong className="text-foreground">Email :</strong> gaetan@batemark.com</li>
                 <li><strong className="text-foreground">Adresse :</strong> 11 Impasse Panisse, 13400 Aubagne, France</li>
                 <li><strong className="text-foreground">WhatsApp :</strong> +33 6 49 67 50 82</li>
               </ul>
