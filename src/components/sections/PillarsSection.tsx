@@ -37,10 +37,10 @@ export const PillarsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">
             Ce que je fais <span className="text-gradient-copper">concrètement</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-2xl text-muted-foreground max-w-2xl mx-auto">
             Trois piliers pour transformer vos opérations, pas les remplacer.
           </p>
         </motion.div>
@@ -59,7 +59,7 @@ export const PillarsSection = () => {
                 <pillar.icon className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
               </div>
               <h3 className="text-2xl font-bold mb-4">{pillar.title}</h3>
-              <p className="text-muted-foreground mb-6 flex-1">{pillar.description}</p>
+              <p className="text-muted-foreground text-lg mb-6 flex-1">{pillar.description}</p>
               <div className="pt-4 border-t border-border">
                 <span className="text-sm text-primary font-medium">{pillar.tools}</span>
               </div>

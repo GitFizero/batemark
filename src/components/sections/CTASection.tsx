@@ -19,11 +19,11 @@ export const CTASection = () => {
           transition={{ duration: 0.6 }}
           className="max-w-4xl mx-auto text-center"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">
             Prêt à intégrer l'IA{" "}
-            <span className="text-gradient-copper">intelligemment</span> ?
+            <span className="text-gradient-copper">dans votre entreprise</span> ?
           </h2>
-          <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+          <p className="text-2xl text-muted-foreground mb-10 max-w-2xl mx-auto">
             Réservez un appel découverte de 30 minutes. On analyse ensemble vos process
             et je vous donne des premières pistes concrètes. Sans engagement.
           </p>

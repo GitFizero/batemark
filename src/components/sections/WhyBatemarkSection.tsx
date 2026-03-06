@@ -44,10 +44,10 @@ export const WhyBatemarkSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">
             Pourquoi <span className="text-gradient-copper">Batemark</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-2xl text-muted-foreground max-w-2xl mx-auto">
             Ce qui me différencie d'une agence classique.
           </p>
         </motion.div>
@@ -67,8 +67,8 @@ export const WhyBatemarkSection = () => {
                   <item.icon className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm">{item.description}</p>
+                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground text-base">{item.description}</p>
                 </div>
               </div>
             </motion.div>

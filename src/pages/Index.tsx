@@ -14,14 +14,14 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>BATEMARK | Consultant IA & Automatisation pour TPE/PME</title>
+        <title>Intégrer l'IA en entreprise | Automatiser vos process — BATEMARK</title>
         <meta 
           name="description" 
-          content="Intégration intelligente de l'IA et de l'automatisation dans vos opérations. Automatisation des process, agents IA, pilotage augmenté. Pour e-commerçants et prestataires B2B (500K-5M€ CA)." 
+          content="Intégrer l'IA dans votre entreprise et automatiser vos process internes. Consultant spécialisé en automatisation, agents IA et pilotage augmenté pour TPE/PME. Appel découverte gratuit." 
         />
-        <meta name="keywords" content="IA entreprise, automatisation process, agents IA, consultant IA, TPE PME, make, n8n, acquisition digitale, dashboard pilotage" />
-        <meta property="og:title" content="BATEMARK | Consultant IA & Automatisation pour TPE/PME" />
-        <meta property="og:description" content="L'IA au service de vos opérations, pas pour elle-même. Automatisation, agents IA, pilotage augmenté." />
+        <meta name="keywords" content="intégrer IA entreprise, automatiser entreprise, automatisation process, agents IA, consultant IA, intégration IA PME, automatisation TPE PME, make n8n zapier, dashboard pilotage IA" />
+        <meta property="og:title" content="Intégrer l'IA en entreprise | Automatiser vos process — BATEMARK" />
+        <meta property="og:description" content="Consultant spécialisé pour intégrer l'IA et automatiser les process de votre entreprise. Agents IA, automatisation, pilotage augmenté." />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://batemark.fr" />
         
@@ -29,8 +29,8 @@ const Index = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
-            "name": "BATEMARK",
-            "description": "Consultant en intégration IA et automatisation pour TPE/PME",
+            "name": "BATEMARK — Intégrer l'IA en entreprise",
+            "description": "Consultant spécialisé pour intégrer l'IA et automatiser les process des entreprises. Automatisation, agents IA, pilotage augmenté.",
             "url": "https://batemark.fr",
             "founder": {
               "@type": "Person",

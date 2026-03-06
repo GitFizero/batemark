@@ -40,15 +40,15 @@ export const PhilosophySection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-8">
+          <h2 className="text-4xl md:text-6xl font-bold mb-8">
             Mon <span className="text-gradient-copper">approche</span>
           </h2>
-          <blockquote className="text-2xl md:text-3xl font-display italic text-foreground max-w-4xl mx-auto mb-6">
+          <blockquote className="text-3xl md:text-4xl font-display italic text-foreground max-w-4xl mx-auto mb-6">
             "Avec l'IA, tout est possible.
             <br />
             <span className="text-gradient-copper">Mais ce n'est pas parce que tout est possible qu'il faut tout faire.</span>"
           </blockquote>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             L'IA ne doit pas s'ajouter au-dessus de votre organisation. Elle doit s'intégrer à l'intérieur.
             L'objectif est de rendre vos équipes plus efficaces, vos décisions mieux informées, vos opérations plus fluides.
           </p>
@@ -67,8 +67,8 @@ export const PhilosophySection = () => {
               <div className="p-4 rounded-2xl bg-primary/10 w-fit mx-auto mb-5">
                 <principle.icon className="w-7 h-7 text-primary group-hover:scale-110 transition-transform" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">{principle.title}</h3>
-              <p className="text-muted-foreground">{principle.description}</p>
+              <h3 className="text-2xl font-semibold mb-3">{principle.title}</h3>
+              <p className="text-muted-foreground text-lg">{principle.description}</p>
             </motion.div>
           ))}
         </div>
