@@ -99,8 +99,6 @@ export const ProcessSection = () => {
               <div className="flex-1 hidden md:block" />
             </motion.div>
           ))}
-            </motion.div>
-          ))}
         </div>
       </div>
     </section>
