@@ -5,18 +5,18 @@ import { SectionFade } from "@/components/ui/SectionFade";
 const metrics = [
   {
     icon: TrendingUp,
-    stat: "×40",
-    label: "ROI moyen constaté sur les missions d'acquisition",
-  },
-  {
-    icon: CalendarCheck,
-    stat: "Mois 1",
-    label: "Résultats mesurables garantis",
+    stat: "×4.3",
+    label: "Augmentation du ROAS en moyenne",
   },
   {
     icon: Clock,
     stat: "6-8h",
-    label: "Économisées par semaine et par personne",
+    label: "Gagnées en moyenne par semaine par personne",
+  },
+  {
+    icon: CalendarCheck,
+    stat: "3-5",
+    label: "Entreprises accompagnées par trimestre maximum",
   },
 ];
 
