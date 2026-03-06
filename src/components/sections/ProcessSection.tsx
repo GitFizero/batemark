@@ -8,28 +8,28 @@ const steps = [
     icon: Search,
     number: "01",
     title: "Audit & diagnostic",
-    description: "On analyse vos outils et vos process existants.",
+    description: "On cartographie ensemble vos process, vos outils actuels et vos objectifs de croissance.",
     duration: "Semaine 1",
   },
   {
     icon: ListChecks,
     number: "02",
     title: "Plan d'action",
-    description: "Priorisation par impact et faisabilité rapide.",
+    description: "Je définis les systèmes à construire, les outils à connecter et les KPIs à suivre.",
     duration: "Semaine 2",
   },
   {
     icon: Rocket,
     number: "03",
     title: "Exécution",
-    description: "Mise en place concrète, en parallèle de votre équipe.",
+    description: "Je livre les automatisations et dashboards. Premiers résultats visibles dès le 1er mois.",
     duration: "Semaines 3-6",
   },
   {
     icon: RefreshCw,
     number: "04",
-    title: "Suivi & itération",
-    description: "Ajustements et montée en compétences de votre équipe.",
+    title: "Suivi & Itération",
+    description: "On mesure, on ajuste, on optimise en continu.",
     duration: "En continu",
   },
 ];
@@ -58,9 +58,7 @@ export const ProcessSection = () => {
           </h2>
         </motion.div>
 
-        {/* Timeline visual */}
         <div className="max-w-4xl mx-auto relative">
-          {/* Vertical line - desktop only */}
           <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/0 via-primary/40 to-primary/0 hidden md:block" />
 
           {steps.map((step, index) => (
@@ -74,7 +72,6 @@ export const ProcessSection = () => {
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               }`}
             >
-              {/* Mobile icon + content */}
               <div className={`flex-1 ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
                 <div className="card-premium group hover:border-primary/30 transition-all duration-300">
                   <div className="flex items-center gap-3 mb-3">
@@ -90,12 +87,10 @@ export const ProcessSection = () => {
                 </div>
               </div>
 
-              {/* Center dot - desktop only */}
               <div className="hidden md:flex shrink-0 w-16 h-16 rounded-full bg-primary/20 items-center justify-center border-2 border-primary/40 z-10">
                 <step.icon className="w-7 h-7 text-primary" />
               </div>
 
-              {/* Spacer - desktop only */}
               <div className="flex-1 hidden md:block" />
             </motion.div>
           ))}

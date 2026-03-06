@@ -1,25 +1,25 @@
 import { motion } from "framer-motion";
-import { Target, Cog, TrendingUp, ArrowDown } from "lucide-react";
+import { Search, Cog, TrendingUp, ArrowDown } from "lucide-react";
 import { SectionFade } from "@/components/ui/SectionFade";
 import bgImage from "@/assets/bg-2.svg";
 
 const principles = [
   {
-    icon: Target,
-    title: "Identifier",
-    description: "Les tâches répétitives et chronophages dans vos process.",
+    icon: Search,
+    title: "Audit & Cartographie",
+    description: "J'analyse vos process, vos outils et vos objectifs pour identifier ce qui peut être automatisé ou piloté.",
     color: "bg-destructive/10 text-destructive",
   },
   {
     icon: Cog,
-    title: "Automatiser",
-    description: "Précisément ces tâches, sans tout réinventer.",
+    title: "Implémentation IA sur-mesure",
+    description: "Je construis et connecte les systèmes : automatisation d'acquisition, prospection, portails IA, dashboards.",
     color: "bg-primary/10 text-primary",
   },
   {
     icon: TrendingUp,
-    title: "Mesurer",
-    description: "L'impact réel sur votre productivité et votre CA.",
+    title: "Mesure & Optimisation",
+    description: "Je livre des résultats mesurables dès le premier mois, avec un suivi des KPIs définis ensemble.",
     color: "bg-success/10 text-success",
   },
 ];

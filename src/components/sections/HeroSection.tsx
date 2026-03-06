@@ -6,7 +6,7 @@ import montagneBg from "@/assets/montagne.svg";
 
 const CAL_LINK = "https://cal.com/gaetan-batemark/15min";
 
-const rotatingWords = ["process", "décisions", "opérations", "équipes"];
+const rotatingWords = ["acquisition", "process", "décisions", "opérations"];
 
 export const HeroSection = () => {
   const [wordIndex, setWordIndex] = useState(0);
@@ -20,7 +20,6 @@ export const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center section-padding overflow-hidden">
-      {/* Background visual */}
       <div className="absolute inset-0">
         <img src={montagneBg} alt="" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-background/80" />
@@ -43,7 +42,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6 md:mb-8 leading-tight"
           >
-            L'IA au service de vos{" "}
+            Automatisez votre{" "}
             <span className="relative inline-flex min-w-[120px] sm:min-w-[180px] md:min-w-[280px] lg:min-w-[340px] justify-center">
               <AnimatePresence mode="wait">
                 <motion.span
@@ -57,7 +56,8 @@ export const HeroSection = () => {
                   {rotatingWords[wordIndex]}
                 </motion.span>
               </AnimatePresence>
-            </span>
+            </span>{" "}
+            et regardez vos résultats décoller
           </motion.h1>
 
           <motion.p
@@ -66,7 +66,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg sm:text-2xl md:text-3xl text-muted-foreground mb-8 md:mb-12 max-w-3xl mx-auto"
           >
-            J'aide les entreprises à ne pas être balayées par la vague de l'IA, et à apprendre à la surfer.
+            J'implémente des systèmes IA sur-mesure pour les PME qui veulent générer plus, sans travailler plus.
           </motion.p>
 
           <motion.div
@@ -82,11 +82,20 @@ export const HeroSection = () => {
               </a>
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
-              <a href="#services">
-                Découvrir les services
+              <a href="#cas-clients">
+                Voir mes réalisations
               </a>
             </Button>
           </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="mt-8 text-sm sm:text-base text-secondary italic"
+          >
+            15 000€ générés dès le 1er mois pour Atlantica Minceur · 24 500€ pour V8 Equipment · 30h économisées/semaine chez Loco Media
+          </motion.p>
         </div>
       </div>
     </section>

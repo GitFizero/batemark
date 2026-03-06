@@ -1,27 +1,27 @@
 import { motion } from "framer-motion";
-import { Brain, Layers, Unplug, BarChart3 } from "lucide-react";
+import { Clock, Target, BarChart3, HelpCircle } from "lucide-react";
 import { SectionFade } from "@/components/ui/SectionFade";
 
 const problems = [
   {
-    icon: Brain,
-    title: "Confusion face à l'IA",
-    description: "Tout le monde en parle, personne ne sait par où commencer.",
+    icon: Clock,
+    title: "Tâches répétitives",
+    description: "Vous perdez des heures sur des tâches répétitives que l'IA pourrait faire à votre place.",
   },
   {
-    icon: Layers,
-    title: "Outils qui s'empilent",
-    description: "Des abonnements qui s'accumulent sans vraie cohérence.",
-  },
-  {
-    icon: Unplug,
-    title: "Manque d'intégration",
-    description: "Les solutions ne communiquent pas entre elles.",
+    icon: Target,
+    title: "Acquisition manuelle",
+    description: "Votre acquisition repose sur des actions manuelles, imprévisibles et non scalables.",
   },
   {
     icon: BarChart3,
-    title: "Pas de gain mesurable",
-    description: "Impossible de quantifier le temps réellement gagné.",
+    title: "Pilotage à l'aveugle",
+    description: "Vous pilotez à l'aveugle — sans dashboard clair pour prendre les bonnes décisions.",
+  },
+  {
+    icon: HelpCircle,
+    title: "Par où commencer ?",
+    description: "Vous voyez vos concurrents automatiser, mais vous ne savez pas par où commencer.",
   },
 ];
 
