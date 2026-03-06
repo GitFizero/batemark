@@ -88,14 +88,6 @@ export const HeroSection = () => {
             </Button>
           </motion.div>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-8 text-sm sm:text-base text-secondary italic"
-          >
-            15 000€ générés dès le 1er mois pour Atlantica Minceur · 24 500€ pour V8 Equipment · 30h économisées/semaine chez Loco Media
-          </motion.p>
         </div>
       </div>
     </section>

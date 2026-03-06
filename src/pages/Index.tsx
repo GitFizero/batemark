@@ -15,13 +15,13 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Intégrer l'IA en entreprise | Automatiser vos process — BATEMARK</title>
+        <title>IA & Automatisation pour PME — BATEMARK</title>
         <meta 
           name="description" 
           content="Intégrer l'IA dans votre entreprise et automatiser vos process internes. Consultant spécialisé en automatisation, agents IA et pilotage augmenté pour TPE/PME. Appel découverte gratuit." 
         />
         <meta name="keywords" content="intégrer IA entreprise, automatiser entreprise, automatisation process, agents IA, consultant IA, intégration IA PME, automatisation TPE PME, make n8n zapier, dashboard pilotage IA" />
-        <meta property="og:title" content="Intégrer l'IA en entreprise | Automatiser vos process — BATEMARK" />
+        <meta property="og:title" content="IA & Automatisation pour PME — BATEMARK" />
         <meta property="og:description" content="Consultant spécialisé pour intégrer l'IA et automatiser les process de votre entreprise. Agents IA, automatisation, pilotage augmenté." />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://batemark.fr" />
