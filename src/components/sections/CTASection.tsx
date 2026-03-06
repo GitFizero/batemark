@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, ShieldCheck, Users } from "lucide-react";
 
-const CAL_LINK = "https://cal.com/gaetan-batemark/30min";
+const CAL_LINK = "https://cal.com/gaetan-batemark/15min";
 
 export const CTASection = () => {
   return (
@@ -24,14 +24,14 @@ export const CTASection = () => {
             <span className="text-gradient-copper">dans votre entreprise</span> ?
           </h2>
           <p className="text-2xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Réservez un appel découverte de 30 minutes. On analyse ensemble vos process
+            Réservez un appel découverte de 15 minutes. On analyse ensemble vos process
             et je vous donne des premières pistes concrètes. Sans engagement.
           </p>
 
           <div className="flex flex-wrap justify-center gap-6 mb-10">
             <div className="flex items-center gap-2 text-lg text-muted-foreground">
               <Clock className="w-6 h-6 text-primary" />
-              <span>30 min d'appel découverte</span>
+              <span>15 min d'appel découverte</span>
             </div>
             <div className="flex items-center gap-2 text-lg text-muted-foreground">
               <ShieldCheck className="w-6 h-6 text-primary" />
