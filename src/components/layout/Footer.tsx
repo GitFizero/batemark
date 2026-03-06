@@ -12,15 +12,13 @@ export const Footer = () => {
     <footer className="border-t border-border">
       <div className="container-custom py-12 px-4 md:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-          {/* Brand */}
           <div className="flex flex-col items-center md:items-start gap-4">
             <img src={logo} alt="BATEMARK" className="h-12 w-auto" />
             <p className="text-muted-foreground text-sm max-w-xs text-center md:text-left">
-              Expert en acquisition digitale. Génération de leads qualifiés pour entreprises locales.
+              Consultant IA & automatisation pour TPE/PME. Intégration intelligente dans vos opérations existantes.
             </p>
           </div>
 
-          {/* Legal Links */}
           <div className="flex flex-wrap justify-center gap-6">
             {legalLinks.map((link) => (
               <Link
@@ -34,7 +32,6 @@ export const Footer = () => {
           </div>
         </div>
 
-        {/* Copyright */}
         <div className="mt-8 pt-8 border-t border-border text-center">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} BATEMARK. Tous droits réservés.
