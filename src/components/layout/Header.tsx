@@ -13,7 +13,7 @@ const navLinks = [
   { label: "FAQ", href: "#faq" },
 ];
 
-const CAL_LINK = "https://cal.com/gaetan-batemark/30min";
+const CAL_LINK = "https://cal.com/gaetan-batemark/15min";
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);

@@ -8,25 +8,29 @@ const steps = [
     icon: Search,
     number: "01",
     title: "Audit & diagnostic",
-    description: "Analyse de vos outils, process et flux existants. Identification des frictions et opportunités prioritaires.",
+    description: "On analyse vos outils et vos process existants.",
+    duration: "Semaine 1",
   },
   {
     icon: ListChecks,
     number: "02",
-    title: "Plan d'action priorisé",
-    description: "Sélection des chantiers selon leur impact potentiel et leur faisabilité rapide. On ne fait pas tout en même temps.",
+    title: "Plan d'action",
+    description: "Priorisation par impact et faisabilité rapide.",
+    duration: "Semaine 2",
   },
   {
     icon: Rocket,
     number: "03",
     title: "Exécution",
-    description: "Mise en place concrète, en parallèle de votre équipe, sans perturber les opérations courantes.",
+    description: "Mise en place concrète, en parallèle de votre équipe.",
+    duration: "Semaines 3-6",
   },
   {
     icon: RefreshCw,
     number: "04",
     title: "Suivi & itération",
-    description: "Reporting régulier, ajustements, et montée en compétences progressive de l'équipe interne.",
+    description: "Ajustements et montée en compétences de votre équipe.",
+    duration: "En continu",
   },
 ];
 
@@ -52,27 +56,44 @@ export const ProcessSection = () => {
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
             Comment ça <span className="text-gradient-copper">marche</span>
           </h2>
-          <p className="text-2xl text-muted-foreground max-w-2xl mx-auto">
-            Un accompagnement structuré, en retainer mensuel.
-          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        {/* Timeline visual */}
+        <div className="max-w-4xl mx-auto relative">
+          {/* Vertical line */}
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/0 via-primary/40 to-primary/0 hidden md:block" />
+
           {steps.map((step, index) => (
             <motion.div
               key={step.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -40 : 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.12 }}
-              className="card-premium text-center group hover:border-primary/30 transition-all duration-300"
+              transition={{ duration: 0.5, delay: index * 0.15 }}
+              className={`relative flex items-center gap-6 mb-8 ${
+                index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+              }`}
             >
-              <div className="text-5xl font-bold text-gradient-copper mb-4">{step.number}</div>
-              <div className="p-3 rounded-xl bg-primary/10 w-fit mx-auto mb-4">
-                <step.icon className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
+              {/* Content card */}
+              <div className={`flex-1 ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
+                <div className="card-premium group hover:border-primary/30 transition-all duration-300">
+                  <div className="flex items-center gap-3 mb-3 justify-start">
+                    <span className="text-xs font-bold text-primary uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full">
+                      {step.duration}
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">{step.title}</h3>
+                  <p className="text-muted-foreground text-lg">{step.description}</p>
+                </div>
               </div>
-              <h3 className="text-2xl font-semibold mb-3">{step.title}</h3>
-              <p className="text-muted-foreground text-lg">{step.description}</p>
+
+              {/* Center dot */}
+              <div className="hidden md:flex shrink-0 w-16 h-16 rounded-full bg-primary/20 items-center justify-center border-2 border-primary/40 z-10">
+                <step.icon className="w-7 h-7 text-primary" />
+              </div>
+
+              {/* Spacer */}
+              <div className="flex-1 hidden md:block" />
             </motion.div>
           ))}
         </div>

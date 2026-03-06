@@ -1,33 +1,13 @@
 import { motion } from "framer-motion";
-import { User, Crosshair, GraduationCap, Shield, Users } from "lucide-react";
+import { User, Crosshair, GraduationCap, Shield, Users, Check, X } from "lucide-react";
 import { SectionFade } from "@/components/ui/SectionFade";
 
-const differentiators = [
-  {
-    icon: User,
-    title: "Un seul interlocuteur",
-    description: "Ads, CRM, automatisation, IA — je maîtrise l'ensemble de la chaîne. Pas de découpage en silos.",
-  },
-  {
-    icon: Shield,
-    title: "Pas une agence",
-    description: "Vous travaillez directement avec le consultant, sans chef de projet intermédiaire, sans junior qui exécute.",
-  },
-  {
-    icon: Crosshair,
-    title: "Approche chirurgicale",
-    description: "Pas de package standard. On part de ce qui existe déjà dans votre entreprise et on l'optimise.",
-  },
-  {
-    icon: GraduationCap,
-    title: "Transfert de compétences",
-    description: "L'objectif est que votre équipe gagne en autonomie au fil du temps, pas de créer une dépendance.",
-  },
-  {
-    icon: Users,
-    title: "Disponibilité garantie",
-    description: "5 à 6 clients maximum en simultané, pour garantir la qualité de l'accompagnement et la réactivité.",
-  },
+const comparisonRows = [
+  { criteria: "Interlocuteur", batemark: "Un seul consultant senior", agency: "Chef de projet + juniors" },
+  { criteria: "Approche", batemark: "Sur-mesure, on part de l'existant", agency: "Packages standardisés" },
+  { criteria: "Compétences", batemark: "Ads + CRM + IA + Automatisation", agency: "Découpé en silos" },
+  { criteria: "Autonomie", batemark: "Transfert de compétences inclus", agency: "Dépendance créée" },
+  { criteria: "Disponibilité", batemark: "5-6 clients max", agency: "Dizaines de clients en parallèle" },
 ];
 
 export const WhyBatemarkSection = () => {
@@ -48,32 +28,51 @@ export const WhyBatemarkSection = () => {
             Pourquoi <span className="text-gradient-copper">Batemark</span>
           </h2>
           <p className="text-2xl text-muted-foreground max-w-2xl mx-auto">
-            Ce qui me différencie d'une agence classique.
+            Consultant solo vs agence classique
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {differentiators.map((item, index) => (
-            <motion.div
-              key={item.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="card-premium group hover:border-primary/30 transition-all duration-300"
-            >
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-xl bg-primary/10 shrink-0">
-                  <item.icon className="w-7 h-7 text-primary group-hover:scale-110 transition-transform" />
+        {/* Comparison table */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-4xl mx-auto"
+        >
+          <div className="card-premium overflow-hidden !p-0">
+            {/* Header */}
+            <div className="grid grid-cols-3 border-b border-border">
+              <div className="p-5" />
+              <div className="p-5 text-center border-x border-border bg-primary/5">
+                <span className="text-xl font-bold text-gradient-copper">Batemark</span>
+              </div>
+              <div className="p-5 text-center">
+                <span className="text-xl font-bold text-muted-foreground">Agence</span>
+              </div>
+            </div>
+
+            {/* Rows */}
+            {comparisonRows.map((row, index) => (
+              <div
+                key={row.criteria}
+                className={`grid grid-cols-3 ${index < comparisonRows.length - 1 ? "border-b border-border" : ""}`}
+              >
+                <div className="p-5 flex items-center">
+                  <span className="font-semibold text-lg">{row.criteria}</span>
                 </div>
-                <div>
-                  <h3 className="text-2xl font-semibold mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground text-lg">{item.description}</p>
+                <div className="p-5 border-x border-border bg-primary/5 flex items-center gap-2">
+                  <Check className="w-5 h-5 text-primary shrink-0" />
+                  <span className="text-base">{row.batemark}</span>
+                </div>
+                <div className="p-5 flex items-center gap-2 text-muted-foreground">
+                  <X className="w-5 h-5 text-destructive/60 shrink-0" />
+                  <span className="text-base">{row.agency}</span>
                 </div>
               </div>
-            </motion.div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
