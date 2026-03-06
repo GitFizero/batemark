@@ -39,7 +39,7 @@ export const ProblemsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6">
             Le vrai <span className="text-gradient-copper">problème</span>
           </h2>
         </motion.div>
@@ -54,12 +54,12 @@ export const ProblemsSection = () => {
               transition={{ duration: 0.4, delay: index * 0.1 }}
               className="card-premium group hover:border-destructive/30 transition-all duration-300 flex items-start gap-5"
             >
-              <div className="p-4 rounded-2xl bg-destructive/10 shrink-0">
-                <problem.icon className="w-8 h-8 text-destructive" />
+              <div className="p-3 sm:p-4 rounded-2xl bg-destructive/10 shrink-0">
+                <problem.icon className="w-6 h-6 sm:w-8 sm:h-8 text-destructive" />
               </div>
               <div>
-                <h3 className="text-2xl font-semibold mb-1">{problem.title}</h3>
-                <p className="text-muted-foreground text-lg">{problem.description}</p>
+                <h3 className="text-lg sm:text-2xl font-semibold mb-1">{problem.title}</h3>
+                <p className="text-muted-foreground text-base sm:text-lg">{problem.description}</p>
               </div>
             </motion.div>
           ))}

@@ -54,7 +54,7 @@ export const FAQSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6">
             Questions <span className="text-gradient-copper">fréquentes</span>
           </h2>
         </motion.div>
@@ -73,10 +73,10 @@ export const FAQSection = () => {
                 value={`item-${index}`}
                 className="card-premium border-none data-[state=open]:border-copper/30"
               >
-                <AccordionTrigger className="text-left text-xl font-semibold hover:text-copper transition-colors px-6 py-4">
+                <AccordionTrigger className="text-left text-base sm:text-xl font-semibold hover:text-copper transition-colors px-4 sm:px-6 py-3 sm:py-4">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground text-lg px-6 pb-6">
+                <AccordionContent className="text-muted-foreground text-base sm:text-lg px-4 sm:px-6 pb-4 sm:pb-6">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
