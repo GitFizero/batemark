@@ -49,10 +49,10 @@ export const ProcessSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">
             Comment ça <span className="text-gradient-copper">marche</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-2xl text-muted-foreground max-w-2xl mx-auto">
             Un accompagnement structuré, en retainer mensuel.
           </p>
         </motion.div>
@@ -71,8 +71,8 @@ export const ProcessSection = () => {
               <div className="p-3 rounded-xl bg-primary/10 w-fit mx-auto mb-4">
                 <step.icon className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
               </div>
-              <h3 className="text-lg font-semibold mb-3">{step.title}</h3>
-              <p className="text-muted-foreground text-sm">{step.description}</p>
+              <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
+              <p className="text-muted-foreground text-base">{step.description}</p>
             </motion.div>
           ))}
         </div>

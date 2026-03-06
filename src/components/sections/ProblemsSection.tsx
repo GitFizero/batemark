@@ -39,10 +39,10 @@ export const ProblemsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">
             Le vrai <span className="text-gradient-copper">problème</span> avec l'IA en entreprise
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-2xl text-muted-foreground max-w-2xl mx-auto">
             Vous reconnaissez-vous dans ces situations ?
           </p>
         </motion.div>
@@ -62,8 +62,8 @@ export const ProblemsSection = () => {
                   <problem.icon className="w-6 h-6 text-destructive" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">{problem.title}</h3>
-                  <p className="text-muted-foreground">{problem.description}</p>
+                  <h3 className="text-2xl font-semibold mb-2">{problem.title}</h3>
+                  <p className="text-muted-foreground text-lg">{problem.description}</p>
                 </div>
               </div>
             </motion.div>

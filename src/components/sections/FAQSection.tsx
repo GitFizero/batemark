@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     question: "Est-ce adapté à mon entreprise ?",
-    answer: "J'accompagne principalement des e-commerçants et prestataires B2B entre 500K et 5M€ de CA, avec une petite équipe marketing (1 à 3 personnes). Si vous cherchez à monter en puissance sans recruter un profil senior à temps plein, c'est fait pour vous.",
+    answer: "J'accompagne les entreprises qui sont conscientes qu'elles peuvent augmenter leur productivité grâce à l'IA et l'automatisation, mais qui ne savent pas par où commencer ou comment l'intégrer concrètement dans leurs opérations existantes.",
   },
   {
     question: "Faut-il déjà utiliser des outils d'IA ?",
@@ -54,7 +54,7 @@ export const FAQSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">
             Questions <span className="text-gradient-copper">fréquentes</span>
           </h2>
         </motion.div>
@@ -73,10 +73,10 @@ export const FAQSection = () => {
                 value={`item-${index}`}
                 className="card-premium border-none data-[state=open]:border-copper/30"
               >
-                <AccordionTrigger className="text-left text-lg font-semibold hover:text-copper transition-colors px-6 py-4">
+                <AccordionTrigger className="text-left text-xl font-semibold hover:text-copper transition-colors px-6 py-4">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground px-6 pb-6">
+                <AccordionContent className="text-muted-foreground text-lg px-6 pb-6">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

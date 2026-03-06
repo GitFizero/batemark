@@ -32,7 +32,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-primary font-semibold text-lg mb-6 tracking-wide uppercase"
+            className="text-primary font-semibold text-xl mb-6 tracking-wide uppercase"
           >
             IA & Automatisation pour TPE / PME
           </motion.p>
@@ -41,7 +41,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight"
+            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight"
           >
             L'IA au service de vos{" "}
             <span className="relative inline-flex min-w-[180px] md:min-w-[280px] lg:min-w-[340px] justify-center">
@@ -59,7 +59,7 @@ export const HeroSection = () => {
               </AnimatePresence>
             </span>
             <br />
-            <span className="text-muted-foreground text-3xl md:text-4xl lg:text-5xl font-medium">
+            <span className="text-muted-foreground text-3xl md:text-5xl lg:text-6xl font-medium">
               pas pour elle-même.
             </span>
           </motion.h1>
@@ -68,10 +68,9 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto"
+            className="text-2xl md:text-3xl text-muted-foreground mb-12 max-w-3xl mx-auto"
           >
-            J'aide les e-commerçants et prestataires B2B (500K–5M€ CA) à intégrer
-            l'IA et l'automatisation dans leurs opérations existantes. Sans tout réinventer.
+            J'aide les entreprises à ne pas être balayées par la vague de l'IA, et à apprendre à la surfer.
           </motion.p>
 
           <motion.div
