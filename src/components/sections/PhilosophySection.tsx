@@ -43,10 +43,10 @@ export const PhilosophySection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-bold mb-8">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 md:mb-8">
             Mon <span className="text-gradient-copper">approche</span>
           </h2>
-          <blockquote className="text-3xl md:text-4xl font-display italic text-foreground max-w-4xl mx-auto mb-4">
+          <blockquote className="text-xl sm:text-3xl md:text-4xl font-display italic text-foreground max-w-4xl mx-auto mb-4">
             "Tout est possible avec l'IA.
             <br />
             <span className="text-gradient-copper">Mais tout faire n'est pas la réponse.</span>"
@@ -63,13 +63,13 @@ export const PhilosophySection = () => {
                 transition={{ duration: 0.4, delay: index * 0.15 }}
                 className="card-premium flex items-center gap-5 group hover:border-primary/30 transition-all duration-300"
               >
-                <div className={`p-4 rounded-2xl shrink-0 ${principle.color}`}>
-                  <principle.icon className="w-8 h-8" />
+                <div className={`p-3 sm:p-4 rounded-2xl shrink-0 ${principle.color}`}>
+                  <principle.icon className="w-6 h-6 sm:w-8 sm:h-8" />
                 </div>
                 <div>
                   <span className="text-xs font-bold text-primary uppercase tracking-widest">Étape {index + 1}</span>
-                  <h3 className="text-2xl font-bold">{principle.title}</h3>
-                  <p className="text-muted-foreground text-lg">{principle.description}</p>
+                  <h3 className="text-lg sm:text-2xl font-bold">{principle.title}</h3>
+                  <p className="text-muted-foreground text-base sm:text-lg">{principle.description}</p>
                 </div>
               </motion.div>
               {index < principles.length - 1 && (

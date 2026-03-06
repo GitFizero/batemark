@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { User, Crosshair, GraduationCap, Shield, Users, Check, X } from "lucide-react";
+import { Check, X } from "lucide-react";
 import { SectionFade } from "@/components/ui/SectionFade";
 
 const comparisonRows = [
@@ -22,26 +22,25 @@ export const WhyBatemarkSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6">
             Pourquoi <span className="text-gradient-copper">Batemark</span>
           </h2>
-          <p className="text-2xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-2xl text-muted-foreground max-w-2xl mx-auto">
             Consultant solo vs agence classique
           </p>
         </motion.div>
 
-        {/* Comparison table */}
+        {/* Desktop table */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-4xl mx-auto hidden md:block"
         >
           <div className="card-premium overflow-hidden !p-0">
-            {/* Header */}
             <div className="grid grid-cols-3 border-b border-border">
               <div className="p-5" />
               <div className="p-5 text-center border-x border-border bg-primary/5">
@@ -52,7 +51,6 @@ export const WhyBatemarkSection = () => {
               </div>
             </div>
 
-            {/* Rows */}
             {comparisonRows.map((row, index) => (
               <div
                 key={row.criteria}
@@ -73,6 +71,30 @@ export const WhyBatemarkSection = () => {
             ))}
           </div>
         </motion.div>
+
+        {/* Mobile cards */}
+        <div className="md:hidden space-y-4 max-w-lg mx-auto">
+          {comparisonRows.map((row, index) => (
+            <motion.div
+              key={row.criteria}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.08 }}
+              className="card-premium !p-4"
+            >
+              <p className="text-sm font-bold text-primary uppercase tracking-widest mb-3">{row.criteria}</p>
+              <div className="flex items-start gap-2 mb-2">
+                <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                <span className="text-sm font-medium">{row.batemark}</span>
+              </div>
+              <div className="flex items-start gap-2 text-muted-foreground">
+                <X className="w-4 h-4 text-destructive/60 shrink-0 mt-0.5" />
+                <span className="text-sm">{row.agency}</span>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

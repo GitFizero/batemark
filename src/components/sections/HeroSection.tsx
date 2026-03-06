@@ -32,7 +32,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-primary font-semibold text-xl mb-6 tracking-wide uppercase"
+            className="text-primary font-semibold text-base sm:text-xl mb-4 md:mb-6 tracking-wide uppercase"
           >
             IA & Automatisation pour TPE / PME
           </motion.p>
@@ -41,10 +41,10 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight"
+            className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6 md:mb-8 leading-tight"
           >
             L'IA au service de vos{" "}
-            <span className="relative inline-flex min-w-[180px] md:min-w-[280px] lg:min-w-[340px] justify-center">
+            <span className="relative inline-flex min-w-[120px] sm:min-w-[180px] md:min-w-[280px] lg:min-w-[340px] justify-center">
               <AnimatePresence mode="wait">
                 <motion.span
                   key={wordIndex}
@@ -64,7 +64,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-2xl md:text-3xl text-muted-foreground mb-12 max-w-3xl mx-auto"
+            className="text-lg sm:text-2xl md:text-3xl text-muted-foreground mb-8 md:mb-12 max-w-3xl mx-auto"
           >
             J'aide les entreprises à ne pas être balayées par la vague de l'IA, et à apprendre à la surfer.
           </motion.p>

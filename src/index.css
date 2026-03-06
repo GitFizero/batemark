@@ -99,8 +99,14 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.7;
+  }
+
+  @media (min-width: 640px) {
+    body {
+      font-size: 18px;
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -140,7 +146,7 @@
   }
 
   .section-padding {
-    @apply py-20 md:py-28 px-4 md:px-8;
+    @apply py-16 sm:py-20 md:py-28 px-4 md:px-8;
   }
 
   .container-custom {

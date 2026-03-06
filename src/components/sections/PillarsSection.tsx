@@ -43,7 +43,7 @@ export const PillarsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6">
             Ce que je fais <span className="text-gradient-copper">concrètement</span>
           </h2>
         </motion.div>
@@ -60,7 +60,7 @@ export const PillarsSection = () => {
             >
               {/* Big stat */}
               <div className="text-center mb-6">
-                <div className="text-5xl md:text-6xl font-black text-gradient-copper mb-1">
+                <div className="text-4xl sm:text-5xl md:text-6xl font-black text-gradient-copper mb-1">
                   {pillar.stats}
                 </div>
                 <p className="text-sm text-muted-foreground uppercase tracking-wide font-medium">
@@ -72,8 +72,8 @@ export const PillarsSection = () => {
                 <pillar.icon className="w-10 h-10 text-primary group-hover:scale-110 transition-transform" />
               </div>
 
-              <h3 className="text-2xl font-bold mb-3 text-center">{pillar.title}</h3>
-              <p className="text-muted-foreground text-lg mb-6 flex-1 text-center">{pillar.description}</p>
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 text-center">{pillar.title}</h3>
+              <p className="text-muted-foreground text-base sm:text-lg mb-6 flex-1 text-center">{pillar.description}</p>
 
               <div className="flex flex-wrap gap-2 justify-center pt-4 border-t border-border">
                 {pillar.tools.map((tool) => (
