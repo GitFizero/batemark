@@ -48,7 +48,7 @@ export const PhilosophySection = () => {
             <br />
             <span className="text-gradient-copper">Mais ce n'est pas parce que tout est possible qu'il faut tout faire.</span>"
           </blockquote>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-2xl text-muted-foreground max-w-3xl mx-auto">
             L'IA ne doit pas s'ajouter au-dessus de votre organisation. Elle doit s'intégrer à l'intérieur.
             L'objectif est de rendre vos équipes plus efficaces, vos décisions mieux informées, vos opérations plus fluides.
           </p>

@@ -67,12 +67,12 @@ export const ProcessSection = () => {
               transition={{ duration: 0.5, delay: index * 0.12 }}
               className="card-premium text-center group hover:border-primary/30 transition-all duration-300"
             >
-              <div className="text-4xl font-bold text-gradient-copper mb-4">{step.number}</div>
+              <div className="text-5xl font-bold text-gradient-copper mb-4">{step.number}</div>
               <div className="p-3 rounded-xl bg-primary/10 w-fit mx-auto mb-4">
                 <step.icon className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
-              <p className="text-muted-foreground text-base">{step.description}</p>
+              <h3 className="text-2xl font-semibold mb-3">{step.title}</h3>
+              <p className="text-muted-foreground text-lg">{step.description}</p>
             </motion.div>
           ))}
         </div>

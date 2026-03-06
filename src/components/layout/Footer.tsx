@@ -14,7 +14,7 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex flex-col items-center md:items-start gap-4">
             <img src={logo} alt="BATEMARK" className="h-12 w-auto" />
-            <p className="text-muted-foreground text-sm max-w-xs text-center md:text-left">
+            <p className="text-muted-foreground text-base max-w-xs text-center md:text-left">
               Consultant IA & automatisation pour TPE/PME. Intégration intelligente dans vos opérations existantes.
             </p>
           </div>
@@ -24,7 +24,7 @@ export const Footer = () => {
               <Link
                 key={link.label}
                 to={link.href}
-                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                className="text-base text-muted-foreground hover:text-primary transition-colors"
               >
                 {link.label}
               </Link>
@@ -33,7 +33,7 @@ export const Footer = () => {
         </div>
 
         <div className="mt-8 pt-8 border-t border-border text-center">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-base text-muted-foreground">
             © {new Date().getFullYear()} BATEMARK. Tous droits réservés.
           </p>
         </div>

@@ -59,7 +59,7 @@ export const ProblemsSection = () => {
             >
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-xl bg-destructive/10 shrink-0">
-                  <problem.icon className="w-6 h-6 text-destructive" />
+                  <problem.icon className="w-7 h-7 text-destructive" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-semibold mb-2">{problem.title}</h3>

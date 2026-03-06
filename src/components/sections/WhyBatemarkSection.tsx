@@ -64,11 +64,11 @@ export const WhyBatemarkSection = () => {
             >
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-xl bg-primary/10 shrink-0">
-                  <item.icon className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
+                  <item.icon className="w-7 h-7 text-primary group-hover:scale-110 transition-transform" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground text-base">{item.description}</p>
+                  <h3 className="text-2xl font-semibold mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground text-lg">{item.description}</p>
                 </div>
               </div>
             </motion.div>

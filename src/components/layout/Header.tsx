@@ -49,7 +49,7 @@ export const Header = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
+                className="text-muted-foreground hover:text-foreground transition-colors text-base font-medium"
               >
                 {link.label}
               </a>

@@ -29,16 +29,16 @@ export const CTASection = () => {
           </p>
 
           <div className="flex flex-wrap justify-center gap-6 mb-10">
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <Clock className="w-5 h-5 text-primary" />
+            <div className="flex items-center gap-2 text-lg text-muted-foreground">
+              <Clock className="w-6 h-6 text-primary" />
               <span>30 min d'appel découverte</span>
             </div>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <ShieldCheck className="w-5 h-5 text-primary" />
+            <div className="flex items-center gap-2 text-lg text-muted-foreground">
+              <ShieldCheck className="w-6 h-6 text-primary" />
               <span>Sans engagement</span>
             </div>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <Users className="w-5 h-5 text-primary" />
+            <div className="flex items-center gap-2 text-lg text-muted-foreground">
+              <Users className="w-6 h-6 text-primary" />
               <span>5-6 clients max en simultané</span>
             </div>
           </div>
