@@ -1,16 +1,11 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
-import { CalEmbed } from "@/components/sections/CalEmbed";
 import { ProblemsSection } from "@/components/sections/ProblemsSection";
-import { OpportunitySection } from "@/components/sections/OpportunitySection";
-import { MethodSection } from "@/components/sections/MethodSection";
-import { RetroplanningSection } from "@/components/sections/RetroplanningSection";
-import { SolutionSection } from "@/components/sections/SolutionSection";
-import { AuthoritySection } from "@/components/sections/AuthoritySection";
-import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
-import { ProjectsSection } from "@/components/sections/ProjectsSection";
-import { PricingSection } from "@/components/sections/PricingSection";
+import { PhilosophySection } from "@/components/sections/PhilosophySection";
+import { PillarsSection } from "@/components/sections/PillarsSection";
+import { ProcessSection } from "@/components/sections/ProcessSection";
+import { WhyBatemarkSection } from "@/components/sections/WhyBatemarkSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { Helmet } from "react-helmet-async";
@@ -19,40 +14,58 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>BATEMARK | Expert Publicité Digitale Locale - Génération de Leads</title>
+        <title>BATEMARK | Consultant IA & Automatisation pour TPE/PME</title>
         <meta 
           name="description" 
-          content="Expert senior en acquisition digitale. Générez des leads qualifiés pour votre entreprise locale. +7 ans d'expérience, +300 campagnes, sans engagement." 
+          content="Intégration intelligente de l'IA et de l'automatisation dans vos opérations. Automatisation des process, agents IA, pilotage augmenté. Pour e-commerçants et prestataires B2B (500K-5M€ CA)." 
         />
-        <meta name="keywords" content="publicité digitale, génération de leads, publicité locale, acquisition digitale, leads qualifiés, facebook ads, google ads" />
-        <meta property="og:title" content="BATEMARK | Expert Publicité Digitale Locale - Génération de Leads" />
-        <meta property="og:description" content="Générez des leads qualifiés pour votre entreprise locale. Accompagnement complet, sans engagement." />
+        <meta name="keywords" content="IA entreprise, automatisation process, agents IA, consultant IA, TPE PME, make, n8n, acquisition digitale, dashboard pilotage" />
+        <meta property="og:title" content="BATEMARK | Consultant IA & Automatisation pour TPE/PME" />
+        <meta property="og:description" content="L'IA au service de vos opérations, pas pour elle-même. Automatisation, agents IA, pilotage augmenté." />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://batemark.fr" />
         
-        {/* Schema.org LocalBusiness */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
+            "@type": "ProfessionalService",
             "name": "BATEMARK",
-            "description": "Expert en génération de leads locaux via publicité digitale",
+            "description": "Consultant en intégration IA et automatisation pour TPE/PME",
             "url": "https://batemark.fr",
-            "priceRange": "€€",
+            "founder": {
+              "@type": "Person",
+              "name": "Gaëtan Fizero"
+            },
             "areaServed": {
               "@type": "Country",
               "name": "France"
             },
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
-              "name": "Services Publicité Digitale",
+              "name": "Services IA & Automatisation",
               "itemListElement": [
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Accompagnement Publicité Digitale",
-                    "description": "Gestion complète de vos campagnes publicitaires digitales"
+                    "name": "Automatisation des process internes",
+                    "description": "Workflows automatisés via Make, n8n, Zapier"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Intégration d'agents IA",
+                    "description": "Agents IA greffés sur vos opérations existantes"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Pilotage & acquisition augmentée",
+                    "description": "Dashboards centralisés et analyse IA des performances"
                   }
                 }
               ]
@@ -60,7 +73,6 @@ const Index = () => {
           })}
         </script>
 
-        {/* FAQ Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -68,26 +80,26 @@ const Index = () => {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "Y a-t-il un engagement ?",
+                "name": "Y a-t-il un engagement minimum ?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Non, aucun engagement. Vous pouvez arrêter à tout moment, sans frais cachés."
+                  "text": "Non. Pas d'engagement de durée. Vous pouvez arrêter à tout moment."
                 }
               },
               {
                 "@type": "Question",
-                "name": "En combien de temps voit-on les premiers leads ?",
+                "name": "Combien de temps avant de voir des résultats ?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Généralement, les premiers leads arrivent dès la première semaine de lancement."
+                  "text": "Les premiers quick wins arrivent dès le premier mois. Les transformations plus profondes se déploient sur 2 à 3 mois."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Quel budget publicitaire prévoir ?",
+                "name": "Faut-il déjà utiliser des outils d'IA ?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Je recommande un budget de 20 à 30€/jour minimum pour des résultats significatifs."
+                  "text": "Non. On part de vos outils et process existants pour intégrer l'IA là où ça a du sens."
                 }
               }
             ]
@@ -99,25 +111,20 @@ const Index = () => {
       
       <main>
         <HeroSection />
-        <CalEmbed />
-        <section id="problems">
+        <section id="probleme">
           <ProblemsSection />
         </section>
-        <OpportunitySection />
-        <MethodSection />
-        <RetroplanningSection />
-        <section id="solution">
-          <SolutionSection />
+        <section id="approche">
+          <PhilosophySection />
         </section>
-        <AuthoritySection />
-        <section id="testimonials">
-          <TestimonialsSection />
+        <section id="services">
+          <PillarsSection />
         </section>
-        <section id="projects">
-          <ProjectsSection />
+        <section id="methode">
+          <ProcessSection />
         </section>
-        <section id="pricing">
-          <PricingSection />
+        <section id="pourquoi">
+          <WhyBatemarkSection />
         </section>
         <section id="faq">
           <FAQSection />

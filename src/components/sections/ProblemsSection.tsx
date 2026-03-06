@@ -1,34 +1,33 @@
 import { motion } from "framer-motion";
-import { AlertTriangle, TrendingDown, Users, Clock } from "lucide-react";
+import { Brain, Layers, Unplug, BarChart3 } from "lucide-react";
 import { SectionFade } from "@/components/ui/SectionFade";
 
 const problems = [
   {
-    icon: AlertTriangle,
-    title: "Publicité locale non mesurable",
-    description: "Flyers, affichage, cinéma... Impossible de savoir combien de clients viennent de vos campagnes.",
+    icon: Brain,
+    title: "Confusion face à l'IA",
+    description: "Tout le monde en parle, personne ne sait par où commencer. Les possibilités semblent infinies, mais concrètement, rien n'avance.",
   },
   {
-    icon: TrendingDown,
-    title: "ROI flou et incertain",
-    description: "Vous dépensez sans savoir si cela génère vraiment du chiffre d'affaires pour votre activité.",
+    icon: Layers,
+    title: "Outils qui s'empilent",
+    description: "Un outil pour ci, un autre pour ça. Des abonnements qui s'accumulent sans vraie cohérence ni gain de productivité mesurable.",
   },
   {
-    icon: Users,
-    title: "Leads non qualifiés",
-    description: "Des contacts qui ne correspondent pas à votre cible, des curieux qui ne convertissent jamais.",
+    icon: Unplug,
+    title: "Manque d'intégration",
+    description: "Les solutions ne communiquent pas entre elles. Vos équipes passent leur temps à faire du copier-coller entre les plateformes.",
   },
   {
-    icon: Clock,
-    title: "Dépendance au bouche-à-oreille",
-    description: "Une croissance lente et imprévisible, sans contrôle sur votre flux de nouveaux clients.",
+    icon: BarChart3,
+    title: "Pas de gain mesurable",
+    description: "Vous avez investi dans des outils mais impossible de quantifier le temps gagné ou l'impact réel sur votre chiffre d'affaires.",
   },
 ];
 
 export const ProblemsSection = () => {
   return (
     <section className="section-padding relative overflow-hidden">
-      {/* Fade Effects */}
       <SectionFade position="top" />
       <SectionFade position="bottom" />
 
@@ -41,7 +40,7 @@ export const ProblemsSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Les <span className="text-gradient-copper">défis</span> des entreprises locales
+            Le vrai <span className="text-gradient-copper">problème</span> avec l'IA en entreprise
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Vous reconnaissez-vous dans ces situations ?
