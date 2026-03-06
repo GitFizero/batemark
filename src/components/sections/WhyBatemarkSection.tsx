@@ -8,6 +8,9 @@ const comparisonRows = [
   { criteria: "Compétences", batemark: "Ads + CRM + IA + Automatisation", agency: "Découpé en silos" },
   { criteria: "Autonomie", batemark: "Transfert de compétences inclus", agency: "Dépendance créée" },
   { criteria: "Disponibilité", batemark: "5-6 clients max", agency: "Dizaines de clients en parallèle" },
+  { criteria: "Résultats", batemark: "Mesurables dès le 1er mois", agency: "Délais longs, reporting flou" },
+  { criteria: "Spécialisation", batemark: "IA appliquée à vos process", agency: "Généraliste, peu de maîtrise IA" },
+  { criteria: "Connaissance métier", batemark: "Immersion dans vos process réels", agency: "Vision externe standardisée" },
 ];
 
 export const WhyBatemarkSection = () => {
@@ -38,16 +41,16 @@ export const WhyBatemarkSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto hidden md:block"
+          className="max-w-5xl mx-auto hidden md:block"
         >
           <div className="card-premium overflow-hidden !p-0">
             <div className="grid grid-cols-3 border-b border-border">
-              <div className="p-5" />
-              <div className="p-5 text-center border-x border-border bg-primary/5">
-                <span className="text-xl font-bold text-gradient-copper">Batemark</span>
+              <div className="p-6" />
+              <div className="p-6 text-center border-x border-border bg-primary/5">
+                <span className="text-2xl font-bold text-gradient-copper">Batemark</span>
               </div>
-              <div className="p-5 text-center">
-                <span className="text-xl font-bold text-muted-foreground">Agence</span>
+              <div className="p-6 text-center">
+                <span className="text-2xl font-bold text-muted-foreground">Agence</span>
               </div>
             </div>
 
@@ -59,13 +62,13 @@ export const WhyBatemarkSection = () => {
                 <div className="p-5 flex items-center">
                   <span className="font-semibold text-lg">{row.criteria}</span>
                 </div>
-                <div className="p-5 border-x border-border bg-primary/5 flex items-center gap-2">
+                <div className="p-5 border-x border-border bg-primary/5 flex items-center gap-3">
                   <Check className="w-5 h-5 text-primary shrink-0" />
-                  <span className="text-base">{row.batemark}</span>
+                  <span className="text-base lg:text-lg">{row.batemark}</span>
                 </div>
-                <div className="p-5 flex items-center gap-2 text-muted-foreground">
+                <div className="p-5 flex items-center gap-3 text-muted-foreground">
                   <X className="w-5 h-5 text-destructive/60 shrink-0" />
-                  <span className="text-base">{row.agency}</span>
+                  <span className="text-base lg:text-lg">{row.agency}</span>
                 </div>
               </div>
             ))}

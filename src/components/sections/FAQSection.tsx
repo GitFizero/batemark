@@ -10,28 +10,28 @@ import bgImage from "@/assets/bg-4.svg";
 
 const faqs = [
   {
-    question: "C'est quoi concrètement un retainer mensuel ?",
-    answer: "C'est un accompagnement continu. Chaque mois, on travaille ensemble sur des chantiers priorisés : automatisation, intégration d'IA, dashboards. Pas une mission ponctuelle, mais un vrai partenariat dans la durée.",
+    question: "Quel type d'entreprise accompagnes-tu ?",
+    answer: "Je travaille avec des PME de 1 à 50 personnes, principalement dans les services, l'e-commerce et les agences. Si vous avez des process répétitifs ou une acquisition à structurer, on peut travailler ensemble.",
   },
   {
-    question: "Est-ce adapté à mon entreprise ?",
-    answer: "J'accompagne les entreprises qui sont conscientes qu'elles peuvent augmenter leur productivité grâce à l'IA et l'automatisation, mais qui ne savent pas par où commencer ou comment l'intégrer concrètement dans leurs opérations existantes.",
+    question: "Combien de temps pour voir des résultats ?",
+    answer: "Mes clients voient des résultats dès le premier mois. L'implémentation prend en moyenne 2 à 4 semaines selon la complexité.",
   },
   {
-    question: "Faut-il déjà utiliser des outils d'IA ?",
-    answer: "Non. Je pars de vos outils et process existants. L'objectif est d'intégrer l'IA et l'automatisation là où ça a du sens, pas de tout remplacer. On construit sur ce qui marche déjà.",
+    question: "Combien ça coûte ?",
+    answer: "Chaque mission est sur-mesure. On définit ensemble le périmètre lors de l'appel découverte de 15 minutes, gratuit et sans engagement.",
   },
   {
-    question: "Combien de temps avant de voir des résultats ?",
-    answer: "Les premiers quick wins (automatisations, gains de temps) arrivent généralement dès le premier mois. Les transformations plus profondes se déploient sur 2 à 3 mois.",
+    question: "Je n'ai pas de données structurées, c'est quand même possible ?",
+    answer: "Oui. L'audit initial sert justement à cartographier ce que vous avez et à construire les bases nécessaires.",
   },
   {
     question: "Pourquoi pas une agence ?",
-    answer: "Avec une agence, vous avez un chef de projet, un junior qui exécute, et des process standardisés. Avec moi, vous avez un consultant senior unique qui maîtrise toute la chaîne : ads, CRM, automatisation, IA. Un seul interlocuteur, plus de réactivité, plus de profondeur.",
+    answer: "Une agence vous vend des heures. Moi je livre des systèmes qui tournent en autonomie — avec des résultats mesurables et un coût sans commune mesure.",
   },
   {
     question: "Y a-t-il un engagement minimum ?",
-    answer: "Non. Pas d'engagement de durée. Je suis convaincu que la qualité de l'accompagnement vous donnera envie de continuer. Vous pouvez arrêter à tout moment.",
+    answer: "Non. On commence par une mission définie, et on continue si les résultats sont là — ce qui est généralement le cas.",
   },
 ];
 

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Clock, ShieldCheck, Users } from "lucide-react";
+import { ArrowRight, Clock, FileText, TrendingUp } from "lucide-react";
 
 const CAL_LINK = "https://cal.com/gaetan-batemark/15min";
 
@@ -20,35 +20,35 @@ export const CTASection = () => {
           className="max-w-4xl mx-auto text-center"
         >
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6">
-            Prêt à intégrer l'IA{" "}
+            Prêt à implémenter l'IA{" "}
             <span className="text-gradient-copper">dans votre entreprise</span> ?
           </h2>
           <p className="text-lg sm:text-2xl text-muted-foreground mb-8 md:mb-10 max-w-2xl mx-auto">
-            Réservez un appel découverte de 15 minutes. On analyse ensemble vos process
-            et je vous donne des premières pistes concrètes. Sans engagement.
+            Réservez un appel découverte de 30 minutes. J'analyse vos process et vous propose
+            un plan d'action concret — gratuit, sans engagement.
           </p>
 
-          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-6 mb-8 md:mb-10">
-            <div className="flex items-center gap-2 text-base sm:text-lg text-muted-foreground">
-              <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-              <span>15 min d'appel découverte</span>
-            </div>
-            <div className="flex items-center gap-2 text-base sm:text-lg text-muted-foreground">
-              <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-              <span>Sans engagement</span>
-            </div>
-            <div className="flex items-center gap-2 text-base sm:text-lg text-muted-foreground">
-              <Users className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-              <span>5-6 clients max en simultané</span>
-            </div>
-          </div>
-
-          <Button variant="hero" size="xl" className="group animate-pulse-glow" asChild>
+          <Button variant="hero" size="xl" className="group animate-pulse-glow mb-8 md:mb-10" asChild>
             <a href={CAL_LINK} target="_blank" rel="noopener noreferrer">
               Réserver mon appel découverte
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
             </a>
           </Button>
+
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-8">
+            <div className="flex items-center gap-2 text-base sm:text-lg text-muted-foreground">
+              <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+              <span>Appel gratuit de 30 min</span>
+            </div>
+            <div className="flex items-center gap-2 text-base sm:text-lg text-muted-foreground">
+              <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+              <span>Plan d'action personnalisé</span>
+            </div>
+            <div className="flex items-center gap-2 text-base sm:text-lg text-muted-foreground">
+              <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+              <span>Résultats mesurables dès le 1er mois</span>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

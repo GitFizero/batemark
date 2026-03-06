@@ -4,6 +4,7 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { ProblemsSection } from "@/components/sections/ProblemsSection";
 import { PhilosophySection } from "@/components/sections/PhilosophySection";
 import { PillarsSection } from "@/components/sections/PillarsSection";
+import { CaseStudiesSection } from "@/components/sections/CaseStudiesSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { WhyBatemarkSection } from "@/components/sections/WhyBatemarkSection";
 import { FAQSection } from "@/components/sections/FAQSection";
@@ -48,24 +49,16 @@ const Index = () => {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Automatisation des process internes",
-                    "description": "Workflows automatisés via Make, n8n, Zapier"
+                    "name": "Automatisation de l'acquisition",
+                    "description": "Systèmes de leads automatisés, prospection LinkedIn, mailing IA"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Intégration d'agents IA",
-                    "description": "Agents IA greffés sur vos opérations existantes"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Pilotage & acquisition augmentée",
-                    "description": "Dashboards centralisés et analyse IA des performances"
+                    "name": "Automatisation des process opérationnels",
+                    "description": "Portails clients IA, dashboards décisionnels, gestion centralisée"
                   }
                 }
               ]
@@ -80,26 +73,26 @@ const Index = () => {
             "mainEntity": [
               {
                 "@type": "Question",
+                "name": "Quel type d'entreprise accompagnes-tu ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Je travaille avec des PME de 1 à 50 personnes, principalement dans les services, l'e-commerce et les agences."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Combien de temps pour voir des résultats ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Mes clients voient des résultats dès le premier mois. L'implémentation prend en moyenne 2 à 4 semaines selon la complexité."
+                }
+              },
+              {
+                "@type": "Question",
                 "name": "Y a-t-il un engagement minimum ?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Non. Pas d'engagement de durée. Vous pouvez arrêter à tout moment."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Combien de temps avant de voir des résultats ?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Les premiers quick wins arrivent dès le premier mois. Les transformations plus profondes se déploient sur 2 à 3 mois."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Faut-il déjà utiliser des outils d'IA ?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Non. On part de vos outils et process existants pour intégrer l'IA là où ça a du sens."
+                  "text": "Non. On commence par une mission définie, et on continue si les résultats sont là."
                 }
               }
             ]
@@ -119,6 +112,9 @@ const Index = () => {
         </section>
         <section id="services">
           <PillarsSection />
+        </section>
+        <section id="cas-clients">
+          <CaseStudiesSection />
         </section>
         <section id="methode">
           <ProcessSection />
