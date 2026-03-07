@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import montagneBg from "@/assets/montagne.svg";
 
-const CAL_LINK = "https://cal.com/gaetan-batemark/15min";
+const CAL_LINK = "https://cal.com/gaetan-batemark/audit";
 
 const rotatingWords = ["acquisition", "process", "décisions", "opérations"];
 
