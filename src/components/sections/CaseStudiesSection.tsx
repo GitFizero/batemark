@@ -53,9 +53,9 @@ const caseStudies = [
 ];
 
 const tagColors: Record<string, string> = {
-  "Acquisition": "bg-primary/15 text-primary",
-  "Prospection": "bg-secondary/20 text-secondary-foreground",
-  "Process opérationnel": "bg-accent/20 text-accent-foreground",
+  "Acquisition": "bg-primary text-primary-foreground",
+  "Prospection": "bg-secondary text-secondary-foreground",
+  "Process opérationnel": "bg-accent text-accent-foreground",
 };
 
 export const CaseStudiesSection = () => {
