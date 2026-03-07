@@ -1,0 +1,1 @@
+UPDATE public.ai_tools SET category = 'Prospection & CRM' WHERE category = 'Prospection & Acquisition';
