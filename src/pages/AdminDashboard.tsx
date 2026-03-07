@@ -267,6 +267,7 @@ ${content}`;
         </div>
       </div>
 
+      <div className="max-w-6xl mx-auto px-4 py-8">
         {/* Tabs */}
         <div className="flex gap-2 mb-8">
           <button
