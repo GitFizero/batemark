@@ -11,6 +11,7 @@ const navLinks = [
   { label: "Services", href: "#services" },
   { label: "Méthode", href: "#methode" },
   { label: "Pourquoi Batemark", href: "#pourquoi" },
+  { label: "Librairie IA", href: "/librairie-ia" },
   { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "#faq" },
 ];
