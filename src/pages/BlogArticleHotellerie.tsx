@@ -489,7 +489,7 @@ const BlogArticleHotellerie = () => {
                   ))}
                 </ul>
                 <Button variant="heroOutline" className="group w-full" asChild>
-                  <a href="https://meetlane.com?ref=batemark" target="_blank" rel="noopener noreferrer">
+                  <a href="https://meetlane.ai/?ref=FDYKP9IKTNKM" target="_blank" rel="noopener noreferrer">
                     Découvrir Meetlane
                     <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                   </a>
@@ -526,7 +526,7 @@ const BlogArticleHotellerie = () => {
                   ))}
                 </ul>
                 <Button variant="heroOutline" className="group w-full" asChild>
-                  <a href="https://manuscry.com?ref=batemark" target="_blank" rel="noopener noreferrer">
+                  <a href="https://manuscry.com/?ref=FDYKP9IKTNKM" target="_blank" rel="noopener noreferrer">
                     Découvrir Manuscry
                     <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                   </a>
