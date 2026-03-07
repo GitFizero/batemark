@@ -49,6 +49,19 @@ export const ContactFormDialog = ({ trigger }: ContactFormDialogProps) => {
       toast({ title: "Erreur lors de l'envoi", description: "Veuillez réessayer.", variant: "destructive" });
     } else {
       setSubmitted(true);
+      // Send webhook to Make.com (fire-and-forget)
+      fetch("https://hook.eu1.make.com/knu83iltl3vh917on9d7m6fzznjltpeb", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: name.trim(),
+          email: email.trim().toLowerCase(),
+          phone: phone.trim() || null,
+          message: message.trim() || null,
+          submitted_at: new Date().toISOString(),
+          source: window.location.href,
+        }),
+      }).catch(() => {});
     }
   };
 
