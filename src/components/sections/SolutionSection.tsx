@@ -4,7 +4,7 @@ import { ArrowRight, Search, Target, Video, Megaphone, TrendingUp, MessageSquare
 import { SectionFade } from "@/components/ui/SectionFade";
 import bgImage from "@/assets/bg-5.svg";
 
-const CAL_LINK = "https://cal.com/gaetan-batemark/15min";
+const CAL_LINK = "https://cal.com/gaetan-batemark/audit";
 
 const steps = [
   {

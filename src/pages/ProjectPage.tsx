@@ -7,7 +7,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Helmet } from "react-helmet-async";
 
-const CAL_LINK = "https://cal.com/gaetan-batemark/15min";
+const CAL_LINK = "https://cal.com/gaetan-batemark/audit";
 
 const ProjectPage = () => {
   const { slug } = useParams<{ slug: string }>();

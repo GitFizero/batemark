@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Zap, Clock, Star } from "lucide-react";
 import { SectionFade } from "@/components/ui/SectionFade";
 
-const CAL_LINK = "https://cal.com/gaetan-batemark/15min";
+const CAL_LINK = "https://cal.com/gaetan-batemark/audit";
 
 const baseFeatures = [
   "Accompagnement complet A à Z",

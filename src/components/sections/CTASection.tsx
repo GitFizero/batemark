@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, FileText, TrendingUp } from "lucide-react";
 
-const CAL_LINK = "https://cal.com/gaetan-batemark/15min";
+const CAL_LINK = "https://cal.com/gaetan-batemark/audit";
 
 export const CTASection = () => {
   return (
