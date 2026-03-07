@@ -1,6 +1,7 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { IABenefitsSection } from "@/components/sections/IABenefitsSection";
 import { ProblemsSection } from "@/components/sections/ProblemsSection";
 import { PhilosophySection } from "@/components/sections/PhilosophySection";
 import { PillarsSection } from "@/components/sections/PillarsSection";
