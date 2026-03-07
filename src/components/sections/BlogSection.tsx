@@ -81,7 +81,7 @@ export const BlogSection = () => {
               Ressources <span className="text-gradient-copper">& conseils</span>
             </h2>
             <p className="text-xl text-muted-foreground">
-              Apprenez les meilleures pratiques Meta Ads
+              Guides pratiques IA & automatisation pour votre business
             </p>
           </div>
           <Button variant="heroOutline" size="lg" className="mt-6 md:mt-0 group" asChild>
@@ -94,39 +94,40 @@ export const BlogSection = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {articles.map((article, index) => (
-            <motion.article
-              key={article.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="card-premium p-0 overflow-hidden group cursor-pointer hover:border-copper/30 transition-all duration-300"
-            >
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={article.image_url}
-                  alt={article.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 rounded-full text-xs font-semibold gradient-copper text-background">
-                    {article.category}
-                  </span>
+            <a key={article.id} href={`/blog/${article.slug}`} className="block">
+              <motion.article
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="card-premium p-0 overflow-hidden group cursor-pointer hover:border-copper/30 transition-all duration-300 h-full"
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={article.image_url}
+                    alt={article.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="px-3 py-1 rounded-full text-xs font-semibold gradient-copper text-background">
+                      {article.category}
+                    </span>
+                  </div>
                 </div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
-                  <Calendar className="w-4 h-4" />
-                  {formatDate(article.published_at)}
+                <div className="p-6">
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
+                    <Calendar className="w-4 h-4" />
+                    {formatDate(article.published_at)}
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 group-hover:text-copper transition-colors line-clamp-2">
+                    {article.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground line-clamp-2">
+                    {article.excerpt}
+                  </p>
                 </div>
-                <h3 className="text-lg font-semibold mb-2 group-hover:text-copper transition-colors line-clamp-2">
-                  {article.title}
-                </h3>
-                <p className="text-sm text-muted-foreground line-clamp-2">
-                  {article.excerpt}
-                </p>
-              </div>
-            </motion.article>
+              </motion.article>
+            </a>
           ))}
         </div>
       </div>
