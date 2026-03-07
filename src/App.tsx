@@ -11,6 +11,8 @@ import MentionsLegales from "./pages/MentionsLegales";
 import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog";
 import BlogArticleHotellerie from "./pages/BlogArticleHotellerie";
+import AdminLogin from "./pages/AdminLogin";
+import AdminDashboard from "./pages/AdminDashboard";
 
 const queryClient = new QueryClient();
 
