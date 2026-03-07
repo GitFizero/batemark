@@ -7,6 +7,14 @@ import figuerollesImg from "@/assets/figuerolles.jpg";
 
 const articles = [
   {
+    title: "Formation IA : pourquoi votre entreprise n'a PAS besoin de se former",
+    slug: "/blog/formation-intelligence-artificielle",
+    excerpt: "Formation IA, formation intelligence artificielle… et si c'était une erreur ? Découvrez pourquoi l'accompagnement IA sur mesure est bien plus efficace qu'une certification obsolète dans 12 mois.",
+    category: "Intelligence artificielle",
+    image: figuerollesImg,
+    date: "2026-03-07",
+  },
+  {
     title: "Comment l'IA transforme l'hôtellerie-restauration — guide complet 2025",
     slug: "/blog/ia-hotellerie-restauration",
     excerpt: "L'intelligence artificielle permet aux hôtels et restaurants d'automatiser leur acquisition client et d'augmenter leur taux de remplissage hors saison. Cas réel : +43 % à Figuerolles.",
