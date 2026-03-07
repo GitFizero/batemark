@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
+import { AdminToolsManager } from "@/components/admin/AdminToolsManager";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -244,6 +245,8 @@ ${content}`;
 
   const showForm = creating || editing;
 
+  const [activeTab, setActiveTab] = useState<"articles" | "tools">("articles");
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -264,8 +267,25 @@ ${content}`;
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        {!showForm ? (
+        {/* Tabs */}
+        <div className="flex gap-2 mb-8">
+          <button
+            onClick={() => setActiveTab("articles")}
+            className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${activeTab === "articles" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}
+          >
+            Articles
+          </button>
+          <button
+            onClick={() => setActiveTab("tools")}
+            className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${activeTab === "tools" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}
+          >
+            Outils IA
+          </button>
+        </div>
+
+        {activeTab === "tools" ? (
+          <AdminToolsManager />
+        ) : !showForm ? (
           <>
             <div className="flex items-center justify-between mb-8">
               <h1 className="text-2xl font-bold">Articles</h1>
