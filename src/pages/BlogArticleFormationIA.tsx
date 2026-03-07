@@ -559,11 +559,13 @@ const BlogArticleFormationIA = () => {
               <p className="text-background/80 text-lg mb-8 max-w-2xl mx-auto">
                 Commençons par un audit de vos processus. Identifiez avec nous les 3 automatisations qui vont vous faire gagner du temps dès ce mois-ci.
               </p>
-              <ContactFormDialog>
-                <Button variant="outline" size="xl" className="bg-background text-foreground border-background hover:bg-background/90 font-bold">
-                  Demander un audit IA gratuit <ArrowRight className="ml-2" />
-                </Button>
-              </ContactFormDialog>
+              <ContactFormDialog
+                trigger={
+                  <Button variant="outline" size="xl" className="bg-background text-foreground border-background hover:bg-background/90 font-bold">
+                    Demander un audit IA gratuit <ArrowRight className="ml-2" />
+                  </Button>
+                }
+              />
             </motion.div>
           </section>
 
