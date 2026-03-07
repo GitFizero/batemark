@@ -15,13 +15,13 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>IA & Automatisation pour PME — BATEMARK</title>
+        <title>IA & Automatisation pour votre entreprise — BATEMARK</title>
         <meta 
           name="description" 
-          content="Intégrer l'IA dans votre entreprise et automatiser vos process internes. Consultant spécialisé en automatisation, agents IA et pilotage augmenté pour TPE/PME. Appel découverte gratuit." 
+          content="Intégrer l'IA dans votre entreprise et automatiser vos process internes. Consultant spécialisé en automatisation, agents IA et pilotage augmenté. Appel découverte gratuit." 
         />
-        <meta name="keywords" content="intégrer IA entreprise, automatiser entreprise, automatisation process, agents IA, consultant IA, intégration IA PME, automatisation TPE PME, make n8n zapier, dashboard pilotage IA" />
-        <meta property="og:title" content="IA & Automatisation pour PME — BATEMARK" />
+        <meta name="keywords" content="intégrer IA entreprise, automatiser entreprise, automatisation process, agents IA, consultant IA, intégration IA, make n8n zapier, dashboard pilotage IA" />
+        <meta property="og:title" content="IA & Automatisation pour votre entreprise — BATEMARK" />
         <meta property="og:description" content="Consultant spécialisé pour intégrer l'IA et automatiser les process de votre entreprise. Agents IA, automatisation, pilotage augmenté." />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://batemark.fr" />
@@ -76,7 +76,7 @@ const Index = () => {
                 "name": "Quel type d'entreprise accompagnes-tu ?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Je travaille avec des PME de 1 à 50 personnes, principalement dans les services, l'e-commerce et les agences."
+                  "text": "Je travaille avec des entreprises de toutes tailles, principalement dans les services, l'e-commerce et les agences."
                 }
               },
               {
