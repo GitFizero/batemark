@@ -105,6 +105,9 @@ const Index = () => {
       
       <main>
         <HeroSection />
+        <section id="ia-benefices">
+          <IABenefitsSection />
+        </section>
         <section id="probleme">
           <ProblemsSection />
         </section>
