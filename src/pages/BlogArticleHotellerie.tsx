@@ -147,7 +147,7 @@ const BlogArticleHotellerie = () => {
                 En bref : L'intelligence artificielle permet aux hôtels et restaurants d'automatiser leur acquisition client, de relancer leur base existante et d'optimiser leurs tarifs en temps réel. Résultat : jusqu'à <strong className="text-foreground">+43 % de taux de remplissage hors saison</strong>, comme l'a démontré le cas de La République Indépendante de Figuerolles à La Ciotat.
               </p>
               <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground border-t border-b border-border py-4">
-                <span>✍️ Par <strong className="text-foreground">Batemark</strong></span>
+                <span>✍️ Par <strong className="text-foreground">Gaëtan Fizero</strong></span>
                 <span>📅 1 juin 2025</span>
                 <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> 8 min de lecture</span>
               </div>
