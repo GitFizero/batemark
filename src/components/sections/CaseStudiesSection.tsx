@@ -2,21 +2,22 @@ import { motion } from "framer-motion";
 import { SectionFade } from "@/components/ui/SectionFade";
 import caseAtlantica from "@/assets/case-atlantica.jpg";
 import caseFunelin from "@/assets/case-funelin.jpg";
-import caseMediacast from "@/assets/case-mediacast.jpg";
+import caseMediacast from "@/assets/case-mediacast-new.jpg";
 import caseV8 from "@/assets/case-v8.jpg";
 import caseLocomedia from "@/assets/case-locomedia.jpg";
+import caseFiguerolles from "@/assets/figuerolles.jpg";
 
 const caseStudies = [
   {
     name: "Atlantica Minceur",
-    context: "Mise en place d'un système d'acquisition de leads automatisé",
-    result: "15 000€ générés dès le 1er mois pour 350€ d'investissement",
+    context: "Système d'acquisition de leads automatisé",
+    result: "15 000€ générés dès le 1er mois pour 350€ investis",
     tag: "Acquisition",
     image: caseAtlantica,
   },
   {
     name: "Funel-In",
-    context: "Automatisation de la prospection LinkedIn + lead nurturing sur Notion",
+    context: "Prospection LinkedIn + lead nurturing automatisés",
     result: "6 800€ générés le 1er mois pour 380€ investis",
     tag: "Prospection",
     image: caseFunelin,
@@ -30,17 +31,24 @@ const caseStudies = [
   },
   {
     name: "V8 Equipment",
-    context: "Automatisation mailing IA + système d'acquisition Meta",
-    result: "9 tentes de toit vendues — 24 500€ générés en 1 mois",
+    context: "Mailing IA + système d'acquisition Meta",
+    result: "24 500€ générés en 1 mois — 9 tentes de toit vendues",
     tag: "Acquisition",
     image: caseV8,
   },
   {
     name: "Loco Media",
-    context: "Portail de gestion de campagnes Meta & Google pour 200+ clients",
-    result: "6h économisées/semaine par membre d'équipe (x5 personnes)",
+    context: "Portail de gestion de campagnes pour 200+ clients",
+    result: "6h économisées/semaine par membre d'équipe (x5)",
     tag: "Process opérationnel",
     image: caseLocomedia,
+  },
+  {
+    name: "La République Indépendante de Figuerolles",
+    context: "Acquisition IA pour un hôtel-restaurant indépendant",
+    result: "+43% de taux de remplissage hors saison",
+    tag: "Acquisition",
+    image: caseFiguerolles,
   },
 ];
 
