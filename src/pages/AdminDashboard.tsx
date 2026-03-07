@@ -97,15 +97,42 @@ const AdminDashboard = () => {
     setOgDescription("");
   };
 
+  const parseSeoFromContent = (rawContent: string) => {
+    const seoMatch = rawContent.match(/<!--SEO\n([\s\S]*?)-->/);
+    let htmlContent = rawContent;
+    let seo = { meta_title: "", meta_description: "", og_title: "", og_description: "" };
+    
+    if (seoMatch) {
+      htmlContent = rawContent.replace(/<!--SEO\n[\s\S]*?-->\n?/, "").trim();
+      const lines = seoMatch[1].split("\n");
+      lines.forEach(line => {
+        const [key, ...rest] = line.split(": ");
+        const value = rest.join(": ").trim();
+        if (key.trim() === "meta_title") seo.meta_title = value;
+        if (key.trim() === "meta_description") seo.meta_description = value;
+        if (key.trim() === "og_title") seo.og_title = value;
+        if (key.trim() === "og_description") seo.og_description = value;
+      });
+    }
+    return { htmlContent, seo };
+  };
+
   const loadArticle = (article: Article) => {
     setTitle(article.title);
     setSlug(article.slug);
     setExcerpt(article.excerpt);
-    setContent(article.content || "");
     setCategory(article.category);
     setImageUrl(article.image_url);
     setIsPublished(article.is_published);
     setPublishedAt(article.published_at?.slice(0, 10) || "");
+    
+    const { htmlContent, seo } = parseSeoFromContent(article.content || "");
+    setContent(htmlContent);
+    setMetaTitle(seo.meta_title);
+    setMetaDescription(seo.meta_description);
+    setOgTitle(seo.og_title);
+    setOgDescription(seo.og_description);
+    
     setEditing(article);
     setCreating(false);
   };
