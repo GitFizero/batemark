@@ -9,6 +9,8 @@ import CGV from "./pages/CGV";
 import Confidentialite from "./pages/Confidentialite";
 import MentionsLegales from "./pages/MentionsLegales";
 import NotFound from "./pages/NotFound";
+import Blog from "./pages/Blog";
+import BlogArticleHotellerie from "./pages/BlogArticleHotellerie";
 
 const queryClient = new QueryClient();
 
