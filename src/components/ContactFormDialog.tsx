@@ -36,12 +36,12 @@ export const ContactFormDialog = ({ trigger }: ContactFormDialogProps) => {
     }
 
     setLoading(true);
-    const { error } = await supabase.from("contact_requests").insert({
+    const { error } = await supabase.from("contact_requests" as any).insert({
       name: name.trim().slice(0, 100),
       email: email.trim().toLowerCase().slice(0, 255),
       phone: phone.trim().slice(0, 20) || null,
       message: message.trim().slice(0, 2000) || null,
-    });
+    } as any);
 
     setLoading(false);
 

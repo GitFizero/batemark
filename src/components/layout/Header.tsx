@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { ContactFormDialog } from "@/components/ContactFormDialog";
 import logo from "@/assets/logo.png";
 
 const navLinks = [
@@ -10,10 +11,9 @@ const navLinks = [
   { label: "Services", href: "#services" },
   { label: "Méthode", href: "#methode" },
   { label: "Pourquoi Batemark", href: "#pourquoi" },
+  { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "#faq" },
 ];
-
-const CAL_LINK = "https://cal.com/gaetan-batemark/15min";
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -57,11 +57,13 @@ export const Header = () => {
           </nav>
 
           <div className="hidden lg:flex items-center">
-            <Button variant="hero" size="lg" asChild>
-              <a href={CAL_LINK} target="_blank" rel="noopener noreferrer">
-                Réserver un appel
-              </a>
-            </Button>
+            <ContactFormDialog
+              trigger={
+                <Button variant="hero" size="lg">
+                  Demander un audit
+                </Button>
+              }
+            />
           </div>
 
           <button
@@ -95,11 +97,13 @@ export const Header = () => {
                 </a>
               ))}
               <div className="mt-4">
-                <Button variant="hero" size="lg" className="w-full" asChild>
-                  <a href={CAL_LINK} target="_blank" rel="noopener noreferrer">
-                    Réserver un appel
-                  </a>
-                </Button>
+                <ContactFormDialog
+                  trigger={
+                    <Button variant="hero" size="lg" className="w-full">
+                      Demander un audit
+                    </Button>
+                  }
+                />
               </div>
             </nav>
           </motion.div>
