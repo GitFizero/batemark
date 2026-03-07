@@ -9,6 +9,7 @@ import { CaseStudiesSection } from "@/components/sections/CaseStudiesSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { WhyBatemarkSection } from "@/components/sections/WhyBatemarkSection";
 import { BlogSection } from "@/components/sections/BlogSection";
+import { LibrairieSection } from "@/components/sections/LibrairieSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { Helmet } from "react-helmet-async";
@@ -126,6 +127,9 @@ const Index = () => {
         </section>
         <section id="pourquoi">
           <WhyBatemarkSection />
+        </section>
+        <section id="librairie-ia">
+          <LibrairieSection />
         </section>
         <section id="blog">
           <BlogSection />
