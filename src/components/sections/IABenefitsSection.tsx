@@ -1,28 +1,31 @@
 import { motion } from "framer-motion";
-import { Zap, TrendingUp, Target } from "lucide-react";
+import { Zap, TrendingUp, Target, Clock, Bot, Rocket } from "lucide-react";
 import { SectionFade } from "@/components/ui/SectionFade";
 
 const benefits = [
   {
     icon: Zap,
-    title: "Automatisez vos process, libérez du temps",
+    secondaryIcon: Clock,
+    title: "Automatisez vos process",
     description:
-      "Chaque entreprise perd des dizaines d'heures par semaine sur des tâches répétitives : saisie de données, relances, reporting, gestion administrative. L'IA prend en charge ces tâches à faible valeur ajoutée pour que vos équipes se concentrent enfin sur ce qui compte : la stratégie, la créativité, la relation client.",
-    highlight: "Résultat : 6 à 8h récupérées par personne et par semaine.",
+      "L'IA prend en charge les tâches répétitives — relances, reporting, saisie — pour que vos équipes se concentrent sur ce qui compte.",
+    highlight: "6 à 8h récupérées par personne / semaine",
   },
   {
     icon: TrendingUp,
-    title: "Améliorez votre productivité globale",
+    secondaryIcon: Bot,
+    title: "Boostez votre productivité",
     description:
-      "L'IA ne remplace pas vos équipes — elle les rend plus efficaces. En automatisant les workflows internes (onboarding client, suivi de projet, dashboards en temps réel), chaque collaborateur traite plus de volume avec moins d'effort. Moins d'erreurs humaines, des décisions plus rapides, et une vision claire de la performance à chaque instant.",
-    highlight: "Vos équipes font plus, mieux, et avec moins de friction.",
+      "Automatisez les workflows internes pour traiter plus de volume, avec moins d'effort et zéro erreur humaine.",
+    highlight: "Plus de résultats, moins de friction",
   },
   {
     icon: Target,
-    title: "Mettez en place une vraie stratégie d'acquisition",
+    secondaryIcon: Rocket,
+    title: "Accélérez votre acquisition",
     description:
-      "Vos concurrents utilisent déjà l'IA pour prospecter, qualifier et convertir des leads — en automatique. Prospection LinkedIn, séquences email personnalisées, campagnes Meta optimisées par l'IA : ceux qui intègrent ces systèmes aujourd'hui prennent une avance décisive. L'IA n'est plus un avantage, c'est une nécessité pour rester dans le top 10% de votre secteur.",
-    highlight: "Ne subissez pas la vague — surfez-la avant vos concurrents.",
+      "Prospection, qualification, conversion — en automatique. Ceux qui intègrent l'IA aujourd'hui prennent une avance décisive.",
+    highlight: "Surfez la vague avant vos concurrents",
   },
 ];
 
@@ -44,8 +47,8 @@ export const IABenefitsSection = () => {
             Ce que l'IA change{" "}
             <span className="text-gradient-copper">concrètement</span>
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-            L'intelligence artificielle n'est pas un buzzword. C'est un levier opérationnel qui transforme la façon dont votre entreprise fonctionne — dès le premier mois.
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto">
+            Un levier opérationnel qui transforme votre entreprise — dès le premier mois.
           </p>
         </motion.div>
 
@@ -57,18 +60,27 @@ export const IABenefitsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.12 }}
-              className="card-premium group hover:border-primary/30 transition-all duration-300 flex flex-col"
+              className="card-premium group hover:border-primary/30 transition-all duration-300 flex flex-col items-center text-center"
             >
-              <div className="p-4 rounded-2xl bg-primary/10 w-fit mb-5">
-                <benefit.icon className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
+              {/* Icon cluster */}
+              <div className="relative mb-6">
+                <div className="p-5 rounded-2xl bg-primary/10 group-hover:bg-primary/15 transition-colors">
+                  <benefit.icon className="w-10 h-10 text-primary group-hover:scale-110 transition-transform" />
+                </div>
+                <div className="absolute -bottom-2 -right-2 p-2 rounded-xl bg-background border border-border shadow-lg">
+                  <benefit.secondaryIcon className="w-4 h-4 text-primary/70" />
+                </div>
               </div>
+
               <h3 className="text-xl sm:text-2xl font-bold mb-3">{benefit.title}</h3>
-              <p className="text-muted-foreground text-base sm:text-lg mb-4 flex-1">
+              <p className="text-muted-foreground text-sm sm:text-base mb-5 flex-1">
                 {benefit.description}
               </p>
-              <p className="text-primary font-bold text-base sm:text-lg pt-4 border-t border-border">
-                {benefit.highlight}
-              </p>
+              <div className="w-full pt-4 border-t border-border">
+                <p className="text-primary font-bold text-sm sm:text-base">
+                  {benefit.highlight}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>
