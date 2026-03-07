@@ -85,7 +85,7 @@ export const BlogSection = () => {
             </p>
           </div>
           <Button variant="heroOutline" size="lg" className="mt-6 md:mt-0 group" asChild>
-            <a href="/journal">
+            <a href="/blog">
               Voir tous les articles
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
             </a>
