@@ -6,14 +6,9 @@ import { ContactFormDialog } from "@/components/ContactFormDialog";
 import logo from "@/assets/logo.svg";
 
 const navLinks = [
-  { label: "Problème", href: "#probleme" },
-  { label: "Approche", href: "#approche" },
-  { label: "Services", href: "#services" },
-  { label: "Méthode", href: "#methode" },
-  { label: "Pourquoi Batemark", href: "#pourquoi" },
+  { label: "Méthode Batemark", href: "/#methode" },
   { label: "Librairie IA", href: "/librairie-ia" },
   { label: "Blog", href: "/blog" },
-  { label: "FAQ", href: "#faq" },
 ];
 
 export const Header = () => {
