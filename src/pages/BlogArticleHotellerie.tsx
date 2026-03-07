@@ -10,10 +10,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { ContactFormDialog } from "@/components/ContactFormDialog";
 import figuerollesImg from "@/assets/figuerolles.jpg";
 import gregoryImg from "@/assets/gregory.png";
 
-const CAL_LINK = "https://cal.com/gaetan-batemark/15min";
 
 const BlogArticleHotellerie = () => {
   return (
@@ -284,12 +284,14 @@ const BlogArticleHotellerie = () => {
             <div className="rounded-2xl p-8 sm:p-10 text-center" style={{ background: "linear-gradient(135deg, hsl(220 12% 10%), hsl(220 15% 7%))" }}>
               <h3 className="text-xl sm:text-2xl font-bold mb-3">Vous voulez savoir où l'IA peut vous faire gagner du temps ?</h3>
               <p className="text-muted-foreground mb-6">Obtenez un audit gratuit de vos process en 10 minutes.</p>
-              <Button variant="hero" size="lg" className="group" asChild>
-                <a href={CAL_LINK} target="_blank" rel="noopener noreferrer">
-                  Démarrer mon audit
-                  <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-                </a>
-              </Button>
+              <ContactFormDialog
+                trigger={
+                  <Button variant="hero" size="lg" className="group">
+                    Démarrer mon audit
+                    <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                }
+              />
             </div>
           </section>
 
@@ -438,12 +440,14 @@ const BlogArticleHotellerie = () => {
             <div className="rounded-2xl p-8 sm:p-10 text-center" style={{ background: "linear-gradient(135deg, hsl(220 12% 10%), hsl(220 15% 7%))" }}>
               <h3 className="text-xl sm:text-2xl font-bold mb-3">Prêt à automatiser votre acquisition ?</h3>
               <p className="text-muted-foreground mb-6">Répondez à 3 questions pour recevoir un plan d'action personnalisé.</p>
-              <Button variant="hero" size="lg" className="group" asChild>
-                <a href={CAL_LINK} target="_blank" rel="noopener noreferrer">
-                  Je veux mon plan d'action
-                  <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-                </a>
-              </Button>
+              <ContactFormDialog
+                trigger={
+                  <Button variant="hero" size="lg" className="group">
+                    Je veux mon plan d'action
+                    <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                }
+              />
             </div>
           </section>
 
@@ -588,12 +592,14 @@ const BlogArticleHotellerie = () => {
                 <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
                   En 10 minutes, obtenez un plan d'action personnalisé pour votre hôtel ou restaurant. Gratuit, sans engagement.
                 </p>
-                <Button variant="hero" size="xl" className="group animate-pulse-glow" asChild>
-                  <a href={CAL_LINK} target="_blank" rel="noopener noreferrer">
-                    Je veux mon audit gratuit
-                    <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-                  </a>
-                </Button>
+                <ContactFormDialog
+                  trigger={
+                    <Button variant="hero" size="xl" className="group animate-pulse-glow">
+                      Je veux mon audit gratuit
+                      <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  }
+                />
               </div>
             </div>
           </section>

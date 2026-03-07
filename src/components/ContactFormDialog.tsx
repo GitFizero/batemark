@@ -1,0 +1,158 @@
+import { useState } from "react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { toast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
+
+interface ContactFormDialogProps {
+  trigger: React.ReactNode;
+}
+
+export const ContactFormDialog = ({ trigger }: ContactFormDialogProps) => {
+  const [open, setOpen] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!name.trim() || !email.trim()) {
+      toast({ title: "Veuillez remplir les champs obligatoires.", variant: "destructive" });
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.trim())) {
+      toast({ title: "Adresse email invalide.", variant: "destructive" });
+      return;
+    }
+
+    setLoading(true);
+    const { error } = await supabase.from("contact_requests" as any).insert({
+      name: name.trim().slice(0, 100),
+      email: email.trim().toLowerCase().slice(0, 255),
+      phone: phone.trim().slice(0, 20) || null,
+      message: message.trim().slice(0, 2000) || null,
+    } as any);
+
+    setLoading(false);
+
+    if (error) {
+      toast({ title: "Erreur lors de l'envoi", description: "Veuillez réessayer.", variant: "destructive" });
+    } else {
+      setSubmitted(true);
+    }
+  };
+
+  const handleOpenChange = (v: boolean) => {
+    setOpen(v);
+    if (!v) {
+      // Reset on close
+      setTimeout(() => {
+        setSubmitted(false);
+        setName("");
+        setEmail("");
+        setPhone("");
+        setMessage("");
+      }, 300);
+    }
+  };
+
+  return (
+    <Dialog open={open} onOpenChange={handleOpenChange}>
+      <DialogTrigger asChild>{trigger}</DialogTrigger>
+      <DialogContent className="sm:max-w-md">
+        {submitted ? (
+          <div className="text-center py-8">
+            <CheckCircle2 className="w-16 h-16 text-primary mx-auto mb-4" />
+            <h3 className="text-2xl font-bold mb-2">Merci !</h3>
+            <p className="text-muted-foreground">
+              Votre demande a bien été envoyée. Nous vous recontactons sous 24h.
+            </p>
+            <Button variant="hero" className="mt-6" onClick={() => handleOpenChange(false)}>
+              Fermer
+            </Button>
+          </div>
+        ) : (
+          <>
+            <DialogHeader>
+              <DialogTitle className="text-xl font-bold">
+                Demander votre audit gratuit
+              </DialogTitle>
+              <p className="text-sm text-muted-foreground mt-1">
+                Remplissez ce formulaire et nous vous recontactons sous 24h.
+              </p>
+            </DialogHeader>
+            <form onSubmit={handleSubmit} className="space-y-4 mt-4">
+              <div>
+                <Label htmlFor="contact-name">Nom complet *</Label>
+                <Input
+                  id="contact-name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Jean Dupont"
+                  maxLength={100}
+                  required
+                  className="mt-1"
+                />
+              </div>
+              <div>
+                <Label htmlFor="contact-email">Email *</Label>
+                <Input
+                  id="contact-email"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="jean@exemple.com"
+                  maxLength={255}
+                  required
+                  className="mt-1"
+                />
+              </div>
+              <div>
+                <Label htmlFor="contact-phone">
+                  Téléphone <span className="text-muted-foreground text-xs">(optionnel)</span>
+                </Label>
+                <Input
+                  id="contact-phone"
+                  type="tel"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  placeholder="06 12 34 56 78"
+                  maxLength={20}
+                  className="mt-1"
+                />
+              </div>
+              <div>
+                <Label htmlFor="contact-message">
+                  Message <span className="text-muted-foreground text-xs">(optionnel)</span>
+                </Label>
+                <Textarea
+                  id="contact-message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder="Décrivez brièvement votre projet..."
+                  maxLength={2000}
+                  rows={3}
+                  className="mt-1"
+                />
+              </div>
+              <Button type="submit" variant="hero" className="w-full group" disabled={loading}>
+                {loading ? "Envoi en cours..." : "Envoyer ma demande"}
+                {!loading && <ArrowRight className="group-hover:translate-x-1 transition-transform" />}
+              </Button>
+            </form>
+          </>
+        )}
+      </DialogContent>
+    </Dialog>
+  );
+};
