@@ -14,6 +14,45 @@ export type Database = {
   }
   public: {
     Tables: {
+      ai_tools: {
+        Row: {
+          affiliate_url: string
+          category: string
+          created_at: string
+          description: string
+          display_order: number
+          id: string
+          is_active: boolean
+          logo_url: string | null
+          name: string
+          updated_at: string
+        }
+        Insert: {
+          affiliate_url: string
+          category?: string
+          created_at?: string
+          description: string
+          display_order?: number
+          id?: string
+          is_active?: boolean
+          logo_url?: string | null
+          name: string
+          updated_at?: string
+        }
+        Update: {
+          affiliate_url?: string
+          category?: string
+          created_at?: string
+          description?: string
+          display_order?: number
+          id?: string
+          is_active?: boolean
+          logo_url?: string | null
+          name?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       articles: {
         Row: {
           category: string
