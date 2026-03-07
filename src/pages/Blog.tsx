@@ -1,30 +1,39 @@
+import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, ChevronRight, BookOpen, Users, Lightbulb } from "lucide-react";
-import figuerollesImg from "@/assets/figuerolles.jpg";
+import { supabase } from "@/integrations/supabase/client";
 
-const articles = [
-  {
-    title: "Formation IA : pourquoi votre entreprise n'a PAS besoin de se former",
-    slug: "/blog/formation-intelligence-artificielle",
-    excerpt: "Formation IA, formation intelligence artificielle… et si c'était une erreur ? Découvrez pourquoi l'accompagnement IA sur mesure est bien plus efficace qu'une certification obsolète dans 12 mois.",
-    category: "Intelligence artificielle",
-    image: figuerollesImg,
-    date: "2026-03-07",
-  },
-  {
-    title: "Comment l'IA transforme l'hôtellerie-restauration — guide complet 2025",
-    slug: "/blog/ia-hotellerie-restauration",
-    excerpt: "L'intelligence artificielle permet aux hôtels et restaurants d'automatiser leur acquisition client et d'augmenter leur taux de remplissage hors saison. Cas réel : +43 % à Figuerolles.",
-    category: "Hôtellerie & Restauration",
-    image: figuerollesImg,
-    date: "2025-06-01",
-  },
-];
+interface Article {
+  id: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  category: string;
+  image_url: string;
+  published_at: string | null;
+  created_at: string;
+}
 
 const Blog = () => {
+  const [articles, setArticles] = useState<Article[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchArticles = async () => {
+      const { data } = await supabase
+        .from("articles")
+        .select("id, title, slug, excerpt, category, image_url, published_at, created_at")
+        .eq("is_published", true)
+        .order("published_at", { ascending: false });
+      if (data) setArticles(data);
+      setLoading(false);
+    };
+    fetchArticles();
+  }, []);
+
   const jsonLdBreadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -51,9 +60,9 @@ const Blog = () => {
       "@type": "BlogPosting",
       "headline": a.title,
       "description": a.excerpt,
-      "url": `https://batemark.fr${a.slug}`,
-      "datePublished": a.date,
-      "image": a.image,
+      "url": `https://batemark.fr/blog/${a.slug}`,
+      "datePublished": a.published_at || a.created_at,
+      "image": a.image_url,
       "author": { "@type": "Person", "name": "Gaëtan Fizero" },
       "publisher": { "@type": "Organization", "name": "BATEMARK" },
     })),
@@ -143,49 +152,55 @@ const Blog = () => {
               </div>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {articles.map((article, index) => (
-                <motion.a
-                  key={article.slug}
-                  href={article.slug}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="card-premium p-0 overflow-hidden group cursor-pointer hover:border-primary/30 transition-all duration-300"
-                >
-                  <div className="relative h-48 overflow-hidden">
-                    <img
-                      src={article.image}
-                      alt={article.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      loading="lazy"
-                      width="400"
-                      height="192"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 rounded-full text-xs font-semibold gradient-copper text-background">
-                        {article.category}
+            {loading ? (
+              <div className="text-center text-muted-foreground py-12">Chargement des articles...</div>
+            ) : (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                {articles.map((article, index) => (
+                  <motion.a
+                    key={article.id}
+                    href={`/blog/${article.slug}`}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="card-premium p-0 overflow-hidden group cursor-pointer hover:border-primary/30 transition-all duration-300"
+                  >
+                    <div className="relative h-48 overflow-hidden">
+                      <img
+                        src={article.image_url}
+                        alt={article.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        loading="lazy"
+                        width="400"
+                        height="192"
+                      />
+                      <div className="absolute top-4 left-4">
+                        <span className="px-3 py-1 rounded-full text-xs font-semibold gradient-copper text-background">
+                          {article.category}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="p-6">
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
+                        <Calendar className="w-4 h-4" />
+                        <time dateTime={article.published_at || article.created_at}>
+                          {formatDate(article.published_at || article.created_at)}
+                        </time>
+                      </div>
+                      <h2 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                        {article.title}
+                      </h2>
+                      <p className="text-sm text-muted-foreground line-clamp-3 mb-4">
+                        {article.excerpt}
+                      </p>
+                      <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:gap-2 transition-all">
+                        Lire l'article <ArrowRight className="w-4 h-4" />
                       </span>
                     </div>
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
-                      <Calendar className="w-4 h-4" />
-                      <time dateTime={article.date}>{formatDate(article.date)}</time>
-                    </div>
-                    <h2 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                      {article.title}
-                    </h2>
-                    <p className="text-sm text-muted-foreground line-clamp-3 mb-4">
-                      {article.excerpt}
-                    </p>
-                    <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:gap-2 transition-all">
-                      Lire l'article <ArrowRight className="w-4 h-4" />
-                    </span>
-                  </div>
-                </motion.a>
-              ))}
-            </div>
+                  </motion.a>
+                ))}
+              </div>
+            )}
           </div>
         </section>
       </main>
