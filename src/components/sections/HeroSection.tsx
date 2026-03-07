@@ -33,7 +33,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.6 }}
             className="text-primary font-semibold text-base sm:text-xl mb-4 md:mb-6 tracking-wide uppercase"
           >
-            IA & Automatisation pour TPE / PME
+            IA & Automatisation pour votre entreprise
           </motion.p>
 
           <motion.h1
@@ -56,8 +56,7 @@ export const HeroSection = () => {
                   {rotatingWords[wordIndex]}
                 </motion.span>
               </AnimatePresence>
-            </span>{" "}
-            et regardez vos résultats décoller
+            </span>
           </motion.h1>
 
           <motion.p
@@ -66,7 +65,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg sm:text-2xl md:text-3xl text-muted-foreground mb-8 md:mb-12 max-w-3xl mx-auto"
           >
-            J'implémente des systèmes IA sur-mesure pour les PME qui veulent générer plus, sans travailler plus.
+            Pour ne pas être balayé par la vague de l'IA, apprenez à la surfer.
           </motion.p>
 
           <motion.div

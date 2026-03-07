@@ -11,7 +11,7 @@ import bgImage from "@/assets/bg-4.svg";
 const faqs = [
   {
     question: "Quel type d'entreprise accompagnes-tu ?",
-    answer: "Je travaille avec des PME de 1 à 50 personnes, principalement dans les services, l'e-commerce et les agences. Si vous avez des process répétitifs ou une acquisition à structurer, on peut travailler ensemble.",
+    answer: "Je travaille avec des entreprises de toutes tailles, principalement dans les services, l'e-commerce et les agences. Si vous avez des process répétitifs ou une acquisition à structurer, on peut travailler ensemble.",
   },
   {
     question: "Combien de temps pour voir des résultats ?",

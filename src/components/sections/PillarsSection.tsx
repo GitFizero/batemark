@@ -143,7 +143,7 @@ export const PillarsSection = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center text-lg sm:text-xl md:text-2xl italic text-secondary mt-12 max-w-4xl mx-auto"
         >
-          Un système qui attire les clients. Un système qui les gère efficacement. C'est ça, une PME qui scale avec l'IA.
+          Un système qui attire les clients. Un système qui les gère efficacement. C'est ça, une entreprise qui scale avec l'IA.
         </motion.p>
       </div>
     </section>
