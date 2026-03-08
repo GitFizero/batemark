@@ -6,8 +6,19 @@
     <title>Intégrer l'IA en entreprise | Automatiser vos process — BATEMARK</title>
     <meta name="description" content="Consultant spécialisé pour intégrer l'IA et automatiser les process de votre entreprise. Agents IA, automatisation, pilotage augmenté pour TPE/PME. Appel découverte gratuit." />
     <meta name="author" content="Gaëtan Fizero" />
-    <meta name="keywords" content="intégrer IA entreprise, automatiser entreprise, automatisation process, agents IA, consultant IA, intégration IA PME, automatisation TPE PME" />
+    <meta name="theme-color" content="#B4836D" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="ai-content-declaration" content="human-assisted" />
     <link rel="canonical" href="https://batemark.fr" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="me" href="https://www.linkedin.com/in/gaetanfizero/" />
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://tadvuqeknasqzapnymqx.supabase.co" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://tadvuqeknasqzapnymqx.supabase.co" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -24,7 +35,42 @@
     <meta name="twitter:description" content="Consultant spécialisé pour intégrer l'IA et automatiser les process de votre entreprise. Agents IA, automatisation, pilotage augmenté pour TPE/PME." />
     <meta name="twitter:image" content="https://batemark.fr/og-image.png" />
 
-    <!-- JSON-LD Structured Data -->
+    <!-- JSON-LD: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "BATEMARK",
+      "url": "https://batemark.fr",
+      "logo": "https://batemark.fr/favicon.svg",
+      "description": "Consultant spécialisé pour intégrer l'IA et automatiser les process des entreprises. Automatisation, agents IA, pilotage augmenté.",
+      "founder": { "@type": "Person", "name": "Gaëtan Fizero" },
+      "sameAs": [
+        "https://www.linkedin.com/in/gaetanfizero/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "url": "https://batemark.fr",
+        "availableLanguage": "French"
+      },
+      "areaServed": { "@type": "Country", "name": "France" }
+    }
+    </script>
+
+    <!-- JSON-LD: WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "BATEMARK",
+      "url": "https://batemark.fr",
+      "description": "Consultant spécialisé pour intégrer l'IA et automatiser les process des entreprises françaises.",
+      "publisher": { "@type": "Organization", "name": "BATEMARK" }
+    }
+    </script>
+
+    <!-- JSON-LD: ProfessionalService -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -48,6 +94,9 @@
   </head>
 
   <body>
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[9999] focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:rounded">
+      Passer au contenu principal
+    </a>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

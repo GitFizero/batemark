@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { ContactFormDialog } from "@/components/ContactFormDialog";
+import { useLocation } from "react-router-dom";
 import logo from "@/assets/logo.svg";
 
 const navLinks = [
@@ -14,6 +15,7 @@ const navLinks = [
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,16 +38,17 @@ export const Header = () => {
     >
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
-          <a href="#" className="flex items-center gap-2">
-            <img src={logo} alt="BATEMARK" className="h-12 w-auto" />
+          <a href="/" className="flex items-center gap-2">
+            <img src={logo} alt="BATEMARK — Consultant IA & Automatisation" className="h-12 w-auto" width={148} height={48} />
           </a>
 
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8" aria-label="Navigation principale">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 className="text-muted-foreground hover:text-foreground transition-colors text-base font-medium"
+                aria-current={location.pathname === link.href ? "page" : undefined}
               >
                 {link.label}
               </a>
@@ -63,13 +66,15 @@ export const Header = () => {
           </div>
 
           <button
-            className="lg:hidden p-2"
+            className="lg:hidden p-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
+              <X className="w-6 h-6" aria-hidden="true" />
             ) : (
-              <Menu className="w-6 h-6" />
+              <Menu className="w-6 h-6" aria-hidden="true" />
             )}
           </button>
         </div>
@@ -81,13 +86,14 @@ export const Header = () => {
             exit={{ opacity: 0, y: -20 }}
             className="lg:hidden py-4 border-t border-border"
           >
-            <nav className="flex flex-col gap-4">
+            <nav className="flex flex-col gap-4" aria-label="Navigation mobile">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-muted-foreground hover:text-foreground transition-colors py-2"
+                  className="text-muted-foreground hover:text-foreground transition-colors py-2 min-h-[44px] flex items-center"
                   onClick={() => setIsMobileMenuOpen(false)}
+                  aria-current={location.pathname === link.href ? "page" : undefined}
                 >
                   {link.label}
                 </a>
