@@ -31,8 +31,8 @@ const BlogArticleFormationIA = () => {
         <meta property="og:title" content="Formation IA : pourquoi c'est (souvent) une erreur pour les dirigeants" />
         <meta property="og:description" content="Formation IA, formation intelligence artificielle… et si c'était une erreur ? Découvrez pourquoi l'accompagnement IA est bien plus efficace." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://batemark.fr/blog/formation-intelligence-artificielle" />
-        <meta property="og:image" content="https://batemark.fr/og-image.png" />
+        <meta property="og:url" content="https://batemark.com/blog/formation-intelligence-artificielle" />
+        <meta property="og:image" content="https://batemark.com/og-image.png" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:site_name" content="BATEMARK" />
         <meta property="article:published_time" content="2026-03-07" />
