@@ -145,15 +145,15 @@ const BlogArticleSpa = () => {
               transition={{ duration: 0.6 }}
             >
               <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold gradient-copper text-background mb-6">
-                🧖 Spa & Bien-être
+                🧖 Bien-être
               </span>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Comment l'IA transforme les spas et centres de bien-être —{" "}
+                Comment l'IA transforme les centres de bien-être —{" "}
                 <span className="text-gradient-copper">guide complet 2026</span>
               </h1>
               <div className="bg-primary/5 border-l-4 border-primary rounded-r-xl p-5 mb-8">
                 <p className="text-lg sm:text-xl text-foreground leading-relaxed">
-                  L'intelligence artificielle permet aux spas et instituts de beauté d'automatiser leur acquisition client, de réactiver leur base existante et de fidéliser durablement sans effort répétitif. Résultat : jusqu'à <strong>+35 % de rendez-vous qualifiés</strong> en 3 mois, comme l'a démontré le cas d'Atlantica Minceur, franchise de 8 instituts en région PACA.
+                  L'intelligence artificielle permet aux centres de bien-être et instituts de beauté d'automatiser leur acquisition client, de réactiver leur base existante et de fidéliser durablement sans effort répétitif. Résultat : jusqu'à <strong>+35 % de rendez-vous qualifiés</strong> en 3 mois, comme l'a démontré le cas d'Atlantica Minceur, franchise de 8 instituts en région PACA.
                 </p>
               </div>
               <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground border-t border-b border-border py-4">
@@ -176,8 +176,8 @@ const BlogArticleSpa = () => {
             <h2 className="text-xl font-bold mb-4">📑 Sommaire</h2>
             <ol className="space-y-2 text-muted-foreground">
               {[
-                "Le défi du secteur spa et bien-être en 2026",
-                "Ce que l'IA peut faire pour votre spa",
+                "Le défi du secteur bien-être en 2026",
+                "Ce que l'IA peut faire pour votre centre de bien-être",
                 "Cas client : Atlantica Minceur — Région PACA",
                 "Comment implémenter l'IA étape par étape",
                 "Les outils conseillés",
@@ -203,17 +203,17 @@ const BlogArticleSpa = () => {
             </h2>
             <div className="space-y-5 text-muted-foreground text-base sm:text-lg leading-relaxed">
               <p>
-                Le secteur du bien-être est l'un des plus exigeants qui soit. Forte saisonnalité, fidélisation difficile, pression sur les marges, concurrence des plateformes de réservation — les dirigeants de spas jonglent en permanence avec des contraintes contradictoires.
+                Le secteur du bien-être est l'un des plus exigeants qui soit. Forte saisonnalité, fidélisation difficile, pression sur les marges, concurrence des plateformes de réservation — les dirigeants de centres de bien-être jonglent en permanence avec des contraintes contradictoires.
               </p>
               <p>
-                En France, le taux d'occupation moyen d'un spa indépendant hors saison tourne autour de <strong className="text-foreground">54 %</strong> selon les données agrégées du secteur. Et pourtant, les coûts fixes — loyer, personnel, consommables — ne baissent pas.
+                En France, le taux d'occupation moyen d'un centre de bien-être indépendant hors saison tourne autour de <strong className="text-foreground">54 %</strong> selon les données agrégées du secteur. Et pourtant, les coûts fixes — loyer, personnel, consommables — ne baissent pas.
               </p>
             </div>
 
             {/* Stats */}
             <div className="grid md:grid-cols-3 gap-6 my-12">
               {[
-                { stat: "54 %", desc: "Taux d'occupation moyen hors saison pour les spas indépendants*" },
+                { stat: "54 %", desc: "Taux d'occupation moyen hors saison pour les centres de bien-être indépendants*" },
                 { stat: "×4", desc: "Plus de chances de revenir après une relance personnalisée qu'après un simple email générique*" },
                 { stat: "67 %", desc: "Des clients ne reviennent jamais sans relance — non par insatisfaction, mais par oubli*" },
               ].map((item, i) => (
@@ -233,7 +233,7 @@ const BlogArticleSpa = () => {
             <p className="text-xs text-muted-foreground italic">*Données estimatives basées sur des études sectorielles agrégées, 2025-2026.</p>
 
             <p className="text-muted-foreground text-base sm:text-lg mt-6">
-              Face à cela, l'intelligence artificielle pour les spas et centres de bien-être n'est plus un gadget réservé aux grands groupes. C'est devenu un <strong className="text-foreground">avantage concurrentiel accessible dès aujourd'hui</strong>, même pour les établissements indépendants.
+              Face à cela, l'intelligence artificielle pour les centres de bien-être n'est plus un gadget réservé aux grands groupes. C'est devenu un <strong className="text-foreground">avantage concurrentiel accessible dès aujourd'hui</strong>, même pour les établissements indépendants.
             </p>
           </section>
 
@@ -241,7 +241,7 @@ const BlogArticleSpa = () => {
           <section className="mb-20">
             <span className="text-sm font-semibold text-primary uppercase tracking-widest mb-2 block">Les applications</span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
-              Ce que l'IA peut concrètement faire pour votre spa ou centre de bien-être
+              Ce que l'IA peut concrètement faire pour votre centre de bien-être
             </h2>
             <p className="text-muted-foreground text-base sm:text-lg mb-8">
               L'IA pour le secteur du bien-être ne se résume pas à un chatbot sur votre site. C'est un ensemble de briques complémentaires qui, bien combinées, transforment votre acquisition, votre fidélisation et votre opérationnel.
@@ -251,11 +251,11 @@ const BlogArticleSpa = () => {
               {[
                 {
                   title: "1. Automatiser la prospection de nouveaux segments clients",
-                  text: "Les spas peuvent aller chercher activement des segments B2B à forte valeur : comités d'entreprise, agences événementielles, organisateurs d'EVJF, cliniques de remise en forme, hôtels sans spa qui externalisent. L'IA identifie les bons contacts, rédige les emails personnalisés et gère les relances automatiquement — sans passer des heures à prospecter manuellement.",
+                  text: "Les centres de bien-être peuvent aller chercher activement des segments B2B à forte valeur : comités d'entreprise, agences événementielles, organisateurs d'EVJF, cliniques de remise en forme, hôtels qui externalisent. L'IA identifie les bons contacts, rédige les emails personnalisés et gère les relances automatiquement — sans passer des heures à prospecter manuellement.",
                 },
                 {
                   title: "2. Réactiver les clients dormants par courrier physique personnalisé",
-                  text: "67 % des clients d'un spa ne reviennent jamais après une seule visite — non par insatisfaction, mais par oubli. Une carte manuscrite personnalisée (écriture générée par IA, indifférenciable du vrai), envoyée au bon moment — anniversaire, 3 mois après la dernière visite, changement de saison — crée un effet de surprise et de fidélisation incomparable. Avec Manuscry, tout est automatisé.",
+                  text: "67 % des clients d'un centre de bien-être ne reviennent jamais après une seule visite — non par insatisfaction, mais par oubli. Une carte manuscrite personnalisée (écriture générée par IA, indifférenciable du vrai), envoyée au bon moment — anniversaire, 3 mois après la dernière visite, changement de saison — crée un effet de surprise et de fidélisation incomparable. Avec Manuscry, tout est automatisé.",
                 },
                 {
                   title: "3. Personnaliser les parcours clients avant et après le soin",
@@ -412,10 +412,10 @@ const BlogArticleSpa = () => {
           <section className="mb-20">
             <span className="text-sm font-semibold text-primary uppercase tracking-widest mb-2 block">La méthode Batemark</span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
-              Intégrer l'IA dans votre spa : 4 étapes concrètes
+              Intégrer l'IA dans votre centre de bien-être : 4 étapes concrètes
             </h2>
             <p className="text-muted-foreground text-base sm:text-lg mb-10">
-              L'intégration de l'intelligence artificielle dans un spa ou centre de bien-être ne se fait pas en un jour. Mais elle peut commencer en une semaine, si l'on suit la bonne méthode.
+              L'intégration de l'intelligence artificielle dans un centre de bien-être ne se fait pas en un jour. Mais elle peut commencer en une semaine, si l'on suit la bonne méthode.
             </p>
 
             <div className="space-y-8">
@@ -441,7 +441,7 @@ const BlogArticleSpa = () => {
           {/* CTA 2 */}
           <section className="mb-20">
             <div className="rounded-2xl p-8 sm:p-10 text-center" style={{ background: "linear-gradient(135deg, hsl(220 12% 10%), hsl(220 15% 7%))" }}>
-              <h3 className="text-xl sm:text-2xl font-bold mb-3">Prêt à automatiser l'acquisition de votre spa ?</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-3">Prêt à automatiser l'acquisition de votre centre de bien-être ?</h3>
               <p className="text-muted-foreground mb-6">Répondez à 3 questions pour recevoir un plan d'action personnalisé.</p>
               <ContactFormDialog
                 trigger={
@@ -458,10 +458,10 @@ const BlogArticleSpa = () => {
           <section className="mb-20">
             <span className="text-sm font-semibold text-primary uppercase tracking-widest mb-2 block">Sélection Batemark</span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
-              Les outils IA conseillés pour les spas et centres de bien-être
+              Les outils IA conseillés pour les centres de bien-être
             </h2>
             <p className="text-muted-foreground text-base sm:text-lg mb-10">
-              Ces deux outils français ont été testés et validés dans des contextes réels de spas et d'instituts de beauté. Ils sont complémentaires et particulièrement adaptés aux établissements indépendants.
+              Ces deux outils français ont été testés et validés dans des contextes réels de centres de bien-être et d'instituts de beauté. Ils sont complémentaires et particulièrement adaptés aux établissements indépendants.
             </p>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -545,17 +545,17 @@ const BlogArticleSpa = () => {
           <section className="mb-20">
             <span className="text-sm font-semibold text-primary uppercase tracking-widest mb-2 block">FAQ</span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8">
-              Questions fréquentes sur l'IA en spa et bien-être
+              Questions fréquentes sur l'IA et les centres de bien-être
             </h2>
 
             <Accordion type="single" collapsible className="space-y-3">
               {[
                 {
-                  q: "L'IA est-elle vraiment adaptée à un petit spa ou institut indépendant ?",
-                  a: "Oui. Les outils d'automatisation actuels sont accessibles dès quelques dizaines d'euros par mois et ne nécessitent aucune compétence technique. Un spa de 2 à 5 praticiens peut tirer autant de valeur de l'IA qu'un grand groupe hôtelier, souvent plus rapidement car les circuits de décision sont courts.",
+                  q: "L'IA est-elle vraiment adaptée à un petit centre de bien-être ou institut indépendant ?",
+                  a: "Oui. Les outils d'automatisation actuels sont accessibles dès quelques dizaines d'euros par mois et ne nécessitent aucune compétence technique. Un centre de 2 à 5 praticiens peut tirer autant de valeur de l'IA qu'un grand groupe hôtelier, souvent plus rapidement car les circuits de décision sont courts.",
                 },
                 {
-                  q: "Combien de temps faut-il pour voir des résultats avec l'IA dans un spa ?",
+                  q: "Combien de temps faut-il pour voir des résultats avec l'IA dans un centre de bien-être ?",
                   a: "Les premières campagnes de réactivation client produisent des résultats visibles sous 2 à 4 semaines. Les campagnes de prospection B2B (séminaires bien-être, CE, EVJF) génèrent généralement leurs premiers rendez-vous qualifiés dans le premier mois. Pour un impact structurel sur le taux de remplissage, comptez 3 à 4 mois.",
                 },
                 {
@@ -567,7 +567,7 @@ const BlogArticleSpa = () => {
                   a: "Non. L'IA prend en charge les tâches répétitives à faible valeur ajoutée (réponse aux emails standards, relances, envoi de courriers). Vos équipes se concentrent sur ce qui compte vraiment : l'expérience client en cabine et l'accueil. C'est complémentaire, pas substitutif.",
                 },
                 {
-                  q: "Par où commencer pour intégrer l'IA dans mon spa ou centre de bien-être ?",
+                  q: "Par où commencer pour intégrer l'IA dans mon centre de bien-être ?",
                   a: "Commencez par un audit de vos process actuels : quelles tâches sont répétitives ? Quelle est la valeur de chaque client sur sa durée de vie ? Ensuite, les deux outils à déployer en priorité sont un agent de prospection B2B (Meetlane) et une solution de courrier physique automatisé (Manuscry) pour réactiver vos anciens clients.",
                 },
               ].map((item, i) => (
@@ -593,7 +593,7 @@ const BlogArticleSpa = () => {
                   Prêt à intégrer l'IA dans votre établissement ?
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
-                  En 10 minutes, obtenez un plan d'action personnalisé pour votre spa ou centre de bien-être. Gratuit, sans engagement.
+                  En 10 minutes, obtenez un plan d'action personnalisé pour votre centre de bien-être. Gratuit, sans engagement.
                 </p>
                 <ContactFormDialog
                   trigger={
