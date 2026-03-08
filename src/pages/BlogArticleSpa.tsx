@@ -56,8 +56,8 @@ const BlogArticleSpa = () => {
             "@graph": [
               {
                 "@type": "Article",
-                headline: "Comment l'IA transforme les spas et centres de bien-être — guide complet 2026",
-                description: "Guide complet pour intégrer l'intelligence artificielle dans un spa ou centre de bien-être : automatisation, fidélisation, acquisition, outils recommandés et cas client.",
+                headline: "Comment l'IA transforme les spas, instituts de beauté et centres de bien-être — guide complet 2026",
+                description: "Guide complet pour intégrer l'intelligence artificielle dans un spa, institut de beauté ou centre de bien-être : automatisation, fidélisation, acquisition client, outils recommandés et cas client.",
                 author: { "@type": "Person", name: "Gaëtan Fizero" },
                 publisher: {
                   "@type": "Organization",
@@ -69,7 +69,7 @@ const BlogArticleSpa = () => {
                 dateModified: "2026-03-08",
                 mainEntityOfPage: "https://batemark.fr/blog/ia-spa-centre-bien-etre",
                 inLanguage: "fr-FR",
-                keywords: "intelligence artificielle spa, IA bien-être, automatisation spa, marketing digital spa, fidélisation client spa",
+                keywords: "intelligence artificielle spa, IA bien-être, IA institut de beauté, automatisation spa, automatisation institut beauté, automatisation centre bien-être, marketing digital spa, fidélisation client spa, IA thalasso, IA institut minceur, acquisition client spa, prospection spa IA",
               },
               {
                 "@type": "FAQPage",
