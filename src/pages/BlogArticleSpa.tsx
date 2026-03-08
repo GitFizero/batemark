@@ -145,7 +145,7 @@ const BlogArticleSpa = () => {
               transition={{ duration: 0.6 }}
             >
               <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold gradient-copper text-background mb-6">
-                🧖 Spa & Bien-être
+                🧖 Bien-être
               </span>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 Comment l'IA transforme les spas et centres de bien-être —{" "}
