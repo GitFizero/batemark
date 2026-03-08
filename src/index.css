@@ -94,6 +94,8 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
@@ -101,6 +103,8 @@
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
   }
 
   @media (min-width: 640px) {
@@ -146,11 +150,11 @@
   }
 
   .section-padding {
-    @apply py-16 sm:py-20 md:py-28 px-4 md:px-8;
+    @apply py-12 sm:py-16 md:py-28 px-4 sm:px-6 md:px-8;
   }
 
   .container-custom {
-    @apply max-w-7xl mx-auto;
+    @apply max-w-7xl mx-auto px-4 sm:px-0;
   }
 }
 

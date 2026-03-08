@@ -11,11 +11,11 @@ const legalLinks = [
 export const Footer = () => {
   return (
     <footer className="border-t border-border">
-      <div className="container-custom py-12 px-4 md:px-8">
+      <div className="container-custom py-10 md:py-12 px-4 sm:px-6 md:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex flex-col items-center md:items-start gap-4">
-            <img src={logo} alt="BATEMARK" className="h-12 w-auto" width={148} height={48} loading="lazy" />
-            <p className="text-muted-foreground text-base max-w-xs text-center md:text-left">
+            <img src={logo} alt="BATEMARK" className="h-10 sm:h-12 w-auto" width={148} height={48} loading="lazy" />
+            <p className="text-muted-foreground text-sm sm:text-base max-w-xs text-center md:text-left">
               Consultant IA & automatisation pour TPE/PME. Intégration intelligente dans vos opérations existantes.
             </p>
             <div className="flex items-center gap-4 mt-2">
@@ -32,22 +32,22 @@ export const Footer = () => {
           </div>
 
           <div className="flex flex-col items-center md:items-end gap-4">
-            <div className="flex flex-wrap justify-center gap-6">
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
               {legalLinks.map((link) => (
                 <Link
                   key={link.label}
                   to={link.href}
-                  className="text-base text-muted-foreground hover:text-primary transition-colors"
+                  className="text-sm sm:text-base text-muted-foreground hover:text-primary transition-colors min-h-[44px] flex items-center"
                 >
                   {link.label}
                 </Link>
               ))}
             </div>
-            <nav className="flex flex-wrap justify-center gap-6" aria-label="Liens utiles">
-              <Link to="/blog" className="text-base text-muted-foreground hover:text-primary transition-colors">
+            <nav className="flex flex-wrap justify-center gap-4 sm:gap-6" aria-label="Liens utiles">
+              <Link to="/blog" className="text-sm sm:text-base text-muted-foreground hover:text-primary transition-colors min-h-[44px] flex items-center">
                 Blog IA & Automatisation
               </Link>
-              <Link to="/librairie-ia" className="text-base text-muted-foreground hover:text-primary transition-colors">
+              <Link to="/librairie-ia" className="text-sm sm:text-base text-muted-foreground hover:text-primary transition-colors min-h-[44px] flex items-center">
                 Librairie d'outils IA
               </Link>
             </nav>
