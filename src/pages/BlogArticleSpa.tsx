@@ -304,15 +304,15 @@ const BlogArticleSpa = () => {
           <section className="mb-20">
             <span className="text-sm font-semibold text-primary uppercase tracking-widest mb-2 block">Cas client</span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
-              L'Atelier des Sens : <span className="text-gradient-copper">+38 % de réservations</span> grâce à l'IA
+              Atlantica Minceur : <span className="text-gradient-copper">+35 % de rendez-vous qualifiés</span> grâce à l'IA
             </h2>
 
             <div className="space-y-5 text-muted-foreground text-base sm:text-lg mb-10">
               <p>
-                Situé au cœur d'Aix-en-Provence, <strong className="text-foreground">L'Atelier des Sens</strong> est un spa urbain de 4 cabines spécialisé dans les soins sur mesure. Comme beaucoup d'instituts indépendants, l'établissement faisait face à une problématique récurrente : des semaines à moitié vides en dehors des vendredis et samedis.
+                <strong className="text-foreground">Atlantica Minceur</strong> est une franchise de 8 instituts minceur implantés en région PACA. Avec une offre premium positionnée sur l'amincissement et le remodelage corporel, la marque s'adresse à une clientèle exigeante, majoritairement féminine, entre 30 et 60 ans.
               </p>
               <p>
-                Sophie, la gérante, passait un temps considérable à relancer ses clients par email, gérer ses réseaux sociaux et prospecter manuellement les entreprises locales. Un cercle vicieux : plus elle prospectait, moins elle pouvait se concentrer sur la qualité de ses soins.
+                Le défi : chaque institut devait générer ses propres rendez-vous qualifiés, avec des équipes réduites et un budget publicitaire dispersé sur trop de canaux. Les leads arrivaient au compte-gouttes, les relances étaient manuelles, et le suivi post-rendez-vous quasi inexistant. Un temps précieux était perdu sur des tâches administratives au lieu d'être investi dans l'accompagnement client.
               </p>
             </div>
 
@@ -322,14 +322,14 @@ const BlogArticleSpa = () => {
                 <span className="text-2xl">🌿</span>
                 <div>
                   <p className="text-xs font-semibold text-primary uppercase tracking-widest">Cas client Batemark</p>
-                  <h3 className="text-xl font-bold">L'Atelier des Sens</h3>
-                  <p className="text-sm text-muted-foreground">📍 Aix-en-Provence · Spa urbain & institut de soins</p>
+                  <h3 className="text-xl font-bold">Atlantica Minceur</h3>
+                  <p className="text-sm text-muted-foreground">📍 Région PACA · 8 instituts minceur franchisés</p>
                 </div>
               </div>
 
               <h4 className="text-lg font-bold mb-2">Le défi</h4>
               <p className="text-muted-foreground mb-6">
-                Augmenter le taux de remplissage des créneaux du mardi au jeudi (creux chronique à 41 %), développer une clientèle B2B entreprises pour des séminaires bien-être, et réactiver les 1 200 clients inactifs depuis plus de 6 mois — sans augmenter les coûts fixes de communication.
+                Structurer une stratégie d'acquisition digitale performante pour l'ensemble du réseau, identifier la bonne plateforme publicitaire, cibler précisément les profils à forte intention, et automatiser l'intégralité du parcours prospect — de la génération du lead jusqu'au suivi post-rendez-vous — pour libérer du temps aux équipes terrain.
               </p>
 
               <h4 className="text-lg font-bold mb-4">Notre approche</h4>
@@ -337,23 +337,23 @@ const BlogArticleSpa = () => {
                 {[
                   {
                     step: "1",
-                    title: "Audit & segmentation de la base client",
-                    desc: "Analyse des 3 dernières années de réservations pour identifier les segments les plus rentables, les profils dormants et les créneaux à maximiser.",
+                    title: "Audit des canaux & identification de la plateforme optimale",
+                    desc: "Analyse comparative des performances d'acquisition sur Meta, Google Ads et TikTok. Identification de la plateforme offrant le meilleur coût par lead qualifié pour le secteur minceur/bien-être en PACA.",
                   },
                   {
                     step: "2",
-                    title: "Déploiement de séquences de prospection B2B via Meetlane",
-                    desc: "Campagnes email ciblant les DRH et office managers d'entreprises dans un rayon de 50 km — axées sur les formules « séminaire bien-être » et « journée ressourcement équipe ».",
+                    title: "Construction du ciblage et des créatifs IA",
+                    desc: "Définition des audiences lookalike à partir des meilleures clientes existantes. Création de visuels et accroches publicitaires testés en A/B, optimisés par l'IA pour maximiser le taux de conversion.",
                   },
                   {
                     step: "3",
-                    title: "Campagne de réactivation physique via Manuscry",
-                    desc: "Envoi automatisé de cartes manuscrites personnalisées aux 1 200 clients dormants : invitation à revenir avec une offre « client fidèle », signée à la main par la gérante (générée par IA).",
+                    title: "Automatisation complète du parcours prospect",
+                    desc: "Dès qu'un lead est capté, déclenchement automatique d'une séquence : confirmation immédiate par SMS, relance à J+1 si pas de réponse, prise de rendez-vous automatisée, rappel la veille du RDV. Zéro intervention manuelle.",
                   },
                   {
                     step: "4",
-                    title: "Mise en place de séquences email post-soin",
-                    desc: "Après chaque prestation, séquence automatique de 3 emails : remerciement personnalisé J+1, recommandation de soin complémentaire J+7, invitation à laisser un avis J+14.",
+                    title: "Suivi post-rendez-vous et fidélisation automatisée",
+                    desc: "Après chaque rendez-vous en institut, séquence automatique : message de remerciement personnalisé, proposition de programme adapté à J+3, relance à J+14 pour les prospects non convertis. Chaque point de contact renforce la relation sans mobiliser l'équipe.",
                   },
                 ].map((item) => (
                   <div key={item.step} className="flex gap-4">
@@ -368,12 +368,12 @@ const BlogArticleSpa = () => {
                 ))}
               </div>
 
-              <h4 className="text-lg font-bold mb-4">Les résultats après 4 mois</h4>
+              <h4 className="text-lg font-bold mb-4">Les résultats après 3 mois</h4>
               <div className="grid sm:grid-cols-3 gap-4 mb-6">
                 {[
-                  { stat: "+38 %", label: "de réservations hors saison vs année précédente" },
-                  { stat: "×3,4", label: "ROI sur les campagnes d'acquisition IA" },
-                  { stat: "71 %", label: "des nouvelles réservations en direct (hors plateformes)" },
+                  { stat: "+35 %", label: "de rendez-vous qualifiés vs trimestre précédent" },
+                  { stat: "÷3", label: "temps passé sur la gestion des prospects (relances, suivi)" },
+                  { stat: "82 %", label: "taux de présence aux rendez-vous grâce aux rappels automatisés" },
                 ].map((item, i) => (
                   <div key={i} className="text-center p-4 rounded-xl bg-background/50">
                     <div className="text-2xl sm:text-3xl font-bold text-gradient-copper">{item.stat}</div>
@@ -383,7 +383,7 @@ const BlogArticleSpa = () => {
               </div>
 
               <div className="flex flex-wrap gap-2">
-                {["Meetlane", "Manuscry", "Automatisation email", "Courrier physique IA", "Segmentation B2B"].map((tag) => (
+                {["Publicité ciblée IA", "Automatisation SMS/email", "Séquences de relance", "Suivi post-RDV", "Optimisation multicanale"].map((tag) => (
                   <span key={tag} className="px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary">
                     {tag}
                   </span>
@@ -397,11 +397,11 @@ const BlogArticleSpa = () => {
                 <Quote className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
                 <div>
                   <p className="text-foreground italic text-lg mb-4">
-                    « Je pensais que l'IA c'était pour les grands groupes hôteliers, pas pour un spa de 4 cabines. Gaëtan m'a prouvé le contraire. En moins de trois mois, mes mardis et mercredis sont devenus mes journées les plus chargées. Et mes anciens clients reviennent — certains m'ont dit avoir été touchés de recevoir une vraie carte écrite à la main. »
+                    « Avant, chaque institut gérait ses prospects à la main — des heures perdues en relances, en messages non suivis, en rendez-vous oubliés. Gaëtan a identifié la bonne plateforme, construit le bon ciblage, et surtout automatisé tout le parcours : du premier contact jusqu'au suivi après le rendez-vous. Aujourd'hui, nos équipes se concentrent sur l'accompagnement client, plus sur la prospection. C'est un gain de temps et d'efficacité qu'on n'imaginait même pas. »
                   </p>
                   <div>
-                    <p className="font-bold text-foreground">Sophie M.</p>
-                    <p className="text-sm text-muted-foreground">Gérante, L'Atelier des Sens — Aix-en-Provence</p>
+                    <p className="font-bold text-foreground">Maud R.</p>
+                    <p className="text-sm text-muted-foreground">Atlantica Minceur — Région PACA</p>
                   </div>
                 </div>
               </div>
