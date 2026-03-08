@@ -99,7 +99,7 @@ export const PillarsSection = () => {
             </ul>
             <div className="pt-4 border-t border-border">
               <p className="text-primary font-bold text-lg sm:text-xl">
-                ROI constaté : x30 à x60 sur l'investissement dès le 1er mois
+                ROAS moyen constaté : ×4.3 sur vos investissements publicitaires
               </p>
             </div>
           </motion.div>

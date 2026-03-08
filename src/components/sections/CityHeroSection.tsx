@@ -68,7 +68,7 @@ export const CityHeroSection = ({ city }: CityHeroSectionProps) => {
             </div>
             <div className="flex items-center gap-2">
               <TrendingUp className="w-5 h-5 text-copper" />
-              <span className="text-muted-foreground">3.2x ROI moyen</span>
+              <span className="text-muted-foreground">ROAS moyen ×4.3</span>
             </div>
           </motion.div>
 
