@@ -241,7 +241,7 @@ const BlogArticleSpa = () => {
           <section className="mb-20">
             <span className="text-sm font-semibold text-primary uppercase tracking-widest mb-2 block">Les applications</span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
-              Ce que l'IA peut concrètement faire pour votre spa ou centre de bien-être
+              Ce que l'IA peut concrètement faire pour votre centre de bien-être
             </h2>
             <p className="text-muted-foreground text-base sm:text-lg mb-8">
               L'IA pour le secteur du bien-être ne se résume pas à un chatbot sur votre site. C'est un ensemble de briques complémentaires qui, bien combinées, transforment votre acquisition, votre fidélisation et votre opérationnel.
