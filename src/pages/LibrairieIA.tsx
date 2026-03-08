@@ -40,8 +40,8 @@ const LibrairieIA = () => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://batemark.fr" },
-      { "@type": "ListItem", "position": 2, "name": "Librairie IA", "item": "https://batemark.fr/librairie-ia" },
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://batemark.com" },
+      { "@type": "ListItem", "position": 2, "name": "Librairie IA", "item": "https://batemark.com/librairie-ia" },
     ],
   };
 
@@ -65,11 +65,11 @@ const LibrairieIA = () => {
     "@type": "CollectionPage",
     "name": "Librairie IA — Outils IA recommandés pour entreprises",
     "description": "Sélection des meilleurs outils IA testés sur des cas clients réels : automatisation, prospection, fidélisation, productivité pour TPE/PME.",
-    "url": "https://batemark.fr/librairie-ia",
+    "url": "https://batemark.com/librairie-ia",
     "inLanguage": "fr",
-    "isPartOf": { "@type": "WebSite", "name": "BATEMARK", "url": "https://batemark.fr" },
+    "isPartOf": { "@type": "WebSite", "name": "BATEMARK", "url": "https://batemark.com" },
     "author": { "@type": "Person", "name": "Gaëtan Fizero" },
-    "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://batemark.fr" },
+    "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://batemark.com" },
   };
 
   const jsonLdFaq = {
