@@ -52,6 +52,11 @@ const App = () => (
               <Route path="/blog/ia-spa-centre-bien-etre" element={<BlogArticleSpa />} />
               <Route path="/blog/ia-e-commerce" element={<BlogArticleEcommerce />} />
               <Route path="/blog/ia-restaurant-intelligence-artificielle" element={<BlogArticleRestaurant />} />
+              <Route path="/blog/automatiser-prospection-b2b-ia" element={<BlogArticleProspectionB2B />} />
+              <Route path="/blog/ia-agence-immobiliere" element={<BlogArticleImmobilier />} />
+              <Route path="/blog/chatbot-ia-site-web-conversion" element={<BlogArticleChatbot />} />
+              <Route path="/blog/automatiser-avis-google-ia" element={<BlogArticleAvisGoogle />} />
+              <Route path="/blog/ia-cabinet-comptable" element={<BlogArticleCabinetComptable />} />
               <Route path="/cgv" element={<CGV />} />
               <Route path="/confidentialite" element={<Confidentialite />} />
               <Route path="/mentions-legales" element={<MentionsLegales />} />
