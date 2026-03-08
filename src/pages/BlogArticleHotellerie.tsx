@@ -105,9 +105,9 @@ const BlogArticleHotellerie = () => {
               {
                 "@type": "BreadcrumbList",
                 itemListElement: [
-                  { "@type": "ListItem", position: 1, name: "Accueil", item: "https://batemark.fr" },
-                  { "@type": "ListItem", position: 2, name: "Blog", item: "https://batemark.fr/blog" },
-                  { "@type": "ListItem", position: 3, name: "IA pour hôtel et restauration", item: "https://batemark.fr/blog/ia-hotellerie-restauration" },
+                  { "@type": "ListItem", position: 1, name: "Accueil", item: "https://batemark.com" },
+                  { "@type": "ListItem", position: 2, name: "Blog", item: "https://batemark.com/blog" },
+                  { "@type": "ListItem", position: 3, name: "IA pour hôtel et restauration", item: "https://batemark.com/blog/ia-hotellerie-restauration" },
                 ],
               },
             ],
