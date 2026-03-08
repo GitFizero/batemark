@@ -16,6 +16,7 @@ import BlogArticleSpa from "./pages/BlogArticleSpa";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
 import LibrairieIA from "./pages/LibrairieIA";
+import BlogArticleEcommerce from "./pages/BlogArticleEcommerce";
 
 const queryClient = new QueryClient();
 
