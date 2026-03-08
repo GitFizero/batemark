@@ -29,7 +29,7 @@ const BlogArticleHotellerie = () => {
           name="keywords"
           content="ia pour hotel, hotel intelligence artificielle, ia hôtellerie, ia restauration, automatisation hôtel, ia taux de remplissage, intelligence artificielle restaurant, chatbot hotel"
         />
-        <link rel="canonical" href="https://batemark.fr/blog/ia-hotellerie-restauration" />
+        <link rel="canonical" href="https://batemark.com/blog/ia-hotellerie-restauration" />
         <meta property="og:title" content="IA hôtellerie-restauration : +43 % de taux de remplissage hors saison | Batemark" />
         <meta property="og:description" content="Comment La République Indépendante de Figuerolles a transformé son acquisition grâce à l'IA. Guide complet pour les hôtels et restaurants indépendants." />
         <meta property="og:type" content="article" />
