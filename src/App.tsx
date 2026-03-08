@@ -17,6 +17,7 @@ const BlogArticleHotellerie = lazy(() => import("./pages/BlogArticleHotellerie")
 const BlogArticleFormationIA = lazy(() => import("./pages/BlogArticleFormationIA"));
 const BlogArticleSpa = lazy(() => import("./pages/BlogArticleSpa"));
 const BlogArticleEcommerce = lazy(() => import("./pages/BlogArticleEcommerce"));
+const BlogArticleRestaurant = lazy(() => import("./pages/BlogArticleRestaurant"));
 const AdminLogin = lazy(() => import("./pages/AdminLogin"));
 const AdminDashboard = lazy(() => import("./pages/AdminDashboard"));
 const LibrairieIA = lazy(() => import("./pages/LibrairieIA"));
