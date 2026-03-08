@@ -567,7 +567,7 @@ const BlogArticleSpa = () => {
                   a: "Non. L'IA prend en charge les tâches répétitives à faible valeur ajoutée (réponse aux emails standards, relances, envoi de courriers). Vos équipes se concentrent sur ce qui compte vraiment : l'expérience client en cabine et l'accueil. C'est complémentaire, pas substitutif.",
                 },
                 {
-                  q: "Par où commencer pour intégrer l'IA dans mon spa ou centre de bien-être ?",
+                  q: "Par où commencer pour intégrer l'IA dans mon centre de bien-être ?",
                   a: "Commencez par un audit de vos process actuels : quelles tâches sont répétitives ? Quelle est la valeur de chaque client sur sa durée de vie ? Ensuite, les deux outils à déployer en priorité sont un agent de prospection B2B (Meetlane) et une solution de courrier physique automatisé (Manuscry) pour réactiver vos anciens clients.",
                 },
               ].map((item, i) => (
