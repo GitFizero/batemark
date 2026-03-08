@@ -461,7 +461,7 @@ const BlogArticleSpa = () => {
               Les outils IA conseillés pour les centres de bien-être
             </h2>
             <p className="text-muted-foreground text-base sm:text-lg mb-10">
-              Ces deux outils français ont été testés et validés dans des contextes réels de spas et d'instituts de beauté. Ils sont complémentaires et particulièrement adaptés aux établissements indépendants.
+              Ces deux outils français ont été testés et validés dans des contextes réels de centres de bien-être et d'instituts de beauté. Ils sont complémentaires et particulièrement adaptés aux établissements indépendants.
             </p>
 
             <div className="grid md:grid-cols-2 gap-8">
