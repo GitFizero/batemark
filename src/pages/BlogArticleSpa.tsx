@@ -120,9 +120,9 @@ const BlogArticleSpa = () => {
               {
                 "@type": "BreadcrumbList",
                 itemListElement: [
-                  { "@type": "ListItem", position: 1, name: "Accueil", item: "https://batemark.fr" },
-                  { "@type": "ListItem", position: 2, name: "Blog", item: "https://batemark.fr/blog" },
-                  { "@type": "ListItem", position: 3, name: "IA Spa & Bien-être", item: "https://batemark.fr/blog/ia-spa-centre-bien-etre" },
+                  { "@type": "ListItem", position: 1, name: "Accueil", item: "https://batemark.com" },
+                  { "@type": "ListItem", position: 2, name: "Blog", item: "https://batemark.com/blog" },
+                  { "@type": "ListItem", position: 3, name: "IA Spa & Bien-être", item: "https://batemark.com/blog/ia-spa-centre-bien-etre" },
                 ],
               },
             ],

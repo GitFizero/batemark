@@ -119,9 +119,9 @@ const BlogArticleEcommerce = () => {
               {
                 "@type": "BreadcrumbList",
                 itemListElement: [
-                  { "@type": "ListItem", position: 1, name: "Accueil", item: "https://batemark.fr" },
-                  { "@type": "ListItem", position: 2, name: "Blog", item: "https://batemark.fr/blog" },
-                  { "@type": "ListItem", position: 3, name: "IA E-commerce", item: "https://batemark.fr/blog/ia-e-commerce" },
+                  { "@type": "ListItem", position: 1, name: "Accueil", item: "https://batemark.com" },
+                  { "@type": "ListItem", position: 2, name: "Blog", item: "https://batemark.com/blog" },
+                  { "@type": "ListItem", position: 3, name: "IA E-commerce", item: "https://batemark.com/blog/ia-e-commerce" },
                 ],
               },
             ],
