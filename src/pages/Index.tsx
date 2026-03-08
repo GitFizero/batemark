@@ -29,7 +29,7 @@ const Index = () => {
             "@type": "ProfessionalService",
             "name": "BATEMARK — Intégrer l'IA en entreprise",
             "description": "Consultant spécialisé pour intégrer l'IA et automatiser les process des entreprises.",
-            "url": "https://batemark.fr",
+            "url": "https://batemark.com",
             "founder": { "@type": "Person", "name": "Gaëtan Fizero" },
             "areaServed": { "@type": "Country", "name": "France" },
             "hasOfferCatalog": {
