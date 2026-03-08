@@ -33,7 +33,7 @@ const BlogArticleHotellerie = () => {
         <meta property="og:title" content="IA hôtellerie-restauration : +43 % de taux de remplissage hors saison | Batemark" />
         <meta property="og:description" content="Comment La République Indépendante de Figuerolles a transformé son acquisition grâce à l'IA. Guide complet pour les hôtels et restaurants indépendants." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://batemark.fr/blog/ia-hotellerie-restauration" />
+        <meta property="og:url" content="https://batemark.com/blog/ia-hotellerie-restauration" />
         <meta property="article:published_time" content="2025-06-01" />
         <meta property="article:modified_time" content="2025-06-01" />
 
