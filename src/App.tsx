@@ -37,6 +37,16 @@ const BlogArticleGestionStock = lazy(() => import("./pages/BlogArticleGestionSto
 const BlogArticleCoachConsultant = lazy(() => import("./pages/BlogArticleCoachConsultant"));
 const BlogArticleTunnelVente = lazy(() => import("./pages/BlogArticleTunnelVente"));
 const BlogArticleFranchise = lazy(() => import("./pages/BlogArticleFranchise"));
+const BlogArticleAgenceCom = lazy(() => import("./pages/BlogArticleAgenceCom"));
+const BlogArticleComptaEcommerce = lazy(() => import("./pages/BlogArticleComptaEcommerce"));
+const BlogArticleMedecin = lazy(() => import("./pages/BlogArticleMedecin"));
+const BlogArticleVeille = lazy(() => import("./pages/BlogArticleVeille"));
+const BlogArticleAssociation = lazy(() => import("./pages/BlogArticleAssociation"));
+const BlogArticleContenuMarketing = lazy(() => import("./pages/BlogArticleContenuMarketing"));
+const BlogArticleSyndic = lazy(() => import("./pages/BlogArticleSyndic"));
+const BlogArticleOnboardingEmploye = lazy(() => import("./pages/BlogArticleOnboardingEmploye"));
+const BlogArticleAutoEcole = lazy(() => import("./pages/BlogArticleAutoEcole"));
+const BlogArticleGestionLocative = lazy(() => import("./pages/BlogArticleGestionLocative"));
 
 const queryClient = new QueryClient();
 
@@ -77,6 +87,16 @@ const App = () => (
               <Route path="/blog/ia-coach-consultant" element={<BlogArticleCoachConsultant />} />
               <Route path="/blog/ia-tunnel-vente-automatise" element={<BlogArticleTunnelVente />} />
               <Route path="/blog/ia-franchise-multi-sites" element={<BlogArticleFranchise />} />
+              <Route path="/blog/ia-agence-communication" element={<BlogArticleAgenceCom />} />
+              <Route path="/blog/ia-comptabilite-ecommerce" element={<BlogArticleComptaEcommerce />} />
+              <Route path="/blog/ia-medecin-cabinet-sante" element={<BlogArticleMedecin />} />
+              <Route path="/blog/ia-veille-concurrentielle" element={<BlogArticleVeille />} />
+              <Route path="/blog/ia-association-ong" element={<BlogArticleAssociation />} />
+              <Route path="/blog/ia-contenu-marketing-automatise" element={<BlogArticleContenuMarketing />} />
+              <Route path="/blog/ia-syndic-copropriete" element={<BlogArticleSyndic />} />
+              <Route path="/blog/ia-onboarding-employe" element={<BlogArticleOnboardingEmploye />} />
+              <Route path="/blog/ia-auto-ecole" element={<BlogArticleAutoEcole />} />
+              <Route path="/blog/ia-gestion-locative" element={<BlogArticleGestionLocative />} />
               <Route path="/cgv" element={<CGV />} />
               <Route path="/confidentialite" element={<Confidentialite />} />
               <Route path="/mentions-legales" element={<MentionsLegales />} />
