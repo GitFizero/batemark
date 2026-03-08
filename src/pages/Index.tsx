@@ -14,7 +14,6 @@ import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { SimulateurSection } from "@/components/sections/SimulateurSection";
 import { SEOHead } from "@/components/SEOHead";
-import { SEOHead } from "@/components/SEOHead";
 
 const Index = () => {
   return (
