@@ -551,8 +551,8 @@ const BlogArticleSpa = () => {
             <Accordion type="single" collapsible className="space-y-3">
               {[
                 {
-                  q: "L'IA est-elle vraiment adaptée à un petit spa ou institut indépendant ?",
-                  a: "Oui. Les outils d'automatisation actuels sont accessibles dès quelques dizaines d'euros par mois et ne nécessitent aucune compétence technique. Un spa de 2 à 5 praticiens peut tirer autant de valeur de l'IA qu'un grand groupe hôtelier, souvent plus rapidement car les circuits de décision sont courts.",
+                  q: "L'IA est-elle vraiment adaptée à un petit centre de bien-être ou institut indépendant ?",
+                  a: "Oui. Les outils d'automatisation actuels sont accessibles dès quelques dizaines d'euros par mois et ne nécessitent aucune compétence technique. Un centre de 2 à 5 praticiens peut tirer autant de valeur de l'IA qu'un grand groupe hôtelier, souvent plus rapidement car les circuits de décision sont courts.",
                 },
                 {
                   q: "Combien de temps faut-il pour voir des résultats avec l'IA dans un spa ?",
