@@ -86,14 +86,14 @@ const Blog = () => {
           content="Guides pratiques, cas clients et retours d'expérience sur l'intégration de l'IA dans les PME : hôtellerie, restauration, e-commerce, agences. Par Gaëtan Fizero."
         />
         <meta name="keywords" content="blog IA entreprise, automatisation PME, cas client IA, intelligence artificielle hôtellerie, guide IA PME, intégration IA" />
-        <link rel="canonical" href="https://batemark.fr/blog" />
+        <link rel="canonical" href="https://batemark.com/blog" />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://batemark.fr/blog" />
+        <meta property="og:url" content="https://batemark.com/blog" />
         <meta property="og:title" content="Blog IA & Automatisation pour PME | BATEMARK" />
         <meta property="og:description" content="Guides pratiques, cas clients et retours d'expérience sur l'intégration de l'IA et l'automatisation dans les PME françaises." />
-        <meta property="og:image" content="https://batemark.fr/og-image.png" />
+        <meta property="og:image" content="https://batemark.com/og-image.png" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:site_name" content="BATEMARK" />
 
@@ -101,7 +101,7 @@ const Blog = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Blog IA & Automatisation pour PME | BATEMARK" />
         <meta name="twitter:description" content="Guides pratiques, cas clients et retours d'expérience sur l'intégration de l'IA et l'automatisation dans les PME françaises." />
-        <meta name="twitter:image" content="https://batemark.fr/og-image.png" />
+        <meta name="twitter:image" content="https://batemark.com/og-image.png" />
 
         {/* JSON-LD */}
         <script type="application/ld+json">{JSON.stringify(jsonLdBreadcrumb)}</script>
