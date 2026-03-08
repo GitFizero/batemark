@@ -176,8 +176,8 @@ const BlogArticleSpa = () => {
             <h2 className="text-xl font-bold mb-4">📑 Sommaire</h2>
             <ol className="space-y-2 text-muted-foreground">
               {[
-                "Le défi du secteur spa et bien-être en 2026",
-                "Ce que l'IA peut faire pour votre spa",
+                "Le défi du secteur bien-être en 2026",
+                "Ce que l'IA peut faire pour votre centre de bien-être",
                 "Cas client : Atlantica Minceur — Région PACA",
                 "Comment implémenter l'IA étape par étape",
                 "Les outils conseillés",
