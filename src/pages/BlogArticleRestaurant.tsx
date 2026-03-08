@@ -25,8 +25,8 @@ const BlogArticleRestaurant = () => {
         "publisher": {
           "@type": "Organization",
           "name": "Batemark",
-          "url": "https://batemark.fr",
-          "logo": { "@type": "ImageObject", "url": "https://batemark.fr/favicon.svg" }
+          "url": "https://batemark.com",
+          "logo": { "@type": "ImageObject", "url": "https://batemark.com/favicon.svg" }
         },
         "datePublished": "2026-03-08",
         "dateModified": "2026-03-08",
