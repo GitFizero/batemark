@@ -56,12 +56,12 @@ const BlogArticleEcommerce = () => {
                 publisher: {
                   "@type": "Organization",
                   name: "Batemark",
-                  url: "https://batemark.fr",
-                  logo: { "@type": "ImageObject", url: "https://batemark.fr/logo.png" },
+                  url: "https://batemark.com",
+                  logo: { "@type": "ImageObject", url: "https://batemark.com/logo.png" },
                 },
                 datePublished: "2025-06-01",
                 dateModified: "2025-06-01",
-                mainEntityOfPage: { "@type": "WebPage", "@id": "https://batemark.fr/blog/ia-e-commerce" },
+                mainEntityOfPage: { "@type": "WebPage", "@id": "https://batemark.com/blog/ia-e-commerce" },
                 keywords: [
                   "intelligence artificielle e-commerce",
                   "IA boutique en ligne",
