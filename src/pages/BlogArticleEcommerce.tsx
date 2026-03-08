@@ -28,13 +28,13 @@ const BlogArticleEcommerce = () => {
           content="intelligence artificielle e-commerce, IA boutique en ligne, chatbot e-commerce conversion, automatisation e-commerce, Meta Ads IA e-commerce, assistant IA avant-vente, augmenter ventes e-commerce IA"
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://batemark.fr/blog/ia-e-commerce" />
+        <link rel="canonical" href="https://batemark.com/blog/ia-e-commerce" />
 
         <meta property="og:title" content="IA et E-commerce : Comment l'Intelligence Artificielle Fait Exploser les Ventes" />
         <meta property="og:description" content="Guide complet : comment les boutiques en ligne utilisent l'IA pour convertir plus, réduire l'abandon panier et dominer leurs Meta Ads. Cas client V8-Equipment inclus." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://batemark.fr/blog/ia-e-commerce" />
-        <meta property="og:image" content="https://batemark.fr/og-ia-ecommerce.jpg" />
+        <meta property="og:url" content="https://batemark.com/blog/ia-e-commerce" />
+        <meta property="og:image" content="https://batemark.com/og-ia-ecommerce.jpg" />
         <meta property="og:site_name" content="Batemark" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="article:published_time" content="2025-06-01" />
