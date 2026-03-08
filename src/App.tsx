@@ -27,6 +27,16 @@ const BlogArticleImmobilier = lazy(() => import("./pages/BlogArticleImmobilier")
 const BlogArticleChatbot = lazy(() => import("./pages/BlogArticleChatbot"));
 const BlogArticleAvisGoogle = lazy(() => import("./pages/BlogArticleAvisGoogle"));
 const BlogArticleCabinetComptable = lazy(() => import("./pages/BlogArticleCabinetComptable"));
+const BlogArticleRecrutement = lazy(() => import("./pages/BlogArticleRecrutement"));
+const BlogArticleArtisan = lazy(() => import("./pages/BlogArticleArtisan"));
+const BlogArticleServiceClient = lazy(() => import("./pages/BlogArticleServiceClient"));
+const BlogArticleAvocat = lazy(() => import("./pages/BlogArticleAvocat"));
+const BlogArticleReporting = lazy(() => import("./pages/BlogArticleReporting"));
+const BlogArticleSalonCoiffure = lazy(() => import("./pages/BlogArticleSalonCoiffure"));
+const BlogArticleGestionStock = lazy(() => import("./pages/BlogArticleGestionStock"));
+const BlogArticleCoachConsultant = lazy(() => import("./pages/BlogArticleCoachConsultant"));
+const BlogArticleTunnelVente = lazy(() => import("./pages/BlogArticleTunnelVente"));
+const BlogArticleFranchise = lazy(() => import("./pages/BlogArticleFranchise"));
 
 const queryClient = new QueryClient();
 
