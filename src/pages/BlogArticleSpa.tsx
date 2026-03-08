@@ -251,7 +251,7 @@ const BlogArticleSpa = () => {
               {[
                 {
                   title: "1. Automatiser la prospection de nouveaux segments clients",
-                  text: "Les spas peuvent aller chercher activement des segments B2B à forte valeur : comités d'entreprise, agences événementielles, organisateurs d'EVJF, cliniques de remise en forme, hôtels sans spa qui externalisent. L'IA identifie les bons contacts, rédige les emails personnalisés et gère les relances automatiquement — sans passer des heures à prospecter manuellement.",
+                  text: "Les centres de bien-être peuvent aller chercher activement des segments B2B à forte valeur : comités d'entreprise, agences événementielles, organisateurs d'EVJF, cliniques de remise en forme, hôtels qui externalisent. L'IA identifie les bons contacts, rédige les emails personnalisés et gère les relances automatiquement — sans passer des heures à prospecter manuellement.",
                 },
                 {
                   title: "2. Réactiver les clients dormants par courrier physique personnalisé",
