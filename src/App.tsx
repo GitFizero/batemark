@@ -22,6 +22,11 @@ const AdminLogin = lazy(() => import("./pages/AdminLogin"));
 const AdminDashboard = lazy(() => import("./pages/AdminDashboard"));
 const LibrairieIA = lazy(() => import("./pages/LibrairieIA"));
 const SimulateurIAPage = lazy(() => import("./pages/SimulateurIAPage"));
+const BlogArticleProspectionB2B = lazy(() => import("./pages/BlogArticleProspectionB2B"));
+const BlogArticleImmobilier = lazy(() => import("./pages/BlogArticleImmobilier"));
+const BlogArticleChatbot = lazy(() => import("./pages/BlogArticleChatbot"));
+const BlogArticleAvisGoogle = lazy(() => import("./pages/BlogArticleAvisGoogle"));
+const BlogArticleCabinetComptable = lazy(() => import("./pages/BlogArticleCabinetComptable"));
 
 const queryClient = new QueryClient();
 
