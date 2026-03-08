@@ -545,7 +545,7 @@ const BlogArticleSpa = () => {
           <section className="mb-20">
             <span className="text-sm font-semibold text-primary uppercase tracking-widest mb-2 block">FAQ</span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8">
-              Questions fréquentes sur l'IA en spa et bien-être
+              Questions fréquentes sur l'IA et les centres de bien-être
             </h2>
 
             <Accordion type="single" collapsible className="space-y-3">
