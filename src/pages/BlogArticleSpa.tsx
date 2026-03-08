@@ -148,7 +148,7 @@ const BlogArticleSpa = () => {
                 🧖 Bien-être
               </span>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Comment l'IA transforme les spas et centres de bien-être —{" "}
+                Comment l'IA transforme les centres de bien-être —{" "}
                 <span className="text-gradient-copper">guide complet 2026</span>
               </h1>
               <div className="bg-primary/5 border-l-4 border-primary rounded-r-xl p-5 mb-8">
