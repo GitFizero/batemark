@@ -1,67 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://batemark.fr/</loc>
-    <lastmod>2025-06-01</lastmod>
+    <loc>https://batemark.com/</loc>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://batemark.fr/blog</loc>
-    <lastmod>2025-06-01</lastmod>
+    <loc>https://batemark.com/blog</loc>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://batemark.fr/blog/ia-hotellerie-restauration</loc>
+    <loc>https://batemark.com/blog/ia-hotellerie-restauration</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://batemark.fr/blog/formation-intelligence-artificielle</loc>
+    <loc>https://batemark.com/blog/formation-intelligence-artificielle</loc>
     <lastmod>2025-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://batemark.fr/blog/ia-spa-centre-bien-etre</loc>
+    <loc>https://batemark.com/blog/ia-spa-centre-bien-etre</loc>
     <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://batemark.fr/blog/ia-e-commerce</loc>
+    <loc>https://batemark.com/blog/ia-e-commerce</loc>
     <lastmod>2025-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://batemark.fr/blog/ia-restaurant-intelligence-artificielle</loc>
+    <loc>https://batemark.com/blog/ia-restaurant-intelligence-artificielle</loc>
     <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://batemark.fr/librairie-ia</loc>
-    <lastmod>2025-06-01</lastmod>
+    <loc>https://batemark.com/librairie-ia</loc>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://batemark.fr/mentions-legales</loc>
+    <loc>https://batemark.com/simulateur-ia</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://batemark.com/mentions-legales</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://batemark.fr/confidentialite</loc>
+    <loc>https://batemark.com/confidentialite</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://batemark.fr/cgv</loc>
+    <loc>https://batemark.com/cgv</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
