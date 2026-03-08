@@ -153,7 +153,7 @@ const BlogArticleSpa = () => {
               </h1>
               <div className="bg-primary/5 border-l-4 border-primary rounded-r-xl p-5 mb-8">
                 <p className="text-lg sm:text-xl text-foreground leading-relaxed">
-                  L'intelligence artificielle permet aux spas et instituts de beauté d'automatiser leur acquisition client, de réactiver leur base existante et de fidéliser durablement sans effort répétitif. Résultat : jusqu'à <strong>+35 % de rendez-vous qualifiés</strong> en 3 mois, comme l'a démontré le cas d'Atlantica Minceur, franchise de 8 instituts en région PACA.
+                  L'intelligence artificielle permet aux centres de bien-être et instituts de beauté d'automatiser leur acquisition client, de réactiver leur base existante et de fidéliser durablement sans effort répétitif. Résultat : jusqu'à <strong>+35 % de rendez-vous qualifiés</strong> en 3 mois, comme l'a démontré le cas d'Atlantica Minceur, franchise de 8 instituts en région PACA.
                 </p>
               </div>
               <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground border-t border-b border-border py-4">
