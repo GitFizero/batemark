@@ -178,7 +178,7 @@ const BlogArticleSpa = () => {
               {[
                 "Le défi du secteur spa et bien-être en 2026",
                 "Ce que l'IA peut faire pour votre spa",
-                "Cas client : L'Atelier des Sens — Aix-en-Provence",
+                "Cas client : Atlantica Minceur — Région PACA",
                 "Comment implémenter l'IA étape par étape",
                 "Les outils conseillés",
                 "Questions fréquentes",
