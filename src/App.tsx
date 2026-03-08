@@ -17,6 +17,7 @@ const BlogArticleHotellerie = lazy(() => import("./pages/BlogArticleHotellerie")
 const BlogArticleFormationIA = lazy(() => import("./pages/BlogArticleFormationIA"));
 const BlogArticleSpa = lazy(() => import("./pages/BlogArticleSpa"));
 const BlogArticleEcommerce = lazy(() => import("./pages/BlogArticleEcommerce"));
+const BlogArticleRestaurant = lazy(() => import("./pages/BlogArticleRestaurant"));
 const AdminLogin = lazy(() => import("./pages/AdminLogin"));
 const AdminDashboard = lazy(() => import("./pages/AdminDashboard"));
 const LibrairieIA = lazy(() => import("./pages/LibrairieIA"));
@@ -44,6 +45,7 @@ const App = () => (
               <Route path="/blog/formation-intelligence-artificielle" element={<BlogArticleFormationIA />} />
               <Route path="/blog/ia-spa-centre-bien-etre" element={<BlogArticleSpa />} />
               <Route path="/blog/ia-e-commerce" element={<BlogArticleEcommerce />} />
+              <Route path="/blog/ia-restaurant-intelligence-artificielle" element={<BlogArticleRestaurant />} />
               <Route path="/cgv" element={<CGV />} />
               <Route path="/confidentialite" element={<Confidentialite />} />
               <Route path="/mentions-legales" element={<MentionsLegales />} />
