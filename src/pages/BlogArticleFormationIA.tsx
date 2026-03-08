@@ -26,13 +26,13 @@ const BlogArticleFormationIA = () => {
           name="keywords"
           content="formation IA, formation intelligence artificielle, accompagnement IA, intégration IA entreprise, automatisation IA, formation IA inutile, spécialiste IA"
         />
-        <link rel="canonical" href="https://batemark.fr/blog/formation-intelligence-artificielle" />
+        <link rel="canonical" href="https://batemark.com/blog/formation-intelligence-artificielle" />
 
         <meta property="og:title" content="Formation IA : pourquoi c'est (souvent) une erreur pour les dirigeants" />
         <meta property="og:description" content="Formation IA, formation intelligence artificielle… et si c'était une erreur ? Découvrez pourquoi l'accompagnement IA est bien plus efficace." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://batemark.fr/blog/formation-intelligence-artificielle" />
-        <meta property="og:image" content="https://batemark.fr/og-image.png" />
+        <meta property="og:url" content="https://batemark.com/blog/formation-intelligence-artificielle" />
+        <meta property="og:image" content="https://batemark.com/og-image.png" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:site_name" content="BATEMARK" />
         <meta property="article:published_time" content="2026-03-07" />
@@ -46,7 +46,7 @@ const BlogArticleFormationIA = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Formation IA : pourquoi c'est (souvent) une erreur pour les dirigeants" />
         <meta name="twitter:description" content="Formation IA, formation intelligence artificielle… et si c'était une erreur ? L'accompagnement IA est bien plus efficace." />
-        <meta name="twitter:image" content="https://batemark.fr/og-image.png" />
+        <meta name="twitter:image" content="https://batemark.com/og-image.png" />
 
         <script type="application/ld+json">
           {JSON.stringify({
@@ -56,17 +56,17 @@ const BlogArticleFormationIA = () => {
                 "@type": "Article",
                 headline: "Formation IA : pourquoi votre entreprise n'a pas besoin de se former à l'intelligence artificielle",
                 description: "Formation IA, formation intelligence artificielle… et si c'était une erreur ? Découvrez pourquoi l'accompagnement IA est bien plus efficace pour votre entreprise.",
-                image: "https://batemark.fr/og-image.png",
+                image: "https://batemark.com/og-image.png",
                 author: { "@type": "Person", name: "Gaëtan Fizero" },
                 publisher: {
                   "@type": "Organization",
                   name: "BATEMARK",
-                  url: "https://batemark.fr",
-                  logo: { "@type": "ImageObject", url: "https://batemark.fr/logo.png" },
+                  url: "https://batemark.com",
+                  logo: { "@type": "ImageObject", url: "https://batemark.com/logo.png" },
                 },
                 datePublished: "2026-03-07",
                 dateModified: "2026-03-07",
-                mainEntityOfPage: "https://batemark.fr/blog/formation-intelligence-artificielle",
+                mainEntityOfPage: "https://batemark.com/blog/formation-intelligence-artificielle",
                 inLanguage: "fr-FR",
                 keywords: "formation IA, formation intelligence artificielle, accompagnement IA, intégration IA entreprise, automatisation IA",
               },
@@ -118,9 +118,9 @@ const BlogArticleFormationIA = () => {
               {
                 "@type": "BreadcrumbList",
                 itemListElement: [
-                  { "@type": "ListItem", position: 1, name: "Accueil", item: "https://batemark.fr" },
-                  { "@type": "ListItem", position: 2, name: "Blog", item: "https://batemark.fr/blog" },
-                  { "@type": "ListItem", position: 3, name: "Formation IA", item: "https://batemark.fr/blog/formation-intelligence-artificielle" },
+                  { "@type": "ListItem", position: 1, name: "Accueil", item: "https://batemark.com" },
+                  { "@type": "ListItem", position: 2, name: "Blog", item: "https://batemark.com/blog" },
+                  { "@type": "ListItem", position: 3, name: "Formation IA", item: "https://batemark.com/blog/formation-intelligence-artificielle" },
                 ],
               },
             ],

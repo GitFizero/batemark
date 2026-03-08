@@ -29,11 +29,11 @@ const BlogArticleHotellerie = () => {
           name="keywords"
           content="ia pour hotel, hotel intelligence artificielle, ia hôtellerie, ia restauration, automatisation hôtel, ia taux de remplissage, intelligence artificielle restaurant, chatbot hotel"
         />
-        <link rel="canonical" href="https://batemark.fr/blog/ia-hotellerie-restauration" />
+        <link rel="canonical" href="https://batemark.com/blog/ia-hotellerie-restauration" />
         <meta property="og:title" content="IA hôtellerie-restauration : +43 % de taux de remplissage hors saison | Batemark" />
         <meta property="og:description" content="Comment La République Indépendante de Figuerolles a transformé son acquisition grâce à l'IA. Guide complet pour les hôtels et restaurants indépendants." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://batemark.fr/blog/ia-hotellerie-restauration" />
+        <meta property="og:url" content="https://batemark.com/blog/ia-hotellerie-restauration" />
         <meta property="article:published_time" content="2025-06-01" />
         <meta property="article:modified_time" content="2025-06-01" />
 
@@ -45,16 +45,16 @@ const BlogArticleHotellerie = () => {
                 "@type": "Article",
                 headline: "Comment l'IA transforme l'hôtellerie-restauration — guide complet 2025",
                 description: "L'IA hôtellerie-restauration permet d'automatiser l'acquisition, fidéliser vos clients et remplir vos chambres hors saison. Cas réel : +43 % de taux de remplissage.",
-                image: "https://batemark.fr/blog/ia-hotellerie-restauration-cover.jpg",
-                author: { "@type": "Organization", name: "Batemark", url: "https://batemark.fr" },
+                image: "https://batemark.com/blog/ia-hotellerie-restauration-cover.jpg",
+                author: { "@type": "Organization", name: "Batemark", url: "https://batemark.com" },
                 publisher: {
                   "@type": "Organization",
                   name: "Batemark",
-                  logo: { "@type": "ImageObject", url: "https://batemark.fr/logo.png" },
+                  logo: { "@type": "ImageObject", url: "https://batemark.com/logo.png" },
                 },
                 datePublished: "2025-06-01",
                 dateModified: "2025-06-01",
-                mainEntityOfPage: "https://batemark.fr/blog/ia-hotellerie-restauration",
+                mainEntityOfPage: "https://batemark.com/blog/ia-hotellerie-restauration",
                 keywords: "ia pour hotel, ia hôtellerie, ia restauration, hotel intelligence artificielle",
               },
               {
@@ -105,9 +105,9 @@ const BlogArticleHotellerie = () => {
               {
                 "@type": "BreadcrumbList",
                 itemListElement: [
-                  { "@type": "ListItem", position: 1, name: "Accueil", item: "https://batemark.fr" },
-                  { "@type": "ListItem", position: 2, name: "Blog", item: "https://batemark.fr/blog" },
-                  { "@type": "ListItem", position: 3, name: "IA pour hôtel et restauration", item: "https://batemark.fr/blog/ia-hotellerie-restauration" },
+                  { "@type": "ListItem", position: 1, name: "Accueil", item: "https://batemark.com" },
+                  { "@type": "ListItem", position: 2, name: "Blog", item: "https://batemark.com/blog" },
+                  { "@type": "ListItem", position: 3, name: "IA pour hôtel et restauration", item: "https://batemark.com/blog/ia-hotellerie-restauration" },
                 ],
               },
             ],

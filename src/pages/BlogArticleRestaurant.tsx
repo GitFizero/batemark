@@ -25,14 +25,14 @@ const BlogArticleRestaurant = () => {
         "publisher": {
           "@type": "Organization",
           "name": "Batemark",
-          "url": "https://batemark.fr",
-          "logo": { "@type": "ImageObject", "url": "https://batemark.fr/favicon.svg" }
+          "url": "https://batemark.com",
+          "logo": { "@type": "ImageObject", "url": "https://batemark.com/favicon.svg" }
         },
         "datePublished": "2026-03-08",
         "dateModified": "2026-03-08",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://batemark.fr/blog/ia-restaurant-intelligence-artificielle"
+          "@id": "https://batemark.com/blog/ia-restaurant-intelligence-artificielle"
         },
         "keywords": [
           "intelligence artificielle restaurant",
@@ -46,9 +46,9 @@ const BlogArticleRestaurant = () => {
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://batemark.fr" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://batemark.fr/blog" },
-          { "@type": "ListItem", "position": 3, "name": "IA Restaurant", "item": "https://batemark.fr/blog/ia-restaurant-intelligence-artificielle" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://batemark.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://batemark.com/blog" },
+          { "@type": "ListItem", "position": 3, "name": "IA Restaurant", "item": "https://batemark.com/blog/ia-restaurant-intelligence-artificielle" }
         ]
       },
       {

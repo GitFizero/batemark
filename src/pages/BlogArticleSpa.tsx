@@ -26,11 +26,11 @@ const BlogArticleSpa = () => {
           name="keywords"
           content="intelligence artificielle spa, IA bien-être, IA institut de beauté, automatisation spa, automatisation institut beauté, automatisation centre bien-être, marketing digital spa, fidélisation client spa, logiciel gestion spa, IA centre de bien-être, IA thalasso, IA institut minceur, prospection spa IA, acquisition client institut beauté, automatisation soins esthétiques, CRM spa intelligence artificielle, gestion rendez-vous spa IA, digitalisation institut beauté, logiciel institut beauté IA"
         />
-        <link rel="canonical" href="https://batemark.fr/blog/ia-spa-centre-bien-etre" />
+        <link rel="canonical" href="https://batemark.com/blog/ia-spa-centre-bien-etre" />
         <meta property="og:title" content="IA pour spa, institut et centre de bien-être : automatisation et acquisition client" />
         <meta property="og:description" content="Guide complet 2026 : comment les spas, instituts de beauté et centres de bien-être utilisent l'IA pour automatiser leur acquisition, fidéliser leurs clients et remplir leur planning hors saison." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://batemark.fr/blog/ia-spa-centre-bien-etre" />
+        <meta property="og:url" content="https://batemark.com/blog/ia-spa-centre-bien-etre" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:site_name" content="BATEMARK" />
         <meta property="article:published_time" content="2026-03-08" />
@@ -63,12 +63,12 @@ const BlogArticleSpa = () => {
                 publisher: {
                   "@type": "Organization",
                   name: "BATEMARK",
-                  url: "https://batemark.fr",
-                  logo: { "@type": "ImageObject", url: "https://batemark.fr/logo.png" },
+                  url: "https://batemark.com",
+                  logo: { "@type": "ImageObject", url: "https://batemark.com/logo.png" },
                 },
                 datePublished: "2026-03-08",
                 dateModified: "2026-03-08",
-                mainEntityOfPage: "https://batemark.fr/blog/ia-spa-centre-bien-etre",
+                mainEntityOfPage: "https://batemark.com/blog/ia-spa-centre-bien-etre",
                 inLanguage: "fr-FR",
                 keywords: "intelligence artificielle spa, IA bien-être, IA institut de beauté, automatisation spa, automatisation institut beauté, automatisation centre bien-être, marketing digital spa, fidélisation client spa, IA thalasso, IA institut minceur, acquisition client spa, prospection spa IA",
               },
@@ -120,9 +120,9 @@ const BlogArticleSpa = () => {
               {
                 "@type": "BreadcrumbList",
                 itemListElement: [
-                  { "@type": "ListItem", position: 1, name: "Accueil", item: "https://batemark.fr" },
-                  { "@type": "ListItem", position: 2, name: "Blog", item: "https://batemark.fr/blog" },
-                  { "@type": "ListItem", position: 3, name: "IA Spa & Bien-être", item: "https://batemark.fr/blog/ia-spa-centre-bien-etre" },
+                  { "@type": "ListItem", position: 1, name: "Accueil", item: "https://batemark.com" },
+                  { "@type": "ListItem", position: 2, name: "Blog", item: "https://batemark.com/blog" },
+                  { "@type": "ListItem", position: 3, name: "IA Spa & Bien-être", item: "https://batemark.com/blog/ia-spa-centre-bien-etre" },
                 ],
               },
             ],
