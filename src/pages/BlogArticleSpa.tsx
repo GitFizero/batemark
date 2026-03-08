@@ -458,7 +458,7 @@ const BlogArticleSpa = () => {
           <section className="mb-20">
             <span className="text-sm font-semibold text-primary uppercase tracking-widest mb-2 block">Sélection Batemark</span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
-              Les outils IA conseillés pour les spas et centres de bien-être
+              Les outils IA conseillés pour les centres de bien-être
             </h2>
             <p className="text-muted-foreground text-base sm:text-lg mb-10">
               Ces deux outils français ont été testés et validés dans des contextes réels de spas et d'instituts de beauté. Ils sont complémentaires et particulièrement adaptés aux établissements indépendants.
