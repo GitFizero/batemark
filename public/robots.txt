@@ -15,4 +15,4 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-Sitemap: https://batemark.fr/sitemap.xml
+Sitemap: https://batemark.com/sitemap.xml
