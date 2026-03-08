@@ -32,7 +32,7 @@ const BlogArticleRestaurant = () => {
         "dateModified": "2026-03-08",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://batemark.fr/blog/ia-restaurant-intelligence-artificielle"
+          "@id": "https://batemark.com/blog/ia-restaurant-intelligence-artificielle"
         },
         "keywords": [
           "intelligence artificielle restaurant",
