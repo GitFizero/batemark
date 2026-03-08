@@ -233,7 +233,7 @@ const BlogArticleSpa = () => {
             <p className="text-xs text-muted-foreground italic">*Données estimatives basées sur des études sectorielles agrégées, 2025-2026.</p>
 
             <p className="text-muted-foreground text-base sm:text-lg mt-6">
-              Face à cela, l'intelligence artificielle pour les spas et centres de bien-être n'est plus un gadget réservé aux grands groupes. C'est devenu un <strong className="text-foreground">avantage concurrentiel accessible dès aujourd'hui</strong>, même pour les établissements indépendants.
+              Face à cela, l'intelligence artificielle pour les centres de bien-être n'est plus un gadget réservé aux grands groupes. C'est devenu un <strong className="text-foreground">avantage concurrentiel accessible dès aujourd'hui</strong>, même pour les établissements indépendants.
             </p>
           </section>
 
