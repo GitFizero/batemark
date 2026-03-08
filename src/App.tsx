@@ -21,6 +21,7 @@ const BlogArticleRestaurant = lazy(() => import("./pages/BlogArticleRestaurant")
 const AdminLogin = lazy(() => import("./pages/AdminLogin"));
 const AdminDashboard = lazy(() => import("./pages/AdminDashboard"));
 const LibrairieIA = lazy(() => import("./pages/LibrairieIA"));
+const SimulateurIAPage = lazy(() => import("./pages/SimulateurIAPage"));
 
 const queryClient = new QueryClient();
 
