@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { SEOHead } from "@/components/SEOHead";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Link } from "react-router-dom";
@@ -7,17 +7,14 @@ import { ArrowLeft } from "lucide-react";
 const Confidentialite = () => {
   return (
     <>
-      <Helmet>
-        <title>Politique de Confidentialité | BATEMARK</title>
-        <meta
-          name="description"
-          content="Politique de confidentialité et protection des données personnelles de BATEMARK."
-        />
-      </Helmet>
+      <SEOHead
+        title="Politique de Confidentialité"
+        description="Politique de confidentialité et protection des données personnelles de BATEMARK. Consultant IA & automatisation."
+      />
 
       <Header />
 
-      <main className="min-h-screen pt-32 pb-20 px-4 md:px-8">
+      <main id="main-content" className="min-h-screen pt-32 pb-20 px-4 md:px-8">
         <div className="container-custom max-w-4xl">
           <Link
             to="/"

@@ -12,63 +12,35 @@ import { BlogSection } from "@/components/sections/BlogSection";
 import { LibrairieSection } from "@/components/sections/LibrairieSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
-import { Helmet } from "react-helmet-async";
+import { SEOHead } from "@/components/SEOHead";
 
 const Index = () => {
   return (
     <>
-      <Helmet>
-        <title>IA & Automatisation pour votre entreprise — BATEMARK</title>
-        <meta 
-          name="description" 
-          content="Intégrer l'IA dans votre entreprise et automatiser vos process internes. Consultant spécialisé en automatisation, agents IA et pilotage augmenté. Appel découverte gratuit." 
-        />
-        <meta name="keywords" content="intégrer IA entreprise, automatiser entreprise, automatisation process, agents IA, consultant IA, intégration IA, make n8n zapier, dashboard pilotage IA" />
-        <meta property="og:title" content="IA & Automatisation pour votre entreprise — BATEMARK" />
-        <meta property="og:description" content="Consultant spécialisé pour intégrer l'IA et automatiser les process de votre entreprise. Agents IA, automatisation, pilotage augmenté." />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://batemark.fr" />
-        
+      <SEOHead
+        title="IA & Automatisation pour votre entreprise"
+        description="Intégrer l'IA dans votre entreprise et automatiser vos process internes. Consultant spécialisé en automatisation, agents IA et pilotage augmenté. Appel découverte gratuit."
+        keywords="intégrer IA entreprise, automatiser entreprise, automatisation process, agents IA, consultant IA, intégration IA, make n8n zapier, dashboard pilotage IA"
+      >
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
             "name": "BATEMARK — Intégrer l'IA en entreprise",
-            "description": "Consultant spécialisé pour intégrer l'IA et automatiser les process des entreprises. Automatisation, agents IA, pilotage augmenté.",
+            "description": "Consultant spécialisé pour intégrer l'IA et automatiser les process des entreprises.",
             "url": "https://batemark.fr",
-            "founder": {
-              "@type": "Person",
-              "name": "Gaëtan Fizero"
-            },
-            "areaServed": {
-              "@type": "Country",
-              "name": "France"
-            },
+            "founder": { "@type": "Person", "name": "Gaëtan Fizero" },
+            "areaServed": { "@type": "Country", "name": "France" },
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
               "name": "Services IA & Automatisation",
               "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Automatisation de l'acquisition",
-                    "description": "Systèmes de leads automatisés, prospection LinkedIn, mailing IA"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Automatisation des process opérationnels",
-                    "description": "Portails clients IA, dashboards décisionnels, gestion centralisée"
-                  }
-                }
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automatisation de l'acquisition" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automatisation des process opérationnels" } }
               ]
             }
           })}
         </script>
-
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -77,35 +49,26 @@ const Index = () => {
               {
                 "@type": "Question",
                 "name": "Quel type d'entreprise accompagnes-tu ?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Je travaille avec des entreprises de toutes tailles, principalement dans les services, l'e-commerce et les agences."
-                }
+                "acceptedAnswer": { "@type": "Answer", "text": "Je travaille avec des entreprises de toutes tailles, principalement dans les services, l'e-commerce et les agences." }
               },
               {
                 "@type": "Question",
                 "name": "Combien de temps pour voir des résultats ?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Mes clients voient des résultats dès le premier mois. L'implémentation prend en moyenne 2 à 4 semaines selon la complexité."
-                }
+                "acceptedAnswer": { "@type": "Answer", "text": "Mes clients voient des résultats dès le premier mois. L'implémentation prend en moyenne 2 à 4 semaines." }
               },
               {
                 "@type": "Question",
                 "name": "Y a-t-il un engagement minimum ?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Non. On commence par une mission définie, et on continue si les résultats sont là."
-                }
+                "acceptedAnswer": { "@type": "Answer", "text": "Non. On commence par une mission définie, et on continue si les résultats sont là." }
               }
             ]
           })}
         </script>
-      </Helmet>
+      </SEOHead>
 
       <Header />
       
-      <main>
+      <main id="main-content">
         <HeroSection />
         <section id="ia-benefices">
           <IABenefitsSection />

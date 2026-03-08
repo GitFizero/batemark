@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { SEOHead } from "@/components/SEOHead";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Link } from "react-router-dom";
@@ -7,17 +7,14 @@ import { ArrowLeft } from "lucide-react";
 const CGV = () => {
   return (
     <>
-      <Helmet>
-        <title>Conditions Générales de Vente | BATEMARK</title>
-        <meta
-          name="description"
-          content="Conditions Générales de Vente de BATEMARK - Expert en acquisition digitale et génération de leads qualifiés."
-        />
-      </Helmet>
+      <SEOHead
+        title="Conditions Générales de Vente"
+        description="Conditions Générales de Vente de BATEMARK. Consultant IA & automatisation pour TPE/PME en France."
+      />
 
       <Header />
 
-      <main className="min-h-screen pt-32 pb-20 px-4 md:px-8">
+      <main id="main-content" className="min-h-screen pt-32 pb-20 px-4 md:px-8">
         <div className="container-custom max-w-4xl">
           <Link
             to="/"
