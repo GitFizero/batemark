@@ -255,7 +255,7 @@ const BlogArticleSpa = () => {
                 },
                 {
                   title: "2. Réactiver les clients dormants par courrier physique personnalisé",
-                  text: "67 % des clients d'un spa ne reviennent jamais après une seule visite — non par insatisfaction, mais par oubli. Une carte manuscrite personnalisée (écriture générée par IA, indifférenciable du vrai), envoyée au bon moment — anniversaire, 3 mois après la dernière visite, changement de saison — crée un effet de surprise et de fidélisation incomparable. Avec Manuscry, tout est automatisé.",
+                  text: "67 % des clients d'un centre de bien-être ne reviennent jamais après une seule visite — non par insatisfaction, mais par oubli. Une carte manuscrite personnalisée (écriture générée par IA, indifférenciable du vrai), envoyée au bon moment — anniversaire, 3 mois après la dernière visite, changement de saison — crée un effet de surprise et de fidélisation incomparable. Avec Manuscry, tout est automatisé.",
                 },
                 {
                   title: "3. Personnaliser les parcours clients avant et après le soin",
