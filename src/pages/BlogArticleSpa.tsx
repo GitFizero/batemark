@@ -213,7 +213,7 @@ const BlogArticleSpa = () => {
             {/* Stats */}
             <div className="grid md:grid-cols-3 gap-6 my-12">
               {[
-                { stat: "54 %", desc: "Taux d'occupation moyen hors saison pour les spas indépendants*" },
+                { stat: "54 %", desc: "Taux d'occupation moyen hors saison pour les centres de bien-être indépendants*" },
                 { stat: "×4", desc: "Plus de chances de revenir après une relance personnalisée qu'après un simple email générique*" },
                 { stat: "67 %", desc: "Des clients ne reviennent jamais sans relance — non par insatisfaction, mais par oubli*" },
               ].map((item, i) => (
