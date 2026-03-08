@@ -12,6 +12,7 @@ import { BlogSection } from "@/components/sections/BlogSection";
 import { LibrairieSection } from "@/components/sections/LibrairieSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
+import { SimulateurSection } from "@/components/sections/SimulateurSection";
 import { SEOHead } from "@/components/SEOHead";
 
 const Index = () => {
@@ -90,6 +91,9 @@ const Index = () => {
         </section>
         <section id="pourquoi">
           <WhyBatemarkSection />
+        </section>
+        <section id="simulateur">
+          <SimulateurSection />
         </section>
         <section id="librairie-ia">
           <LibrairieSection />

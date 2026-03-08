@@ -21,6 +21,7 @@ const BlogArticleRestaurant = lazy(() => import("./pages/BlogArticleRestaurant")
 const AdminLogin = lazy(() => import("./pages/AdminLogin"));
 const AdminDashboard = lazy(() => import("./pages/AdminDashboard"));
 const LibrairieIA = lazy(() => import("./pages/LibrairieIA"));
+const SimulateurIAPage = lazy(() => import("./pages/SimulateurIAPage"));
 
 const queryClient = new QueryClient();
 
@@ -50,6 +51,7 @@ const App = () => (
               <Route path="/confidentialite" element={<Confidentialite />} />
               <Route path="/mentions-legales" element={<MentionsLegales />} />
               <Route path="/librairie-ia" element={<LibrairieIA />} />
+              <Route path="/simulateur-ia" element={<SimulateurIAPage />} />
               <Route path="/admin/login" element={<AdminLogin />} />
               <Route path="/admin" element={<AdminDashboard />} />
               <Route path="*" element={<NotFound />} />
