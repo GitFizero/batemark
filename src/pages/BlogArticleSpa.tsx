@@ -593,7 +593,7 @@ const BlogArticleSpa = () => {
                   Prêt à intégrer l'IA dans votre établissement ?
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
-                  En 10 minutes, obtenez un plan d'action personnalisé pour votre spa ou centre de bien-être. Gratuit, sans engagement.
+                  En 10 minutes, obtenez un plan d'action personnalisé pour votre centre de bien-être. Gratuit, sans engagement.
                 </p>
                 <ContactFormDialog
                   trigger={
