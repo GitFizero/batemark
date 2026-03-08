@@ -16,6 +16,7 @@ import BlogArticleSpa from "./pages/BlogArticleSpa";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
 import LibrairieIA from "./pages/LibrairieIA";
+import BlogArticleEcommerce from "./pages/BlogArticleEcommerce";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
             <Route path="/blog/ia-hotellerie-restauration" element={<BlogArticleHotellerie />} />
             <Route path="/blog/formation-intelligence-artificielle" element={<BlogArticleFormationIA />} />
             <Route path="/blog/ia-spa-centre-bien-etre" element={<BlogArticleSpa />} />
+            <Route path="/blog/ia-e-commerce" element={<BlogArticleEcommerce />} />
             <Route path="/cgv" element={<CGV />} />
             <Route path="/confidentialite" element={<Confidentialite />} />
             <Route path="/mentions-legales" element={<MentionsLegales />} />
