@@ -112,14 +112,14 @@ const LibrairieIA = () => {
           content="Découvrez les meilleurs outils IA testés sur des cas clients réels : automatisation, prospection, fidélisation et productivité pour TPE/PME. Sélection experte Batemark."
         />
         <meta name="keywords" content="outils IA entreprise, meilleurs outils intelligence artificielle, automatisation PME, IA prospection, IA productivité, outils IA recommandés" />
-        <link rel="canonical" href="https://batemark.fr/librairie-ia" />
+        <link rel="canonical" href="https://batemark.com/librairie-ia" />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://batemark.fr/librairie-ia" />
+        <meta property="og:url" content="https://batemark.com/librairie-ia" />
         <meta property="og:title" content="Librairie IA — Meilleurs outils IA pour entreprises | BATEMARK" />
         <meta property="og:description" content="Sélection des meilleurs outils IA testés sur des cas clients réels. Automatisez votre prospection, fidélisation et productivité." />
-        <meta property="og:image" content="https://batemark.fr/og-image.png" />
+        <meta property="og:image" content="https://batemark.com/og-image.png" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:site_name" content="BATEMARK" />
 
@@ -127,7 +127,7 @@ const LibrairieIA = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Librairie IA — Meilleurs outils IA pour entreprises | BATEMARK" />
         <meta name="twitter:description" content="Sélection des meilleurs outils IA testés sur des cas clients réels. Automatisez votre prospection, fidélisation et productivité." />
-        <meta name="twitter:image" content="https://batemark.fr/og-image.png" />
+        <meta name="twitter:image" content="https://batemark.com/og-image.png" />
 
         {/* JSON-LD */}
         <script type="application/ld+json">{JSON.stringify(jsonLdWebPage)}</script>
