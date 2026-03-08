@@ -1,0 +1,21 @@
+{
+  "name": "BATEMARK — IA & Automatisation pour entreprises",
+  "short_name": "BATEMARK",
+  "description": "Consultant spécialisé pour intégrer l'IA et automatiser les process de votre entreprise. Agents IA, automatisation, pilotage augmenté pour TPE/PME.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#B4836D",
+  "background_color": "#0d0f14",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}
