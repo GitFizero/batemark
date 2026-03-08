@@ -203,7 +203,7 @@ const BlogArticleSpa = () => {
             </h2>
             <div className="space-y-5 text-muted-foreground text-base sm:text-lg leading-relaxed">
               <p>
-                Le secteur du bien-être est l'un des plus exigeants qui soit. Forte saisonnalité, fidélisation difficile, pression sur les marges, concurrence des plateformes de réservation — les dirigeants de spas jonglent en permanence avec des contraintes contradictoires.
+                Le secteur du bien-être est l'un des plus exigeants qui soit. Forte saisonnalité, fidélisation difficile, pression sur les marges, concurrence des plateformes de réservation — les dirigeants de centres de bien-être jonglent en permanence avec des contraintes contradictoires.
               </p>
               <p>
                 En France, le taux d'occupation moyen d'un spa indépendant hors saison tourne autour de <strong className="text-foreground">54 %</strong> selon les données agrégées du secteur. Et pourtant, les coûts fixes — loyer, personnel, consommables — ne baissent pas.
