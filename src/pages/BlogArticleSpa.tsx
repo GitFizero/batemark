@@ -441,7 +441,7 @@ const BlogArticleSpa = () => {
           {/* CTA 2 */}
           <section className="mb-20">
             <div className="rounded-2xl p-8 sm:p-10 text-center" style={{ background: "linear-gradient(135deg, hsl(220 12% 10%), hsl(220 15% 7%))" }}>
-              <h3 className="text-xl sm:text-2xl font-bold mb-3">Prêt à automatiser l'acquisition de votre spa ?</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-3">Prêt à automatiser l'acquisition de votre centre de bien-être ?</h3>
               <p className="text-muted-foreground mb-6">Répondez à 3 questions pour recevoir un plan d'action personnalisé.</p>
               <ContactFormDialog
                 trigger={
