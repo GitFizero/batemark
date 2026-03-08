@@ -67,6 +67,16 @@ const App = () => (
               <Route path="/blog/chatbot-ia-site-web-conversion" element={<BlogArticleChatbot />} />
               <Route path="/blog/automatiser-avis-google-ia" element={<BlogArticleAvisGoogle />} />
               <Route path="/blog/ia-cabinet-comptable" element={<BlogArticleCabinetComptable />} />
+              <Route path="/blog/ia-recrutement-pme" element={<BlogArticleRecrutement />} />
+              <Route path="/blog/ia-artisan-automatisation" element={<BlogArticleArtisan />} />
+              <Route path="/blog/ia-automatiser-service-client" element={<BlogArticleServiceClient />} />
+              <Route path="/blog/ia-avocat-cabinet" element={<BlogArticleAvocat />} />
+              <Route path="/blog/ia-automatiser-reporting" element={<BlogArticleReporting />} />
+              <Route path="/blog/ia-salon-coiffure-beaute" element={<BlogArticleSalonCoiffure />} />
+              <Route path="/blog/ia-gestion-stock-automatique" element={<BlogArticleGestionStock />} />
+              <Route path="/blog/ia-coach-consultant" element={<BlogArticleCoachConsultant />} />
+              <Route path="/blog/ia-tunnel-vente-automatise" element={<BlogArticleTunnelVente />} />
+              <Route path="/blog/ia-franchise-multi-sites" element={<BlogArticleFranchise />} />
               <Route path="/cgv" element={<CGV />} />
               <Route path="/confidentialite" element={<Confidentialite />} />
               <Route path="/mentions-legales" element={<MentionsLegales />} />
