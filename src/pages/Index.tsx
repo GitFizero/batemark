@@ -93,6 +93,9 @@ const Index = () => {
         <section id="pourquoi">
           <WhyBatemarkSection />
         </section>
+        <section id="simulateur">
+          <SimulateurSection />
+        </section>
         <section id="librairie-ia">
           <LibrairieSection />
         </section>
