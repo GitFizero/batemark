@@ -245,9 +245,15 @@ const LibrairieIA = () => {
                               <ExternalLink className="w-4 h-4 ml-1 group-hover/btn:translate-x-0.5 transition-transform" />
                             </a>
                           </Button>
-                          <p className="text-xs text-muted-foreground mt-3 text-center italic">
-                            🎁 Lien partenaire — avantages exclusifs Batemark
-                          </p>
+                          {tool.name.toLowerCase() === "make" ? (
+                            <p className="text-xs text-primary mt-3 text-center font-medium">
+                              🎁 Inscrivez-vous via notre lien et recevez <strong>1 mois du plan Pro avec 10 000 opérations gratuites</strong> !
+                            </p>
+                          ) : (
+                            <p className="text-xs text-muted-foreground mt-3 text-center italic">
+                              🎁 Lien partenaire — avantages exclusifs Batemark
+                            </p>
+                          )}
                         </motion.div>
                       ))}
                   </div>
