@@ -46,7 +46,7 @@ const BlogArticleFormationIA = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Formation IA : pourquoi c'est (souvent) une erreur pour les dirigeants" />
         <meta name="twitter:description" content="Formation IA, formation intelligence artificielle… et si c'était une erreur ? L'accompagnement IA est bien plus efficace." />
-        <meta name="twitter:image" content="https://batemark.fr/og-image.png" />
+        <meta name="twitter:image" content="https://batemark.com/og-image.png" />
 
         <script type="application/ld+json">
           {JSON.stringify({
