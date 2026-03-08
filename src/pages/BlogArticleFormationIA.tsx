@@ -26,7 +26,7 @@ const BlogArticleFormationIA = () => {
           name="keywords"
           content="formation IA, formation intelligence artificielle, accompagnement IA, intégration IA entreprise, automatisation IA, formation IA inutile, spécialiste IA"
         />
-        <link rel="canonical" href="https://batemark.fr/blog/formation-intelligence-artificielle" />
+        <link rel="canonical" href="https://batemark.com/blog/formation-intelligence-artificielle" />
 
         <meta property="og:title" content="Formation IA : pourquoi c'est (souvent) une erreur pour les dirigeants" />
         <meta property="og:description" content="Formation IA, formation intelligence artificielle… et si c'était une erreur ? Découvrez pourquoi l'accompagnement IA est bien plus efficace." />
