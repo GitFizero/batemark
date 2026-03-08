@@ -412,7 +412,7 @@ const BlogArticleSpa = () => {
           <section className="mb-20">
             <span className="text-sm font-semibold text-primary uppercase tracking-widest mb-2 block">La méthode Batemark</span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
-              Intégrer l'IA dans votre spa : 4 étapes concrètes
+              Intégrer l'IA dans votre centre de bien-être : 4 étapes concrètes
             </h2>
             <p className="text-muted-foreground text-base sm:text-lg mb-10">
               L'intégration de l'intelligence artificielle dans un spa ou centre de bien-être ne se fait pas en un jour. Mais elle peut commencer en une semaine, si l'on suit la bonne méthode.
