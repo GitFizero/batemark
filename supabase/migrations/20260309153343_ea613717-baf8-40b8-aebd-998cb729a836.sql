@@ -1,0 +1,25 @@
+
+UPDATE ai_tools SET logo_url = '/images/logos/clay.png' WHERE id = '93f347ee-f5c4-44d4-a49f-97ac4e76f08f';
+UPDATE ai_tools SET logo_url = '/images/logos/instantly.png' WHERE id = '33890ff3-a71e-4aae-8b0d-b5043f65639c';
+UPDATE ai_tools SET logo_url = '/images/logos/jasper.png' WHERE id = '76fe532d-6fa7-4d1b-b19a-35515db22dcc';
+UPDATE ai_tools SET logo_url = '/images/logos/copyai.png' WHERE id = 'd8b54f08-d129-4dd9-8c37-a8e8d6376e46';
+UPDATE ai_tools SET logo_url = '/images/logos/writesonic.png' WHERE id = '15b34138-0542-414c-920e-fc83761cb6f9';
+UPDATE ai_tools SET logo_url = '/images/logos/notion.png' WHERE id = '61dd41be-333b-48a2-ae73-aa137ee9a150';
+UPDATE ai_tools SET logo_url = '/images/logos/lovable.png' WHERE id = 'd2d9f4fe-8d59-4922-abc5-65187b5c8a95';
+UPDATE ai_tools SET logo_url = '/images/logos/claude.png' WHERE id = 'f4180766-5d63-49f9-9594-2613150b7c3c';
+UPDATE ai_tools SET logo_url = '/images/logos/bubble.png' WHERE id = 'e7259407-8525-4e33-a20d-66c94f6fbaf6';
+UPDATE ai_tools SET logo_url = '/images/logos/otter.png' WHERE id = 'd4c6e7d3-94e6-4e51-810b-6b7fc581d0a4';
+UPDATE ai_tools SET logo_url = '/images/logos/fireflies.png' WHERE id = '666ade0a-4914-4c74-957d-732cbca567e1';
+UPDATE ai_tools SET logo_url = '/images/logos/coda.png' WHERE id = 'b679fba8-00ad-41c0-9f2a-7e993e01b768';
+UPDATE ai_tools SET logo_url = '/images/logos/canva.png' WHERE id = 'ec514ee0-4a15-47e2-95d7-a2d5390f88a9';
+UPDATE ai_tools SET logo_url = '/images/logos/midjourney.png' WHERE id = '5fca0c93-0250-4059-a9fa-4af0293cebf7';
+UPDATE ai_tools SET logo_url = '/images/logos/runway.png' WHERE id = 'b3a5b3cf-f13a-41d7-9630-1566e9c9bd10';
+UPDATE ai_tools SET logo_url = '/images/logos/tableau.png' WHERE id = 'e2ae6639-a615-405c-b4d1-175c0a8af81f';
+UPDATE ai_tools SET logo_url = '/images/logos/julius.png' WHERE id = 'e38fdf6b-612e-4bd2-8abb-904e1a178cfa';
+UPDATE ai_tools SET logo_url = '/images/logos/taplio.png' WHERE id = '47c9ec2f-f76f-4cc3-80c2-8f7f892b86c1';
+UPDATE ai_tools SET logo_url = '/images/logos/hypefury.png' WHERE id = '68e16d21-2653-486c-a8cb-b1707298ed71';
+UPDATE ai_tools SET logo_url = '/images/logos/manychat.png' WHERE id = '45c221d8-bacf-481f-9822-9e32b0f42b83';
+UPDATE ai_tools SET logo_url = '/images/logos/flick.png' WHERE id = 'eb9280ba-4c8f-462b-a12b-5b85cec19cff';
+UPDATE ai_tools SET logo_url = '/images/logos/crisp.png' WHERE id = 'ec8d1fd4-2fb4-47ac-91f5-630dfba0ecb5';
+UPDATE ai_tools SET logo_url = '/images/logos/tidio.png' WHERE id = 'e22f2fc7-cd57-4968-adeb-5c38e8364fb4';
+UPDATE ai_tools SET logo_url = '/images/logos/botpress.png' WHERE id = 'a4a9b8a8-1c62-4b92-80fa-c38f80e62fb1';
