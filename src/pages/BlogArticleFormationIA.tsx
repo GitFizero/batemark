@@ -12,6 +12,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { ContactFormDialog } from "@/components/ContactFormDialog";
+import { RelatedArticles } from "@/components/RelatedArticles";
 
 const BlogArticleFormationIA = () => {
   return (
@@ -582,6 +583,7 @@ const BlogArticleFormationIA = () => {
               <li>Grand View Research (2024). <em>AI in Education Market Size & Trends Analysis</em>. grandviewresearch.com</li>
             </ul>
           </section>
+          <RelatedArticles currentSlug="formation-intelligence-artificielle" />
         </article>
       </main>
 

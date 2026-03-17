@@ -2,9 +2,22 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /admin
+Disallow: /feed/
+Disallow: /comments/
+Disallow: /home/
+Disallow: /biography/
+Disallow: /wp-
+Disallow: /?s=
+Disallow: /xmlrpc.php
 
 User-agent: Googlebot
 Allow: /
+Disallow: /admin/
+Disallow: /admin
+Disallow: /feed/
+Disallow: /comments/
+Disallow: /home/
+Disallow: /biography/
 
 User-agent: Bingbot
 Allow: /

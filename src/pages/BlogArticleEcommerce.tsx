@@ -12,6 +12,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { ContactFormDialog } from "@/components/ContactFormDialog";
+import { RelatedArticles } from "@/components/RelatedArticles";
 import v8Img from "@/assets/case-v8-equipment.jpg";
 
 const BlogArticleEcommerce = () => {
@@ -611,6 +612,7 @@ const BlogArticleEcommerce = () => {
               </div>
             </div>
           </section>
+          <RelatedArticles currentSlug="ia-e-commerce" />
         </article>
       </main>
 

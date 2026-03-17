@@ -7,6 +7,7 @@ import { ArrowRight, Clock, CheckCircle2, ChevronRight } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ContactFormDialog } from "@/components/ContactFormDialog";
 import { Link } from "react-router-dom";
+import { RelatedArticles } from "@/components/RelatedArticles";
 
 const CAL_LINK = "https://cal.com/gaetan-batemark/audit";
 
@@ -173,6 +174,7 @@ const BlogArticleAgenceCom = () => {
               <Button variant="hero" size="lg" className="group" asChild><a href={CAL_LINK} target="_blank" rel="noopener noreferrer">Réserver mon audit gratuit<ArrowRight className="group-hover:translate-x-1 transition-transform" /></a></Button>
             </div>
           </section>
+          <RelatedArticles currentSlug="ia-agence-communication" />
         </article>
       </main>
       <Footer />

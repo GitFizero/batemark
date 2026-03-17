@@ -7,6 +7,7 @@ import { ArrowRight, Clock, CheckCircle2, ChevronRight } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ContactFormDialog } from "@/components/ContactFormDialog";
 import { Link } from "react-router-dom";
+import { RelatedArticles } from "@/components/RelatedArticles";
 
 const CAL_LINK = "https://cal.com/gaetan-batemark/audit";
 
