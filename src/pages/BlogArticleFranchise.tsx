@@ -204,6 +204,7 @@ const BlogArticleFranchise = () => {
               </Button>
             </div>
           </section>
+          <RelatedArticles currentSlug="ia-franchise-multi-sites" />
         </article>
       </main>
       <Footer />

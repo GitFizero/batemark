@@ -11,6 +11,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { ContactFormDialog } from "@/components/ContactFormDialog";
+import { RelatedArticles } from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
 
 const CAL_LINK = "https://cal.com/gaetan-batemark/audit";
@@ -409,6 +410,7 @@ const BlogArticleProspectionB2B = () => {
               </Button>
             </div>
           </section>
+          <RelatedArticles currentSlug="automatiser-prospection-b2b-ia" />
         </article>
       </main>
 

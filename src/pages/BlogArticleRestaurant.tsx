@@ -11,6 +11,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { ContactFormDialog } from "@/components/ContactFormDialog";
+import { RelatedArticles } from "@/components/RelatedArticles";
 import restaurantImg from "@/assets/case-restaurant-bordeaux.jpg";
 
 const BlogArticleRestaurant = () => {
@@ -635,6 +636,7 @@ const BlogArticleRestaurant = () => {
             </div>
           </section>
 
+          <RelatedArticles currentSlug="ia-restaurant-intelligence-artificielle" />
         </article>
       </main>
 
