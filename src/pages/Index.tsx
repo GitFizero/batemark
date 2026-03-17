@@ -6,6 +6,7 @@ import { ProblemsSection } from "@/components/sections/ProblemsSection";
 import { PhilosophySection } from "@/components/sections/PhilosophySection";
 import { PillarsSection } from "@/components/sections/PillarsSection";
 import { CaseStudiesSection } from "@/components/sections/CaseStudiesSection";
+import { SectorsSection } from "@/components/sections/SectorsSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { WhyBatemarkSection } from "@/components/sections/WhyBatemarkSection";
 import { BlogSection } from "@/components/sections/BlogSection";

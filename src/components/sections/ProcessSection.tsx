@@ -7,29 +7,29 @@ const steps = [
   {
     icon: Search,
     number: "01",
-    title: "Audit & diagnostic",
-    description: "On cartographie ensemble vos process, vos outils actuels et vos objectifs de croissance.",
+    title: "Audit & diagnostic IA de votre entreprise",
+    description: "On cartographie ensemble vos processus métier, vos outils actuels et vos objectifs de croissance. Que vous soyez dans l'hôtellerie, l'e-commerce, le BTP ou le juridique, nous identifions les tâches automatisables et les leviers d'acquisition à fort potentiel. Livrable : rapport d'audit IA complet avec recommandations prioritaires.",
     duration: "Semaine 1",
   },
   {
     icon: ListChecks,
     number: "02",
-    title: "Plan d'action",
-    description: "Je définis les systèmes à construire, les outils à connecter et les KPIs à suivre.",
+    title: "Plan d'action & stratégie d'intégration IA",
+    description: "Nous définissons les systèmes IA à construire, les outils à connecter (CRM, Meta Ads, Google Ads, mailing, ERP) et les KPIs à suivre. Chaque plan est adapté à votre secteur : automatisation de devis pour artisans, système de réservation IA pour hôtels, tunnel d'acquisition pour e-commerce. Livrable : roadmap détaillée avec calendrier et indicateurs de succès.",
     duration: "Semaine 2",
   },
   {
     icon: Rocket,
     number: "03",
-    title: "Exécution",
-    description: "Je livre les automatisations et dashboards. Premiers résultats visibles dès le 1er mois.",
+    title: "Exécution & déploiement des systèmes IA",
+    description: "Nous livrons les automatisations, portails clients, dashboards décisionnels et campagnes d'acquisition IA. Intégration avec vos outils existants, tests et mise en production. Premiers résultats mesurables dès le premier mois : leads générés, heures économisées, chiffre d'affaires additionnel. Livrables : systèmes fonctionnels, documentation et formation de vos équipes.",
     duration: "Semaines 3-6",
   },
   {
     icon: RefreshCw,
     number: "04",
-    title: "Suivi & Itération",
-    description: "On mesure, on ajuste, on optimise en continu.",
+    title: "Suivi, itération & optimisation continue",
+    description: "On mesure les performances de chaque système IA déployé, on ajuste les campagnes d'acquisition, on optimise les automatisations opérationnelles en continu. Reporting mensuel avec analyse des KPIs et recommandations d'amélioration pour maximiser votre retour sur investissement.",
     duration: "En continu",
   },
 ];
@@ -54,8 +54,11 @@ export const ProcessSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6">
-            Comment ça <span className="text-gradient-copper">marche</span>
+            Notre méthode d'intégration de <span className="text-gradient-copper">l'IA</span> dans votre entreprise
           </h2>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
+            Une méthodologie éprouvée en 4 étapes pour intégrer l'intelligence artificielle dans votre activité — de l'audit initial au déploiement opérationnel, avec des résultats mesurables dès le premier mois.
+          </p>
         </motion.div>
 
         <div className="max-w-4xl mx-auto relative">
@@ -95,6 +98,16 @@ export const ProcessSection = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-center text-base sm:text-lg text-muted-foreground mt-12 max-w-4xl mx-auto"
+        >
+          Notre méthode d'intégration IA s'adapte aux spécificités de chaque secteur : gestion de réservations et expérience client pour l'hôtellerie-restauration, automatisation de devis et suivi de chantier pour le BTP et les artisans, tunnels de vente et gestion de stock pour l'e-commerce, gestion de dossiers pour les cabinets juridiques, prise de rendez-vous intelligente pour la santé et la beauté, et prospection automatisée pour l'immobilier. Quel que soit votre métier, Batemark conçoit un système IA sur mesure, adapté à vos process et à vos objectifs.
+        </motion.p>
       </div>
     </section>
   );

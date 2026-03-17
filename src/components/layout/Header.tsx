@@ -16,6 +16,7 @@ import logo from "@/assets/logo.svg";
 const navLinks = [
   { label: "Méthode Batemark", href: "/#methode" },
   { label: "Librairie IA", href: "/librairie-ia" },
+  { label: "Secteurs", href: "/#secteurs" },
   { label: "Blog", href: "/blog" },
 ];
 
