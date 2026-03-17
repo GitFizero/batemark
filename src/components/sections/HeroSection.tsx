@@ -6,7 +6,7 @@ import montagneBg from "@/assets/montagne.svg";
 
 const CAL_LINK = "https://cal.com/gaetan-batemark/audit";
 
-const rotatingWords = ["acquisition", "process", "décisions", "opérations"];
+const rotatingWords = ["hôtellerie", "restauration", "immobilier", "BTP", "e-commerce", "santé"];
 
 export const HeroSection = () => {
   const [wordIndex, setWordIndex] = useState(0);
@@ -33,16 +33,25 @@ export const HeroSection = () => {
             transition={{ duration: 0.6 }}
             className="text-primary font-semibold text-base sm:text-xl mb-4 md:mb-6 tracking-wide uppercase"
           >
-            IA & Automatisation pour votre entreprise
+            Cabinet de conseil en intelligence artificielle
           </motion.p>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6 md:mb-8 leading-tight"
+            className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-4 md:mb-6 leading-tight"
           >
-            Automatisez votre{" "}
+            Intégrez l'intelligence artificielle dans votre entreprise
+          </motion.h1>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 md:mb-6"
+          >
+            <span className="text-muted-foreground">Spécialistes en </span>
             <span className="relative inline-flex min-w-[120px] sm:min-w-[180px] md:min-w-[280px] lg:min-w-[340px] justify-center">
               <AnimatePresence mode="wait">
                 <motion.span
@@ -57,15 +66,24 @@ export const HeroSection = () => {
                 </motion.span>
               </AnimatePresence>
             </span>
-          </motion.h1>
+          </motion.div>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg sm:text-2xl md:text-3xl text-muted-foreground mb-8 md:mb-12 max-w-3xl mx-auto"
+            className="text-lg sm:text-2xl md:text-3xl text-muted-foreground mb-4 md:mb-6 max-w-3xl mx-auto"
           >
-            Pour ne pas être balayé par la vague de l'IA, apprenez à la surfer.
+            Automatisation, productivité et croissance grâce à l'IA — pour ne pas être balayé par la vague, apprenez à la surfer.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.25 }}
+            className="text-base sm:text-lg text-muted-foreground/80 mb-8 md:mb-12 max-w-2xl mx-auto"
+          >
+            Batemark accompagne les PME et TPE dans leur transformation digitale : hôtellerie, restauration, immobilier, BTP, e-commerce, santé, juridique et secteur de la beauté.
           </motion.p>
 
           <motion.div
@@ -76,7 +94,7 @@ export const HeroSection = () => {
           >
             <Button variant="hero" size="xl" className="group" asChild>
               <a href={CAL_LINK} target="_blank" rel="noopener noreferrer">
-                Réserver un appel découverte
+                Réserver un audit IA gratuit
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>

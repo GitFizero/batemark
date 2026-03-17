@@ -21,15 +21,15 @@ const metrics = [
 ];
 
 const offer1Deliverables = [
-  "Système de leads entrants automatisés (Meta, Google, mailing IA)",
-  "Prospection LinkedIn automatisée + lead nurturing",
-  "Séquences de mailing IA personnalisées",
+  "Prospection IA hôtellerie & restauration : génération de réservations directes via Meta, Google Ads et mailing automatisé",
+  "Acquisition client e-commerce : campagnes IA, retargeting intelligent et séquences de mailing personnalisées pour boutiques en ligne",
+  "Génération de leads immobilier, BTP et artisans : prospection LinkedIn automatisée, lead nurturing et qualification IA des prospects",
 ];
 
 const offer2Deliverables = [
-  "Portail client IA (onboarding, suivi, pilotage)",
-  "Gestion centralisée de campagnes ou de clients",
-  "Dashboards décisionnels connectés à vos données",
+  "Automatisation devis artisan & BTP : génération de devis IA, suivi client automatisé et portail client intelligent",
+  "Gestion de stock IA & reporting automatisé : dashboards décisionnels connectés à vos données pour e-commerce, retail et restauration",
+  "Onboarding employé IA & gestion centralisée : portails internes, suivi de campagnes et pilotage opérationnel pour cabinets juridiques, instituts beauté et cliniques santé",
 ];
 
 export const PillarsSection = () => {
@@ -47,8 +47,11 @@ export const PillarsSection = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6">
-            Ce que je fais <span className="text-gradient-copper">concrètement</span>
+            Services d'intégration <span className="text-gradient-copper">IA et automatisation</span> pour entreprises
           </h2>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
+            Nous accompagnons les entreprises de l'hôtellerie, la restauration, l'immobilier, le BTP, l'e-commerce, la santé, le juridique et la beauté dans l'intégration de solutions IA sur mesure — acquisition de clients et automatisation des processus opérationnels.
+          </p>
         </motion.div>
 
         {/* Metrics */}
@@ -85,9 +88,9 @@ export const PillarsSection = () => {
             <div className="p-4 rounded-2xl bg-primary/10 w-fit mb-5">
               <Megaphone className="w-10 h-10 text-primary group-hover:scale-110 transition-transform" />
             </div>
-            <h3 className="text-xl sm:text-2xl font-bold mb-3">Automatisation de l'acquisition</h3>
+            <h3 className="text-xl sm:text-2xl font-bold mb-3">Automatisation de l'acquisition client par l'IA</h3>
             <p className="text-muted-foreground text-base sm:text-lg mb-6">
-              Générez des leads et des ventes en automatique — sans dépendre d'une équipe commerciale.
+              Générez des leads qualifiés et des ventes en automatique grâce à l'intelligence artificielle — prospection IA hôtellerie pour augmenter vos réservations directes, acquisition client e-commerce pour booster votre chiffre d'affaires, génération de leads immobilier et BTP pour remplir votre carnet de commandes. Sans dépendre d'une équipe commerciale.
             </p>
             <ul className="space-y-3 mb-6 flex-1">
               {offer1Deliverables.map((item, i) => (
@@ -115,9 +118,9 @@ export const PillarsSection = () => {
             <div className="p-4 rounded-2xl bg-primary/10 w-fit mb-5">
               <Cog className="w-10 h-10 text-primary group-hover:scale-110 transition-transform" />
             </div>
-            <h3 className="text-xl sm:text-2xl font-bold mb-3">Automatisation des process opérationnels</h3>
+            <h3 className="text-xl sm:text-2xl font-bold mb-3">Automatisation des processus opérationnels avec l'IA</h3>
             <p className="text-muted-foreground text-base sm:text-lg mb-6">
-              Libérez vos équipes des tâches répétitives — pour qu'elles se concentrent sur ce qui crée de la valeur.
+              Libérez vos équipes des tâches répétitives grâce à l'automatisation IA — automatisation de devis pour artisans et entreprises du BTP, gestion de stock intelligente pour e-commerce et restauration, reporting automatisé et dashboards décisionnels, onboarding employé IA pour cabinets juridiques et cliniques santé. Concentrez-vous sur ce qui crée de la valeur.
             </p>
             <ul className="space-y-3 mb-6 flex-1">
               {offer2Deliverables.map((item, i) => (
