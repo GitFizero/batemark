@@ -21,7 +21,7 @@ const pillars = [
 
 export const PillarsSection = () => {
   return (
-    <section className="py-14 sm:py-16 md:py-20 px-4 sm:px-6 bg-[#1a1a1a]">
+    <section className="py-14 sm:py-16 md:py-20 px-4 sm:px-6 bg-[#0a0a0a]">
       <div className="container-custom">
         <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
           {pillars.map((pillar, i) => (

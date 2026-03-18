@@ -34,7 +34,7 @@ const steps = [
 
 export const ProcessSection = () => {
   return (
-    <section className="section-padding">
+    <section className="section-padding bg-white">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
@@ -43,10 +43,10 @@ export const ProcessSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-2">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-2 text-[#0a0a0a]">
             La méthode
           </h2>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-[#0a0a0a]/50">
             4 étapes pour intégrer l'IA dans votre activité.
           </p>
         </motion.div>
@@ -61,14 +61,14 @@ export const ProcessSection = () => {
               transition={{ duration: 0.4, delay: index * 0.08 }}
               className="text-center"
             >
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-primary/8 mb-3">
-                <step.icon className="w-5 h-5 text-primary" />
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-[#0a0a0a]/5 mb-3">
+                <step.icon className="w-5 h-5 text-[#c4956e]" />
               </div>
-              <span className="block text-[10px] font-semibold text-primary uppercase tracking-wider mb-1.5">
+              <span className="block text-[10px] font-semibold text-[#c4956e] uppercase tracking-wider mb-1.5">
                 {step.duration}
               </span>
-              <h3 className="text-sm font-semibold mb-1">{step.title}</h3>
-              <p className="text-xs text-muted-foreground leading-relaxed">{step.description}</p>
+              <h3 className="text-sm font-semibold mb-1 text-[#0a0a0a]">{step.title}</h3>
+              <p className="text-xs text-[#0a0a0a]/50 leading-relaxed">{step.description}</p>
             </motion.div>
           ))}
         </div>

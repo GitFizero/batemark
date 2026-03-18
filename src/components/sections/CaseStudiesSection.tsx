@@ -59,7 +59,7 @@ const tagColors: Record<string, string> = {
 
 export const CaseStudiesSection = () => {
   return (
-    <section className="py-14 sm:py-16 md:py-20 px-4 sm:px-6 bg-[#1a1a1a]">
+    <section className="py-14 sm:py-16 md:py-20 px-4 sm:px-6 bg-[#0a0a0a]">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 16 }}

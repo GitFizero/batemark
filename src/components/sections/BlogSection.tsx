@@ -36,14 +36,14 @@ export const BlogSection = () => {
 
   if (loading) {
     return (
-      <section className="section-padding">
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-3 gap-4">
             {[1, 2, 3].map((i) => (
-              <div key={i} className="rounded-2xl border border-border overflow-hidden animate-pulse">
-                <div className="h-32 bg-muted" />
+              <div key={i} className="rounded-2xl border border-[#0a0a0a]/10 overflow-hidden animate-pulse">
+                <div className="h-32 bg-[#0a0a0a]/5" />
                 <div className="p-3">
-                  <div className="h-3 bg-muted rounded w-3/4" />
+                  <div className="h-3 bg-[#0a0a0a]/5 rounded w-3/4" />
                 </div>
               </div>
             ))}
@@ -54,7 +54,7 @@ export const BlogSection = () => {
   }
 
   return (
-    <section className="section-padding">
+    <section className="section-padding bg-white">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
@@ -63,10 +63,10 @@ export const BlogSection = () => {
           transition={{ duration: 0.5 }}
           className="flex items-end justify-between mb-8"
         >
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#0a0a0a]">
             Ressources
           </h2>
-          <Button variant="ghost" size="sm" className="group text-xs text-muted-foreground hover:text-foreground" asChild>
+          <Button variant="ghost" size="sm" className="group text-xs text-[#0a0a0a]/40 hover:text-[#0a0a0a]" asChild>
             <a href="/blog">
               Tout voir
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -82,7 +82,7 @@ export const BlogSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.06 }}
-                className="rounded-2xl border border-border overflow-hidden group cursor-pointer hover:shadow-sm transition-all duration-300 bg-card"
+                className="rounded-2xl border border-[#0a0a0a]/8 overflow-hidden group cursor-pointer hover:shadow-sm transition-all duration-300 bg-white"
               >
                 <div className="relative h-32 overflow-hidden">
                   <img
@@ -93,10 +93,10 @@ export const BlogSection = () => {
                   />
                 </div>
                 <div className="p-3">
-                  <span className="text-[10px] font-semibold text-primary uppercase tracking-wider">
+                  <span className="text-[10px] font-semibold text-[#c4956e] uppercase tracking-wider">
                     {article.category}
                   </span>
-                  <h3 className="text-xs sm:text-sm font-semibold mt-1 group-hover:text-primary transition-colors line-clamp-2">
+                  <h3 className="text-xs sm:text-sm font-semibold mt-1 text-[#0a0a0a] group-hover:text-[#c4956e] transition-colors line-clamp-2">
                     {article.title}
                   </h3>
                 </div>

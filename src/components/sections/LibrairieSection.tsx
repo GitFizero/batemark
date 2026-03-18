@@ -54,14 +54,14 @@ export const LibrairieSection = () => {
 
   if (loading) {
     return (
-      <section className="section-padding">
+      <section className="section-padding bg-[#0a0a0a]">
         <div className="container-custom">
           <div className="grid md:grid-cols-3 gap-4">
             {[1, 2, 3].map((i) => (
-              <div key={i} className="rounded-2xl border border-border p-5 animate-pulse">
-                <div className="h-8 w-8 bg-muted rounded mb-3" />
-                <div className="h-3 bg-muted rounded w-1/2 mb-2" />
-                <div className="h-3 bg-muted rounded w-3/4" />
+              <div key={i} className="rounded-2xl border border-white/8 p-5 animate-pulse">
+                <div className="h-8 w-8 bg-white/10 rounded mb-3" />
+                <div className="h-3 bg-white/10 rounded w-1/2 mb-2" />
+                <div className="h-3 bg-white/10 rounded w-3/4" />
               </div>
             ))}
           </div>
@@ -73,7 +73,7 @@ export const LibrairieSection = () => {
   if (tools.length === 0) return null;
 
   return (
-    <section className="section-padding">
+    <section className="section-padding bg-[#0a0a0a]">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
@@ -82,10 +82,10 @@ export const LibrairieSection = () => {
           transition={{ duration: 0.5 }}
           className="flex items-end justify-between mb-8"
         >
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white">
             Outils IA
           </h2>
-          <Button variant="ghost" size="sm" className="group text-xs text-muted-foreground hover:text-foreground" asChild>
+          <Button variant="ghost" size="sm" className="group text-xs text-white/40 hover:text-white hover:bg-white/5" asChild>
             <a href="/librairie-ia">
               Tout voir
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -104,25 +104,25 @@ export const LibrairieSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.06 }}
-              className="flex items-center gap-4 p-4 rounded-2xl border border-border bg-card hover:border-primary/20 transition-colors group"
+              className="flex items-center gap-4 p-4 rounded-2xl border border-white/8 bg-white/[0.03] hover:border-white/15 transition-colors group"
             >
               {(tool.logo_url || LOGO_FALLBACKS[tool.name.toLowerCase()]) ? (
                 <img
                   src={tool.logo_url || LOGO_FALLBACKS[tool.name.toLowerCase()]}
                   alt={tool.name}
-                  className="h-9 w-9 object-contain shrink-0 rounded-lg bg-white border border-border/50 p-0.5"
+                  className="h-9 w-9 object-contain shrink-0 rounded-lg bg-white p-0.5"
                   loading="lazy"
                 />
               ) : (
-                <div className="h-9 w-9 rounded-lg bg-primary/8 shrink-0 flex items-center justify-center text-primary font-bold text-xs">
+                <div className="h-9 w-9 rounded-lg bg-white/10 shrink-0 flex items-center justify-center text-[#c4956e] font-bold text-xs">
                   {tool.name.charAt(0)}
                 </div>
               )}
               <div className="flex-1 min-w-0">
-                <h3 className="text-sm font-semibold">{tool.name}</h3>
-                <p className="text-xs text-muted-foreground line-clamp-1">{tool.description}</p>
+                <h3 className="text-sm font-semibold text-white">{tool.name}</h3>
+                <p className="text-xs text-white/40 line-clamp-1">{tool.description}</p>
               </div>
-              <ExternalLink className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary shrink-0 transition-colors" />
+              <ExternalLink className="w-3.5 h-3.5 text-white/20 group-hover:text-[#c4956e] shrink-0 transition-colors" />
             </motion.a>
           ))}
         </div>

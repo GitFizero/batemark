@@ -31,7 +31,7 @@ const faqs = [
 
 export const FAQSection = () => {
   return (
-    <section className="section-padding bg-[hsl(30_15%_96%)]">
+    <section className="section-padding bg-[#0a0a0a]">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
@@ -40,7 +40,7 @@ export const FAQSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-8"
         >
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white">
             FAQ
           </h2>
         </motion.div>
@@ -57,12 +57,12 @@ export const FAQSection = () => {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-card rounded-xl border border-border px-4"
+                className="bg-white/[0.04] rounded-xl border border-white/8 px-4"
               >
-                <AccordionTrigger className="text-left text-sm font-medium hover:text-primary transition-colors py-3.5">
+                <AccordionTrigger className="text-left text-sm font-medium text-white/80 hover:text-white transition-colors py-3.5">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground text-xs pb-3.5 leading-relaxed">
+                <AccordionContent className="text-white/40 text-xs pb-3.5 leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

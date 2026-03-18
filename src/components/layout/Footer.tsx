@@ -16,19 +16,19 @@ const legalLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="border-t border-border" role="contentinfo">
+    <footer className="bg-[#0a0a0a] border-t border-white/8" role="contentinfo">
       <div className="container-custom py-10 px-4 sm:px-6">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           {/* Brand */}
           <div className="flex items-center gap-4">
             <Link to="/">
-              <img src={logo} alt="BATEMARK" className="h-7 w-auto" width={148} height={28} loading="lazy" />
+              <img src={logo} alt="BATEMARK" className="h-7 w-auto brightness-0 invert" width={148} height={28} loading="lazy" />
             </Link>
             <a
               href="https://www.linkedin.com/in/gaetanfizero/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-white/40 hover:text-[#c4956e] transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin className="w-4 h-4" aria-hidden="true" />
@@ -41,17 +41,17 @@ export const Footer = () => {
               <Link
                 key={link.href}
                 to={link.href}
-                className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                className="text-xs text-white/40 hover:text-white transition-colors"
               >
                 {link.label}
               </Link>
             ))}
-            <span className="hidden sm:inline text-border">|</span>
+            <span className="hidden sm:inline text-white/10">|</span>
             {legalLinks.map((link) => (
               <Link
                 key={link.href}
                 to={link.href}
-                className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                className="text-xs text-white/40 hover:text-white transition-colors"
               >
                 {link.label}
               </Link>
@@ -59,7 +59,7 @@ export const Footer = () => {
           </nav>
         </div>
 
-        <p className="text-[11px] text-muted-foreground mt-6">
+        <p className="text-[11px] text-white/25 mt-6">
           © {new Date().getFullYear()} BATEMARK — Gaëtan Fizero. Consultant IA & Automatisation.
         </p>
       </div>
