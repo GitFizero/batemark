@@ -47,16 +47,16 @@ export const BlogSection = () => {
 
   if (loading) {
     return (
-      <section id="journal" className="section-padding">
+      <section className="section-padding">
         <div className="container-custom">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-5">
             {[1, 2, 3].map((i) => (
-              <div key={i} className="card-premium p-0 overflow-hidden animate-pulse">
-                <div className="h-48 bg-muted" />
-                <div className="p-6">
-                  <div className="h-4 bg-muted rounded w-20 mb-4" />
-                  <div className="h-6 bg-muted rounded w-full mb-3" />
-                  <div className="h-16 bg-muted rounded w-full" />
+              <div key={i} className="bg-white rounded-2xl border border-border overflow-hidden animate-pulse">
+                <div className="h-40 bg-muted" />
+                <div className="p-4">
+                  <div className="h-3 bg-muted rounded w-16 mb-3" />
+                  <div className="h-4 bg-muted rounded w-full mb-2" />
+                  <div className="h-3 bg-muted rounded w-3/4" />
                 </div>
               </div>
             ))}
@@ -67,64 +67,62 @@ export const BlogSection = () => {
   }
 
   return (
-    <section id="journal" className="section-padding">
+    <section className="section-padding">
       <div className="container-custom">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="flex flex-col md:flex-row md:items-end md:justify-between mb-12"
+          transition={{ duration: 0.5 }}
+          className="flex flex-col md:flex-row md:items-end md:justify-between mb-10"
         >
           <div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">
-              Ressources <span className="text-gradient-copper">& conseils</span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-2">
+              Ressources
             </h2>
-            <p className="text-xl text-muted-foreground">
-              Guides pratiques IA & automatisation pour votre business
+            <p className="text-sm text-muted-foreground">
+              Guides pratiques IA & automatisation
             </p>
           </div>
-          <Button variant="heroOutline" size="lg" className="mt-6 md:mt-0 group" asChild>
+          <Button variant="heroOutline" size="default" className="mt-4 md:mt-0 group text-sm" asChild>
             <a href="/blog">
-              Voir tous les articles
-              <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+              Tous les articles
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
           </Button>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-5">
           {articles.map((article, index) => (
             <a key={article.id} href={`/blog/${article.slug}`} className="block">
               <motion.article
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="card-premium p-0 overflow-hidden group cursor-pointer hover:border-copper/30 transition-all duration-300 h-full"
+                transition={{ duration: 0.4, delay: index * 0.08 }}
+                className="bg-white rounded-2xl border border-border overflow-hidden group cursor-pointer hover:shadow-md transition-all duration-300 h-full"
               >
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-40 overflow-hidden">
                   <img
                     src={article.image_url}
                     alt={article.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
                   />
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 rounded-full text-xs font-semibold gradient-copper text-background">
+                  <div className="absolute top-3 left-3">
+                    <span className="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-primary/90 text-white">
                       {article.category}
                     </span>
                   </div>
                 </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
-                    <Calendar className="w-4 h-4" />
+                <div className="p-4">
+                  <div className="flex items-center gap-1.5 text-xs text-muted-foreground mb-2">
+                    <Calendar className="w-3 h-3" />
                     {formatDate(article.published_at)}
                   </div>
-                  <h3 className="text-lg font-semibold mb-2 group-hover:text-copper transition-colors line-clamp-2">
+                  <h3 className="text-sm font-semibold group-hover:text-primary transition-colors line-clamp-2">
                     {article.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground line-clamp-2">
-                    {article.excerpt}
-                  </p>
                 </div>
               </motion.article>
             </a>

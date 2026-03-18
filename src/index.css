@@ -6,84 +6,77 @@
 
 @layer base {
   :root {
-    /* Premium Dark Theme - Strict Color Palette */
-    /* Primary: #B4836D = hsl(18, 31%, 57%) */
-    /* Secondary: #896B60 = hsl(15, 19%, 46%) */
-    /* Tertiary: #25414B = hsl(193, 33%, 22%) */
-    
-    --background: 220 15% 5%;
-    --foreground: 0 0% 96%;
+    /* Light Theme - Warm Minimal (inspired by dreelio) */
+    /* Primary: #B4836D copper */
 
-    --card: 220 12% 8%;
-    --card-foreground: 0 0% 96%;
+    --background: 30 20% 97%;
+    --foreground: 20 15% 10%;
 
-    --popover: 220 12% 8%;
-    --popover-foreground: 0 0% 96%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 15% 10%;
 
-    /* Primary - #B4836D */
-    --primary: 18 31% 57%;
-    --primary-foreground: 220 15% 5%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 15% 10%;
 
-    /* Secondary - #896B60 */
-    --secondary: 15 19% 46%;
-    --secondary-foreground: 0 0% 96%;
+    /* Primary - Copper */
+    --primary: 18 31% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Tertiary - #25414B */
-    --tertiary: 193 33% 22%;
-    --tertiary-foreground: 0 0% 96%;
+    /* Secondary */
+    --secondary: 30 10% 92%;
+    --secondary-foreground: 20 15% 20%;
 
-    /* Accent uses tertiary */
-    --accent: 193 33% 22%;
-    --accent-foreground: 0 0% 96%;
+    /* Tertiary */
+    --tertiary: 193 25% 35%;
+    --tertiary-foreground: 0 0% 100%;
 
-    --muted: 220 10% 15%;
-    --muted-foreground: 0 0% 65%;
+    /* Accent */
+    --accent: 30 15% 94%;
+    --accent-foreground: 20 15% 20%;
+
+    --muted: 30 10% 93%;
+    --muted-foreground: 20 8% 45%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 18 31% 57% / 0.15;
-    --input: 220 12% 12%;
-    --ring: 18 31% 57%;
+    --border: 20 10% 88%;
+    --input: 30 10% 93%;
+    --ring: 18 31% 50%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
-    /* Custom Tokens - Strict Palette */
-    --copper: 18 31% 57%;
-    --copper-light: 18 31% 65%;
-    --copper-dark: 15 19% 46%;
-    --dark-surface: 220 15% 8%;
-    --glow-copper: 0 0 40px hsl(18 31% 57% / 0.3);
+    /* Custom Tokens */
+    --copper: 18 31% 50%;
+    --copper-light: 18 31% 60%;
+    --copper-dark: 15 19% 40%;
+    --dark-surface: 30 10% 95%;
+    --glow-copper: 0 4px 30px hsl(18 31% 50% / 0.12);
 
-    --sidebar-background: 220 15% 6%;
-    --sidebar-foreground: 0 0% 96%;
-    --sidebar-primary: 18 31% 57%;
-    --sidebar-primary-foreground: 220 15% 5%;
-    --sidebar-accent: 193 33% 22%;
-    --sidebar-accent-foreground: 0 0% 96%;
-    --sidebar-border: 220 15% 15%;
-    --sidebar-ring: 18 31% 57%;
-    
-    --background-alt: 220 12% 6%;
-    --foreground-muted: 0 0% 70%;
-    --primary-light: 18 31% 65%;
-    --primary-dark: 15 19% 46%;
-    
+    --sidebar-background: 30 15% 96%;
+    --sidebar-foreground: 20 15% 10%;
+    --sidebar-primary: 18 31% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 30 15% 94%;
+    --sidebar-accent-foreground: 20 15% 20%;
+    --sidebar-border: 20 10% 88%;
+    --sidebar-ring: 18 31% 50%;
+
+    --background-alt: 30 15% 95%;
+    --foreground-muted: 20 8% 45%;
+    --primary-light: 18 31% 60%;
+    --primary-dark: 15 19% 40%;
+
     --success: 142 76% 36%;
     --success-foreground: 0 0% 98%;
-    
-    --gradient-primary: linear-gradient(135deg, hsl(15 19% 46%) 0%, hsl(18 31% 57%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(220 15% 5%), hsl(220 12% 6%));
-    --shadow-elegant: 0 20px 60px hsl(0 0% 0% / 0.6);
-    --shadow-lift: 0 8px 24px hsl(0 0% 0% / 0.5);
-    --shadow-copper: 0 10px 40px hsl(18 31% 57% / 0.25);
-    --shadow-copper-glow: 0 0 60px hsl(18 31% 57% / 0.3);
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
 
-  .dark {
-    --background: 220 15% 5%;
-    --foreground: 0 0% 96%;
+    --gradient-primary: linear-gradient(135deg, hsl(15 19% 40%) 0%, hsl(18 31% 50%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(30 20% 97%), hsl(30 15% 95%));
+    --shadow-elegant: 0 4px 50px hsl(20 10% 30% / 0.06);
+    --shadow-lift: 0 2px 12px hsl(20 10% 30% / 0.08);
+    --shadow-copper: 0 4px 20px hsl(18 31% 50% / 0.1);
+    --shadow-copper-glow: 0 0 30px hsl(18 31% 50% / 0.08);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -101,21 +94,22 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    line-height: 1.7;
+    font-size: 15px;
+    line-height: 1.6;
     overflow-x: hidden;
     -webkit-tap-highlight-color: transparent;
   }
 
   @media (min-width: 640px) {
     body {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Inter', sans-serif;
-    @apply font-bold tracking-tight;
+    @apply font-semibold tracking-tight;
+    line-height: 1.2;
   }
 }
 
@@ -133,21 +127,21 @@
 
   /* Hero slide accent colors */
   .text-gradient-mountain {
-    background: linear-gradient(135deg, hsl(18 31% 57%), hsl(18 31% 68%));
+    background: linear-gradient(135deg, hsl(18 31% 45%), hsl(18 31% 58%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .text-gradient-ocean {
-    background: linear-gradient(135deg, hsl(195 70% 50%), hsl(185 60% 65%));
+    background: linear-gradient(135deg, hsl(200 60% 40%), hsl(190 55% 50%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .text-gradient-train {
-    background: linear-gradient(135deg, hsl(30 70% 55%), hsl(35 80% 65%));
+    background: linear-gradient(135deg, hsl(25 60% 45%), hsl(30 65% 55%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -155,51 +149,54 @@
 
   /* Hero slide button themes */
   .hero-btn-mountain {
-    background: linear-gradient(135deg, hsl(15 19% 46%), hsl(18 31% 57%)) !important;
-    box-shadow: 0 0 20px hsl(18 31% 57% / 0.4);
+    background: linear-gradient(135deg, hsl(15 19% 40%), hsl(18 31% 50%)) !important;
+    color: white !important;
+    box-shadow: 0 4px 20px hsl(18 31% 50% / 0.25);
   }
   .hero-btn-mountain:hover {
-    box-shadow: 0 0 30px hsl(18 31% 57% / 0.6);
+    box-shadow: 0 4px 30px hsl(18 31% 50% / 0.35);
   }
 
   .hero-btn-ocean {
-    background: linear-gradient(135deg, hsl(200 60% 35%), hsl(195 70% 50%)) !important;
-    box-shadow: 0 0 20px hsl(195 70% 50% / 0.4);
+    background: linear-gradient(135deg, hsl(200 55% 35%), hsl(195 60% 45%)) !important;
+    color: white !important;
+    box-shadow: 0 4px 20px hsl(195 60% 45% / 0.25);
   }
   .hero-btn-ocean:hover {
-    box-shadow: 0 0 30px hsl(195 70% 50% / 0.6);
+    box-shadow: 0 4px 30px hsl(195 60% 45% / 0.35);
   }
 
   .hero-btn-train {
-    background: linear-gradient(135deg, hsl(25 50% 40%), hsl(30 70% 55%)) !important;
-    box-shadow: 0 0 20px hsl(30 70% 55% / 0.4);
+    background: linear-gradient(135deg, hsl(25 50% 38%), hsl(30 60% 48%)) !important;
+    color: white !important;
+    box-shadow: 0 4px 20px hsl(30 60% 48% / 0.25);
   }
   .hero-btn-train:hover {
-    box-shadow: 0 0 30px hsl(30 70% 55% / 0.6);
+    box-shadow: 0 4px 30px hsl(30 60% 48% / 0.35);
   }
 
   .hero-btn-outline-mountain {
-    border-color: hsl(18 31% 57% / 0.5) !important;
-    color: hsl(18 31% 57%) !important;
+    border-color: hsl(18 31% 50% / 0.4) !important;
+    color: hsl(18 31% 45%) !important;
   }
   .hero-btn-outline-ocean {
-    border-color: hsl(195 70% 50% / 0.5) !important;
-    color: hsl(195 70% 50%) !important;
+    border-color: hsl(195 60% 45% / 0.4) !important;
+    color: hsl(200 55% 35%) !important;
   }
   .hero-btn-outline-train {
-    border-color: hsl(30 70% 55% / 0.5) !important;
-    color: hsl(30 70% 55%) !important;
+    border-color: hsl(30 60% 48% / 0.4) !important;
+    color: hsl(25 50% 38%) !important;
   }
 
   /* Hero slide surtitre accent */
   .hero-accent-mountain {
-    color: hsl(18 31% 57%);
+    color: hsl(18 31% 45%);
   }
   .hero-accent-ocean {
-    color: hsl(195 70% 50%);
+    color: hsl(200 55% 35%);
   }
   .hero-accent-train {
-    color: hsl(30 70% 55%);
+    color: hsl(25 50% 38%);
   }
 
   .glow-copper {
@@ -207,25 +204,25 @@
   }
 
   .card-premium {
-    @apply bg-card border border-border rounded-2xl p-6 backdrop-blur-sm;
-    background: linear-gradient(145deg, hsl(220 12% 8%), hsl(220 15% 5%));
+    @apply bg-card border border-border rounded-2xl p-6;
+    box-shadow: 0 4px 50px hsl(20 10% 30% / 0.04);
   }
 
   .btn-primary-glow {
     @apply relative overflow-hidden;
-    box-shadow: 0 0 20px hsl(18 31% 57% / 0.4), 0 0 40px hsl(18 31% 57% / 0.2);
+    box-shadow: 0 4px 20px hsl(18 31% 50% / 0.2);
   }
 
   .btn-primary-glow:hover {
-    box-shadow: 0 0 30px hsl(18 31% 57% / 0.6), 0 0 60px hsl(18 31% 57% / 0.3);
+    box-shadow: 0 4px 30px hsl(18 31% 50% / 0.3);
   }
 
   .section-padding {
-    @apply py-12 sm:py-16 md:py-28 px-4 sm:px-6 md:px-8;
+    @apply py-16 sm:py-20 md:py-28 px-4 sm:px-6 md:px-8;
   }
 
   .container-custom {
-    @apply max-w-7xl mx-auto px-4 sm:px-0;
+    @apply max-w-6xl mx-auto px-4 sm:px-0;
   }
 }
 
@@ -244,7 +241,7 @@
   }
 
   @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 20px hsl(18 31% 57% / 0.4); }
-    50% { box-shadow: 0 0 40px hsl(18 31% 57% / 0.6); }
+    0%, 100% { box-shadow: 0 4px 20px hsl(18 31% 50% / 0.15); }
+    50% { box-shadow: 0 4px 30px hsl(18 31% 50% / 0.25); }
   }
 }

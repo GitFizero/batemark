@@ -62,11 +62,11 @@ export const LibrairieSection = () => {
           className="flex flex-col md:flex-row md:items-end md:justify-between mb-12"
         >
           <div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-2">
               Librairie <span className="text-gradient-copper">IA</span>
             </h2>
-            <p className="text-xl text-muted-foreground">
-              Les outils IA qu'on recommande à nos clients
+            <p className="text-sm text-muted-foreground">
+              Les outils IA qu'on recommande
             </p>
           </div>
           <Button variant="heroOutline" size="lg" className="mt-6 md:mt-0 group" asChild>
