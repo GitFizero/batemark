@@ -48,7 +48,7 @@ export const IABenefitsSection = () => {
             <span className="text-gradient-copper">dans votre entreprise</span>
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Un levier opérationnel concret qui transforme la performance des PME et TPE — dans l'hôtellerie, la restauration, l'immobilier, le BTP, l'e-commerce, la santé, le juridique et bien d'autres secteurs — dès le premier mois de déploiement.
+            Les entreprises qui intègrent l'IA aujourd'hui gagnent un avantage concurrentiel décisif : elles gagnent du temps, travaillent plus efficacement et attirent plus de clients — avec des résultats mesurables dès le premier mois.
           </p>
         </motion.div>
 

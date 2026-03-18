@@ -10,7 +10,7 @@ import caseFiguerolles from "@/assets/figuerolles.jpg";
 const caseStudies = [
   {
     name: "Atlantica Minceur",
-    context: "Beauté & bien-être — Système d'acquisition de leads IA automatisé avec campagnes Meta Ads, landing pages optimisées et séquences de mailing IA pour un institut de beauté et minceur",
+    context: "Beauté & bien-être — Système d'acquisition client IA complet : prospection automatisée, landing pages intelligentes et séquences de mailing personnalisées par l'IA pour un institut de beauté et minceur",
     result: "15 000€ générés dès le 1er mois pour 350€ investis",
     tag: "Acquisition",
     image: caseAtlantica,
@@ -31,7 +31,7 @@ const caseStudies = [
   },
   {
     name: "V8 Equipment",
-    context: "E-commerce outdoor — Système d'acquisition IA complet avec mailing automatisé, campagnes Meta Ads et retargeting intelligent pour une boutique en ligne d'équipement de camping et van",
+    context: "E-commerce outdoor — Système d'acquisition IA complet : mailing automatisé, ciblage intelligent et retargeting piloté par l'IA pour une boutique en ligne d'équipement de camping et van",
     result: "24 500€ générés en 1 mois — 9 tentes de toit vendues",
     tag: "Acquisition",
     image: caseV8,
@@ -45,7 +45,7 @@ const caseStudies = [
   },
   {
     name: "La République Indépendante de Figuerolles",
-    context: "Hôtellerie-restauration — Acquisition IA pour un hôtel-restaurant indépendant avec campagnes Google Ads, Meta Ads et stratégie de réservation directe automatisée hors saison",
+    context: "Hôtellerie-restauration — Système IA d'acquisition pour un hôtel-restaurant indépendant : campagnes optimisées par l'IA, stratégie de réservation directe automatisée et ciblage intelligent hors saison",
     result: "+43% de taux de remplissage hors saison",
     tag: "Acquisition",
     image: caseFiguerolles,

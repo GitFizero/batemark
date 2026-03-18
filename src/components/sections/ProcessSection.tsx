@@ -15,7 +15,7 @@ const steps = [
     icon: ListChecks,
     number: "02",
     title: "Plan d'action & stratégie d'intégration IA",
-    description: "Nous définissons les systèmes IA à construire, les outils à connecter (CRM, Meta Ads, Google Ads, mailing, ERP) et les KPIs à suivre. Chaque plan est adapté à votre secteur : automatisation de devis pour artisans, système de réservation IA pour hôtels, tunnel d'acquisition pour e-commerce. Livrable : roadmap détaillée avec calendrier et indicateurs de succès.",
+    description: "Nous définissons les systèmes IA à construire, les outils à connecter (CRM, mailing, ERP, Make, n8n, ChatGPT) et les KPIs à suivre. Chaque plan est adapté à votre secteur : automatisation de devis pour artisans, système de réservation IA pour hôtels, tunnel d'acquisition pour e-commerce. Livrable : roadmap détaillée avec calendrier et indicateurs de succès.",
     duration: "Semaine 2",
   },
   {

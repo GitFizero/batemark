@@ -6,7 +6,7 @@ const metrics = [
   {
     icon: TrendingUp,
     stat: "×4.3",
-    label: "Augmentation du ROAS en moyenne",
+    label: "Retour sur investissement moyen",
   },
   {
     icon: Clock,
@@ -21,15 +21,15 @@ const metrics = [
 ];
 
 const offer1Deliverables = [
-  "Prospection IA hôtellerie & restauration : génération de réservations directes via Meta, Google Ads et mailing automatisé",
-  "Acquisition client e-commerce : campagnes IA, retargeting intelligent et séquences de mailing personnalisées pour boutiques en ligne",
-  "Génération de leads immobilier, BTP et artisans : prospection LinkedIn automatisée, lead nurturing et qualification IA des prospects",
+  "Prospection automatisée par l'IA : identification de prospects, séquences d'emails personnalisés et relances intelligentes — sans intervention manuelle",
+  "Acquisition client pilotée par l'IA : tunnels de conversion, chatbots qualifiants et campagnes optimisées par intelligence artificielle",
+  "Génération de leads pour tous secteurs : hôtellerie, immobilier, BTP, e-commerce, santé — l'IA qualifie et nourrit vos prospects en continu",
 ];
 
 const offer2Deliverables = [
-  "Automatisation devis artisan & BTP : génération de devis IA, suivi client automatisé et portail client intelligent",
-  "Gestion de stock IA & reporting automatisé : dashboards décisionnels connectés à vos données pour e-commerce, retail et restauration",
-  "Onboarding employé IA & gestion centralisée : portails internes, suivi de campagnes et pilotage opérationnel pour cabinets juridiques, instituts beauté et cliniques santé",
+  "Automatisation administrative : génération de devis, factures, relances et suivi client — le tout piloté par l'IA sans intervention manuelle",
+  "Dashboards décisionnels & reporting IA : visualisez vos KPIs en temps réel, prenez des décisions éclairées grâce à l'analyse intelligente de vos données",
+  "Portails clients & onboarding IA : centralisez vos process, automatisez l'intégration de nouveaux clients ou collaborateurs avec des workflows intelligents",
 ];
 
 export const PillarsSection = () => {
@@ -50,7 +50,7 @@ export const PillarsSection = () => {
             Services d'intégration <span className="text-gradient-copper">IA et automatisation</span> pour entreprises
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Nous accompagnons les entreprises de l'hôtellerie, la restauration, l'immobilier, le BTP, l'e-commerce, la santé, le juridique et la beauté dans l'intégration de solutions IA sur mesure — acquisition de clients et automatisation des processus opérationnels.
+            Deux leviers pour transformer votre entreprise grâce à l'IA : attirer plus de clients en automatique, et gagner du temps sur vos opérations quotidiennes. Résultat : vous travaillez plus efficacement et votre activité se développe sans multiplier les efforts.
           </p>
         </motion.div>
 
@@ -90,7 +90,7 @@ export const PillarsSection = () => {
             </div>
             <h3 className="text-xl sm:text-2xl font-bold mb-3">Automatisation de l'acquisition client par l'IA</h3>
             <p className="text-muted-foreground text-base sm:text-lg mb-6">
-              Générez des leads qualifiés et des ventes en automatique grâce à l'intelligence artificielle — prospection IA hôtellerie pour augmenter vos réservations directes, acquisition client e-commerce pour booster votre chiffre d'affaires, génération de leads immobilier et BTP pour remplir votre carnet de commandes. Sans dépendre d'une équipe commerciale.
+              Attirez plus de clients sans effort supplémentaire grâce à l'intelligence artificielle. L'IA identifie vos prospects idéaux, personnalise vos messages et automatise tout le parcours — de la prise de contact à la conversion. Plus besoin d'une équipe commerciale dédiée : vos systèmes IA travaillent pour vous 24h/24.
             </p>
             <ul className="space-y-3 mb-6 flex-1">
               {offer1Deliverables.map((item, i) => (
@@ -102,7 +102,7 @@ export const PillarsSection = () => {
             </ul>
             <div className="pt-4 border-t border-border">
               <p className="text-primary font-bold text-lg sm:text-xl">
-                ROAS moyen constaté : ×4.3 sur vos investissements publicitaires
+                En moyenne : ×4.3 de retour sur investissement grâce à l'IA
               </p>
             </div>
           </motion.div>
@@ -120,7 +120,7 @@ export const PillarsSection = () => {
             </div>
             <h3 className="text-xl sm:text-2xl font-bold mb-3">Automatisation des processus opérationnels avec l'IA</h3>
             <p className="text-muted-foreground text-base sm:text-lg mb-6">
-              Libérez vos équipes des tâches répétitives grâce à l'automatisation IA — automatisation de devis pour artisans et entreprises du BTP, gestion de stock intelligente pour e-commerce et restauration, reporting automatisé et dashboards décisionnels, onboarding employé IA pour cabinets juridiques et cliniques santé. Concentrez-vous sur ce qui crée de la valeur.
+              Gagnez du temps et travaillez plus efficacement grâce à l'automatisation IA. Vos tâches répétitives — devis, factures, relances, reporting, gestion de stock — sont prises en charge par des systèmes intelligents. Vos équipes se concentrent sur les missions à forte valeur ajoutée pendant que l'IA gère le reste.
             </p>
             <ul className="space-y-3 mb-6 flex-1">
               {offer2Deliverables.map((item, i) => (

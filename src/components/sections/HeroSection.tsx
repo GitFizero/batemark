@@ -74,7 +74,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg sm:text-2xl md:text-3xl text-muted-foreground mb-4 md:mb-6 max-w-3xl mx-auto"
           >
-            Automatisation, productivité et croissance grâce à l'IA — pour ne pas être balayé par la vague, apprenez à la surfer.
+            Gagnez du temps, travaillez plus efficacement et attirez plus de clients grâce à l'IA — pour ne pas être balayé par la vague, apprenez à la surfer.
           </motion.p>
 
           <motion.p
