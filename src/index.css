@@ -131,6 +131,77 @@
     background-clip: text;
   }
 
+  /* Hero slide accent colors */
+  .text-gradient-mountain {
+    background: linear-gradient(135deg, hsl(18 31% 57%), hsl(18 31% 68%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-ocean {
+    background: linear-gradient(135deg, hsl(195 70% 50%), hsl(185 60% 65%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-train {
+    background: linear-gradient(135deg, hsl(30 70% 55%), hsl(35 80% 65%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Hero slide button themes */
+  .hero-btn-mountain {
+    background: linear-gradient(135deg, hsl(15 19% 46%), hsl(18 31% 57%)) !important;
+    box-shadow: 0 0 20px hsl(18 31% 57% / 0.4);
+  }
+  .hero-btn-mountain:hover {
+    box-shadow: 0 0 30px hsl(18 31% 57% / 0.6);
+  }
+
+  .hero-btn-ocean {
+    background: linear-gradient(135deg, hsl(200 60% 35%), hsl(195 70% 50%)) !important;
+    box-shadow: 0 0 20px hsl(195 70% 50% / 0.4);
+  }
+  .hero-btn-ocean:hover {
+    box-shadow: 0 0 30px hsl(195 70% 50% / 0.6);
+  }
+
+  .hero-btn-train {
+    background: linear-gradient(135deg, hsl(25 50% 40%), hsl(30 70% 55%)) !important;
+    box-shadow: 0 0 20px hsl(30 70% 55% / 0.4);
+  }
+  .hero-btn-train:hover {
+    box-shadow: 0 0 30px hsl(30 70% 55% / 0.6);
+  }
+
+  .hero-btn-outline-mountain {
+    border-color: hsl(18 31% 57% / 0.5) !important;
+    color: hsl(18 31% 57%) !important;
+  }
+  .hero-btn-outline-ocean {
+    border-color: hsl(195 70% 50% / 0.5) !important;
+    color: hsl(195 70% 50%) !important;
+  }
+  .hero-btn-outline-train {
+    border-color: hsl(30 70% 55% / 0.5) !important;
+    color: hsl(30 70% 55%) !important;
+  }
+
+  /* Hero slide surtitre accent */
+  .hero-accent-mountain {
+    color: hsl(18 31% 57%);
+  }
+  .hero-accent-ocean {
+    color: hsl(195 70% 50%);
+  }
+  .hero-accent-train {
+    color: hsl(30 70% 55%);
+  }
+
   .glow-copper {
     box-shadow: var(--glow-copper);
   }
