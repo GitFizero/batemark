@@ -20,17 +20,17 @@ const slides: Slide[] = [
   {
     id: "mountain",
     image: montagneBg,
-    tagline: "Atteignez le sommet",
+    tagline: "La puissance de l'IA pour vous amener au sommet",
   },
   {
     id: "wave",
     image: vagueBg,
-    tagline: "Surfez la vague",
+    tagline: "Pour ne pas être balayé par la vague de l'IA, apprenez à la surfer",
   },
   {
     id: "train",
     image: trainBg,
-    tagline: "Prenez le train en marche",
+    tagline: "Montez dans le train de l'IA pour ne pas rester à quai",
   },
 ];
 
@@ -65,26 +65,25 @@ export const HeroSection = () => {
   const slide = slides[currentSlide];
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-      {/* Background images with crossfade */}
-      <AnimatePresence mode="wait">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* All background images stacked - opacity controlled individually for smooth crossfade */}
+      {slides.map((s, i) => (
         <motion.div
-          key={slide.id}
+          key={s.id}
           className="absolute inset-0"
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1.4, ease: "easeInOut" }}
+          animate={{ opacity: i === currentSlide ? 1 : 0 }}
+          transition={{ duration: 1.8, ease: [0.4, 0, 0.2, 1] }}
         >
           <img
-            src={slide.image}
+            src={s.image}
             alt=""
             className="w-full h-full object-cover"
           />
-          {/* Strong dark overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60" />
         </motion.div>
-      </AnimatePresence>
+      ))}
+
+      {/* Permanent dark overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/45 to-black/65" />
 
       <div className="relative z-10 text-center px-4 max-w-2xl mx-auto">
         <motion.p
@@ -108,7 +107,7 @@ export const HeroSection = () => {
         </motion.h1>
 
         {/* Rotating tagline */}
-        <div className="h-8 mb-8 flex items-center justify-center">
+        <div className="h-12 sm:h-8 mb-8 flex items-center justify-center">
           <AnimatePresence mode="wait">
             <motion.p
               key={slide.id}

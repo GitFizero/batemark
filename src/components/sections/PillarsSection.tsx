@@ -1,82 +1,51 @@
 import { motion } from "framer-motion";
-import { Megaphone, Cog, TrendingUp, Clock, Users } from "lucide-react";
+import { Zap, TrendingUp, Target, Clock, BarChart3, Users } from "lucide-react";
 
-const metrics = [
-  { icon: TrendingUp, stat: "×4.3", label: "ROI moyen" },
-  { icon: Clock, stat: "6-8h", label: "Gagnées / semaine" },
-  { icon: Users, stat: "3-5", label: "Clients / trimestre" },
-];
-
-const offers = [
+const pillars = [
   {
-    icon: Megaphone,
-    title: "Acquisition",
-    description: "Prospection automatisée et campagnes IA 24h/24.",
+    icon: Zap,
+    badge: Clock,
+    title: "Automatisez vos tâches répétitives",
   },
   {
-    icon: Cog,
-    title: "Automatisation",
-    description: "Vos tâches répétitives gérées par l'IA.",
+    icon: TrendingUp,
+    badge: BarChart3,
+    title: "Boostez la productivité de votre entreprise",
+  },
+  {
+    icon: Target,
+    badge: Users,
+    title: "Accélérez votre acquisition client",
   },
 ];
 
 export const PillarsSection = () => {
   return (
-    <section className="section-padding">
+    <section className="py-14 sm:py-16 md:py-20 px-4 sm:px-6 bg-[#1a1a1a]">
       <div className="container-custom">
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-2">
-            Deux leviers de croissance
-          </h2>
-          <p className="text-sm text-muted-foreground">
-            Plus de clients, moins de tâches manuelles.
-          </p>
-        </motion.div>
-
-        {/* Metrics row */}
-        <div className="flex items-center justify-center gap-8 sm:gap-14 mb-12">
-          {metrics.map((m, i) => (
+        <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+          {pillars.map((pillar, i) => (
             <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 10 }}
+              key={pillar.title}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="text-center"
+              className="rounded-2xl border border-white/8 bg-white/[0.04] p-6 sm:p-8 text-center flex flex-col items-center"
             >
-              <m.icon className="w-4 h-4 text-primary mx-auto mb-2" />
-              <div className="text-2xl sm:text-3xl font-bold text-foreground mb-0.5">
-                {m.stat}
+              {/* Icon container with badge */}
+              <div className="relative mb-5">
+                <div className="w-14 h-14 rounded-2xl bg-white/[0.06] border border-white/10 flex items-center justify-center">
+                  <pillar.icon className="w-6 h-6 text-[#c4956e]" />
+                </div>
+                <div className="absolute -bottom-1.5 -right-1.5 w-6 h-6 rounded-lg bg-[#2a2a2a] border border-white/10 flex items-center justify-center">
+                  <pillar.badge className="w-3 h-3 text-[#c4956e]/70" />
+                </div>
               </div>
-              <p className="text-xs text-muted-foreground">{m.label}</p>
-            </motion.div>
-          ))}
-        </div>
 
-        {/* Two cards */}
-        <div className="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto">
-          {offers.map((offer, i) => (
-            <motion.div
-              key={offer.title}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="flex items-start gap-4 p-5 rounded-2xl border border-border bg-card hover:border-primary/20 transition-colors"
-            >
-              <div className="p-2.5 rounded-xl bg-primary/8 shrink-0">
-                <offer.icon className="w-5 h-5 text-primary" />
-              </div>
-              <div>
-                <h3 className="text-sm font-semibold mb-1">{offer.title}</h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">{offer.description}</p>
-              </div>
+              <h3 className="text-sm sm:text-base font-semibold text-white/90 leading-snug">
+                {pillar.title}
+              </h3>
             </motion.div>
           ))}
         </div>

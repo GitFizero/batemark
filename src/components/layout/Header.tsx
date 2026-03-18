@@ -24,6 +24,7 @@ export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const isHome = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,6 +38,9 @@ export const Header = () => {
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
 
+  // On homepage before scroll: white text on dark hero
+  const isTransparentDark = isHome && !isScrolled;
+
   return (
     <motion.header
       initial={{ y: -100 }}
@@ -44,14 +48,20 @@ export const Header = () => {
       transition={{ duration: 0.4 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/80 backdrop-blur-xl border-b border-border shadow-sm"
+          ? "bg-white/90 backdrop-blur-xl border-b border-border shadow-sm"
           : "bg-transparent"
       }`}
     >
       <div className="container-custom px-4">
         <div className="flex items-center justify-between h-14 sm:h-16">
           <a href="/" className="flex items-center gap-2">
-            <img src={logo} alt="BATEMARK" className="h-8 sm:h-9 w-auto" width={148} height={36} />
+            <img
+              src={logo}
+              alt="BATEMARK"
+              className={`h-8 sm:h-9 w-auto transition-all duration-300 ${isTransparentDark ? "brightness-0 invert" : ""}`}
+              width={148}
+              height={36}
+            />
           </a>
 
           <nav className="hidden lg:flex items-center gap-6" aria-label="Navigation principale">
@@ -59,7 +69,11 @@ export const Header = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
+                className={`transition-colors text-sm font-medium ${
+                  isTransparentDark
+                    ? "text-white/80 hover:text-white"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
                 aria-current={location.pathname === link.href ? "page" : undefined}
               >
                 {link.label}
@@ -70,7 +84,15 @@ export const Header = () => {
           <div className="hidden lg:flex items-center">
             <ContactFormDialog
               trigger={
-                <Button variant="hero" size="default" className="text-sm">
+                <Button
+                  variant={isTransparentDark ? "outline" : "hero"}
+                  size="default"
+                  className={`text-sm ${
+                    isTransparentDark
+                      ? "border-white/30 text-white hover:bg-white/10 bg-transparent"
+                      : ""
+                  }`}
+                >
                   Demander un audit
                 </Button>
               }
@@ -82,7 +104,7 @@ export const Header = () => {
             onClick={() => setIsMobileMenuOpen(true)}
             aria-label="Ouvrir le menu"
           >
-            <Menu className="w-5 h-5" aria-hidden="true" />
+            <Menu className={`w-5 h-5 transition-colors ${isTransparentDark ? "text-white" : ""}`} aria-hidden="true" />
           </button>
         </div>
       </div>
