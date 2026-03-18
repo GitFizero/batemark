@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import montagneBg from "@/assets/montagne.svg";
-import vagueBg from "@/assets/vague.svg";
-import trainBg from "@/assets/train.svg";
+import vagueBg from "@/assets/Vague.svg";
+import trainBg from "@/assets/Train.png";
 
 const CAL_LINK = "https://cal.com/gaetan-batemark/audit";
 
@@ -144,21 +144,11 @@ export const HeroSection = () => {
             </AnimatePresence>
           </div>
 
-          {/* Description */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-base sm:text-lg text-muted-foreground mb-8 md:mb-12 max-w-2xl mx-auto"
-          >
-            J'accompagne les PME et TPE dans l'intégration de l'intelligence artificielle pour gagner du temps, automatiser vos process et attirer plus de clients.
-          </motion.p>
-
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.25 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Button
