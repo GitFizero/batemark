@@ -7,6 +7,7 @@ import { ProcessSection } from "@/components/sections/ProcessSection";
 import { BlogSection } from "@/components/sections/BlogSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
+import { LibrairieSection } from "@/components/sections/LibrairieSection";
 import { SEOHead } from "@/components/SEOHead";
 
 const Index = () => {
@@ -31,18 +32,10 @@ const Index = () => {
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
             "name": "BATEMARK — Intégrer l'IA en entreprise",
-            "description": "Consultant spécialisé pour intégrer l'IA et automatiser les process des entreprises : hôtellerie, restauration, immobilier, BTP, e-commerce, santé, juridique, beauté.",
+            "description": "Consultant spécialisé pour intégrer l'IA et automatiser les process des entreprises.",
             "url": "https://batemark.com",
             "founder": { "@type": "Person", "name": "Gaëtan Fizero" },
             "areaServed": { "@type": "Country", "name": "France" },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Services IA & Automatisation",
-              "itemListElement": [
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automatisation de l'acquisition" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automatisation des process opérationnels" } }
-              ]
-            }
           })}
         </script>
         <script type="application/ld+json">
@@ -53,32 +46,22 @@ const Index = () => {
               {
                 "@type": "Question",
                 "name": "Quel type d'entreprise accompagnes-tu ?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Je travaille avec des entreprises de toutes tailles : hôtellerie, restauration, immobilier, BTP, e-commerce, santé, juridique, beauté. L'IA s'adapte à tous les secteurs." }
+                "acceptedAnswer": { "@type": "Answer", "text": "PME, TPE, indépendants dans tous secteurs : hôtellerie, BTP, e-commerce, immobilier, santé, juridique, beauté." }
               },
               {
                 "@type": "Question",
                 "name": "Combien de temps pour voir des résultats ?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Mes clients voient des résultats dès le premier mois. L'implémentation prend en moyenne 2 à 4 semaines selon la complexité du projet." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Résultats mesurables dès le premier mois. Implémentation en 2 à 4 semaines." }
               },
               {
                 "@type": "Question",
-                "name": "Y a-t-il un engagement minimum ?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Non. On commence par une mission définie, et on continue si les résultats sont là." }
+                "name": "Combien coûte un accompagnement ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Chaque mission est sur-mesure. L'appel découverte de 30 min est gratuit." }
               },
               {
                 "@type": "Question",
-                "name": "Combien coûte un accompagnement IA ?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Chaque mission est sur-mesure. L'appel découverte de 30 minutes est gratuit et permet de définir le périmètre et le budget adapté." }
-              },
-              {
-                "@type": "Question",
-                "name": "Pourquoi choisir un consultant IA plutôt qu'une agence ?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Un consultant livre des systèmes autonomes avec un interlocuteur unique, un coût inférieur et un transfert de compétences inclus." }
-              },
-              {
-                "@type": "Question",
-                "name": "L'IA est-elle compatible avec le RGPD ?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Oui, toutes les solutions déployées respectent le RGPD et la réglementation européenne." }
+                "name": "Pourquoi un consultant plutôt qu'une agence ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Interlocuteur unique, systèmes autonomes, coût inférieur, transfert de compétences inclus." }
               }
             ]
           })}
@@ -98,6 +81,7 @@ const Index = () => {
         <section id="methode">
           <ProcessSection />
         </section>
+        <LibrairieSection />
         <section id="blog">
           <BlogSection />
         </section>
