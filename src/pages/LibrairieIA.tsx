@@ -67,6 +67,10 @@ const LibrairieIA = () => {
 
   useEffect(() => {
     const fetchTools = async () => {
+      if (!supabase) {
+        setLoading(false);
+        return;
+      }
       const { data } = await supabase
         .from("ai_tools")
         .select("*")

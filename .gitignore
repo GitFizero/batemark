@@ -12,9 +12,7 @@ dist
 dist-ssr
 *.local
 
-# Environment variables
-.env
-.env.*
+# Environment variables (secrets only — .env.local for private keys)
 .env.local
 .env.*.local
 
