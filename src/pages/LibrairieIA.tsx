@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { Helmet } from "react-helmet-async";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -68,17 +68,26 @@ const LibrairieIA = () => {
   useEffect(() => {
     const fetchTools = async () => {
       const { data } = await supabase
-        .from("ai_tools" as any)
+        .from("ai_tools")
         .select("*")
         .eq("is_active", true)
         .order("display_order", { ascending: true });
-      if (data) setTools(data as any);
+      if (data) setTools(data);
       setLoading(false);
     };
     fetchTools();
   }, []);
 
-  const categories = [...new Set(tools.map((t) => t.category))];
+  const categories = useMemo(() => [...new Set(tools.map((t) => t.category))], [tools]);
+
+  const toolsByCategory = useMemo(() => {
+    const grouped: Record<string, AiTool[]> = {};
+    for (const tool of tools) {
+      if (!grouped[tool.category]) grouped[tool.category] = [];
+      grouped[tool.category].push(tool);
+    }
+    return grouped;
+  }, [tools]);
 
   const handleLogoError = (toolId: string, toolName: string) => {
     // If the original logo failed, try the clearbit fallback
@@ -200,8 +209,7 @@ const LibrairieIA = () => {
                     {category}
                   </motion.h2>
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {tools
-                      .filter((t) => t.category === category)
+                    {(toolsByCategory[category] || [])
                       .map((tool, index) => {
                         const logoUrl = getEffectiveLogoUrl(tool);
                         return (

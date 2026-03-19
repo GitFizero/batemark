@@ -40,10 +40,10 @@ export const AdminToolsManager = () => {
 
   const fetchTools = async () => {
     const { data } = await supabase
-      .from("ai_tools" as any)
+      .from("ai_tools")
       .select("*")
       .order("display_order", { ascending: true });
-    if (data) setTools(data as any);
+    if (data) setTools(data);
     setLoading(false);
   };
 
@@ -103,7 +103,7 @@ export const AdminToolsManager = () => {
     };
 
     if (editing) {
-      const { error } = await (supabase.from("ai_tools" as any) as any)
+      const { error } = await supabase.from("ai_tools")
         .update(toolData)
         .eq("id", editing.id);
       if (error) {
@@ -115,7 +115,7 @@ export const AdminToolsManager = () => {
         fetchTools();
       }
     } else {
-      const { error } = await (supabase.from("ai_tools" as any) as any).insert(toolData);
+      const { error } = await supabase.from("ai_tools").insert(toolData);
       if (error) {
         toast({ title: "Erreur", description: error.message, variant: "destructive" });
       } else {
@@ -129,7 +129,7 @@ export const AdminToolsManager = () => {
 
   const handleDelete = async (id: string) => {
     if (!confirm("Supprimer cet outil ?")) return;
-    const { error } = await (supabase.from("ai_tools" as any) as any).delete().eq("id", id);
+    const { error } = await supabase.from("ai_tools").delete().eq("id", id);
     if (error) {
       toast({ title: "Erreur", description: error.message, variant: "destructive" });
     } else {
@@ -233,10 +233,10 @@ export const AdminToolsManager = () => {
                 </div>
               </div>
               <div className="flex items-center gap-1">
-                <Button variant="ghost" size="icon" onClick={() => loadTool(tool)}>
+                <Button variant="ghost" size="icon" aria-label={`Modifier ${tool.name}`} onClick={() => loadTool(tool)}>
                   <Pencil className="w-4 h-4" />
                 </Button>
-                <Button variant="ghost" size="icon" onClick={() => handleDelete(tool.id)}>
+                <Button variant="ghost" size="icon" aria-label={`Supprimer ${tool.name}`} onClick={() => handleDelete(tool.id)}>
                   <Trash2 className="w-4 h-4 text-destructive" />
                 </Button>
               </div>

@@ -41,12 +41,12 @@ export const LibrairieSection = () => {
   useEffect(() => {
     const fetchTools = async () => {
       const { data } = await supabase
-        .from("ai_tools" as any)
+        .from("ai_tools")
         .select("*")
         .eq("is_active", true)
         .order("display_order", { ascending: true })
         .limit(3);
-      if (data) setTools(data as any);
+      if (data) setTools(data);
       setLoading(false);
     };
     fetchTools();

@@ -1,25 +1,32 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 
+interface CalApi {
+  q: unknown[];
+  loaded?: boolean;
+  ns: Record<string, CalApi>;
+  (...args: unknown[]): void;
+}
+
 declare global {
   interface Window {
-    Cal?: any;
+    Cal?: CalApi;
   }
 }
 
 export const CalEmbed = () => {
   useEffect(() => {
     // Load Cal.com embed script - exact code from user
-    (function (C: any, A: string, L: string) {
-      let p = function (a: any, ar: any) {
+    (function (C: Window, A: string, L: string) {
+      const p = function (a: CalApi, ar: unknown) {
         a.q.push(ar);
       };
-      let d = C.document;
+      const d = C.document;
       C.Cal =
         C.Cal ||
-        function () {
-          let cal = C.Cal;
-          let ar = arguments;
+        (function () {
+          const cal = C.Cal!;
+          const ar = arguments;
           if (!cal.loaded) {
             cal.ns = {};
             cal.q = cal.q || [];
@@ -28,10 +35,10 @@ export const CalEmbed = () => {
           }
           if (ar[0] === L) {
             const api = function () {
-              p(api, arguments);
-            };
+              p(api as unknown as CalApi, arguments);
+            } as unknown as CalApi;
             const namespace = ar[1];
-            (api as any).q = (api as any).q || [];
+            api.q = api.q || [];
             if (typeof namespace === "string") {
               cal.ns[namespace] = cal.ns[namespace] || api;
               p(cal.ns[namespace], ar);
@@ -40,7 +47,7 @@ export const CalEmbed = () => {
             return;
           }
           p(cal, ar);
-        };
+        } as unknown as CalApi);
     })(window, "https://app.cal.com/embed/embed.js", "init");
 
     window.Cal("init", "15min", { origin: "https://app.cal.com" });
