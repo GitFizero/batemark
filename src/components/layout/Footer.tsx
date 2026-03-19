@@ -16,7 +16,7 @@ const legalLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#0a0a0a] border-t border-white/8" role="contentinfo">
+    <footer className="border-t border-white/6" role="contentinfo">
       <div className="container-custom py-10 px-4 sm:px-6">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           {/* Brand */}

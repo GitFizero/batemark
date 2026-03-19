@@ -58,14 +58,14 @@ export const LibrairieSection = () => {
 
   if (loading) {
     return (
-      <section className="section-padding bg-[#0a0a0a]">
+      <section className="section-padding">
         <div className="container-custom">
           <div className="grid md:grid-cols-3 gap-4">
             {[1, 2, 3].map((i) => (
-              <div key={i} className="rounded-2xl border border-white/8 p-5 animate-pulse">
-                <div className="h-8 w-8 bg-white/10 rounded mb-3" />
-                <div className="h-3 bg-white/10 rounded w-1/2 mb-2" />
-                <div className="h-3 bg-white/10 rounded w-3/4" />
+              <div key={i} className="glass-card p-5 animate-pulse">
+                <div className="h-8 w-8 bg-white/[0.05] rounded mb-3" />
+                <div className="h-3 bg-white/[0.05] rounded w-1/2 mb-2" />
+                <div className="h-3 bg-white/[0.05] rounded w-3/4" />
               </div>
             ))}
           </div>
@@ -77,19 +77,19 @@ export const LibrairieSection = () => {
   if (tools.length === 0) return null;
 
   return (
-    <section className="section-padding bg-[#0a0a0a]">
+    <section className="section-padding">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="flex items-end justify-between mb-8"
+          className="flex items-end justify-between mb-10"
         >
           <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white">
             Outils IA
           </h2>
-          <Button variant="ghost" size="sm" className="group text-xs text-white/40 hover:text-white hover:bg-white/5" asChild>
+          <Button variant="ghost" size="sm" className="group text-xs text-white/30 hover:text-white hover:bg-white/5" asChild>
             <a href="/librairie-ia">
               Tout voir
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -108,7 +108,7 @@ export const LibrairieSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.06 }}
-              className="flex items-center gap-4 p-4 rounded-2xl border border-white/8 bg-white/[0.03] hover:border-white/15 transition-colors group"
+              className="flex items-center gap-4 p-4 glass-card glass-card-hover transition-all duration-300 group"
             >
               {(tool.logo_url || LOGO_FALLBACKS[tool.name.toLowerCase()]) ? (
                 <img

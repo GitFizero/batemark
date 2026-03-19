@@ -6,40 +6,40 @@
 
 @layer base {
   :root {
-    /* Light Theme - Warm Minimal */
-    --background: 30 20% 98%;
-    --foreground: 20 15% 10%;
+    /* Dark Theme — heymessage-inspired */
+    --background: 0 0% 4%;
+    --foreground: 30 10% 90%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 20 15% 10%;
+    --card: 0 0% 7%;
+    --card-foreground: 30 10% 90%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 20 15% 10%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 30 10% 90%;
 
     /* Primary - Copper */
     --primary: 18 31% 50%;
     --primary-foreground: 0 0% 100%;
 
     /* Secondary */
-    --secondary: 30 10% 92%;
-    --secondary-foreground: 20 15% 20%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 30 10% 80%;
 
     /* Tertiary */
     --tertiary: 193 25% 35%;
     --tertiary-foreground: 0 0% 100%;
 
     /* Accent */
-    --accent: 30 15% 94%;
-    --accent-foreground: 20 15% 20%;
+    --accent: 0 0% 12%;
+    --accent-foreground: 30 10% 80%;
 
-    --muted: 30 10% 93%;
-    --muted-foreground: 20 8% 50%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 52%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 20 10% 90%;
-    --input: 30 10% 93%;
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
     --ring: 18 31% 50%;
 
     --radius: 1rem;
@@ -48,19 +48,19 @@
     --copper: 18 31% 50%;
     --copper-light: 18 31% 60%;
     --copper-dark: 15 19% 40%;
-    --dark-surface: 30 10% 95%;
+    --dark-surface: 0 0% 7%;
 
-    --sidebar-background: 30 15% 96%;
-    --sidebar-foreground: 20 15% 10%;
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 30 10% 90%;
     --sidebar-primary: 18 31% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 30 15% 94%;
-    --sidebar-accent-foreground: 20 15% 20%;
-    --sidebar-border: 20 10% 88%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 30 10% 80%;
+    --sidebar-border: 0 0% 14%;
     --sidebar-ring: 18 31% 50%;
 
-    --background-alt: 30 15% 95%;
-    --foreground-muted: 20 8% 50%;
+    --background-alt: 0 0% 6%;
+    --foreground-muted: 0 0% 52%;
     --primary-light: 18 31% 60%;
     --primary-dark: 15 19% 40%;
 
@@ -68,10 +68,10 @@
     --success-foreground: 0 0% 98%;
 
     --gradient-primary: linear-gradient(135deg, hsl(15 19% 40%) 0%, hsl(18 31% 50%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(30 20% 98%), hsl(30 15% 95%));
-    --shadow-elegant: 0 2px 30px hsl(20 10% 30% / 0.04);
-    --shadow-lift: 0 1px 8px hsl(20 10% 30% / 0.06);
-    --shadow-copper: 0 2px 16px hsl(18 31% 50% / 0.08);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 4%), hsl(0 0% 6%));
+    --shadow-elegant: 0 2px 30px hsl(0 0% 0% / 0.3);
+    --shadow-lift: 0 1px 8px hsl(0 0% 0% / 0.2);
+    --shadow-copper: 0 2px 16px hsl(18 31% 50% / 0.12);
   }
 }
 
@@ -109,6 +109,32 @@
 }
 
 @layer components {
+  /* Grain / noise overlay — heymessage style */
+  .grain-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 256px 256px;
+  }
+
+  /* Glass card style */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 1rem;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .glass-card-hover:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
   .gradient-copper {
     background: linear-gradient(135deg, hsl(var(--copper)), hsl(var(--copper-light)));
   }
@@ -179,16 +205,24 @@
   }
 
   .card-premium {
-    @apply bg-card border border-border rounded-2xl p-5;
+    @apply rounded-2xl p-5;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     box-shadow: var(--shadow-elegant);
   }
 
   .section-padding {
-    @apply py-14 sm:py-16 md:py-20 px-4 sm:px-6;
+    @apply py-16 sm:py-20 md:py-24 px-4 sm:px-6;
   }
 
   .container-custom {
     @apply max-w-5xl mx-auto px-4 sm:px-0;
+  }
+
+  /* Subtle section separator */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
   }
 }
 

@@ -34,7 +34,7 @@ const steps = [
 
 export const ProcessSection = () => {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
@@ -43,15 +43,15 @@ export const ProcessSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-2 text-[#0a0a0a]">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-2 text-white">
             La méthode
           </h2>
-          <p className="text-sm text-[#0a0a0a]/50">
+          <p className="text-sm text-white/40">
             4 étapes pour intégrer l'IA dans votre activité.
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-4xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
           {steps.map((step, index) => (
             <motion.div
               key={step.number}
@@ -59,16 +59,16 @@ export const ProcessSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.08 }}
-              className="text-center"
+              className="glass-card p-5 text-center"
             >
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-[#0a0a0a]/5 mb-3">
-                <step.icon className="w-5 h-5 text-[#c4956e]" />
+              <div className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-[#c4956e]/10 border border-[#c4956e]/15 mb-3">
+                <step.icon className="w-4 h-4 text-[#c4956e]" />
               </div>
-              <span className="block text-[10px] font-semibold text-[#c4956e] uppercase tracking-wider mb-1.5">
+              <span className="block text-[10px] font-semibold text-[#c4956e]/70 uppercase tracking-wider mb-1.5">
                 {step.duration}
               </span>
-              <h3 className="text-sm font-semibold mb-1 text-[#0a0a0a]">{step.title}</h3>
-              <p className="text-xs text-[#0a0a0a]/50 leading-relaxed">{step.description}</p>
+              <h3 className="text-sm font-semibold mb-1 text-white">{step.title}</h3>
+              <p className="text-xs text-white/40 leading-relaxed">{step.description}</p>
             </motion.div>
           ))}
         </div>

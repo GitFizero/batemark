@@ -1,9 +1,12 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { ProblemsSection } from "@/components/sections/ProblemsSection";
 import { PillarsSection } from "@/components/sections/PillarsSection";
+import { OffersSection } from "@/components/sections/OffersSection";
 import { CaseStudiesSection } from "@/components/sections/CaseStudiesSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
+import { AboutSection } from "@/components/sections/AboutSection";
 import { BlogSection } from "@/components/sections/BlogSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
@@ -68,26 +71,51 @@ const Index = () => {
         </script>
       </SEOHead>
 
+      {/* Grain overlay — heymessage-style film texture */}
+      <div className="grain-overlay" aria-hidden="true" />
+
       <Header />
 
       <main id="main-content">
         <HeroSection />
+
+        <div className="section-divider" />
+        <ProblemsSection />
+
+        <div className="section-divider" />
         <section id="services">
           <PillarsSection />
         </section>
+
+        <div className="section-divider" />
+        <OffersSection />
+
+        <div className="section-divider" />
         <section id="cas-clients">
           <CaseStudiesSection />
         </section>
+
+        <div className="section-divider" />
         <section id="methode">
           <ProcessSection />
         </section>
+
+        <div className="section-divider" />
+        <AboutSection />
+
+        <div className="section-divider" />
         <LibrairieSection />
+
+        <div className="section-divider" />
         <section id="blog">
           <BlogSection />
         </section>
+
+        <div className="section-divider" />
         <section id="faq">
           <FAQSection />
         </section>
+
         <CTASection />
       </main>
 

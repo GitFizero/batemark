@@ -38,8 +38,8 @@ export const Header = () => {
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
 
-  // On homepage before scroll: white text on dark hero
-  const isTransparentDark = isHome && !isScrolled;
+  // Always dark header — white text
+  const isTransparentDark = true;
 
   return (
     <motion.header
@@ -48,7 +48,7 @@ export const Header = () => {
       transition={{ duration: 0.4 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/90 backdrop-blur-xl border-b border-border shadow-sm"
+          ? "bg-[#0a0a0a]/80 backdrop-blur-xl border-b border-white/6"
           : "bg-transparent"
       }`}
     >
@@ -110,10 +110,10 @@ export const Header = () => {
       </div>
 
       <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-        <SheetContent side="right" className="w-[80vw] max-w-xs bg-background border-l border-border p-0 flex flex-col">
-          <SheetHeader className="p-5 pb-3 border-b border-border">
+        <SheetContent side="right" className="w-[80vw] max-w-xs bg-[#0f0f0f] border-l border-white/6 p-0 flex flex-col">
+          <SheetHeader className="p-5 pb-3 border-b border-white/6">
             <SheetTitle className="text-left">
-              <img src={logo} alt="BATEMARK" className="h-8 w-auto" width={148} height={32} />
+              <img src={logo} alt="BATEMARK" className="h-8 w-auto brightness-0 invert" width={148} height={32} />
             </SheetTitle>
           </SheetHeader>
 
@@ -124,8 +124,8 @@ export const Header = () => {
                   href={link.href}
                   className={`text-sm font-medium py-2.5 px-3 rounded-lg transition-colors min-h-[44px] flex items-center ${
                     location.pathname === link.href
-                      ? "text-primary bg-primary/5"
-                      : "text-foreground hover:bg-muted"
+                      ? "text-[#c4956e] bg-[#c4956e]/10"
+                      : "text-white/70 hover:bg-white/5 hover:text-white"
                   }`}
                   aria-current={location.pathname === link.href ? "page" : undefined}
                 >
@@ -138,7 +138,7 @@ export const Header = () => {
           <div className="p-5 pt-0 mt-auto">
             <ContactFormDialog
               trigger={
-                <Button variant="hero" size="default" className="w-full min-h-[44px] text-sm">
+                <Button size="default" className="w-full min-h-[44px] text-sm bg-[#c4956e] text-white hover:bg-[#c4956e]/90">
                   Demander un audit
                 </Button>
               }

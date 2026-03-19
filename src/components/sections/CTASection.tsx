@@ -6,7 +6,7 @@ const CAL_LINK = "https://cal.com/gaetan-batemark/audit";
 
 export const CTASection = () => {
   return (
-    <section className="py-16 sm:py-20 px-4 bg-white">
+    <section className="py-20 sm:py-28 px-4">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
@@ -15,19 +15,28 @@ export const CTASection = () => {
           transition={{ duration: 0.5 }}
           className="max-w-md mx-auto text-center"
         >
-          <h2 className="text-xl sm:text-2xl font-semibold mb-2 text-[#0a0a0a]">
-            Prêt à intégrer l'IA ?
+          <h2 className="text-xl sm:text-2xl font-semibold mb-3 text-white">
+            Réserver un audit gratuit
           </h2>
-          <p className="text-sm text-[#0a0a0a]/50 mb-6">
-            Appel gratuit de 30 min. Plan d'action concret.
+          <p className="text-sm text-white/40 mb-8">
+            En 30 minutes, identifiez les opportunités concrètes
+            d'automatisation et de croissance pour votre entreprise.
           </p>
 
-          <Button size="default" className="group rounded-full px-6 text-sm bg-[#0a0a0a] text-white hover:bg-[#0a0a0a]/90" asChild>
+          <Button
+            size="default"
+            className="group rounded-full px-8 py-3 text-sm bg-[#c4956e] text-white hover:bg-[#c4956e]/90"
+            asChild
+          >
             <a href={CAL_LINK} target="_blank" rel="noopener noreferrer">
-              Réserver un audit
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              Réserver mon créneau
+              <ArrowRight className="w-3.5 h-3.5 ml-1 group-hover:translate-x-1 transition-transform" />
             </a>
           </Button>
+
+          <p className="text-[11px] text-white/25 mt-4">
+            Gratuit • Sans engagement • 30 min
+          </p>
         </motion.div>
       </div>
     </section>
