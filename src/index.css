@@ -109,6 +109,10 @@
 }
 
 @layer components {
+  .gradient-copper {
+    background: linear-gradient(135deg, hsl(var(--copper)), hsl(var(--copper-light)));
+  }
+
   .text-gradient-copper {
     background: linear-gradient(135deg, hsl(var(--copper)), hsl(var(--copper-light)));
     -webkit-background-clip: text;
