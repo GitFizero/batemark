@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Clock, Wrench, Users, TrendingDown } from "lucide-react";
+import { AmbientOrb } from "@/components/ui/AmbientGlow";
 
 const problems = [
   { icon: Clock, text: "Trop de tâches manuelles" },
@@ -10,8 +11,10 @@ const problems = [
 
 export const ProblemsSection = () => {
   return (
-    <section className="section-padding">
-      <div className="container-custom max-w-3xl mx-auto">
+    <section className="section-padding relative overflow-hidden">
+      <AmbientOrb color="copper" size="md" position="top-right" intensity={0.06} />
+      <AmbientOrb color="neutral" size="sm" position="bottom-left" intensity={0.05} />
+      <div className="container-custom max-w-3xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}

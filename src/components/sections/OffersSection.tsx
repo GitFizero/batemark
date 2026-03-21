@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
+import { AmbientOrb } from "@/components/ui/AmbientGlow";
 
 const CAL_LINK = "https://cal.com/gaetan-batemark/audit";
 
@@ -61,8 +62,10 @@ const offers = [
 
 export const OffersSection = () => {
   return (
-    <section className="section-padding">
-      <div className="container-custom">
+    <section className="section-padding relative overflow-hidden">
+      <AmbientOrb color="copper" size="md" position="top-left" intensity={0.05} />
+      <AmbientOrb color="blue" size="md" position="bottom-right" intensity={0.04} />
+      <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}

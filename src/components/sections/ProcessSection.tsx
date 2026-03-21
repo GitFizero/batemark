@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Search, ListChecks, Rocket, RefreshCw } from "lucide-react";
+import { AmbientOrb } from "@/components/ui/AmbientGlow";
 
 const steps = [
   {
@@ -42,8 +43,9 @@ export const ProcessSection = () => {
   const y = useTransform(scrollYProgress, [0, 1], [20, -20]);
 
   return (
-    <section className="section-padding" ref={sectionRef}>
-      <div className="container-custom">
+    <section className="section-padding relative overflow-hidden" ref={sectionRef}>
+      <AmbientOrb color="copper" size="md" position="center" intensity={0.04} />
+      <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

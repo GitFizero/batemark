@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { AmbientOrb } from "@/components/ui/AmbientGlow";
 import caseAtlantica from "@/assets/case-atlantica.jpg";
 import caseFunelin from "@/assets/case-funelin.jpg";
 import caseMediacast from "@/assets/case-mediacast-new.jpg";
@@ -79,8 +80,10 @@ export const CaseStudiesSection = () => {
   const y = useTransform(scrollYProgress, [0, 1], [40, -40]);
 
   return (
-    <section className="section-padding" ref={sectionRef}>
-      <div className="container-custom">
+    <section className="section-padding relative overflow-hidden" ref={sectionRef}>
+      <AmbientOrb color="blue" size="lg" position="top-right" intensity={0.05} />
+      <AmbientOrb color="copper" size="md" position="bottom-left" intensity={0.04} />
+      <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { AmbientOrb } from "@/components/ui/AmbientGlow";
 
 const CAL_LINK = "https://cal.com/gaetan-batemark/audit";
 
 export const CTASection = () => {
   return (
-    <section className="py-20 sm:py-28 px-4">
-      <div className="container-custom">
+    <section className="py-20 sm:py-28 px-4 relative overflow-hidden">
+      <AmbientOrb color="copper" size="lg" position="center" intensity={0.07} />
+      <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
