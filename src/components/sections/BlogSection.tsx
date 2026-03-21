@@ -72,7 +72,7 @@ export const BlogSection = () => {
           <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white">
             Ressources
           </h2>
-          <Button variant="ghost" size="sm" className="group text-xs text-white/30 hover:text-white" asChild>
+          <Button variant="ghost" size="sm" className="group text-xs text-white/50 hover:text-white" asChild>
             <a href="/blog">
               Tout voir
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />

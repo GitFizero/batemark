@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import { Search, ListChecks, Rocket, RefreshCw } from "lucide-react";
 
 const steps = [
@@ -33,25 +34,32 @@ const steps = [
 ];
 
 export const ProcessSection = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], [20, -20]);
+
   return (
-    <section className="section-padding">
+    <section className="section-padding" ref={sectionRef}>
       <div className="container-custom">
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-2 text-white">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3 text-white">
             La méthode
           </h2>
-          <p className="text-sm text-white/40">
+          <p className="text-sm text-white/55">
             4 étapes pour intégrer l'IA dans votre activité.
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+        <motion.div style={{ y }} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
           {steps.map((step, index) => (
             <motion.div
               key={step.number}
@@ -68,10 +76,10 @@ export const ProcessSection = () => {
                 {step.duration}
               </span>
               <h3 className="text-sm font-semibold mb-1 text-white">{step.title}</h3>
-              <p className="text-xs text-white/40 leading-relaxed">{step.description}</p>
+              <p className="text-xs text-white/55 leading-relaxed">{step.description}</p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

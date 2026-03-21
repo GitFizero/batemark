@@ -19,10 +19,10 @@ export const ProblemsSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-10"
         >
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white mb-3">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white mb-3">
             Vous perdez du temps… et donc de l'argent
           </h2>
-          <p className="text-sm text-white/40 max-w-lg mx-auto">
+          <p className="text-sm text-white/55 max-w-lg mx-auto">
             La majorité des entreprises perd un temps considérable sur des tâches
             répétitives, mal structurées ou non optimisées.
           </p>
@@ -41,7 +41,7 @@ export const ProblemsSection = () => {
               <div className="w-9 h-9 rounded-lg bg-red-500/8 border border-red-500/10 flex items-center justify-center flex-shrink-0">
                 <problem.icon className="w-4 h-4 text-red-400/70" />
               </div>
-              <span className="text-sm text-white/60">{problem.text}</span>
+              <span className="text-sm text-white/75">{problem.text}</span>
             </motion.div>
           ))}
         </div>

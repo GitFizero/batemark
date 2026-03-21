@@ -18,7 +18,7 @@ export const CTASection = () => {
           <h2 className="text-xl sm:text-2xl font-semibold mb-3 text-white">
             Réserver un audit gratuit
           </h2>
-          <p className="text-sm text-white/40 mb-8">
+          <p className="text-sm text-white/55 mb-8">
             En 30 minutes, identifiez les opportunités concrètes
             d'automatisation et de croissance pour votre entreprise.
           </p>
@@ -34,7 +34,7 @@ export const CTASection = () => {
             </a>
           </Button>
 
-          <p className="text-[11px] text-white/25 mt-4">
+          <p className="text-[11px] text-white/40 mt-4">
             Gratuit • Sans engagement • 30 min
           </p>
         </motion.div>

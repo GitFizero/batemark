@@ -8,7 +8,7 @@ import trainBg from "@/assets/Train.png";
 
 const CAL_LINK = "https://cal.com/gaetan-batemark/audit";
 
-const SLIDE_DURATION = 6000;
+const SLIDE_DURATION = 4000;
 
 interface Slide {
   id: string;

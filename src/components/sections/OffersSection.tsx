@@ -41,10 +41,10 @@ export const OffersSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white mb-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white mb-3">
             Deux offres, un objectif : vos résultats
           </h2>
-          <p className="text-sm text-white/40">
+          <p className="text-sm text-white/55">
             Choisissez l'accompagnement adapté à votre besoin.
           </p>
         </motion.div>
@@ -74,7 +74,7 @@ export const OffersSection = () => {
                 >
                   <offer.icon
                     className={`w-5 h-5 ${
-                      offer.featured ? "text-[#c4956e]" : "text-white/50"
+                      offer.featured ? "text-[#c4956e]" : "text-white/60"
                     }`}
                   />
                 </div>
@@ -89,20 +89,20 @@ export const OffersSection = () => {
               </div>
 
               {/* Description */}
-              <p className="text-xs text-white/40 mb-5 leading-relaxed">
+              <p className="text-xs text-white/55 mb-5 leading-relaxed">
                 {offer.description}
               </p>
 
               {/* Examples */}
               <div className="mb-5">
-                <span className="text-[10px] uppercase tracking-wider text-white/25 font-medium">
+                <span className="text-[10px] uppercase tracking-wider text-white/40 font-medium">
                   Exemples
                 </span>
                 <div className="flex flex-wrap gap-1.5 mt-2">
                   {offer.examples.map((ex) => (
                     <span
                       key={ex}
-                      className="text-[11px] px-2.5 py-1 rounded-full bg-white/[0.04] text-white/50 border border-white/6"
+                      className="text-[11px] px-2.5 py-1 rounded-full bg-white/[0.04] text-white/60 border border-white/6"
                     >
                       {ex}
                     </span>
@@ -115,13 +115,13 @@ export const OffersSection = () => {
                 {offer.benefits.map((b) => (
                   <li key={b} className="flex items-center gap-2">
                     <Check className="w-3.5 h-3.5 text-[#c4956e]/70 flex-shrink-0" />
-                    <span className="text-xs text-white/50">{b}</span>
+                    <span className="text-xs text-white/60">{b}</span>
                   </li>
                 ))}
               </ul>
 
               {/* Proof */}
-              <p className="text-[11px] text-white/25 mb-4 text-center">
+              <p className="text-[11px] text-white/40 mb-4 text-center">
                 {offer.proof}
               </p>
 
