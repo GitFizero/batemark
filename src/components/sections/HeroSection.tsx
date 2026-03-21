@@ -130,7 +130,7 @@ export const HeroSection = () => {
         >
           <Button
             size="lg"
-            className="bg-white text-foreground hover:bg-white/90 rounded-full px-8 py-3 text-sm font-medium group"
+            className="bg-white text-[#0a0a0a] hover:bg-white/90 rounded-full px-8 py-3 text-sm font-medium group"
             asChild
           >
             <a href={CAL_LINK} target="_blank" rel="noopener noreferrer">

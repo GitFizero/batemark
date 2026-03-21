@@ -3,7 +3,7 @@
   <!-- Page d'accueil -->
   <url>
     <loc>https://batemark.com/</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,7 +11,7 @@
   <!-- Blog index -->
   <url>
     <loc>https://batemark.com/blog</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -19,181 +19,181 @@
   <!-- Articles blog sectoriels -->
   <url>
     <loc>https://batemark.com/blog/ia-hotellerie-restauration</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/formation-intelligence-artificielle</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/ia-spa-centre-bien-etre</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/ia-e-commerce</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/ia-restaurant-intelligence-artificielle</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/automatiser-prospection-b2b-ia</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/ia-agence-immobiliere</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/chatbot-ia-site-web-conversion</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/automatiser-avis-google-ia</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/ia-cabinet-comptable</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/ia-recrutement-pme</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/ia-artisan-automatisation</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/ia-automatiser-service-client</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/ia-avocat-cabinet</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/ia-automatiser-reporting</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/ia-salon-coiffure-beaute</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/ia-gestion-stock-automatique</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/ia-coach-consultant</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/ia-tunnel-vente-automatise</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/ia-franchise-multi-sites</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/ia-agence-communication</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/ia-comptabilite-ecommerce</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/ia-medecin-cabinet-sante</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/ia-veille-concurrentielle</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/ia-association-ong</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/ia-contenu-marketing-automatise</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/ia-syndic-copropriete</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/ia-onboarding-employe</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/ia-auto-ecole</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/blog/ia-gestion-locative</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -201,13 +201,13 @@
   <!-- Pages fonctionnelles -->
   <url>
     <loc>https://batemark.com/librairie-ia</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://batemark.com/simulateur-ia</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
