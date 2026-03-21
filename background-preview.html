@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preview fond BATEMARK — style heymessage</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: #e5e0db;
+    background: #050505;
+    overflow-x: hidden;
+  }
+
+  /* ============================================
+     TECHNIQUE : Ambient Glow Orbs
+     Des divs positionnées en absolute avec des
+     radial-gradients floutés (filter: blur)
+     placées derrière chaque section.
+     C'est ce que fait heymessage.
+     ============================================ */
+
+  /* Grain overlay — texture film */
+  .grain {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0.12;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 512px 512px;
+    mix-blend-mode: overlay;
+  }
+
+  /* Section container */
+  section {
+    position: relative;
+    padding: 120px 24px;
+    overflow: hidden;
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 600;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.7;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .copper { color: #c4956e; }
+
+  /* Glass card */
+  .glass-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    padding: 24px;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  /* ============================================
+     LES ORBS AMBIENT (la clé du design)
+     ============================================ */
+
+  /* Orb = div positionné en absolute, avec un
+     radial-gradient et un filter:blur important.
+     Chaque section a ses propres orbs avec des
+     couleurs et positions différentes. */
+
+  .ambient-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Section 1 : glow copper subtil en haut à droite */
+  .orb-1 {
+    width: 600px;
+    height: 400px;
+    top: -100px;
+    right: -200px;
+    background: radial-gradient(ellipse, rgba(196,149,110, 0.07) 0%, transparent 70%);
+  }
+
+  .orb-2 {
+    width: 500px;
+    height: 500px;
+    bottom: -200px;
+    left: -150px;
+    background: radial-gradient(ellipse, rgba(80,80,100, 0.06) 0%, transparent 70%);
+  }
+
+  /* Section 2 : glow central plus diffus */
+  .orb-3 {
+    width: 800px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(ellipse, rgba(196,149,110, 0.04) 0%, transparent 60%);
+  }
+
+  /* Section 3 : glow en bas à gauche + haut à droite */
+  .orb-4 {
+    width: 500px;
+    height: 400px;
+    top: -50px;
+    right: -100px;
+    background: radial-gradient(ellipse, rgba(100,120,140, 0.06) 0%, transparent 70%);
+  }
+
+  .orb-5 {
+    width: 600px;
+    height: 400px;
+    bottom: -100px;
+    left: -100px;
+    background: radial-gradient(ellipse, rgba(196,149,110, 0.05) 0%, transparent 70%);
+  }
+
+  /* Section 4 : glow fort copper (CTA) */
+  .orb-6 {
+    width: 700px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(ellipse, rgba(196,149,110, 0.08) 0%, transparent 60%);
+  }
+
+  /* Séparateur subtil entre sections */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+  }
+
+  /* Légende */
+  .legend {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0,0,0,0.8);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 16px 20px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    z-index: 10000;
+    max-width: 280px;
+    line-height: 1.6;
+  }
+  .legend strong { color: #c4956e; }
+</style>
+</head>
+<body>
+
+<div class="grain"></div>
+
+<!-- SECTION 1 : Problème -->
+<section>
+  <div class="ambient-orb orb-1"></div>
+  <div class="ambient-orb orb-2"></div>
+  <div class="content">
+    <h2>Vous perdez du temps… et donc de l'argent</h2>
+    <p>La majorité des entreprises perd un temps considérable sur des tâches répétitives, mal structurées ou non optimisées.</p>
+    <div class="cards-grid">
+      <div class="glass-card">
+        <p style="color:rgba(255,255,255,0.7); font-size:14px;">Trop de tâches manuelles</p>
+      </div>
+      <div class="glass-card">
+        <p style="color:rgba(255,255,255,0.7); font-size:14px;">Des outils mal exploités</p>
+      </div>
+      <div class="glass-card">
+        <p style="color:rgba(255,255,255,0.7); font-size:14px;">Une acquisition irrégulière</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SECTION 2 : Solution -->
+<section>
+  <div class="ambient-orb orb-3"></div>
+  <div class="content">
+    <h2>Ce que l'IA change <span class="copper">concrètement</span></h2>
+    <p>3 leviers activés pour chaque client.</p>
+    <div class="cards-grid">
+      <div class="glass-card">
+        <h3 style="font-size:16px; margin-bottom:8px;">Gagner du temps</h3>
+        <p style="font-size:13px;">Automatisation des tâches répétitives</p>
+      </div>
+      <div class="glass-card">
+        <h3 style="font-size:16px; margin-bottom:8px;">Productivité</h3>
+        <p style="font-size:13px;">Optimisation des process internes</p>
+      </div>
+      <div class="glass-card">
+        <h3 style="font-size:16px; margin-bottom:8px;">Plus de chiffre</h3>
+        <p style="font-size:13px;">Amélioration de l'acquisition</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SECTION 3 : Cas clients -->
+<section>
+  <div class="ambient-orb orb-4"></div>
+  <div class="ambient-orb orb-5"></div>
+  <div class="content">
+    <h2>Résultats clients</h2>
+    <p>Des systèmes IA livrés, des chiffres mesurés.</p>
+    <div class="cards-grid">
+      <div class="glass-card">
+        <p style="color:#c4956e; font-weight:600; font-size:14px;">15 000€ générés dès le 1er mois</p>
+      </div>
+      <div class="glass-card">
+        <p style="color:#c4956e; font-weight:600; font-size:14px;">8h/semaine économisées</p>
+      </div>
+      <div class="glass-card">
+        <p style="color:#c4956e; font-weight:600; font-size:14px;">+43% taux de remplissage</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SECTION 4 : CTA -->
+<section>
+  <div class="ambient-orb orb-6"></div>
+  <div class="content">
+    <h2>Réserver un audit gratuit</h2>
+    <p>En 30 minutes, identifiez les opportunités concrètes d'automatisation et de croissance.</p>
+    <div style="margin-top:32px;">
+      <a href="#" style="display:inline-block; background:#c4956e; color:white; padding:12px 32px; border-radius:999px; text-decoration:none; font-size:14px; font-weight:500;">
+        Réserver mon créneau →
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="legend">
+  <strong>Preview du fond BATEMARK</strong><br>
+  Technique : orbs ambient (divs absolute + radial-gradient + filter:blur:100px) placés derrière chaque section.<br>
+  + Grain overlay en mix-blend-mode: overlay.
+</div>
+
+</body>
+</html>
