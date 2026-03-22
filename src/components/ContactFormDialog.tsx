@@ -42,12 +42,12 @@ const ContactForm = ({ onSuccess }: { onSuccess: () => void }) => {
     }
 
     setLoading(true);
-    const { error } = await supabase.from("contact_requests" as any).insert({
+    const { error } = await supabase.from("contact_requests").insert({
       name: name.trim().slice(0, 100),
       email: email.trim().toLowerCase().slice(0, 255),
       phone: phone.trim().slice(0, 20) || null,
       message: message.trim().slice(0, 2000) || null,
-    } as any);
+    });
 
     setLoading(false);
 

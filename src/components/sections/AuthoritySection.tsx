@@ -7,31 +7,31 @@ const highlights = [
   {
     icon: Award,
     title: "+7 ans d'expérience",
-    description: "En acquisition digitale et génération de leads qualifiés",
+    description: "En intégration IA, automatisation et transformation digitale des entreprises",
   },
   {
     icon: TrendingUp,
-    title: "+300 campagnes en 2025",
-    description: "Gérées avec des résultats mesurables et documentés",
+    title: "+15 entreprises transformées",
+    description: "Systèmes IA déployés avec des résultats mesurables dès le 1er mois",
   },
   {
     icon: Users,
-    title: "Dirigeant de pôle en agence",
-    description: "Management d'une équipe de 6 traffic managers",
+    title: "Expert IA multi-sectoriel",
+    description: "Hôtellerie, BTP, e-commerce, santé, juridique, beauté et plus",
   },
   {
     icon: Code,
-    title: "Développeur CRM métier",
-    description: "Création d'un CRM spécialisé pour le secteur bien-être / fitness",
+    title: "Développeur & intégrateur IA",
+    description: "Création de portails, dashboards et automatisations sur mesure (Make, n8n, ChatGPT)",
   },
 ];
 
 const differentiators = [
-  "Vision business avant tout : je comprends vos enjeux de rentabilité",
-  "Approche data-driven : chaque décision est basée sur les données",
-  "Transparence totale : vous avez accès à tous vos comptes publicitaires",
-  "Pas de jargon : des rapports clairs et compréhensibles",
-  "Réactivité : une réponse sous 24h, toujours",
+  "Vision business avant tout : je comprends vos enjeux de rentabilité et de gain de temps",
+  "Approche sur mesure : chaque système IA est adapté à votre métier et vos process",
+  "Transfert de compétences : vous devenez autonome, sans dépendance",
+  "Résultats mesurables : KPIs clairs, reporting transparent, ROI dès le 1er mois",
+  "Réactivité : un interlocuteur unique qui répond sous 24h, toujours",
 ];
 
 export const AuthoritySection = () => {
@@ -64,8 +64,9 @@ export const AuthoritySection = () => {
               Pourquoi me faire <span className="text-gradient-copper">confiance</span> ?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Je ne suis pas une agence générique. Je suis un expert senior spécialisé 
-              exclusivement dans la génération de leads locaux via la publicité digitale.
+              Je ne suis pas une agence générique. Je suis un consultant IA spécialisé
+              dans l'intégration de l'intelligence artificielle pour aider les entreprises
+              à gagner du temps, travailler plus efficacement et attirer plus de clients.
             </p>
 
             <ul className="space-y-4">

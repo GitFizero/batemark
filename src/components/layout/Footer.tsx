@@ -2,63 +2,66 @@ import { Link } from "react-router-dom";
 import { Linkedin } from "lucide-react";
 import logo from "@/assets/logo.svg";
 
+const navLinks = [
+  { label: "Blog", href: "/blog" },
+  { label: "Librairie IA", href: "/librairie-ia" },
+  { label: "Simulateur", href: "/simulateur-ia" },
+];
+
 const legalLinks = [
   { label: "Mentions légales", href: "/mentions-legales" },
-  { label: "Politique de confidentialité", href: "/confidentialite" },
+  { label: "Confidentialité", href: "/confidentialite" },
   { label: "CGV", href: "/cgv" },
 ];
 
 export const Footer = () => {
   return (
-    <footer className="border-t border-border">
-      <div className="container-custom py-10 md:py-12 px-4 sm:px-6 md:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="flex flex-col items-center md:items-start gap-4">
-            <img src={logo} alt="BATEMARK" className="h-10 sm:h-12 w-auto" width={148} height={48} loading="lazy" />
-            <p className="text-muted-foreground text-sm sm:text-base max-w-xs text-center md:text-left">
-              Consultant IA & automatisation pour TPE/PME. Intégration intelligente dans vos opérations existantes.
-            </p>
-            <div className="flex items-center gap-4 mt-2">
-              <a
-                href="https://www.linkedin.com/in/gaetanfizero/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
-                aria-label="Profil LinkedIn de Gaëtan Fizero"
+    <footer className="border-t border-white/6" role="contentinfo">
+      <div className="container-custom py-10 px-4 sm:px-6">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          {/* Brand */}
+          <div className="flex items-center gap-4">
+            <Link to="/">
+              <img src={logo} alt="BATEMARK" className="h-7 w-auto brightness-0 invert" width={148} height={28} loading="lazy" />
+            </Link>
+            <a
+              href="https://www.linkedin.com/in/gaetanfizero/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/40 hover:text-[#c4956e] transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="w-4 h-4" aria-hidden="true" />
+            </a>
+          </div>
+
+          {/* Nav */}
+          <nav className="flex flex-wrap items-center gap-5" aria-label="Footer">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                to={link.href}
+                className="text-xs text-white/40 hover:text-white transition-colors"
               >
-                <Linkedin className="w-5 h-5" aria-hidden="true" />
-              </a>
-            </div>
-          </div>
-
-          <div className="flex flex-col items-center md:items-end gap-4">
-            <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
-              {legalLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  to={link.href}
-                  className="text-sm sm:text-base text-muted-foreground hover:text-primary transition-colors min-h-[44px] flex items-center"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-            <nav className="flex flex-wrap justify-center gap-4 sm:gap-6" aria-label="Liens utiles">
-              <Link to="/blog" className="text-sm sm:text-base text-muted-foreground hover:text-primary transition-colors min-h-[44px] flex items-center">
-                Blog IA & Automatisation
+                {link.label}
               </Link>
-              <Link to="/librairie-ia" className="text-sm sm:text-base text-muted-foreground hover:text-primary transition-colors min-h-[44px] flex items-center">
-                Librairie d'outils IA
+            ))}
+            <span className="hidden sm:inline text-white/10">|</span>
+            {legalLinks.map((link) => (
+              <Link
+                key={link.href}
+                to={link.href}
+                className="text-xs text-white/40 hover:text-white transition-colors"
+              >
+                {link.label}
               </Link>
-            </nav>
-          </div>
+            ))}
+          </nav>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-border text-center">
-          <p className="text-base text-muted-foreground">
-            © {new Date().getFullYear()} BATEMARK. Tous droits réservés. — Consultant IA & Automatisation en France.
-          </p>
-        </div>
+        <p className="text-[11px] text-white/25 mt-6">
+          © {new Date().getFullYear()} BATEMARK — Gaëtan Fizero. Consultant IA & Automatisation.
+        </p>
       </div>
     </footer>
   );

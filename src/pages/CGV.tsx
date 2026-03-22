@@ -10,6 +10,7 @@ const CGV = () => {
       <SEOHead
         title="Conditions Générales de Vente"
         description="Conditions Générales de Vente de BATEMARK. Consultant IA & automatisation pour TPE/PME en France."
+        noindex
       />
 
       <Header />

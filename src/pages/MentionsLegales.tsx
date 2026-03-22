@@ -10,6 +10,7 @@ const MentionsLegales = () => {
       <SEOHead
         title="Mentions Légales"
         description="Mentions légales du site BATEMARK. Consultant IA & automatisation pour TPE/PME en France."
+        noindex
       />
 
       <Header />

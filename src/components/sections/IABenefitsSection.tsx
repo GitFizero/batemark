@@ -6,26 +6,26 @@ const benefits = [
   {
     icon: Zap,
     secondaryIcon: Clock,
-    title: "Automatisez vos process",
+    title: "Automatisez vos tâches répétitives",
     description:
-      "L'IA prend en charge les tâches répétitives — relances, reporting, saisie — pour que vos équipes se concentrent sur ce qui compte.",
-    highlight: "6 à 8h récupérées par personne / semaine",
+      "L'intelligence artificielle prend en charge les tâches chronophages de votre quotidien — relances clients, reporting, saisie de données, gestion des réservations, facturation. Que vous soyez hôtelier, restaurateur, artisan du bâtiment ou commerçant en ligne, vos équipes se concentrent enfin sur les missions à forte valeur ajoutée.",
+    highlight: "6 à 8h récupérées par collaborateur / semaine",
   },
   {
     icon: TrendingUp,
     secondaryIcon: Bot,
-    title: "Boostez votre productivité",
+    title: "Boostez la productivité de votre entreprise",
     description:
-      "Automatisez les workflows internes pour traiter plus de volume, avec moins d'effort et zéro erreur humaine.",
-    highlight: "Plus de résultats, moins de friction",
+      "Automatisez vos workflows internes pour traiter davantage de volume avec moins d'effort et zéro erreur humaine. De la gestion immobilière au suivi de chantier BTP, en passant par le pilotage de votre boutique e-commerce ou de votre cabinet juridique, l'IA optimise chaque étape de votre chaîne de valeur.",
+    highlight: "Plus de résultats, moins de friction opérationnelle",
   },
   {
     icon: Target,
     secondaryIcon: Rocket,
-    title: "Accélérez votre acquisition",
+    title: "Accélérez votre acquisition client",
     description:
-      "Prospection, qualification, conversion — en automatique. Ceux qui intègrent l'IA aujourd'hui prennent une avance décisive.",
-    highlight: "Surfez la vague avant vos concurrents",
+      "Prospection, qualification de leads, conversion — tout en automatique grâce à l'IA. Les professionnels de la santé, de la beauté, de la restauration et de l'immobilier qui intègrent l'intelligence artificielle dès aujourd'hui prennent une avance décisive sur leurs concurrents.",
+    highlight: "Surfez la vague IA avant vos concurrents",
   },
 ];
 
@@ -44,11 +44,11 @@ export const IABenefitsSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">
-            Ce que l'IA change{" "}
-            <span className="text-gradient-copper">concrètement</span>
+            Pourquoi intégrer l'IA{" "}
+            <span className="text-gradient-copper">dans votre entreprise</span>
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto">
-            Un levier opérationnel qui transforme votre entreprise — dès le premier mois.
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
+            Les entreprises qui intègrent l'IA aujourd'hui gagnent un avantage concurrentiel décisif : elles gagnent du temps, travaillent plus efficacement et attirent plus de clients — avec des résultats mesurables dès le premier mois.
           </p>
         </motion.div>
 

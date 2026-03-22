@@ -12,6 +12,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { ContactFormDialog } from "@/components/ContactFormDialog";
+import { RelatedArticles } from "@/components/RelatedArticles";
 
 const BlogArticleSpa = () => {
   return (
@@ -614,6 +615,7 @@ const BlogArticleSpa = () => {
               </div>
             </div>
           </section>
+          <RelatedArticles currentSlug="ia-spa-centre-bien-etre" />
         </article>
       </main>
 

@@ -16,8 +16,8 @@ const buttonVariants = cva(
         tertiary: "bg-tertiary text-tertiary-foreground hover:bg-tertiary/80 transition-all duration-300",
         ghost: "hover:bg-muted hover:text-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-gradient-to-r from-copper-dark via-copper to-copper-light text-background font-bold shadow-lg hover:shadow-[0_0_30px_hsl(18_31%_57%_/_0.5)] hover:scale-105 transition-all duration-300",
-        heroOutline: "border-2 border-copper bg-transparent text-foreground hover:bg-copper/10 hover:border-copper-light transition-all duration-300",
+        hero: "bg-gradient-to-r from-copper-dark via-copper to-copper-light text-white font-semibold shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300",
+        heroOutline: "border-2 border-copper/40 bg-transparent text-foreground hover:bg-copper/5 hover:border-copper transition-all duration-300",
       },
       size: {
         default: "h-10 px-4 py-2",

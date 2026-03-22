@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
-import { SEOHead } from "@/components/SEOHead";
+import { useEffect, useState, useMemo } from "react";
 import { Helmet } from "react-helmet-async";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { motion } from "framer-motion";
-import { ExternalLink, ChevronRight, Sparkles, Shield, TrendingUp } from "lucide-react";
+import { ExternalLink, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -17,24 +16,99 @@ interface AiTool {
   logo_url: string | null;
 }
 
+// Fallback logos from official sources (Clearbit Logo API) for tools with missing/broken logos
+const LOGO_FALLBACKS: Record<string, string> = {
+  "make": "https://logo.clearbit.com/make.com",
+  "botpress": "https://logo.clearbit.com/botpress.com",
+  "bubble": "https://logo.clearbit.com/bubble.io",
+  "canva": "https://logo.clearbit.com/canva.com",
+  "claude": "https://logo.clearbit.com/anthropic.com",
+  "clay": "https://logo.clearbit.com/clay.com",
+  "coda": "https://logo.clearbit.com/coda.io",
+  "copy.ai": "https://logo.clearbit.com/copy.ai",
+  "copyai": "https://logo.clearbit.com/copy.ai",
+  "crisp": "https://logo.clearbit.com/crisp.chat",
+  "fireflies": "https://logo.clearbit.com/fireflies.ai",
+  "flick": "https://logo.clearbit.com/flick.social",
+  "hypefury": "https://logo.clearbit.com/hypefury.com",
+  "instantly": "https://logo.clearbit.com/instantly.ai",
+  "jasper": "https://logo.clearbit.com/jasper.ai",
+  "julius": "https://logo.clearbit.com/julius.ai",
+  "lovable": "https://logo.clearbit.com/lovable.dev",
+  "manychat": "https://logo.clearbit.com/manychat.com",
+  "midjourney": "https://logo.clearbit.com/midjourney.com",
+  "notion": "https://logo.clearbit.com/notion.so",
+  "otter": "https://logo.clearbit.com/otter.ai",
+  "runway": "https://logo.clearbit.com/runwayml.com",
+  "tableau": "https://logo.clearbit.com/tableau.com",
+  "taplio": "https://logo.clearbit.com/taplio.com",
+  "tidio": "https://logo.clearbit.com/tidio.com",
+  "writesonic": "https://logo.clearbit.com/writesonic.com",
+  "n8n": "https://logo.clearbit.com/n8n.io",
+  "zapier": "https://logo.clearbit.com/zapier.com",
+  "chatgpt": "https://logo.clearbit.com/openai.com",
+  "openai": "https://logo.clearbit.com/openai.com",
+  "hubspot": "https://logo.clearbit.com/hubspot.com",
+  "airtable": "https://logo.clearbit.com/airtable.com",
+  "phantombuster": "https://logo.clearbit.com/phantombuster.com",
+  "lemlist": "https://logo.clearbit.com/lemlist.com",
+};
+
+function getLogoUrl(tool: AiTool): string | null {
+  if (tool.logo_url) return tool.logo_url;
+  const key = tool.name.toLowerCase().trim();
+  return LOGO_FALLBACKS[key] || null;
+}
+
 const LibrairieIA = () => {
   const [tools, setTools] = useState<AiTool[]>([]);
   const [loading, setLoading] = useState(true);
+  const [brokenLogos, setBrokenLogos] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     const fetchTools = async () => {
+      if (!supabase) {
+        setLoading(false);
+        return;
+      }
       const { data } = await supabase
-        .from("ai_tools" as any)
+        .from("ai_tools")
         .select("*")
         .eq("is_active", true)
         .order("display_order", { ascending: true });
-      if (data) setTools(data as any);
+      if (data) setTools(data);
       setLoading(false);
     };
     fetchTools();
   }, []);
 
-  const categories = [...new Set(tools.map((t) => t.category))];
+  const categories = useMemo(() => [...new Set(tools.map((t) => t.category))], [tools]);
+
+  const toolsByCategory = useMemo(() => {
+    const grouped: Record<string, AiTool[]> = {};
+    for (const tool of tools) {
+      if (!grouped[tool.category]) grouped[tool.category] = [];
+      grouped[tool.category].push(tool);
+    }
+    return grouped;
+  }, [tools]);
+
+  const handleLogoError = (toolId: string, toolName: string) => {
+    // If the original logo failed, try the clearbit fallback
+    const key = toolName.toLowerCase().trim();
+    const fallback = LOGO_FALLBACKS[key];
+    if (fallback && !brokenLogos.has(toolId)) {
+      setBrokenLogos((prev) => new Set(prev).add(toolId));
+    }
+  };
+
+  const getEffectiveLogoUrl = (tool: AiTool): string | null => {
+    if (brokenLogos.has(tool.id)) {
+      const key = tool.name.toLowerCase().trim();
+      return LOGO_FALLBACKS[key] || null;
+    }
+    return getLogoUrl(tool);
+  };
 
   const jsonLdBreadcrumb = {
     "@context": "https://schema.org",
@@ -49,7 +123,6 @@ const LibrairieIA = () => {
     "@context": "https://schema.org",
     "@type": "ItemList",
     "name": "Meilleurs outils IA pour entreprises",
-    "description": "Sélection d'outils d'intelligence artificielle testés et approuvés pour automatiser la prospection, la fidélisation et la productivité des PME.",
     "numberOfItems": tools.length,
     "itemListElement": tools.map((tool, i) => ({
       "@type": "ListItem",
@@ -60,88 +133,33 @@ const LibrairieIA = () => {
     })),
   };
 
-  const jsonLdWebPage = {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Librairie IA — Outils IA recommandés pour entreprises",
-    "description": "Sélection des meilleurs outils IA testés sur des cas clients réels : automatisation, prospection, fidélisation, productivité pour TPE/PME.",
-    "url": "https://batemark.com/librairie-ia",
-    "inLanguage": "fr",
-    "isPartOf": { "@type": "WebSite", "name": "BATEMARK", "url": "https://batemark.com" },
-    "author": { "@type": "Person", "name": "Gaëtan Fizero" },
-    "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://batemark.com" },
-  };
-
-  const jsonLdFaq = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Comment sont sélectionnés les outils IA de la librairie ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Chaque outil est testé sur des cas clients réels avant d'être recommandé. Nous évaluons l'impact concret sur la productivité, l'acquisition client et le ROI avant de l'intégrer.",
-        },
-      },
-      {
-        "@type": "Question",
-        "name": "Les outils IA sont-ils adaptés aux PME ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Oui, tous les outils sélectionnés sont spécifiquement testés pour les TPE et PME, avec des tarifs accessibles et une prise en main rapide sans compétences techniques.",
-        },
-      },
-      {
-        "@type": "Question",
-        "name": "Qu'est-ce qu'un lien partenaire Batemark ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nos liens partenaires vous donnent accès à des avantages exclusifs (réductions, essais prolongés). En passant par nos liens, vous soutenez Batemark sans surcoût.",
-        },
-      },
-    ],
-  };
-
   return (
     <>
       <Helmet>
         <title>Librairie IA — Meilleurs outils IA pour entreprises | BATEMARK</title>
         <meta
           name="description"
-          content="Découvrez les meilleurs outils IA testés sur des cas clients réels : automatisation, prospection, fidélisation et productivité pour TPE/PME. Sélection experte Batemark."
+          content="Découvrez les meilleurs outils IA testés sur des cas clients réels : automatisation, prospection, fidélisation et productivité pour TPE/PME."
         />
-        <meta name="keywords" content="outils IA entreprise, meilleurs outils intelligence artificielle, automatisation PME, IA prospection, IA productivité, outils IA recommandés" />
+        <meta name="keywords" content="outils IA entreprise, meilleurs outils intelligence artificielle, automatisation PME, IA prospection, IA productivité" />
         <link rel="canonical" href="https://batemark.com/librairie-ia" />
-
-        {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://batemark.com/librairie-ia" />
         <meta property="og:title" content="Librairie IA — Meilleurs outils IA pour entreprises | BATEMARK" />
-        <meta property="og:description" content="Sélection des meilleurs outils IA testés sur des cas clients réels. Automatisez votre prospection, fidélisation et productivité." />
+        <meta property="og:description" content="Sélection des meilleurs outils IA testés sur des cas clients réels." />
         <meta property="og:image" content="https://batemark.com/og-image.png" />
         <meta property="og:locale" content="fr_FR" />
-        <meta property="og:site_name" content="BATEMARK" />
-
-        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Librairie IA — Meilleurs outils IA pour entreprises | BATEMARK" />
-        <meta name="twitter:description" content="Sélection des meilleurs outils IA testés sur des cas clients réels. Automatisez votre prospection, fidélisation et productivité." />
-        <meta name="twitter:image" content="https://batemark.com/og-image.png" />
-
-        {/* JSON-LD */}
-        <script type="application/ld+json">{JSON.stringify(jsonLdWebPage)}</script>
         <script type="application/ld+json">{JSON.stringify(jsonLdBreadcrumb)}</script>
         <script type="application/ld+json">{JSON.stringify(jsonLdItemList)}</script>
-        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
       </Helmet>
 
       <Header />
 
-      <main className="pt-24">
+      <main className="pt-20">
         {/* Breadcrumb */}
         <div className="container-custom pt-4 pb-2">
-          <nav aria-label="Fil d'Ariane" className="flex items-center gap-1 text-sm text-muted-foreground">
+          <nav aria-label="Fil d'Ariane" className="flex items-center gap-1 text-xs text-muted-foreground">
             <a href="/" className="hover:text-foreground transition-colors">Accueil</a>
             <ChevronRight className="w-3 h-3" />
             <span className="text-foreground font-medium">Librairie IA</span>
@@ -149,157 +167,102 @@ const LibrairieIA = () => {
         </div>
 
         {/* Hero */}
-        <section className="section-padding pt-8">
-          <div className="container-custom">
+        <section className="py-8 sm:py-12 px-4 sm:px-6">
+          <div className="container-custom text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-16"
+              transition={{ duration: 0.5 }}
             >
-              <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3">
                 Librairie <span className="text-gradient-copper">IA</span>
               </h1>
-              <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-                Notre sélection d'outils IA testés et approuvés pour automatiser votre croissance.
-                Chaque outil a été validé sur des cas clients réels.
+              <p className="text-sm text-muted-foreground max-w-md mx-auto">
+                Outils IA testés et approuvés sur des cas clients réels.
               </p>
-
-              {/* Trust indicators */}
-              <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
-                <span className="flex items-center gap-2">
-                  <Shield className="w-4 h-4 text-primary" />
-                  Testés sur des cas réels
-                </span>
-                <span className="flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-primary" />
-                  Avantages exclusifs
-                </span>
-                <span className="flex items-center gap-2">
-                  <TrendingUp className="w-4 h-4 text-primary" />
-                  ROI prouvé
-                </span>
-              </div>
             </motion.div>
+          </div>
+        </section>
 
+        {/* Tools grid */}
+        <section className="section-padding pt-4">
+          <div className="container-custom">
             {loading ? (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="card-premium animate-pulse">
-                    <div className="h-6 bg-muted rounded w-1/2 mb-4" />
-                    <div className="h-4 bg-muted rounded w-full mb-2" />
-                    <div className="h-4 bg-muted rounded w-3/4" />
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {[1, 2, 3, 4, 5, 6].map((i) => (
+                  <div key={i} className="rounded-2xl border border-border p-5 animate-pulse">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="h-10 w-10 bg-muted rounded-xl" />
+                      <div className="h-4 bg-muted rounded w-24" />
+                    </div>
+                    <div className="h-3 bg-muted rounded w-full mb-2" />
+                    <div className="h-3 bg-muted rounded w-3/4" />
                   </div>
                 ))}
               </div>
             ) : (
               categories.map((category) => (
-                <div key={category} className="mb-16 last:mb-0">
+                <div key={category} className="mb-12 last:mb-0">
                   <motion.h2
-                    initial={{ opacity: 0, y: 10 }}
+                    initial={{ opacity: 0, y: 8 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-2xl font-bold mb-8 flex items-center gap-3"
+                    className="text-base font-semibold mb-5 flex items-center gap-2"
                   >
-                    <span className="w-2 h-8 rounded-full bg-primary" />
+                    <span className="w-1.5 h-5 rounded-full bg-primary" />
                     {category}
                   </motion.h2>
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    {tools
-                      .filter((t) => t.category === category)
-                      .map((tool, index) => (
-                        <motion.div
-                          key={tool.id}
-                          initial={{ opacity: 0, y: 30 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.5, delay: index * 0.1 }}
-                          className="card-premium group hover:border-primary/30 transition-all duration-300 flex flex-col"
-                        >
-                          {tool.logo_url && (
-                            <img
-                              src={tool.logo_url}
-                              alt={`Logo ${tool.name}`}
-                              className="h-10 w-auto object-contain mb-4"
-                              loading="lazy"
-                              width="120"
-                              height="40"
-                            />
-                          )}
-                          <div className="flex items-center justify-between mb-3">
-                            <h3 className="text-xl font-bold">{tool.name}</h3>
-                            <span className="px-2 py-0.5 rounded text-xs font-semibold bg-primary/10 text-primary">
-                              Recommandé
-                            </span>
-                          </div>
-                          <p className="text-muted-foreground text-sm mb-6 flex-1">
-                            {tool.description}
-                          </p>
-                          <Button variant="heroOutline" className="group/btn w-full" asChild>
-                            <a
-                              href={tool.affiliate_url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              Découvrir {tool.name}
-                              <ExternalLink className="w-4 h-4 ml-1 group-hover/btn:translate-x-0.5 transition-transform" />
-                            </a>
-                          </Button>
-                          {tool.name.toLowerCase() === "make" ? (
-                            <p className="text-xs text-primary mt-3 text-center font-medium">
-                              🎁 Inscrivez-vous via notre lien et recevez <strong>1 mois du plan Pro avec 10 000 opérations gratuites</strong> !
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {(toolsByCategory[category] || [])
+                      .map((tool, index) => {
+                        const logoUrl = getEffectiveLogoUrl(tool);
+                        return (
+                          <motion.div
+                            key={tool.id}
+                            initial={{ opacity: 0, y: 12 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.4, delay: index * 0.05 }}
+                            className="rounded-2xl border border-border bg-card p-5 group hover:border-primary/20 transition-colors flex flex-col"
+                          >
+                            <div className="flex items-center gap-3 mb-3">
+                              {logoUrl ? (
+                                <img
+                                  src={logoUrl}
+                                  alt={`Logo ${tool.name}`}
+                                  className="h-10 w-10 object-contain rounded-xl bg-white border border-border/50 p-1"
+                                  loading="lazy"
+                                  width="40"
+                                  height="40"
+                                  onError={() => handleLogoError(tool.id, tool.name)}
+                                />
+                              ) : (
+                                <div className="h-10 w-10 rounded-xl bg-primary/8 flex items-center justify-center text-primary font-bold text-sm">
+                                  {tool.name.charAt(0)}
+                                </div>
+                              )}
+                              <h3 className="text-sm font-semibold">{tool.name}</h3>
+                            </div>
+                            <p className="text-xs text-muted-foreground mb-4 flex-1 line-clamp-2 leading-relaxed">
+                              {tool.description}
                             </p>
-                          ) : (
-                            <p className="text-xs text-muted-foreground mt-3 text-center italic">
-                              🎁 Lien partenaire — avantages exclusifs Batemark
-                            </p>
-                          )}
-                        </motion.div>
-                      ))}
+                            <Button variant="heroOutline" size="sm" className="w-full text-xs group/btn" asChild>
+                              <a
+                                href={tool.affiliate_url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                Découvrir
+                                <ExternalLink className="w-3 h-3 ml-1" />
+                              </a>
+                            </Button>
+                          </motion.div>
+                        );
+                      })}
                   </div>
                 </div>
               ))
             )}
-          </div>
-        </section>
-
-        {/* FAQ SEO Section */}
-        <section className="section-padding border-t border-border">
-          <div className="container-custom max-w-3xl">
-            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
-              Questions fréquentes sur la <span className="text-gradient-copper">Librairie IA</span>
-            </h2>
-            <div className="space-y-6">
-              {[
-                {
-                  q: "Comment sont sélectionnés les outils IA de la librairie ?",
-                  a: "Chaque outil est testé sur des cas clients réels avant d'être recommandé. Nous évaluons l'impact concret sur la productivité, l'acquisition client et le ROI avant de l'intégrer à notre sélection.",
-                },
-                {
-                  q: "Les outils IA sont-ils adaptés aux PME ?",
-                  a: "Oui, tous les outils sélectionnés sont spécifiquement testés pour les TPE et PME, avec des tarifs accessibles et une prise en main rapide sans compétences techniques.",
-                },
-                {
-                  q: "Qu'est-ce qu'un lien partenaire Batemark ?",
-                  a: "Nos liens partenaires vous donnent accès à des avantages exclusifs (réductions, essais prolongés). En passant par nos liens, vous soutenez Batemark sans surcoût.",
-                },
-              ].map((faq, i) => (
-                <motion.details
-                  key={i}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="card-premium cursor-pointer"
-                >
-                  <summary className="font-semibold text-lg list-none flex items-center justify-between">
-                    {faq.q}
-                    <ChevronRight className="w-5 h-5 text-muted-foreground transition-transform details-open:rotate-90" />
-                  </summary>
-                  <p className="text-muted-foreground mt-4">{faq.a}</p>
-                </motion.details>
-              ))}
-            </div>
           </div>
         </section>
       </main>

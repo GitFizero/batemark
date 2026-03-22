@@ -1,100 +1,87 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import { Search, ListChecks, Rocket, RefreshCw } from "lucide-react";
-import { SectionFade } from "@/components/ui/SectionFade";
-import bgImage from "@/assets/bg-3.svg";
+import { AmbientOrb } from "@/components/ui/AmbientGlow";
 
 const steps = [
   {
     icon: Search,
     number: "01",
-    title: "Audit & diagnostic",
-    description: "On cartographie ensemble vos process, vos outils actuels et vos objectifs de croissance.",
+    title: "Audit",
+    description: "On cartographie vos process et on identifie les leviers IA.",
     duration: "Semaine 1",
   },
   {
     icon: ListChecks,
     number: "02",
-    title: "Plan d'action",
-    description: "Je définis les systèmes à construire, les outils à connecter et les KPIs à suivre.",
+    title: "Stratégie",
+    description: "Plan d'action, outils à connecter et KPIs à suivre.",
     duration: "Semaine 2",
   },
   {
     icon: Rocket,
     number: "03",
-    title: "Exécution",
-    description: "Je livre les automatisations et dashboards. Premiers résultats visibles dès le 1er mois.",
+    title: "Déploiement",
+    description: "Livraison des automatisations et mise en production.",
     duration: "Semaines 3-6",
   },
   {
     icon: RefreshCw,
     number: "04",
-    title: "Suivi & Itération",
-    description: "On mesure, on ajuste, on optimise en continu.",
+    title: "Optimisation",
+    description: "Suivi des performances et ajustements continus.",
     duration: "En continu",
   },
 ];
 
 export const ProcessSection = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], [20, -20]);
+
   return (
-    <section className="section-padding relative overflow-hidden">
-      <div className="absolute inset-0">
-        <img src={bgImage} alt="" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-background/90" />
-      </div>
-
-      <SectionFade position="top" />
-      <SectionFade position="bottom" />
-
+    <section className="section-padding relative overflow-hidden" ref={sectionRef}>
+      <AmbientOrb color="copper" size="md" position="center" intensity={0.04} />
       <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6">
-            Comment ça <span className="text-gradient-copper">marche</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3 text-white">
+            La méthode
           </h2>
+          <p className="text-sm text-white/55">
+            4 étapes pour intégrer l'IA dans votre activité.
+          </p>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto relative">
-          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/0 via-primary/40 to-primary/0 hidden md:block" />
-
+        <motion.div style={{ y }} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
           {steps.map((step, index) => (
             <motion.div
-              key={step.title}
-              initial={{ opacity: 0, y: 20 }}
+              key={step.number}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
-              className={`relative flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6 mb-6 md:mb-8 ${
-                index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              }`}
+              transition={{ duration: 0.4, delay: index * 0.08 }}
+              className="glass-card p-5 text-center"
             >
-              <div className={`flex-1 ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
-                <div className="card-premium group hover:border-primary/30 transition-all duration-300">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="md:hidden p-2 rounded-xl bg-primary/10 shrink-0">
-                      <step.icon className="w-5 h-5 text-primary" />
-                    </div>
-                    <span className="text-xs font-bold text-primary uppercase tracking-widest bg-primary/10 px-3 py-1 rounded-full">
-                      {step.duration}
-                    </span>
-                  </div>
-                  <h3 className="text-lg sm:text-2xl font-bold mb-2">{step.title}</h3>
-                  <p className="text-muted-foreground text-base sm:text-lg">{step.description}</p>
-                </div>
+              <div className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-[#c4956e]/10 border border-[#c4956e]/15 mb-3">
+                <step.icon className="w-4 h-4 text-[#c4956e]" />
               </div>
-
-              <div className="hidden md:flex shrink-0 w-16 h-16 rounded-full bg-primary/20 items-center justify-center border-2 border-primary/40 z-10">
-                <step.icon className="w-7 h-7 text-primary" />
-              </div>
-
-              <div className="flex-1 hidden md:block" />
+              <span className="block text-[10px] font-semibold text-[#c4956e]/70 uppercase tracking-wider mb-1.5">
+                {step.duration}
+              </span>
+              <h3 className="text-sm font-semibold mb-1 text-white">{step.title}</h3>
+              <p className="text-xs text-white/55 leading-relaxed">{step.description}</p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

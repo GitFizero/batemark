@@ -3,14 +3,14 @@ import { Check, X } from "lucide-react";
 import { SectionFade } from "@/components/ui/SectionFade";
 
 const comparisonRows = [
-  { criteria: "Interlocuteur", batemark: "Un seul consultant senior", agency: "Chef de projet + juniors" },
-  { criteria: "Approche", batemark: "Sur-mesure, on part de l'existant", agency: "Packages standardisés" },
-  { criteria: "Compétences", batemark: "Ads + CRM + IA + Automatisation", agency: "Découpé en silos" },
-  { criteria: "Autonomie", batemark: "Transfert de compétences inclus", agency: "Dépendance créée" },
-  { criteria: "Disponibilité", batemark: "5-6 clients max", agency: "Dizaines de clients en parallèle" },
-  { criteria: "Résultats", batemark: "Mesurables dès le 1er mois", agency: "Délais longs, reporting flou" },
-  { criteria: "Spécialisation", batemark: "IA appliquée à vos process", agency: "Généraliste, peu de maîtrise IA" },
-  { criteria: "Connaissance métier", batemark: "Immersion dans vos process réels", agency: "Vision externe standardisée" },
+  { criteria: "Interlocuteur", batemark: "Un seul consultant IA senior et dédié", agency: "Chef de projet + exécutants juniors" },
+  { criteria: "Approche", batemark: "Sur-mesure, adaptée à votre secteur (hôtellerie, BTP, e-commerce…)", agency: "Packages standardisés, peu personnalisés" },
+  { criteria: "Compétences", batemark: "Ads + CRM + IA + Automatisation + Stratégie métier", agency: "Compétences découpées en silos, faible expertise IA" },
+  { criteria: "Autonomie", batemark: "Transfert de compétences inclus — vous devenez autonome", agency: "Dépendance créée pour justifier l'abonnement" },
+  { criteria: "Disponibilité", batemark: "5-6 clients max pour une qualité irréprochable", agency: "Dizaines de clients en parallèle, attention diluée" },
+  { criteria: "Résultats", batemark: "Mesurables dès le 1er mois, KPIs clairs", agency: "Délais longs, reporting flou et peu actionnable" },
+  { criteria: "Spécialisation IA", batemark: "Intelligence artificielle appliquée à vos process métier", agency: "Généraliste digital, maîtrise IA superficielle" },
+  { criteria: "Connaissance métier", batemark: "Immersion dans vos process réels, connaissance sectorielle", agency: "Vision externe standardisée, peu d'adaptation" },
 ];
 
 export const WhyBatemarkSection = () => {
@@ -28,10 +28,14 @@ export const WhyBatemarkSection = () => {
           className="text-center mb-10 md:mb-16"
         >
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6">
-            Pourquoi <span className="text-gradient-copper">Batemark</span>
+            Pourquoi choisir un{" "}
+            <span className="text-gradient-copper">consultant IA spécialisé</span>{" "}
+            plutôt qu'une agence
           </h2>
-          <p className="text-lg sm:text-2xl text-muted-foreground max-w-2xl mx-auto">
-            Consultant solo vs agence classique
+          <p className="text-lg sm:text-2xl text-muted-foreground max-w-3xl mx-auto">
+            Expert en intégration IA pour l'hôtellerie, le BTP, l'e-commerce,
+            l'immobilier, la santé, le juridique et les PME françaises —
+            un accompagnement sur-mesure qui produit des résultats concrets
           </p>
         </motion.div>
 
@@ -98,6 +102,28 @@ export const WhyBatemarkSection = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* SEO paragraph below comparison */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="max-w-3xl mx-auto mt-12 md:mt-16 text-center"
+        >
+          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+            Un consultant IA spécialisé comme Batemark vous apporte une expertise
+            pointue en intelligence artificielle appliquée à votre secteur
+            d'activité. Contrairement aux agences digitales généralistes qui
+            diluent leurs efforts sur des dizaines de clients, un consultant
+            indépendant s'immerge dans vos process métier — qu'il s'agisse de
+            la gestion hôtelière, du suivi de chantier BTP, de l'optimisation
+            e-commerce ou de l'automatisation comptable — pour déployer des
+            solutions IA qui génèrent un retour sur investissement mesurable
+            dès le premier mois. C'est la différence entre un prestataire qui
+            vend des heures et un partenaire qui livre des résultats.
+          </p>
+        </motion.div>
       </div>
     </section>
   );

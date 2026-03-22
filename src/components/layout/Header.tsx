@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { ContactFormDialog } from "@/components/ContactFormDialog";
 import { useLocation } from "react-router-dom";
 import {
@@ -14,7 +14,8 @@ import {
 import logo from "@/assets/logo.svg";
 
 const navLinks = [
-  { label: "Méthode Batemark", href: "/#methode" },
+  { label: "Méthode", href: "/#methode" },
+  { label: "Réalisations", href: "/#cas-clients" },
   { label: "Librairie IA", href: "/librairie-ia" },
   { label: "Blog", href: "/blog" },
 ];
@@ -23,6 +24,7 @@ export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const isHome = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,34 +34,46 @@ export const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
+
+  // Always dark header — white text
+  const isTransparentDark = true;
 
   return (
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.4 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-lg border-b border-border"
+          ? "bg-[#0a0a0a]/80 backdrop-blur-xl border-b border-white/6"
           : "bg-transparent"
       }`}
     >
       <div className="container-custom px-4">
-        <div className="flex items-center justify-between h-16 sm:h-20">
+        <div className="flex items-center justify-between h-14 sm:h-16">
           <a href="/" className="flex items-center gap-2">
-            <img src={logo} alt="BATEMARK — Consultant IA & Automatisation" className="h-10 sm:h-12 w-auto" width={148} height={48} />
+            <img
+              src={logo}
+              alt="BATEMARK"
+              className={`h-8 sm:h-9 w-auto transition-all duration-300 ${isTransparentDark ? "brightness-0 invert" : ""}`}
+              width={148}
+              height={36}
+            />
           </a>
 
-          <nav className="hidden lg:flex items-center gap-8" aria-label="Navigation principale">
+          <nav className="hidden lg:flex items-center gap-6" aria-label="Navigation principale">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors text-base font-medium"
+                className={`transition-colors text-sm font-medium ${
+                  isTransparentDark
+                    ? "text-white/80 hover:text-white"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
                 aria-current={location.pathname === link.href ? "page" : undefined}
               >
                 {link.label}
@@ -70,42 +84,48 @@ export const Header = () => {
           <div className="hidden lg:flex items-center">
             <ContactFormDialog
               trigger={
-                <Button variant="hero" size="lg">
+                <Button
+                  variant={isTransparentDark ? "outline" : "hero"}
+                  size="default"
+                  className={`text-sm ${
+                    isTransparentDark
+                      ? "border-white/30 text-white hover:bg-white/10 bg-transparent"
+                      : ""
+                  }`}
+                >
                   Demander un audit
                 </Button>
               }
             />
           </div>
 
-          {/* Mobile menu trigger */}
           <button
             className="lg:hidden p-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
             onClick={() => setIsMobileMenuOpen(true)}
             aria-label="Ouvrir le menu"
           >
-            <Menu className="w-6 h-6" aria-hidden="true" />
+            <Menu className={`w-5 h-5 transition-colors ${isTransparentDark ? "text-white" : ""}`} aria-hidden="true" />
           </button>
         </div>
       </div>
 
-      {/* Mobile Sheet Menu */}
       <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-        <SheetContent side="right" className="w-[85vw] max-w-sm bg-background border-l border-border p-0 flex flex-col">
-          <SheetHeader className="p-6 pb-4 border-b border-border">
+        <SheetContent side="right" className="w-[80vw] max-w-xs bg-[#0f0f0f] border-l border-white/6 p-0 flex flex-col">
+          <SheetHeader className="p-5 pb-3 border-b border-white/6">
             <SheetTitle className="text-left">
-              <img src={logo} alt="BATEMARK" className="h-10 w-auto" width={148} height={40} />
+              <img src={logo} alt="BATEMARK" className="h-8 w-auto brightness-0 invert" width={148} height={32} />
             </SheetTitle>
           </SheetHeader>
 
-          <nav className="flex flex-col flex-1 p-6 gap-2" aria-label="Navigation mobile">
+          <nav className="flex flex-col flex-1 p-5 gap-1" aria-label="Navigation mobile">
             {navLinks.map((link) => (
               <SheetClose asChild key={link.label}>
                 <a
                   href={link.href}
-                  className={`text-lg font-medium py-3 px-4 rounded-xl transition-colors min-h-[48px] flex items-center ${
+                  className={`text-sm font-medium py-2.5 px-3 rounded-lg transition-colors min-h-[44px] flex items-center ${
                     location.pathname === link.href
-                      ? "text-primary bg-primary/10"
-                      : "text-foreground hover:bg-muted"
+                      ? "text-[#c4956e] bg-[#c4956e]/10"
+                      : "text-white/70 hover:bg-white/5 hover:text-white"
                   }`}
                   aria-current={location.pathname === link.href ? "page" : undefined}
                 >
@@ -115,10 +135,10 @@ export const Header = () => {
             ))}
           </nav>
 
-          <div className="p-6 pt-0 mt-auto">
+          <div className="p-5 pt-0 mt-auto">
             <ContactFormDialog
               trigger={
-                <Button variant="hero" size="lg" className="w-full min-h-[52px] text-base">
+                <Button size="default" className="w-full min-h-[44px] text-sm bg-[#c4956e] text-white hover:bg-[#c4956e]/90">
                   Demander un audit
                 </Button>
               }

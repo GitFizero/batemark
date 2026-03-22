@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, CheckCircle2, ChevronRight } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ContactFormDialog } from "@/components/ContactFormDialog";
+import { RelatedArticles } from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
 
 const CAL_LINK = "https://cal.com/gaetan-batemark/audit";
@@ -218,6 +219,7 @@ const BlogArticleChatbot = () => {
               </Button>
             </div>
           </section>
+          <RelatedArticles currentSlug="chatbot-ia-site-web-conversion" />
         </article>
       </main>
       <Footer />

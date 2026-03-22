@@ -165,11 +165,11 @@ export const SimulateurIA = ({ embedded = false }: SimulateurIAProps) => {
   useEffect(() => {
     const fetchTools = async () => {
       const { data } = await supabase
-        .from("ai_tools" as any)
+        .from("ai_tools")
         .select("*")
         .eq("is_active", true)
         .order("display_order", { ascending: true });
-      if (data) setAllTools(data as any);
+      if (data) setAllTools(data);
     };
     fetchTools();
   }, []);

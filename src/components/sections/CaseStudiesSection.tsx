@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
-import { SectionFade } from "@/components/ui/SectionFade";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import { AmbientOrb } from "@/components/ui/AmbientGlow";
 import caseAtlantica from "@/assets/case-atlantica.jpg";
 import caseFunelin from "@/assets/case-funelin.jpg";
 import caseMediacast from "@/assets/case-mediacast-new.jpg";
@@ -10,42 +11,54 @@ import caseFiguerolles from "@/assets/figuerolles.jpg";
 const caseStudies = [
   {
     name: "Atlantica Minceur",
-    context: "Système d'acquisition de leads automatisé",
+    sector: "Beauté & bien-être",
+    before: "Acquisition 100% manuelle, pas de système de relance",
+    after: "Prospection automatisée + séquences mailing IA",
     result: "15 000€ générés dès le 1er mois pour 350€ investis",
     tag: "Acquisition",
     image: caseAtlantica,
   },
   {
     name: "Funel-In",
-    context: "Prospection LinkedIn + lead nurturing automatisés",
+    sector: "Conseil B2B",
+    before: "Prospection LinkedIn manuelle, leads non qualifiés",
+    after: "Prospection IA automatisée + qualification intelligente",
     result: "6 800€ générés le 1er mois pour 380€ investis",
     tag: "Prospection",
     image: caseFunelin,
   },
   {
     name: "MediaCast",
-    context: "Portail client boosté à l'IA pour un studio de podcast",
+    sector: "Studio podcast",
+    before: "Onboarding clients chronophage, suivi projet dispersé",
+    after: "Portail client IA + onboarding automatisé",
     result: "8 nouveaux clients onboardés, 8h/semaine économisées",
-    tag: "Process opérationnel",
+    tag: "Process",
     image: caseMediacast,
   },
   {
     name: "V8 Equipment",
-    context: "Mailing IA + système d'acquisition Meta",
-    result: "24 500€ générés en 1 mois — 9 tentes de toit vendues",
+    sector: "E-commerce outdoor",
+    before: "Acquisition irrégulière, pas de retargeting",
+    after: "Mailing automatisé + ciblage IA + retargeting",
+    result: "24 500€ en 1 mois — 9 tentes de toit vendues",
     tag: "Acquisition",
     image: caseV8,
   },
   {
     name: "Loco Media",
-    context: "Portail de gestion de campagnes pour 200+ clients",
+    sector: "Agence marketing",
+    before: "Reporting manuel pour 200+ clients, dashboards inexistants",
+    after: "Portail IA + reporting automatisé + dashboards décisionnels",
     result: "6h économisées/semaine par membre d'équipe (x5)",
-    tag: "Process opérationnel",
+    tag: "Process",
     image: caseLocomedia,
   },
   {
-    name: "La République Indépendante de Figuerolles",
-    context: "Acquisition IA pour un hôtel-restaurant indépendant",
+    name: "La République de Figuerolles",
+    sector: "Hôtellerie-restauration",
+    before: "Remplissage hors saison très faible, pas de stratégie digitale",
+    after: "Système IA d'acquisition + réservation directe automatisée",
     result: "+43% de taux de remplissage hors saison",
     tag: "Acquisition",
     image: caseFiguerolles,
@@ -53,67 +66,104 @@ const caseStudies = [
 ];
 
 const tagColors: Record<string, string> = {
-  "Acquisition": "bg-primary text-primary-foreground",
-  "Prospection": "bg-secondary text-secondary-foreground",
-  "Process opérationnel": "bg-accent text-accent-foreground",
+  Acquisition: "bg-[#c4956e]/20 text-[#c4956e]",
+  Prospection: "bg-[#5a8f7b]/20 text-[#5a8f7b]",
+  Process: "bg-[#7a8fb5]/20 text-[#7a8fb5]",
 };
 
 export const CaseStudiesSection = () => {
-  return (
-    <section className="section-padding relative overflow-hidden">
-      <SectionFade position="top" />
-      <SectionFade position="bottom" />
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], [40, -40]);
 
+  return (
+    <section className="section-padding relative overflow-hidden" ref={sectionRef}>
+      <AmbientOrb color="blue" size="lg" position="top-right" intensity={0.05} />
+      <AmbientOrb color="copper" size="md" position="bottom-left" intensity={0.04} />
       <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">
-            Résultats <span className="text-gradient-copper">réels</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white mb-3">
+            Résultats clients
           </h2>
-          <p className="text-lg sm:text-2xl text-muted-foreground">
-            Des systèmes livrés, des chiffres mesurés.
+          <p className="text-sm text-white/50">
+            Des systèmes IA livrés, des chiffres mesurés.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <motion.div style={{ y }} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {caseStudies.map((cs, index) => (
             <motion.div
               key={cs.name}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="card-premium group hover:border-primary/30 transition-all duration-300 flex flex-col overflow-hidden"
-              style={{
-                background: "linear-gradient(145deg, hsl(220 12% 10%), hsl(220 15% 7%))",
-              }}
+              transition={{ duration: 0.5, delay: index * 0.08 }}
+              className="glass-card overflow-hidden flex flex-col group"
             >
-              <div className="relative h-40 -mx-6 -mt-6 mb-4 overflow-hidden">
+              {/* Image */}
+              <div className="relative h-36 overflow-hidden">
                 <img
                   src={cs.image}
-                  alt={`Projet ${cs.name}`}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  alt={cs.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220_15%_7%)] via-transparent to-transparent" />
-                <span className={`absolute top-3 left-3 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full ${tagColors[cs.tag] || "bg-primary/15 text-primary"}`}>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/60 to-transparent" />
+                <span
+                  className={`absolute top-3 left-3 text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full backdrop-blur-sm ${
+                    tagColors[cs.tag] || "bg-white/10 text-white/60"
+                  }`}
+                >
                   {cs.tag}
                 </span>
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold mb-2">{cs.name}</h3>
-              <p className="text-muted-foreground text-base sm:text-lg mb-4 flex-1">{cs.context}</p>
-              <div className="pt-4 border-t border-border">
-                <p className="text-foreground font-bold text-lg sm:text-xl">
-                  {cs.result}
-                </p>
+
+              {/* Content */}
+              <div className="p-5 flex flex-col flex-1">
+                <div className="mb-4">
+                  <h3 className="text-sm font-bold text-white">{cs.name}</h3>
+                  <span className="text-[11px] text-white/50">{cs.sector}</span>
+                </div>
+
+                {/* Before / After */}
+                <div className="space-y-2 mb-4 flex-1">
+                  <div className="rounded-lg bg-red-500/[0.07] border border-red-500/10 px-3 py-2">
+                    <span className="text-[10px] font-semibold uppercase tracking-wider text-red-400/70 block mb-0.5">
+                      Avant
+                    </span>
+                    <p className="text-[11px] text-white/65 leading-relaxed">
+                      {cs.before}
+                    </p>
+                  </div>
+                  <div className="rounded-lg bg-emerald-500/[0.07] border border-emerald-500/10 px-3 py-2">
+                    <span className="text-[10px] font-semibold uppercase tracking-wider text-emerald-400/70 block mb-0.5">
+                      Après
+                    </span>
+                    <p className="text-[11px] text-white/65 leading-relaxed">
+                      {cs.after}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Result */}
+                <div className="border-t border-white/8 pt-3">
+                  <p className="text-[#c4956e] font-bold text-xs sm:text-sm">
+                    {cs.result}
+                  </p>
+                </div>
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

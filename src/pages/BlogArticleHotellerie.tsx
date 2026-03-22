@@ -12,6 +12,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { ContactFormDialog } from "@/components/ContactFormDialog";
+import { RelatedArticles } from "@/components/RelatedArticles";
 import figuerollesImg from "@/assets/figuerolles.jpg";
 import gregoryImg from "@/assets/gregory.png";
 
@@ -604,6 +605,7 @@ const BlogArticleHotellerie = () => {
               </div>
             </div>
           </section>
+          <RelatedArticles currentSlug="ia-hotellerie-restauration" />
         </article>
       </main>
 
