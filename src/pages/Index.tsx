@@ -13,7 +13,6 @@ import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { LibrairieSection } from "@/components/sections/LibrairieSection";
 import { SEOHead } from "@/components/SEOHead";
-import { GrainOverlay } from "@/components/ui/GrainOverlay";
 
 const Index = () => {
   return (
@@ -72,9 +71,6 @@ const Index = () => {
           })}
         </script>
       </SEOHead>
-
-      {/* Grain overlay — canvas-generated noise texture */}
-      <GrainOverlay />
 
       <Header />
 

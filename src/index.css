@@ -114,14 +114,6 @@
 }
 
 @layer components {
-  /* Grain / noise overlay — canvas-generated at runtime */
-  .grain-overlay {
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-    pointer-events: none;
-  }
-
   /* Glass card style */
   .glass-card {
     background: rgba(255, 255, 255, 0.03);

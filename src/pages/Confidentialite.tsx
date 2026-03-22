@@ -10,6 +10,7 @@ const Confidentialite = () => {
       <SEOHead
         title="Politique de Confidentialité"
         description="Politique de confidentialité et protection des données personnelles de BATEMARK. Consultant IA & automatisation."
+        noindex
       />
 
       <Header />
