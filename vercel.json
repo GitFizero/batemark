@@ -1,12 +1,6 @@
 {
   "redirects": [
-    {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.batemark.com" }],
-      "destination": "https://batemark.com/:path*",
-      "permanent": true
-    },
-    { "source": "/feed/", "destination": "/blog", "permanent": true },
+{ "source": "/feed/", "destination": "/blog", "permanent": true },
     { "source": "/comments/feed/", "destination": "/blog", "permanent": true },
     { "source": "/home/", "destination": "/", "permanent": true },
     { "source": "/biography/", "destination": "/", "permanent": true },
