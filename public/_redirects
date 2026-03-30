@@ -1,7 +1,7 @@
-# Force HTTPS and non-www
-http://www.batemark.com/* https://batemark.com/:splat 301!
-https://www.batemark.com/* https://batemark.com/:splat 301!
-http://batemark.com/* https://batemark.com/:splat 301!
+# Force HTTPS and www
+http://www.batemark.com/* https://www.batemark.com/:splat 301!
+http://batemark.com/* https://www.batemark.com/:splat 301!
+https://batemark.com/* https://www.batemark.com/:splat 301!
 
 # Ghost WordPress URLs - redirect to relevant pages
 /feed/ /blog 301
@@ -10,6 +10,9 @@ http://batemark.com/* https://batemark.com/:splat 301!
 /biography/ / 301
 /wp-admin/* /admin 301
 /wp-login.php /admin/login 301
+
+# Typo redirects
+/blog/la-agence-immobiliere /blog/ia-agence-immobiliere 301
 
 # SPA fallback - serve index.html for all routes
 /* /index.html 200

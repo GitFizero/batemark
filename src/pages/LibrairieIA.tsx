@@ -114,8 +114,8 @@ const LibrairieIA = () => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://batemark.com" },
-      { "@type": "ListItem", "position": 2, "name": "Librairie IA", "item": "https://batemark.com/librairie-ia" },
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.batemark.com" },
+      { "@type": "ListItem", "position": 2, "name": "Librairie IA", "item": "https://www.batemark.com/librairie-ia" },
     ],
   };
 
@@ -142,12 +142,12 @@ const LibrairieIA = () => {
           content="Découvrez les meilleurs outils IA testés sur des cas clients réels : automatisation, prospection, fidélisation et productivité pour TPE/PME."
         />
         <meta name="keywords" content="outils IA entreprise, meilleurs outils intelligence artificielle, automatisation PME, IA prospection, IA productivité" />
-        <link rel="canonical" href="https://batemark.com/librairie-ia" />
+        <link rel="canonical" href="https://www.batemark.com/librairie-ia" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://batemark.com/librairie-ia" />
+        <meta property="og:url" content="https://www.batemark.com/librairie-ia" />
         <meta property="og:title" content="Librairie IA — Meilleurs outils IA pour entreprises | BATEMARK" />
         <meta property="og:description" content="Sélection des meilleurs outils IA testés sur des cas clients réels." />
-        <meta property="og:image" content="https://batemark.com/og-image.png" />
+        <meta property="og:image" content="https://www.batemark.com/og-image.png" />
         <meta property="og:locale" content="fr_FR" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(jsonLdBreadcrumb)}</script>

@@ -20,18 +20,18 @@ const BlogArticleSalonCoiffure = () => {
         "headline": "IA pour salon de coiffure et institut de beauté : fidélisation et no-show",
         "description": "Guide complet pour les salons de coiffure et instituts de beauté : réduire les no-shows, fidéliser les clients et automatiser la gestion avec l'IA.",
         "author": { "@type": "Person", "name": "Gaëtan Fizero" },
-        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://batemark.com", "logo": { "@type": "ImageObject", "url": "https://batemark.com/favicon.svg" } },
+        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://www.batemark.com", "logo": { "@type": "ImageObject", "url": "https://www.batemark.com/favicon.svg" } },
         "datePublished": "2026-03-08", "dateModified": "2026-03-08",
-        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://batemark.com/blog/ia-salon-coiffure-beaute" },
-        "image": "https://batemark.com/images/cover-ia-salon-coiffure.jpg",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.batemark.com/blog/ia-salon-coiffure-beaute" },
+        "image": "https://www.batemark.com/images/cover-ia-salon-coiffure.jpg",
         "keywords": ["IA salon coiffure", "automatisation institut beauté", "réduire no-show coiffeur", "fidélisation salon", "IA beauté"]
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://batemark.com" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://batemark.com/blog" },
-          { "@type": "ListItem", "position": 3, "name": "IA Salon Coiffure", "item": "https://batemark.com/blog/ia-salon-coiffure-beaute" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.batemark.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.batemark.com/blog" },
+          { "@type": "ListItem", "position": 3, "name": "IA Salon Coiffure", "item": "https://www.batemark.com/blog/ia-salon-coiffure-beaute" }
         ]
       },
       {
@@ -51,12 +51,12 @@ const BlogArticleSalonCoiffure = () => {
         <title>IA pour salon de coiffure et institut de beauté | BATEMARK</title>
         <meta name="description" content="Comment réduire les no-shows, fidéliser les clients et automatiser la gestion de votre salon de coiffure ou institut de beauté avec l'IA." />
         <meta name="keywords" content="IA salon coiffure, automatisation institut beauté, réduire no-show coiffeur, fidélisation salon, IA beauté, prise RDV automatique" />
-        <link rel="canonical" href="https://batemark.com/blog/ia-salon-coiffure-beaute" />
+        <link rel="canonical" href="https://www.batemark.com/blog/ia-salon-coiffure-beaute" />
         <meta property="og:title" content="IA pour salon de coiffure et institut de beauté" />
         <meta property="og:description" content="Réduire les no-shows et fidéliser vos clients grâce à l'IA. Guide complet." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://batemark.com/blog/ia-salon-coiffure-beaute" />
-        <meta property="og:image" content="https://batemark.com/images/cover-ia-salon-coiffure.jpg" />
+        <meta property="og:url" content="https://www.batemark.com/blog/ia-salon-coiffure-beaute" />
+        <meta property="og:image" content="https://www.batemark.com/images/cover-ia-salon-coiffure.jpg" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:site_name" content="BATEMARK" />
         <meta property="article:published_time" content="2026-03-08" />

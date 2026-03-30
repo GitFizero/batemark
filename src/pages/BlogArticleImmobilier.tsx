@@ -20,19 +20,19 @@ const BlogArticleImmobilier = () => {
         "headline": "IA pour agence immobilière : automatiser relances, estimations et suivi client en 2026",
         "description": "Guide complet pour intégrer l'intelligence artificielle dans une agence immobilière : automatisation des relances, estimation prédictive, suivi acquéreur et vendeur.",
         "author": { "@type": "Person", "name": "Gaëtan Fizero" },
-        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://batemark.com", "logo": { "@type": "ImageObject", "url": "https://batemark.com/favicon.svg" } },
+        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://www.batemark.com", "logo": { "@type": "ImageObject", "url": "https://www.batemark.com/favicon.svg" } },
         "datePublished": "2026-03-08",
         "dateModified": "2026-03-08",
-        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://batemark.com/blog/ia-agence-immobiliere" },
-        "image": "https://batemark.com/images/cover-ia-immobilier.jpg",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.batemark.com/blog/ia-agence-immobiliere" },
+        "image": "https://www.batemark.com/images/cover-ia-immobilier.jpg",
         "keywords": ["IA agence immobilière", "automatisation immobilier", "intelligence artificielle immobilier", "CRM immobilier IA", "estimation IA immobilier"]
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://batemark.com" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://batemark.com/blog" },
-          { "@type": "ListItem", "position": 3, "name": "IA Immobilier", "item": "https://batemark.com/blog/ia-agence-immobiliere" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.batemark.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.batemark.com/blog" },
+          { "@type": "ListItem", "position": 3, "name": "IA Immobilier", "item": "https://www.batemark.com/blog/ia-agence-immobiliere" }
         ]
       },
       {
@@ -53,12 +53,12 @@ const BlogArticleImmobilier = () => {
         <title>IA pour agence immobilière : automatiser relances et suivi client | BATEMARK</title>
         <meta name="description" content="Comment l'IA transforme les agences immobilières : automatisation des relances acquéreurs, prospection vendeur, estimation prédictive. Guide complet 2026 + outils recommandés." />
         <meta name="keywords" content="IA agence immobilière, automatisation immobilier, intelligence artificielle immobilier, CRM immobilier IA, estimation IA immobilier, prospection vendeur IA, relance acquéreur automatique" />
-        <link rel="canonical" href="https://batemark.com/blog/ia-agence-immobiliere" />
+        <link rel="canonical" href="https://www.batemark.com/blog/ia-agence-immobiliere" />
         <meta property="og:title" content="IA pour agence immobilière — Guide complet 2026" />
         <meta property="og:description" content="Comment l'IA transforme les agences immobilières : relances automatiques, prospection vendeur, estimation prédictive." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://batemark.com/blog/ia-agence-immobiliere" />
-        <meta property="og:image" content="https://batemark.com/images/cover-ia-immobilier.jpg" />
+        <meta property="og:url" content="https://www.batemark.com/blog/ia-agence-immobiliere" />
+        <meta property="og:image" content="https://www.batemark.com/images/cover-ia-immobilier.jpg" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:site_name" content="BATEMARK" />
         <meta property="article:published_time" content="2026-03-08" />
@@ -68,7 +68,7 @@ const BlogArticleImmobilier = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="IA pour agence immobilière — Guide complet 2026" />
         <meta name="twitter:description" content="Automatiser relances, estimations et suivi client dans l'immobilier grâce à l'IA." />
-        <meta name="twitter:image" content="https://batemark.com/images/cover-ia-immobilier.jpg" />
+        <meta name="twitter:image" content="https://www.batemark.com/images/cover-ia-immobilier.jpg" />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
       </Helmet>
 

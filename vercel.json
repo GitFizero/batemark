@@ -1,11 +1,12 @@
 {
   "redirects": [
-{ "source": "/feed/", "destination": "/blog", "permanent": true },
+    { "source": "/feed/", "destination": "/blog", "permanent": true },
     { "source": "/comments/feed/", "destination": "/blog", "permanent": true },
     { "source": "/home/", "destination": "/", "permanent": true },
     { "source": "/biography/", "destination": "/", "permanent": true },
     { "source": "/wp-admin/:path*", "destination": "/admin", "permanent": true },
-    { "source": "/wp-login.php", "destination": "/admin/login", "permanent": true }
+    { "source": "/wp-login.php", "destination": "/admin/login", "permanent": true },
+    { "source": "/blog/la-agence-immobiliere", "destination": "/blog/ia-agence-immobiliere", "permanent": true }
   ],
   "headers": [
     {

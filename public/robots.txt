@@ -4,8 +4,6 @@ Disallow: /admin/
 Disallow: /admin
 Disallow: /feed/
 Disallow: /comments/
-Disallow: /home/
-Disallow: /biography/
 Disallow: /wp-
 Disallow: /?s=
 Disallow: /xmlrpc.php
@@ -16,8 +14,6 @@ Disallow: /admin/
 Disallow: /admin
 Disallow: /feed/
 Disallow: /comments/
-Disallow: /home/
-Disallow: /biography/
 
 User-agent: Bingbot
 Allow: /
@@ -28,4 +24,4 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-Sitemap: https://batemark.com/sitemap.xml
+Sitemap: https://www.batemark.com/sitemap.xml

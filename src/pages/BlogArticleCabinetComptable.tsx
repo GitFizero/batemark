@@ -20,18 +20,18 @@ const BlogArticleCabinetComptable = () => {
         "headline": "IA pour cabinet comptable : automatiser saisie, suivi client et relance en 2026",
         "description": "Guide complet pour intégrer l'IA dans un cabinet comptable : automatisation de la saisie, relance documentaire, suivi client et productivité. Outils, méthode et résultats.",
         "author": { "@type": "Person", "name": "Gaëtan Fizero" },
-        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://batemark.com", "logo": { "@type": "ImageObject", "url": "https://batemark.com/favicon.svg" } },
+        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://www.batemark.com", "logo": { "@type": "ImageObject", "url": "https://www.batemark.com/favicon.svg" } },
         "datePublished": "2026-03-08", "dateModified": "2026-03-08",
-        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://batemark.com/blog/ia-cabinet-comptable" },
-        "image": "https://batemark.com/images/cover-ia-cabinet-comptable.jpg",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.batemark.com/blog/ia-cabinet-comptable" },
+        "image": "https://www.batemark.com/images/cover-ia-cabinet-comptable.jpg",
         "keywords": ["IA cabinet comptable", "automatisation expert-comptable", "intelligence artificielle comptabilité", "automatiser saisie comptable", "IA expertise comptable"]
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://batemark.com" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://batemark.com/blog" },
-          { "@type": "ListItem", "position": 3, "name": "IA Cabinet Comptable", "item": "https://batemark.com/blog/ia-cabinet-comptable" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.batemark.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.batemark.com/blog" },
+          { "@type": "ListItem", "position": 3, "name": "IA Cabinet Comptable", "item": "https://www.batemark.com/blog/ia-cabinet-comptable" }
         ]
       },
       {
@@ -51,19 +51,19 @@ const BlogArticleCabinetComptable = () => {
         <title>IA pour cabinet comptable : automatiser saisie et suivi client | BATEMARK</title>
         <meta name="description" content="Comment l'IA transforme les cabinets comptables : automatisation de la saisie, relance documentaire, suivi client. Guide complet 2026 pour experts-comptables." />
         <meta name="keywords" content="IA cabinet comptable, automatisation expert-comptable, intelligence artificielle comptabilité, automatiser saisie comptable, IA expertise comptable, productivité cabinet comptable" />
-        <link rel="canonical" href="https://batemark.com/blog/ia-cabinet-comptable" />
+        <link rel="canonical" href="https://www.batemark.com/blog/ia-cabinet-comptable" />
         <meta property="og:title" content="IA pour cabinet comptable — Guide complet 2026" />
         <meta property="og:description" content="Automatiser saisie, suivi client et relance dans un cabinet comptable grâce à l'IA." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://batemark.com/blog/ia-cabinet-comptable" />
-        <meta property="og:image" content="https://batemark.com/images/cover-ia-cabinet-comptable.jpg" />
+        <meta property="og:url" content="https://www.batemark.com/blog/ia-cabinet-comptable" />
+        <meta property="og:image" content="https://www.batemark.com/images/cover-ia-cabinet-comptable.jpg" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:site_name" content="BATEMARK" />
         <meta property="article:published_time" content="2026-03-08" />
         <meta property="article:modified_time" content="2026-03-08" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="IA pour cabinet comptable — Guide complet 2026" />
-        <meta name="twitter:image" content="https://batemark.com/images/cover-ia-cabinet-comptable.jpg" />
+        <meta name="twitter:image" content="https://www.batemark.com/images/cover-ia-cabinet-comptable.jpg" />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
       </Helmet>
 

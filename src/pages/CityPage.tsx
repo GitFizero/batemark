@@ -26,7 +26,7 @@ const CityPage = () => {
     "@type": "LocalBusiness",
     "name": "BATEMARK - Expert Meta Ads",
     "description": `Expert Meta Ads à ${cityData.name}. Génération de leads qualifiés pour entreprises locales.`,
-    "url": `https://batemark.com/meta-ads-${cityData.slug}`,
+    "url": `https://www.batemark.com/meta-ads-${cityData.slug}`,
     "areaServed": {
       "@type": "City",
       "name": cityData.name,
@@ -45,12 +45,12 @@ const CityPage = () => {
         <title>{cityData.metaTitle} - BATEMARK</title>
         <meta name="description" content={cityData.metaDescription} />
         <meta name="keywords" content={cityData.keywords.join(", ")} />
-        <link rel="canonical" href={`https://batemark.com/meta-ads-${cityData.slug}`} />
+        <link rel="canonical" href={`https://www.batemark.com/meta-ads-${cityData.slug}`} />
         
         {/* Open Graph */}
         <meta property="og:title" content={`${cityData.metaTitle} - BATEMARK`} />
         <meta property="og:description" content={cityData.metaDescription} />
-        <meta property="og:url" content={`https://batemark.com/meta-ads-${cityData.slug}`} />
+        <meta property="og:url" content={`https://www.batemark.com/meta-ads-${cityData.slug}`} />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="fr_FR" />
         

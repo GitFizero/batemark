@@ -14,7 +14,7 @@ interface SEOHeadProps {
 }
 
 const SITE_NAME = "BATEMARK";
-const SITE_URL = "https://batemark.com";
+const SITE_URL = "https://www.batemark.com";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
 const AUTHOR = "Gaëtan Fizero";
 
