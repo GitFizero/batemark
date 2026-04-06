@@ -48,6 +48,7 @@ const BlogArticleSyndic = lazy(() => import("./pages/BlogArticleSyndic"));
 const BlogArticleOnboardingEmploye = lazy(() => import("./pages/BlogArticleOnboardingEmploye"));
 const BlogArticleAutoEcole = lazy(() => import("./pages/BlogArticleAutoEcole"));
 const BlogArticleGestionLocative = lazy(() => import("./pages/BlogArticleGestionLocative"));
+const SecteurBienEtre = lazy(() => import("./pages/SecteurBienEtre"));
 
 const queryClient = new QueryClient();
 
@@ -104,6 +105,7 @@ const App = () => (
               <Route path="/mentions-legales" element={<MentionsLegales />} />
               <Route path="/librairie-ia" element={<LibrairieIA />} />
               <Route path="/simulateur-ia" element={<SimulateurIAPage />} />
+              <Route path="/secteur/bien-etre" element={<SecteurBienEtre />} />
               <Route path="/admin/login" element={<AdminLogin />} />
               <Route path="/admin" element={<AdminDashboard />} />
               <Route path="*" element={<NotFound />} />
