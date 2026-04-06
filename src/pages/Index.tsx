@@ -2,6 +2,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ProblemsSection } from "@/components/sections/ProblemsSection";
+import { ProblemDiagnostic } from "@/components/sections/ProblemDiagnostic";
 import { PillarsSection } from "@/components/sections/PillarsSection";
 import { OffersSection } from "@/components/sections/OffersSection";
 import { CaseStudiesSection } from "@/components/sections/CaseStudiesSection";
@@ -79,6 +80,11 @@ const Index = () => {
 
         <div className="section-divider" />
         <ProblemsSection />
+
+        <div className="section-divider" />
+        <section id="diagnostic">
+          <ProblemDiagnostic />
+        </section>
 
         <div className="section-divider" />
         <section id="services">
