@@ -103,11 +103,15 @@ const BlogArticleCoachConsultant = () => {
 
         <article className="container-custom max-w-4xl px-4 md:px-8">
           <section className="mb-20">
-            <span className="text-sm font-semibold text-primary uppercase tracking-widest mb-2 block">Le problème</span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Le paradoxe du consultant : <span className="text-gradient-copper">trop occupé pour prospecter</span></h2>
+            <span className="text-sm font-semibold text-primary uppercase tracking-widest mb-2 block">Le paradoxe du consultant</span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Trop occupé pour prospecter, <span className="text-gradient-copper">trop vide pour refuser</span></h2>
             <div className="space-y-5 text-muted-foreground text-base sm:text-lg leading-relaxed">
-              <p>Quand vous avez des clients, vous n'avez pas le temps de prospecter. Quand les missions se terminent, le pipeline est vide. <strong className="text-foreground">Le "feast or famine"</strong> est le fléau n°1 des indépendants.</p>
-              <p>L'IA résout ce problème en créant un flux de prospection continu qui tourne en arrière-plan. Comme pour la <Link to="/blog/automatiser-prospection-b2b-ia" className="text-primary hover:underline">prospection B2B</Link>, l'automatisation garantit un pipeline toujours alimenté.</p>
+              <p>Je le connais ce cycle. Quand vous avez des missions, vous n'avez pas le temps de prospecter. Quand les missions se terminent, le pipeline est vide et vous repartez de zéro. <strong className="text-foreground">Le "feast or famine".</strong> C'est le fléau n°1 des indépendants, et personne n'est à l'abri — même les consultants très demandés.</p>
+              <p>La solution n'est pas de prospecter plus fort pendant les périodes creuses. C'est de prospecter en continu, à faible bruit, pendant que vous travaillez. Exactement ce que l'IA permet.</p>
+              <p>J'accompagne des consultants depuis 2017. Ce que j'observe systématiquement : ceux qui ont un pipeline stable ne sont pas ceux qui prospectent le mieux — ce sont ceux qui ont un système qui prospecte pour eux. Comme pour la <Link to="/blog/automatiser-prospection-b2b-ia" className="text-primary hover:underline">prospection B2B en général</Link>, l'automatisation est la différence entre subir et anticiper.</p>
+              <div className="bg-accent/30 border-l-4 border-primary rounded-r-xl p-5">
+                <p className="text-foreground font-semibold m-0">Ce qui change quand vous automatisez : vous ne cherchez plus des clients. Vous choisissez ceux que vous acceptez.</p>
+              </div>
             </div>
             <div className="grid md:grid-cols-3 gap-6 my-12">
               {[
@@ -128,9 +132,9 @@ const BlogArticleCoachConsultant = () => {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">3 automatisations pour <span className="text-gradient-copper">scaler votre activité</span></h2>
             <div className="space-y-8">
               {[
-                { title: "1. Prospection automatique et continue", text: "L'IA identifie vos prospects idéaux sur LinkedIn, enrichit les données, et envoie des séquences de messages personnalisés. Chaque semaine, de nouveaux leads qualifiés arrivent dans votre pipeline — sans que vous n'y pensiez." },
-                { title: "2. Onboarding client en 20 minutes", text: "Nouveau client signé ? L'IA déclenche automatiquement : envoi du questionnaire d'onboarding, création de l'espace client, planification du kick-off, envoi des documents contractuels. Ce qui prenait 2 heures se fait en 20 minutes." },
-                { title: "3. Suivi et fidélisation automatisés", text: "Rappels de séances, envoi de compte-rendus, check-in réguliers entre les sessions, demande de témoignage en fin de mission… L'IA maintient la relation sans effort, et vos clients se sentent accompagnés à chaque étape." },
+                { title: "1. Prospection automatique et continue", text: "L'IA identifie vos prospects idéaux sur LinkedIn, enrichit les données, et envoie des séquences de messages personnalisés. Chaque semaine, de nouveaux leads qualifiés arrivent dans votre pipeline — pendant que vous êtes en mission. Ce n'est pas de la prospection de masse. C'est de la prospection ciblée, au bon rythme, avec le bon message." },
+                { title: "2. Onboarding client en 20 minutes", text: "Nouveau client signé ? L'IA déclenche automatiquement tout ce qui suit : questionnaire d'onboarding, création de l'espace client, planification du kick-off, envoi des documents contractuels. Ce qui prenait 2 heures — et que vous faisiez souvent le soir après une journée de missions — se fait en 20 minutes sans votre intervention." },
+                { title: "3. Suivi et fidélisation automatisés", text: "Rappels de séances, envoi de compte-rendus, check-in réguliers entre les sessions, demande de témoignage en fin de mission. L'IA maintient la continuité relationnelle entre vos sessions. Et un client qui se sent suivi est un client qui renouvelle — et qui recommande." },
               ].map((item, i) => (
                 <motion.div key={i} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="border-l-2 border-primary/30 pl-6">
                   <h3 className="text-xl font-bold mb-2 text-foreground">{item.title}</h3>
@@ -143,7 +147,7 @@ const BlogArticleCoachConsultant = () => {
           <section className="mb-20">
             <div className="rounded-2xl p-8 sm:p-10 text-center" style={{ background: "linear-gradient(135deg, hsl(220 12% 10%), hsl(220 15% 7%))" }}>
               <h3 className="text-xl sm:text-2xl font-bold mb-3">Prêt à scaler sans recruter ?</h3>
-              <p className="text-muted-foreground mb-6">Audit gratuit de votre activité et plan d'automatisation personnalisé.</p>
+              <p className="text-muted-foreground mb-6">15 minutes pour analyser votre activité et identifier vos leviers d'automatisation prioritaires.</p>
               <ContactFormDialog trigger={<Button variant="hero" size="lg" className="group">Auditer mon activité<ArrowRight className="group-hover:translate-x-1 transition-transform" /></Button>} />
             </div>
           </section>
@@ -182,10 +186,10 @@ const BlogArticleCoachConsultant = () => {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8">Questions fréquentes — <span className="text-gradient-copper">Coach, Consultant & IA</span></h2>
             <Accordion type="single" collapsible className="space-y-4">
               {[
-                { q: "L'automatisation ne déshumanise-t-elle pas la relation ?", a: "Au contraire. Moins d'admin = plus de temps en face-à-face de qualité." },
-                { q: "Combien de clients en plus peut-on gérer ?", a: "+50 à 100 % sans augmenter la charge. L'onboarding passe de 2h à 20 min." },
-                { q: "Quels outils pour commencer ?", a: "Make + Cal.com + ChatGPT couvrent 90 % des besoins. Budget : 50-100 €/mois." },
-                { q: "Comment automatiser la prospection LinkedIn ?", a: "L'IA identifie les profils cibles, personnalise les messages et gère les séquences de relance." },
+                { q: "L'automatisation ne déshumanise-t-elle pas la relation client ?", a: "C'est l'objection que j'entends le plus souvent. Et c'est l'inverse qui se produit. Quand vous ne passez plus 2h par client à faire de l'admin, vous avez du temps pour les conversations à vraie valeur ajoutée. Vos clients reçoivent un meilleur suivi, pas un suivi moindre." },
+                { q: "Combien de clients supplémentaires peut-on gérer avec l'IA ?", a: "En moyenne +50 à 100 % sans augmenter la charge de travail. L'onboarding qui prenait 2h passe à 20 minutes. Le suivi inter-sessions qui était souvent négligé devient automatique." },
+                { q: "Quels outils pour commencer ?", a: "Make + Cal.com + ChatGPT couvrent 90 % des besoins pour un consultant. Budget : 50-100 €/mois. On peut commencer par l'onboarding automatisé, qui donne des résultats immédiats et visibles." },
+                { q: "Comment automatiser la prospection LinkedIn sans paraître robotique ?", a: "La clé, c'est la personnalisation. L'IA n'envoie pas de messages génériques — elle adapte l'accroche au profil, au secteur, à l'actualité de l'entreprise. Les retours les plus fréquents de mes clients : 'On m'a répondu que ça sonnait vraiment personnel.'" },
               ].map((faq, i) => (
                 <AccordionItem key={i} value={`faq-${i}`} className="card-premium border-border">
                   <AccordionTrigger className="text-left font-semibold text-base hover:text-primary">{faq.q}</AccordionTrigger>
