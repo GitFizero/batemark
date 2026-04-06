@@ -12,6 +12,7 @@ import { BlogSection } from "@/components/sections/BlogSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { LibrairieSection } from "@/components/sections/LibrairieSection";
+import { ChallengeSection } from "@/components/sections/ChallengeSection";
 import { SEOHead } from "@/components/SEOHead";
 
 const Index = () => {
@@ -106,6 +107,9 @@ const Index = () => {
 
         <div className="section-divider" />
         <LibrairieSection />
+
+        <div className="section-divider" />
+        <ChallengeSection />
 
         <div className="section-divider" />
         <section id="blog">
