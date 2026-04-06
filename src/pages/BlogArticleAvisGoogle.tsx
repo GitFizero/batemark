@@ -20,18 +20,18 @@ const BlogArticleAvisGoogle = () => {
         "headline": "Automatiser la gestion des avis Google avec l'IA — guide pratique pour PME",
         "description": "Guide complet pour automatiser la collecte, la réponse et l'analyse des avis Google grâce à l'IA. Méthode, outils et résultats concrets pour les PME et commerces locaux.",
         "author": { "@type": "Person", "name": "Gaëtan Fizero" },
-        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://batemark.com", "logo": { "@type": "ImageObject", "url": "https://batemark.com/favicon.svg" } },
+        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://www.batemark.com", "logo": { "@type": "ImageObject", "url": "https://www.batemark.com/favicon.svg" } },
         "datePublished": "2026-03-08", "dateModified": "2026-03-08",
-        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://batemark.com/blog/automatiser-avis-google-ia" },
-        "image": "https://batemark.com/images/cover-avis-google-ia.jpg",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.batemark.com/blog/automatiser-avis-google-ia" },
+        "image": "https://www.batemark.com/images/cover-avis-google-ia.jpg",
         "keywords": ["automatiser avis Google", "répondre avis Google IA", "gestion avis Google automatique", "e-réputation IA", "avis clients automatisation"]
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://batemark.com" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://batemark.com/blog" },
-          { "@type": "ListItem", "position": 3, "name": "Avis Google IA", "item": "https://batemark.com/blog/automatiser-avis-google-ia" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.batemark.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.batemark.com/blog" },
+          { "@type": "ListItem", "position": 3, "name": "Avis Google IA", "item": "https://www.batemark.com/blog/automatiser-avis-google-ia" }
         ]
       },
       {
@@ -51,19 +51,19 @@ const BlogArticleAvisGoogle = () => {
         <title>Automatiser les avis Google avec l'IA — Guide PME 2026 | BATEMARK</title>
         <meta name="description" content="Comment automatiser la collecte, la réponse et l'analyse de vos avis Google grâce à l'IA. Guide pratique pour PME et commerces locaux : outils, méthode et résultats concrets." />
         <meta name="keywords" content="automatiser avis Google, répondre avis Google IA, gestion avis Google automatique, e-réputation IA, avis clients automatisation, Google reviews IA, avis Google PME" />
-        <link rel="canonical" href="https://batemark.com/blog/automatiser-avis-google-ia" />
+        <link rel="canonical" href="https://www.batemark.com/blog/automatiser-avis-google-ia" />
         <meta property="og:title" content="Automatiser les avis Google avec l'IA — Guide PME" />
         <meta property="og:description" content="Collecte, réponse et analyse automatisées des avis Google. Guide complet pour PME." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://batemark.com/blog/automatiser-avis-google-ia" />
-        <meta property="og:image" content="https://batemark.com/images/cover-avis-google-ia.jpg" />
+        <meta property="og:url" content="https://www.batemark.com/blog/automatiser-avis-google-ia" />
+        <meta property="og:image" content="https://www.batemark.com/images/cover-avis-google-ia.jpg" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:site_name" content="BATEMARK" />
         <meta property="article:published_time" content="2026-03-08" />
         <meta property="article:modified_time" content="2026-03-08" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Automatiser les avis Google avec l'IA — Guide PME" />
-        <meta name="twitter:image" content="https://batemark.com/images/cover-avis-google-ia.jpg" />
+        <meta name="twitter:image" content="https://www.batemark.com/images/cover-avis-google-ia.jpg" />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
       </Helmet>
 

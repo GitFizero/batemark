@@ -20,18 +20,18 @@ const BlogArticleArtisan = () => {
         "headline": "IA pour artisan : automatiser devis, relance et planification",
         "description": "Guide complet pour les artisans qui veulent automatiser la gestion de devis, les relances clients et la planification de chantiers grâce à l'IA.",
         "author": { "@type": "Person", "name": "Gaëtan Fizero" },
-        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://batemark.com", "logo": { "@type": "ImageObject", "url": "https://batemark.com/favicon.svg" } },
+        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://www.batemark.com", "logo": { "@type": "ImageObject", "url": "https://www.batemark.com/favicon.svg" } },
         "datePublished": "2026-03-08", "dateModified": "2026-03-08",
-        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://batemark.com/blog/ia-artisan-automatisation" },
-        "image": "https://batemark.com/images/cover-ia-artisan.jpg",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.batemark.com/blog/ia-artisan-automatisation" },
+        "image": "https://www.batemark.com/images/cover-ia-artisan.jpg",
         "keywords": ["IA artisan", "automatiser devis artisan", "planification chantier IA", "relance client artisan", "automatisation artisan"]
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://batemark.com" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://batemark.com/blog" },
-          { "@type": "ListItem", "position": 3, "name": "IA Artisan", "item": "https://batemark.com/blog/ia-artisan-automatisation" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.batemark.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.batemark.com/blog" },
+          { "@type": "ListItem", "position": 3, "name": "IA Artisan", "item": "https://www.batemark.com/blog/ia-artisan-automatisation" }
         ]
       },
       {
@@ -51,12 +51,12 @@ const BlogArticleArtisan = () => {
         <title>IA pour artisan : automatiser devis, relance et planification | BATEMARK</title>
         <meta name="description" content="Comment l'IA permet aux artisans d'automatiser devis, relances clients et planification de chantiers. Guide pratique avec outils et résultats concrets." />
         <meta name="keywords" content="IA artisan, automatiser devis artisan, planification chantier IA, relance client artisan, automatisation artisan, devis automatique" />
-        <link rel="canonical" href="https://batemark.com/blog/ia-artisan-automatisation" />
+        <link rel="canonical" href="https://www.batemark.com/blog/ia-artisan-automatisation" />
         <meta property="og:title" content="IA pour artisan : automatiser devis, relance et planification" />
         <meta property="og:description" content="Devis, relances et planification automatisés pour artisans. Guide complet." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://batemark.com/blog/ia-artisan-automatisation" />
-        <meta property="og:image" content="https://batemark.com/images/cover-ia-artisan.jpg" />
+        <meta property="og:url" content="https://www.batemark.com/blog/ia-artisan-automatisation" />
+        <meta property="og:image" content="https://www.batemark.com/images/cover-ia-artisan.jpg" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:site_name" content="BATEMARK" />
         <meta property="article:published_time" content="2026-03-08" />

@@ -20,18 +20,18 @@ const BlogArticleReporting = () => {
         "headline": "Comment réduire de 60 % le temps de reporting avec l'IA",
         "description": "Guide complet pour automatiser vos reportings grâce à l'IA : collecte de données, génération de rapports et alertes automatiques. Méthode pour PME et managers.",
         "author": { "@type": "Person", "name": "Gaëtan Fizero" },
-        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://batemark.com", "logo": { "@type": "ImageObject", "url": "https://batemark.com/favicon.svg" } },
+        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://www.batemark.com", "logo": { "@type": "ImageObject", "url": "https://www.batemark.com/favicon.svg" } },
         "datePublished": "2026-03-08", "dateModified": "2026-03-08",
-        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://batemark.com/blog/ia-automatiser-reporting" },
-        "image": "https://batemark.com/images/cover-ia-reporting.jpg",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.batemark.com/blog/ia-automatiser-reporting" },
+        "image": "https://www.batemark.com/images/cover-ia-reporting.jpg",
         "keywords": ["automatiser reporting IA", "reporting automatique", "IA reporting", "tableau de bord IA", "dashboard automatisé"]
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://batemark.com" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://batemark.com/blog" },
-          { "@type": "ListItem", "position": 3, "name": "IA Reporting", "item": "https://batemark.com/blog/ia-automatiser-reporting" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.batemark.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.batemark.com/blog" },
+          { "@type": "ListItem", "position": 3, "name": "IA Reporting", "item": "https://www.batemark.com/blog/ia-automatiser-reporting" }
         ]
       },
       {
@@ -51,12 +51,12 @@ const BlogArticleReporting = () => {
         <title>Réduire de 60 % le temps de reporting avec l'IA | BATEMARK</title>
         <meta name="description" content="Comment automatiser vos reportings grâce à l'IA. Collecte de données, génération de rapports et alertes automatiques. Guide pratique pour PME et managers." />
         <meta name="keywords" content="automatiser reporting IA, reporting automatique, IA reporting, tableau de bord IA, dashboard automatisé, rapport automatique" />
-        <link rel="canonical" href="https://batemark.com/blog/ia-automatiser-reporting" />
+        <link rel="canonical" href="https://www.batemark.com/blog/ia-automatiser-reporting" />
         <meta property="og:title" content="Réduire de 60 % le temps de reporting avec l'IA" />
         <meta property="og:description" content="Automatiser la collecte, la génération et l'envoi de vos rapports grâce à l'IA." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://batemark.com/blog/ia-automatiser-reporting" />
-        <meta property="og:image" content="https://batemark.com/images/cover-ia-reporting.jpg" />
+        <meta property="og:url" content="https://www.batemark.com/blog/ia-automatiser-reporting" />
+        <meta property="og:image" content="https://www.batemark.com/images/cover-ia-reporting.jpg" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:site_name" content="BATEMARK" />
         <meta property="article:published_time" content="2026-03-08" />

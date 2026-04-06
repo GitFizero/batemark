@@ -20,18 +20,18 @@ const BlogArticleRecrutement = () => {
         "headline": "Automatiser le recrutement en PME avec l'IA — guide complet 2026",
         "description": "Comment automatiser le tri de CV, la pré-qualification et la planification des entretiens grâce à l'IA. Méthode et outils concrets pour PME.",
         "author": { "@type": "Person", "name": "Gaëtan Fizero" },
-        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://batemark.com", "logo": { "@type": "ImageObject", "url": "https://batemark.com/favicon.svg" } },
+        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://www.batemark.com", "logo": { "@type": "ImageObject", "url": "https://www.batemark.com/favicon.svg" } },
         "datePublished": "2026-03-08", "dateModified": "2026-03-08",
-        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://batemark.com/blog/ia-recrutement-pme" },
-        "image": "https://batemark.com/images/cover-ia-recrutement.jpg",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.batemark.com/blog/ia-recrutement-pme" },
+        "image": "https://www.batemark.com/images/cover-ia-recrutement.jpg",
         "keywords": ["automatiser recrutement IA", "recrutement PME IA", "tri CV automatique", "IA RH", "recrutement automatisé"]
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://batemark.com" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://batemark.com/blog" },
-          { "@type": "ListItem", "position": 3, "name": "IA Recrutement PME", "item": "https://batemark.com/blog/ia-recrutement-pme" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.batemark.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.batemark.com/blog" },
+          { "@type": "ListItem", "position": 3, "name": "IA Recrutement PME", "item": "https://www.batemark.com/blog/ia-recrutement-pme" }
         ]
       },
       {
@@ -51,18 +51,18 @@ const BlogArticleRecrutement = () => {
         <title>Automatiser le recrutement en PME avec l'IA — Guide 2026 | BATEMARK</title>
         <meta name="description" content="Comment automatiser le tri de CV, la pré-qualification et la planification des entretiens grâce à l'IA. Guide complet pour PME : outils, méthode et résultats." />
         <meta name="keywords" content="automatiser recrutement IA, recrutement PME IA, tri CV automatique, IA RH, recrutement automatisé, présélection candidats IA" />
-        <link rel="canonical" href="https://batemark.com/blog/ia-recrutement-pme" />
+        <link rel="canonical" href="https://www.batemark.com/blog/ia-recrutement-pme" />
         <meta property="og:title" content="Automatiser le recrutement en PME avec l'IA" />
         <meta property="og:description" content="Tri de CV, pré-qualification et planification automatisés. Guide complet pour PME." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://batemark.com/blog/ia-recrutement-pme" />
-        <meta property="og:image" content="https://batemark.com/images/cover-ia-recrutement.jpg" />
+        <meta property="og:url" content="https://www.batemark.com/blog/ia-recrutement-pme" />
+        <meta property="og:image" content="https://www.batemark.com/images/cover-ia-recrutement.jpg" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:site_name" content="BATEMARK" />
         <meta property="article:published_time" content="2026-03-08" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Automatiser le recrutement en PME avec l'IA" />
-        <meta name="twitter:image" content="https://batemark.com/images/cover-ia-recrutement.jpg" />
+        <meta name="twitter:image" content="https://www.batemark.com/images/cover-ia-recrutement.jpg" />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
       </Helmet>
 

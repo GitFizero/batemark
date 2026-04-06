@@ -20,18 +20,18 @@ const BlogArticleTunnelVente = () => {
         "headline": "Comment créer un tunnel de vente automatisé avec l'IA en 2026",
         "description": "Guide complet pour créer un tunnel de vente automatisé grâce à l'IA : capture de leads, nurturing et conversion. Méthode étape par étape pour PME.",
         "author": { "@type": "Person", "name": "Gaëtan Fizero" },
-        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://batemark.com", "logo": { "@type": "ImageObject", "url": "https://batemark.com/favicon.svg" } },
+        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://www.batemark.com", "logo": { "@type": "ImageObject", "url": "https://www.batemark.com/favicon.svg" } },
         "datePublished": "2026-03-08", "dateModified": "2026-03-08",
-        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://batemark.com/blog/ia-tunnel-vente-automatise" },
-        "image": "https://batemark.com/images/cover-ia-tunnel-vente.jpg",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.batemark.com/blog/ia-tunnel-vente-automatise" },
+        "image": "https://www.batemark.com/images/cover-ia-tunnel-vente.jpg",
         "keywords": ["tunnel de vente automatisé", "tunnel de vente IA", "funnel automatique", "automatiser conversion", "lead nurturing IA"]
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://batemark.com" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://batemark.com/blog" },
-          { "@type": "ListItem", "position": 3, "name": "Tunnel de Vente IA", "item": "https://batemark.com/blog/ia-tunnel-vente-automatise" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.batemark.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.batemark.com/blog" },
+          { "@type": "ListItem", "position": 3, "name": "Tunnel de Vente IA", "item": "https://www.batemark.com/blog/ia-tunnel-vente-automatise" }
         ]
       },
       {
@@ -51,12 +51,12 @@ const BlogArticleTunnelVente = () => {
         <title>Créer un tunnel de vente automatisé avec l'IA — Guide 2026 | BATEMARK</title>
         <meta name="description" content="Comment créer un tunnel de vente automatisé grâce à l'IA. Capture de leads, nurturing et conversion automatique. Guide étape par étape pour PME." />
         <meta name="keywords" content="tunnel de vente automatisé, tunnel de vente IA, funnel automatique, automatiser conversion, lead nurturing IA, sales funnel" />
-        <link rel="canonical" href="https://batemark.com/blog/ia-tunnel-vente-automatise" />
+        <link rel="canonical" href="https://www.batemark.com/blog/ia-tunnel-vente-automatise" />
         <meta property="og:title" content="Créer un tunnel de vente automatisé avec l'IA en 2026" />
         <meta property="og:description" content="Capture, nurturing et conversion automatisés. Guide complet pour PME." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://batemark.com/blog/ia-tunnel-vente-automatise" />
-        <meta property="og:image" content="https://batemark.com/images/cover-ia-tunnel-vente.jpg" />
+        <meta property="og:url" content="https://www.batemark.com/blog/ia-tunnel-vente-automatise" />
+        <meta property="og:image" content="https://www.batemark.com/images/cover-ia-tunnel-vente.jpg" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:site_name" content="BATEMARK" />
         <meta property="article:published_time" content="2026-03-08" />

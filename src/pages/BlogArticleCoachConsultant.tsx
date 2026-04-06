@@ -20,18 +20,18 @@ const BlogArticleCoachConsultant = () => {
         "headline": "IA pour coach et consultant : automatiser prospection et onboarding client",
         "description": "Guide complet pour les coachs et consultants : automatiser la prospection, l'onboarding client et le suivi grâce à l'IA. Outils et méthode.",
         "author": { "@type": "Person", "name": "Gaëtan Fizero" },
-        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://batemark.com", "logo": { "@type": "ImageObject", "url": "https://batemark.com/favicon.svg" } },
+        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://www.batemark.com", "logo": { "@type": "ImageObject", "url": "https://www.batemark.com/favicon.svg" } },
         "datePublished": "2026-03-08", "dateModified": "2026-03-08",
-        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://batemark.com/blog/ia-coach-consultant" },
-        "image": "https://batemark.com/images/cover-ia-coach-consultant.jpg",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.batemark.com/blog/ia-coach-consultant" },
+        "image": "https://www.batemark.com/images/cover-ia-coach-consultant.jpg",
         "keywords": ["IA coach", "IA consultant", "automatiser prospection consultant", "onboarding client IA", "automatisation coach"]
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://batemark.com" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://batemark.com/blog" },
-          { "@type": "ListItem", "position": 3, "name": "IA Coach Consultant", "item": "https://batemark.com/blog/ia-coach-consultant" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.batemark.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.batemark.com/blog" },
+          { "@type": "ListItem", "position": 3, "name": "IA Coach Consultant", "item": "https://www.batemark.com/blog/ia-coach-consultant" }
         ]
       },
       {
@@ -51,12 +51,12 @@ const BlogArticleCoachConsultant = () => {
         <title>IA pour coach et consultant : prospection et onboarding automatisés | BATEMARK</title>
         <meta name="description" content="Comment les coachs et consultants automatisent prospection, onboarding et suivi client avec l'IA. Guide pratique avec outils et résultats concrets." />
         <meta name="keywords" content="IA coach, IA consultant, automatiser prospection consultant, onboarding client IA, automatisation coach, CRM consultant" />
-        <link rel="canonical" href="https://batemark.com/blog/ia-coach-consultant" />
+        <link rel="canonical" href="https://www.batemark.com/blog/ia-coach-consultant" />
         <meta property="og:title" content="IA pour coach et consultant : prospection et onboarding automatisés" />
         <meta property="og:description" content="Prospection, onboarding et suivi client automatisés pour coachs et consultants." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://batemark.com/blog/ia-coach-consultant" />
-        <meta property="og:image" content="https://batemark.com/images/cover-ia-coach-consultant.jpg" />
+        <meta property="og:url" content="https://www.batemark.com/blog/ia-coach-consultant" />
+        <meta property="og:image" content="https://www.batemark.com/images/cover-ia-coach-consultant.jpg" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:site_name" content="BATEMARK" />
         <meta property="article:published_time" content="2026-03-08" />

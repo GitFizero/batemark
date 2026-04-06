@@ -20,18 +20,18 @@ const BlogArticleFranchise = () => {
         "headline": "IA pour franchise : standardiser et automatiser vos process multi-sites",
         "description": "Guide complet pour les réseaux de franchise : standardiser les process, automatiser le reporting multi-sites et piloter la performance avec l'IA.",
         "author": { "@type": "Person", "name": "Gaëtan Fizero" },
-        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://batemark.com", "logo": { "@type": "ImageObject", "url": "https://batemark.com/favicon.svg" } },
+        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://www.batemark.com", "logo": { "@type": "ImageObject", "url": "https://www.batemark.com/favicon.svg" } },
         "datePublished": "2026-03-08", "dateModified": "2026-03-08",
-        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://batemark.com/blog/ia-franchise-multi-sites" },
-        "image": "https://batemark.com/images/cover-ia-franchise.jpg",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.batemark.com/blog/ia-franchise-multi-sites" },
+        "image": "https://www.batemark.com/images/cover-ia-franchise.jpg",
         "keywords": ["IA franchise", "automatisation franchise", "process multi-sites IA", "standardisation franchise", "pilotage franchise IA"]
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://batemark.com" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://batemark.com/blog" },
-          { "@type": "ListItem", "position": 3, "name": "IA Franchise", "item": "https://batemark.com/blog/ia-franchise-multi-sites" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.batemark.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.batemark.com/blog" },
+          { "@type": "ListItem", "position": 3, "name": "IA Franchise", "item": "https://www.batemark.com/blog/ia-franchise-multi-sites" }
         ]
       },
       {
@@ -51,12 +51,12 @@ const BlogArticleFranchise = () => {
         <title>IA pour franchise : automatiser vos process multi-sites | BATEMARK</title>
         <meta name="description" content="Comment standardiser et automatiser les process de votre réseau de franchise avec l'IA. Reporting multi-sites, conformité et pilotage de la performance." />
         <meta name="keywords" content="IA franchise, automatisation franchise, process multi-sites IA, standardisation franchise, pilotage franchise IA, réseau franchise" />
-        <link rel="canonical" href="https://batemark.com/blog/ia-franchise-multi-sites" />
+        <link rel="canonical" href="https://www.batemark.com/blog/ia-franchise-multi-sites" />
         <meta property="og:title" content="IA pour franchise : automatiser vos process multi-sites" />
         <meta property="og:description" content="Standardisation, reporting et pilotage automatisés pour réseaux de franchise." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://batemark.com/blog/ia-franchise-multi-sites" />
-        <meta property="og:image" content="https://batemark.com/images/cover-ia-franchise.jpg" />
+        <meta property="og:url" content="https://www.batemark.com/blog/ia-franchise-multi-sites" />
+        <meta property="og:image" content="https://www.batemark.com/images/cover-ia-franchise.jpg" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:site_name" content="BATEMARK" />
         <meta property="article:published_time" content="2026-03-08" />

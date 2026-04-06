@@ -1,6 +1,18 @@
 {
   "redirects": [
-{ "source": "/feed/", "destination": "/blog", "permanent": true },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "batemark.vercel.app" }],
+      "destination": "https://www.batemark.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "batemark.com" }],
+      "destination": "https://www.batemark.com/$1",
+      "permanent": true
+    },
+    { "source": "/feed/", "destination": "/blog", "permanent": true },
     { "source": "/comments/feed/", "destination": "/blog", "permanent": true },
     { "source": "/home/", "destination": "/", "permanent": true },
     { "source": "/biography/", "destination": "/", "permanent": true },

@@ -29,13 +29,13 @@ const BlogArticleEcommerce = () => {
           content="intelligence artificielle e-commerce, IA boutique en ligne, chatbot e-commerce conversion, automatisation e-commerce, Meta Ads IA e-commerce, assistant IA avant-vente, augmenter ventes e-commerce IA"
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://batemark.com/blog/ia-e-commerce" />
+        <link rel="canonical" href="https://www.batemark.com/blog/ia-e-commerce" />
 
         <meta property="og:title" content="IA et E-commerce : Comment l'Intelligence Artificielle Fait Exploser les Ventes" />
         <meta property="og:description" content="Guide complet : comment les boutiques en ligne utilisent l'IA pour convertir plus, réduire l'abandon panier et dominer leurs Meta Ads. Cas client V8-Equipment inclus." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://batemark.com/blog/ia-e-commerce" />
-        <meta property="og:image" content="https://batemark.com/og-ia-ecommerce.jpg" />
+        <meta property="og:url" content="https://www.batemark.com/blog/ia-e-commerce" />
+        <meta property="og:image" content="https://www.batemark.com/og-ia-ecommerce.jpg" />
         <meta property="og:site_name" content="Batemark" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="article:published_time" content="2025-06-01" />
@@ -57,12 +57,12 @@ const BlogArticleEcommerce = () => {
                 publisher: {
                   "@type": "Organization",
                   name: "Batemark",
-                  url: "https://batemark.com",
-                  logo: { "@type": "ImageObject", url: "https://batemark.com/logo.png" },
+                  url: "https://www.batemark.com",
+                  logo: { "@type": "ImageObject", url: "https://www.batemark.com/logo.png" },
                 },
                 datePublished: "2025-06-01",
                 dateModified: "2025-06-01",
-                mainEntityOfPage: { "@type": "WebPage", "@id": "https://batemark.com/blog/ia-e-commerce" },
+                mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.batemark.com/blog/ia-e-commerce" },
                 keywords: [
                   "intelligence artificielle e-commerce",
                   "IA boutique en ligne",
@@ -120,9 +120,9 @@ const BlogArticleEcommerce = () => {
               {
                 "@type": "BreadcrumbList",
                 itemListElement: [
-                  { "@type": "ListItem", position: 1, name: "Accueil", item: "https://batemark.com" },
-                  { "@type": "ListItem", position: 2, name: "Blog", item: "https://batemark.com/blog" },
-                  { "@type": "ListItem", position: 3, name: "IA E-commerce", item: "https://batemark.com/blog/ia-e-commerce" },
+                  { "@type": "ListItem", position: 1, name: "Accueil", item: "https://www.batemark.com" },
+                  { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.batemark.com/blog" },
+                  { "@type": "ListItem", position: 3, name: "IA E-commerce", item: "https://www.batemark.com/blog/ia-e-commerce" },
                 ],
               },
             ],

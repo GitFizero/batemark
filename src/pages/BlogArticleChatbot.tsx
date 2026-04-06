@@ -20,18 +20,18 @@ const BlogArticleChatbot = () => {
         "headline": "Chatbot IA pour site web : comment multiplier par 3 vos conversions sans recruter",
         "description": "Guide complet : comment un chatbot IA conversationnel installé sur votre site peut tripler votre taux de conversion. Cas client, outils, méthode et ROI concrets.",
         "author": { "@type": "Person", "name": "Gaëtan Fizero" },
-        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://batemark.com", "logo": { "@type": "ImageObject", "url": "https://batemark.com/favicon.svg" } },
+        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://www.batemark.com", "logo": { "@type": "ImageObject", "url": "https://www.batemark.com/favicon.svg" } },
         "datePublished": "2026-03-08", "dateModified": "2026-03-08",
-        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://batemark.com/blog/chatbot-ia-site-web-conversion" },
-        "image": "https://batemark.com/images/cover-chatbot-conversion.jpg",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.batemark.com/blog/chatbot-ia-site-web-conversion" },
+        "image": "https://www.batemark.com/images/cover-chatbot-conversion.jpg",
         "keywords": ["chatbot IA site web", "chatbot conversion", "chatbot IA entreprise", "assistant virtuel site web", "augmenter conversion chatbot"]
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://batemark.com" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://batemark.com/blog" },
-          { "@type": "ListItem", "position": 3, "name": "Chatbot IA Conversion", "item": "https://batemark.com/blog/chatbot-ia-site-web-conversion" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.batemark.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.batemark.com/blog" },
+          { "@type": "ListItem", "position": 3, "name": "Chatbot IA Conversion", "item": "https://www.batemark.com/blog/chatbot-ia-site-web-conversion" }
         ]
       },
       {
@@ -52,19 +52,19 @@ const BlogArticleChatbot = () => {
         <title>Chatbot IA pour site web : ×3 sur vos conversions | BATEMARK</title>
         <meta name="description" content="Comment un chatbot IA conversationnel peut tripler le taux de conversion de votre site web. Guide complet : outils, méthode d'implémentation et résultats concrets pour PME." />
         <meta name="keywords" content="chatbot IA site web, chatbot conversion, chatbot IA entreprise, assistant virtuel site web, augmenter conversion chatbot, chatbot IA PME, Crisp chatbot" />
-        <link rel="canonical" href="https://batemark.com/blog/chatbot-ia-site-web-conversion" />
+        <link rel="canonical" href="https://www.batemark.com/blog/chatbot-ia-site-web-conversion" />
         <meta property="og:title" content="Chatbot IA : ×3 sur vos conversions sans recruter" />
         <meta property="og:description" content="Comment un chatbot IA peut tripler vos conversions. Guide complet : outils, méthode et résultats concrets." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://batemark.com/blog/chatbot-ia-site-web-conversion" />
-        <meta property="og:image" content="https://batemark.com/images/cover-chatbot-conversion.jpg" />
+        <meta property="og:url" content="https://www.batemark.com/blog/chatbot-ia-site-web-conversion" />
+        <meta property="og:image" content="https://www.batemark.com/images/cover-chatbot-conversion.jpg" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:site_name" content="BATEMARK" />
         <meta property="article:published_time" content="2026-03-08" />
         <meta property="article:modified_time" content="2026-03-08" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Chatbot IA : ×3 sur vos conversions sans recruter" />
-        <meta name="twitter:image" content="https://batemark.com/images/cover-chatbot-conversion.jpg" />
+        <meta name="twitter:image" content="https://www.batemark.com/images/cover-chatbot-conversion.jpg" />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
       </Helmet>
 
