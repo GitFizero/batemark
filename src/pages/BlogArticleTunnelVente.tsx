@@ -106,8 +106,9 @@ const BlogArticleTunnelVente = () => {
             <span className="text-sm font-semibold text-primary uppercase tracking-widest mb-2 block">Le problème</span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Vous perdez 97 % de <span className="text-gradient-copper">vos visiteurs</span></h2>
             <div className="space-y-5 text-muted-foreground text-base sm:text-lg leading-relaxed">
-              <p>Votre site génère du trafic, mais <strong className="text-foreground">la quasi-totalité des visiteurs repart sans convertir</strong>. Sans tunnel de vente, vous comptez sur la chance : espérer qu'un visiteur tombe sur la bonne page, au bon moment, avec la bonne offre.</p>
-              <p>L'IA change la donne en personnalisant chaque étape du parcours. Comme nous l'expliquons dans notre guide sur les <Link to="/blog/chatbot-ia-site-web-conversion" className="text-primary hover:underline">chatbots IA pour la conversion</Link>, la personnalisation automatisée multiplie les taux de conversion.</p>
+              <p>Votre site génère du trafic. Des gens arrivent, regardent, et repartent. <strong className="text-foreground">97 % d'entre eux disparaissent sans laisser de trace.</strong> Sans tunnel de vente, vous comptez sur la chance — espérer que le bon visiteur tombe sur la bonne page au bon moment avec la bonne offre. Ça arrive. Rarement.</p>
+              <p>J'ai travaillé avec une marque B2B qui dépensait 3 000 €/mois en publicités. Bon trafic, belle landing page. Mais les leads n'arrivaient pas. Le problème ? Il n'y avait rien après le premier contact. Pas de nurturing, pas de relance, pas de séquence. Les visiteurs intéressés partaient sans revenir.</p>
+              <p>On a mis en place un tunnel simple en 3 semaines. Six mois après, le coût par lead avait été divisé par 4. Comme nous l'expliquons dans notre guide sur les <Link to="/blog/chatbot-ia-site-web-conversion" className="text-primary hover:underline">chatbots IA pour la conversion</Link>, la personnalisation automatisée du parcours change les chiffres de façon radicale.</p>
             </div>
             <div className="grid md:grid-cols-3 gap-6 my-12">
               {[
@@ -183,10 +184,10 @@ const BlogArticleTunnelVente = () => {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8">Questions fréquentes — <span className="text-gradient-copper">Tunnel de Vente & IA</span></h2>
             <Accordion type="single" collapsible className="space-y-4">
               {[
-                { q: "Un tunnel de vente IA, c'est quoi ?", a: "Un parcours automatisé qui guide le prospect de la découverte à l'achat, personnalisé par l'IA." },
-                { q: "Combien de temps pour le mettre en place ?", a: "2 à 4 semaines. La phase 1 (capture + emails) peut être opérationnelle en 1 semaine." },
-                { q: "Quel budget prévoir ?", a: "100-300 €/mois en outils. L'investissement principal est la stratégie et le contenu." },
-                { q: "Ça marche pour le B2B ?", a: "Absolument. Le nurturing IA est même plus efficace en B2B où les cycles de vente sont longs." },
+                { q: "Un tunnel de vente IA, c'est quoi exactement ?", a: "C'est un parcours automatisé qui guide le prospect de la découverte à l'achat — personnalisé à chaque étape par l'IA selon le comportement du visiteur. Concrètement : capture de lead, séquence email adaptée, offre déclenchée au bon moment. Le tout sans intervention manuelle." },
+                { q: "Combien de temps pour le mettre en place ?", a: "Comptez 2 à 4 semaines pour un tunnel complet. La phase 1 — capture + séquence email de base — peut être opérationnelle en une semaine. L'optimisation IA s'ajoute progressivement." },
+                { q: "Quel budget prévoir ?", a: "Les outils coûtent entre 100 et 300 €/mois (Make + email + landing pages). L'investissement réel est dans la stratégie et le contenu — mais un tunnel bien construit se rentabilise rapidement." },
+                { q: "Ça marche pour le B2B ?", a: "Particulièrement en B2B. Les cycles de vente longs rendent le nurturing encore plus important. L'IA maintient le contact et adapte le contenu tout au long d'un cycle qui peut durer des semaines ou des mois." },
               ].map((faq, i) => (
                 <AccordionItem key={i} value={`faq-${i}`} className="card-premium border-border">
                   <AccordionTrigger className="text-left font-semibold text-base hover:text-primary">{faq.q}</AccordionTrigger>
