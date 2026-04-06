@@ -20,18 +20,18 @@ const BlogArticleAvocat = () => {
         "headline": "IA pour avocat : automatiser les tâches administratives du cabinet",
         "description": "Guide complet pour les cabinets d'avocats : automatiser la rédaction, le suivi client et la facturation grâce à l'IA. Outils, méthode et gains concrets.",
         "author": { "@type": "Person", "name": "Gaëtan Fizero" },
-        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://batemark.com", "logo": { "@type": "ImageObject", "url": "https://batemark.com/favicon.svg" } },
+        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://www.batemark.com", "logo": { "@type": "ImageObject", "url": "https://www.batemark.com/favicon.svg" } },
         "datePublished": "2026-03-08", "dateModified": "2026-03-08",
-        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://batemark.com/blog/ia-avocat-cabinet" },
-        "image": "https://batemark.com/images/cover-ia-avocat.jpg",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.batemark.com/blog/ia-avocat-cabinet" },
+        "image": "https://www.batemark.com/images/cover-ia-avocat.jpg",
         "keywords": ["IA avocat", "automatisation cabinet avocat", "IA juridique", "legaltech IA", "avocat automatisation"]
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://batemark.com" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://batemark.com/blog" },
-          { "@type": "ListItem", "position": 3, "name": "IA Avocat", "item": "https://batemark.com/blog/ia-avocat-cabinet" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.batemark.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.batemark.com/blog" },
+          { "@type": "ListItem", "position": 3, "name": "IA Avocat", "item": "https://www.batemark.com/blog/ia-avocat-cabinet" }
         ]
       },
       {
@@ -51,12 +51,12 @@ const BlogArticleAvocat = () => {
         <title>IA pour avocat : automatiser les tâches du cabinet | BATEMARK</title>
         <meta name="description" content="Comment l'IA permet aux cabinets d'avocats d'automatiser rédaction, suivi client et facturation. Guide pratique avec outils et résultats concrets." />
         <meta name="keywords" content="IA avocat, automatisation cabinet avocat, IA juridique, legaltech IA, avocat automatisation, rédaction juridique IA" />
-        <link rel="canonical" href="https://batemark.com/blog/ia-avocat-cabinet" />
+        <link rel="canonical" href="https://www.batemark.com/blog/ia-avocat-cabinet" />
         <meta property="og:title" content="IA pour avocat : automatiser les tâches du cabinet" />
         <meta property="og:description" content="Rédaction, suivi client et facturation automatisés pour cabinets d'avocats." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://batemark.com/blog/ia-avocat-cabinet" />
-        <meta property="og:image" content="https://batemark.com/images/cover-ia-avocat.jpg" />
+        <meta property="og:url" content="https://www.batemark.com/blog/ia-avocat-cabinet" />
+        <meta property="og:image" content="https://www.batemark.com/images/cover-ia-avocat.jpg" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:site_name" content="BATEMARK" />
         <meta property="article:published_time" content="2026-03-08" />

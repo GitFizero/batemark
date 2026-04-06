@@ -28,16 +28,16 @@ const BlogArticleProspectionB2B = () => {
         "publisher": {
           "@type": "Organization",
           "name": "BATEMARK",
-          "url": "https://batemark.com",
-          "logo": { "@type": "ImageObject", "url": "https://batemark.com/favicon.svg" }
+          "url": "https://www.batemark.com",
+          "logo": { "@type": "ImageObject", "url": "https://www.batemark.com/favicon.svg" }
         },
         "datePublished": "2026-03-08",
         "dateModified": "2026-03-08",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://batemark.com/blog/automatiser-prospection-b2b-ia"
+          "@id": "https://www.batemark.com/blog/automatiser-prospection-b2b-ia"
         },
-        "image": "https://batemark.com/images/cover-prospection-b2b.jpg",
+        "image": "https://www.batemark.com/images/cover-prospection-b2b.jpg",
         "keywords": [
           "automatiser prospection B2B",
           "IA prospection commerciale",
@@ -49,9 +49,9 @@ const BlogArticleProspectionB2B = () => {
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://batemark.com" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://batemark.com/blog" },
-          { "@type": "ListItem", "position": 3, "name": "Prospection B2B IA", "item": "https://batemark.com/blog/automatiser-prospection-b2b-ia" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.batemark.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.batemark.com/blog" },
+          { "@type": "ListItem", "position": 3, "name": "Prospection B2B IA", "item": "https://www.batemark.com/blog/automatiser-prospection-b2b-ia" }
         ]
       },
       {
@@ -100,12 +100,12 @@ const BlogArticleProspectionB2B = () => {
         <title>Automatiser la prospection B2B avec l'IA en 2026 — Guide complet | BATEMARK</title>
         <meta name="description" content="Comment automatiser votre prospection B2B grâce à l'IA : séquences email, enrichissement de données, scoring de leads. Méthode Batemark + outils + résultats concrets pour PME." />
         <meta name="keywords" content="automatiser prospection B2B, IA prospection commerciale, automatisation vente B2B, email automation B2B IA, lead generation IA, prospection automatisée PME, séquence email IA" />
-        <link rel="canonical" href="https://batemark.com/blog/automatiser-prospection-b2b-ia" />
+        <link rel="canonical" href="https://www.batemark.com/blog/automatiser-prospection-b2b-ia" />
         <meta property="og:title" content="Automatiser la prospection B2B avec l'IA — Guide complet 2026" />
         <meta property="og:description" content="Guide complet : comment les PME utilisent l'IA pour générer 3 à 5× plus de leads qualifiés en B2B. Méthode + outils + résultats." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://batemark.com/blog/automatiser-prospection-b2b-ia" />
-        <meta property="og:image" content="https://batemark.com/images/cover-prospection-b2b.jpg" />
+        <meta property="og:url" content="https://www.batemark.com/blog/automatiser-prospection-b2b-ia" />
+        <meta property="og:image" content="https://www.batemark.com/images/cover-prospection-b2b.jpg" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:site_name" content="BATEMARK" />
         <meta property="article:published_time" content="2026-03-08" />
@@ -118,7 +118,7 @@ const BlogArticleProspectionB2B = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Automatiser la prospection B2B avec l'IA — Guide complet 2026" />
         <meta name="twitter:description" content="Comment les PME génèrent 3 à 5× plus de leads qualifiés grâce à l'IA. Méthode + outils + résultats." />
-        <meta name="twitter:image" content="https://batemark.com/images/cover-prospection-b2b.jpg" />
+        <meta name="twitter:image" content="https://www.batemark.com/images/cover-prospection-b2b.jpg" />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
       </Helmet>
 

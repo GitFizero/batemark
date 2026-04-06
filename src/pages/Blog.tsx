@@ -40,8 +40,8 @@ const Blog = () => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Accueil", item: "https://batemark.com" },
-      { "@type": "ListItem", position: 2, name: "Blog IA & Automatisation", item: "https://batemark.com/blog" },
+      { "@type": "ListItem", position: 1, name: "Accueil", item: "https://www.batemark.com" },
+      { "@type": "ListItem", position: 2, name: "Blog IA & Automatisation", item: "https://www.batemark.com/blog" },
     ],
   };
 
@@ -50,9 +50,9 @@ const Blog = () => {
     "@type": "Blog",
     name: "Blog IA & Automatisation — BATEMARK",
     description: "Guides pratiques et cas clients sur l'intégration de l'IA et l'automatisation dans les PME : hôtellerie, restauration, immobilier, BTP, e-commerce, santé, juridique.",
-    url: "https://batemark.com/blog",
+    url: "https://www.batemark.com/blog",
     inLanguage: "fr",
-    publisher: { "@type": "Organization", name: "BATEMARK", url: "https://batemark.com" },
+    publisher: { "@type": "Organization", name: "BATEMARK", url: "https://www.batemark.com" },
     author: { "@type": "Person", name: "Gaëtan Fizero" },
     blogPost: blogArticles.map((a) => ({
       "@type": "BlogPosting",
@@ -70,7 +70,7 @@ const Blog = () => {
     "@type": "CollectionPage",
     name: "Guides IA par secteur d'activité",
     description: "Retrouvez tous nos guides pour intégrer l'intelligence artificielle dans votre secteur : hôtellerie, restauration, immobilier, BTP, e-commerce, santé, juridique, beauté et plus.",
-    url: "https://batemark.com/blog",
+    url: "https://www.batemark.com/blog",
     mainEntity: {
       "@type": "ItemList",
       itemListElement: blogArticles.map((a, i) => ({
@@ -99,21 +99,21 @@ const Blog = () => {
           content="Guides pratiques pour intégrer l'IA dans votre entreprise : hôtellerie, restauration, immobilier, BTP, e-commerce, santé, juridique. Cas clients et retours d'expérience par Gaëtan Fizero."
         />
         <meta name="keywords" content="blog IA entreprise, automatisation PME, IA hôtellerie, IA restauration, IA immobilier, IA BTP, IA e-commerce, IA santé, IA juridique, intégration IA, guide IA secteur, consultant IA" />
-        <link rel="canonical" href="https://batemark.com/blog" />
+        <link rel="canonical" href="https://www.batemark.com/blog" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://batemark.com/blog" />
+        <meta property="og:url" content="https://www.batemark.com/blog" />
         <meta property="og:title" content="Blog IA & Automatisation pour PME — Guides par secteur | BATEMARK" />
         <meta property="og:description" content="Guides pratiques pour intégrer l'IA par secteur : hôtellerie, restauration, immobilier, BTP, e-commerce, santé. Cas clients réels." />
-        <meta property="og:image" content="https://batemark.com/og-image.png" />
+        <meta property="og:image" content="https://www.batemark.com/og-image.png" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:site_name" content="BATEMARK" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Blog IA & Automatisation pour PME | BATEMARK" />
         <meta name="twitter:description" content="Guides pratiques pour intégrer l'IA par secteur : hôtellerie, restauration, immobilier, BTP, e-commerce, santé." />
-        <meta name="twitter:image" content="https://batemark.com/og-image.png" />
+        <meta name="twitter:image" content="https://www.batemark.com/og-image.png" />
 
         <script type="application/ld+json">{JSON.stringify(jsonLdBreadcrumb)}</script>
         <script type="application/ld+json">{JSON.stringify(jsonLdBlog)}</script>

@@ -20,16 +20,16 @@ const BlogArticleAgenceCom = () => {
         "headline": "IA pour agence de communication : automatiser production et reporting client",
         "description": "Guide complet pour les agences de communication : automatiser la production de contenu, le reporting client et la gestion de projet grâce à l'IA.",
         "author": { "@type": "Person", "name": "Gaëtan Fizero" },
-        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://batemark.com", "logo": { "@type": "ImageObject", "url": "https://batemark.com/favicon.svg" } },
+        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://www.batemark.com", "logo": { "@type": "ImageObject", "url": "https://www.batemark.com/favicon.svg" } },
         "datePublished": "2026-03-08", "dateModified": "2026-03-08",
-        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://batemark.com/blog/ia-agence-communication" },
-        "image": "https://batemark.com/images/cover-ia-agence-communication.jpg",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.batemark.com/blog/ia-agence-communication" },
+        "image": "https://www.batemark.com/images/cover-ia-agence-communication.jpg",
         "keywords": ["IA agence communication", "automatiser agence com", "reporting client IA", "production contenu IA", "agence communication automatisation"]
       },
       { "@type": "BreadcrumbList", "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://batemark.com" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://batemark.com/blog" },
-        { "@type": "ListItem", "position": 3, "name": "IA Agence Com", "item": "https://batemark.com/blog/ia-agence-communication" }
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.batemark.com" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.batemark.com/blog" },
+        { "@type": "ListItem", "position": 3, "name": "IA Agence Com", "item": "https://www.batemark.com/blog/ia-agence-communication" }
       ]},
       { "@type": "FAQPage", "mainEntity": [
         { "@type": "Question", "name": "L'IA va-t-elle remplacer les créatifs en agence ?", "acceptedAnswer": { "@type": "Answer", "text": "Non. L'IA automatise les tâches répétitives (déclinaisons, reportings, briefs) et libère les créatifs pour la stratégie et la création à haute valeur ajoutée. Les agences qui utilisent l'IA sont plus rentables, pas moins créatives." } },
@@ -45,12 +45,12 @@ const BlogArticleAgenceCom = () => {
         <title>IA pour agence de communication : production et reporting | BATEMARK</title>
         <meta name="description" content="Comment automatiser la production de contenu, le reporting client et la gestion de projet en agence de communication grâce à l'IA. Guide complet." />
         <meta name="keywords" content="IA agence communication, automatiser agence com, reporting client IA, production contenu IA, agence communication automatisation" />
-        <link rel="canonical" href="https://batemark.com/blog/ia-agence-communication" />
+        <link rel="canonical" href="https://www.batemark.com/blog/ia-agence-communication" />
         <meta property="og:title" content="IA pour agence de communication" />
         <meta property="og:description" content="Production, reporting et gestion de projet automatisés pour agences." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://batemark.com/blog/ia-agence-communication" />
-        <meta property="og:image" content="https://batemark.com/images/cover-ia-agence-communication.jpg" />
+        <meta property="og:url" content="https://www.batemark.com/blog/ia-agence-communication" />
+        <meta property="og:image" content="https://www.batemark.com/images/cover-ia-agence-communication.jpg" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:site_name" content="BATEMARK" />
         <meta property="article:published_time" content="2026-03-08" />

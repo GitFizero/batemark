@@ -20,18 +20,18 @@ const BlogArticleServiceClient = () => {
         "headline": "Automatiser le service client avec l'IA sans perdre en qualité",
         "description": "Guide complet pour automatiser le support client grâce à l'IA : chatbot, ticketing intelligent et escalade automatique. Méthode pour PME et e-commerce.",
         "author": { "@type": "Person", "name": "Gaëtan Fizero" },
-        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://batemark.com", "logo": { "@type": "ImageObject", "url": "https://batemark.com/favicon.svg" } },
+        "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://www.batemark.com", "logo": { "@type": "ImageObject", "url": "https://www.batemark.com/favicon.svg" } },
         "datePublished": "2026-03-08", "dateModified": "2026-03-08",
-        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://batemark.com/blog/ia-automatiser-service-client" },
-        "image": "https://batemark.com/images/cover-ia-service-client.jpg",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.batemark.com/blog/ia-automatiser-service-client" },
+        "image": "https://www.batemark.com/images/cover-ia-service-client.jpg",
         "keywords": ["automatiser service client IA", "chatbot service client", "support client IA", "ticketing automatique", "service client automatisé"]
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://batemark.com" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://batemark.com/blog" },
-          { "@type": "ListItem", "position": 3, "name": "IA Service Client", "item": "https://batemark.com/blog/ia-automatiser-service-client" }
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.batemark.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.batemark.com/blog" },
+          { "@type": "ListItem", "position": 3, "name": "IA Service Client", "item": "https://www.batemark.com/blog/ia-automatiser-service-client" }
         ]
       },
       {
@@ -51,12 +51,12 @@ const BlogArticleServiceClient = () => {
         <title>Automatiser le service client avec l'IA — Guide PME 2026 | BATEMARK</title>
         <meta name="description" content="Comment automatiser le support client avec l'IA sans perdre en qualité. Chatbot, ticketing intelligent et escalade automatique pour PME et e-commerce." />
         <meta name="keywords" content="automatiser service client IA, chatbot service client, support client IA, ticketing automatique, service client automatisé, IA support" />
-        <link rel="canonical" href="https://batemark.com/blog/ia-automatiser-service-client" />
+        <link rel="canonical" href="https://www.batemark.com/blog/ia-automatiser-service-client" />
         <meta property="og:title" content="Automatiser le service client avec l'IA sans perdre en qualité" />
         <meta property="og:description" content="Chatbot, ticketing et escalade automatiques. Guide complet pour PME." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://batemark.com/blog/ia-automatiser-service-client" />
-        <meta property="og:image" content="https://batemark.com/images/cover-ia-service-client.jpg" />
+        <meta property="og:url" content="https://www.batemark.com/blog/ia-automatiser-service-client" />
+        <meta property="og:image" content="https://www.batemark.com/images/cover-ia-service-client.jpg" />
         <meta property="og:locale" content="fr_FR" />
         <meta property="og:site_name" content="BATEMARK" />
         <meta property="article:published_time" content="2026-03-08" />

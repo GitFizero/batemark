@@ -1,7 +1,11 @@
-# Force HTTPS and non-www
-http://www.batemark.com/* https://batemark.com/:splat 301!
-https://www.batemark.com/* https://batemark.com/:splat 301!
-http://batemark.com/* https://batemark.com/:splat 301!
+# Force HTTPS and www
+http://batemark.com/* https://www.batemark.com/:splat 301!
+https://batemark.com/* https://www.batemark.com/:splat 301!
+http://www.batemark.com/* https://www.batemark.com/:splat 301!
+
+# Redirect Vercel preview domain to canonical
+https://batemark.vercel.app/* https://www.batemark.com/:splat 301!
+http://batemark.vercel.app/* https://www.batemark.com/:splat 301!
 
 # Ghost WordPress URLs - redirect to relevant pages
 /feed/ /blog 301
