@@ -3,6 +3,7 @@ import { Linkedin } from "lucide-react";
 import logo from "@/assets/logo.svg";
 
 const navLinks = [
+  { label: "À propos", href: "/a-propos" },
   { label: "Blog", href: "/blog" },
   { label: "Librairie IA", href: "/librairie-ia" },
   { label: "Simulateur", href: "/simulateur-ia" },

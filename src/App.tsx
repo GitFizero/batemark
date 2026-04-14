@@ -49,6 +49,7 @@ const BlogArticleOnboardingEmploye = lazy(() => import("./pages/BlogArticleOnboa
 const BlogArticleAutoEcole = lazy(() => import("./pages/BlogArticleAutoEcole"));
 const BlogArticleGestionLocative = lazy(() => import("./pages/BlogArticleGestionLocative"));
 const SecteurBienEtre = lazy(() => import("./pages/SecteurBienEtre"));
+const APropos = lazy(() => import("./pages/APropos"));
 
 const queryClient = new QueryClient();
 
@@ -101,6 +102,7 @@ const App = () => (
               <Route path="/blog/ia-auto-ecole" element={<BlogArticleAutoEcole />} />
               <Route path="/blog/ia-gestion-locative" element={<BlogArticleGestionLocative />} />
               <Route path="/secteur/bien-etre" element={<SecteurBienEtre />} />
+              <Route path="/a-propos" element={<APropos />} />
               <Route path="/cgv" element={<CGV />} />
               <Route path="/confidentialite" element={<Confidentialite />} />
               <Route path="/mentions-legales" element={<MentionsLegales />} />
