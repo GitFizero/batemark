@@ -58,7 +58,7 @@ const BlogArticleFormationIA = () => {
                 headline: "Formation IA : pourquoi votre entreprise n'a pas besoin de se former à l'intelligence artificielle",
                 description: "Formation IA, formation intelligence artificielle… et si c'était une erreur ? Découvrez pourquoi l'accompagnement IA est bien plus efficace pour votre entreprise.",
                 image: "https://www.batemark.com/og-image.png",
-                author: { "@type": "Person", name: "Gaëtan Fizero" },
+                author: { "@type": "Person", name: "Gaëtan Fizero", url: "https://www.batemark.com/a-propos", sameAs: ["https://www.linkedin.com/in/gaetanfizero/", "https://www.malt.fr/profile/gaetanfizero"] },
                 publisher: {
                   "@type": "Organization",
                   name: "BATEMARK",

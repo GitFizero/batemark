@@ -60,7 +60,7 @@ const BlogArticleSpa = () => {
                 "@type": "Article",
                 headline: "Comment l'IA transforme les spas, instituts de beauté et centres de bien-être — guide complet 2026",
                 description: "Guide complet pour intégrer l'intelligence artificielle dans un spa, institut de beauté ou centre de bien-être : automatisation, fidélisation, acquisition client, outils recommandés et cas client.",
-                author: { "@type": "Person", name: "Gaëtan Fizero" },
+                author: { "@type": "Person", name: "Gaëtan Fizero", url: "https://www.batemark.com/a-propos", sameAs: ["https://www.linkedin.com/in/gaetanfizero/", "https://www.malt.fr/profile/gaetanfizero"] },
                 publisher: {
                   "@type": "Organization",
                   name: "BATEMARK",

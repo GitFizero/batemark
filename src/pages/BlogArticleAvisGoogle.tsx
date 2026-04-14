@@ -19,7 +19,7 @@ const BlogArticleAvisGoogle = () => {
         "@type": "Article",
         "headline": "Automatiser la gestion des avis Google avec l'IA — guide pratique pour PME",
         "description": "Guide complet pour automatiser la collecte, la réponse et l'analyse des avis Google grâce à l'IA. Méthode, outils et résultats concrets pour les PME et commerces locaux.",
-        "author": { "@type": "Person", "name": "Gaëtan Fizero" },
+        "author": { "@type": "Person", "name": "Gaëtan Fizero", "url": "https://www.batemark.com/a-propos", "sameAs": ["https://www.linkedin.com/in/gaetanfizero/", "https://www.malt.fr/profile/gaetanfizero"] },
         "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://www.batemark.com", "logo": { "@type": "ImageObject", "url": "https://www.batemark.com/favicon.svg" } },
         "datePublished": "2026-03-08", "dateModified": "2026-04-06",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.batemark.com/blog/automatiser-avis-google-ia" },

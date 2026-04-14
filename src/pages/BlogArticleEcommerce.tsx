@@ -53,7 +53,7 @@ const BlogArticleEcommerce = () => {
                 "@type": "Article",
                 headline: "Comment l'IA transforme l'e-commerce outdoor et fait exploser les ventes — guide complet 2025",
                 description: "Guide complet pour intégrer l'intelligence artificielle dans une boutique en ligne : assistant conversationnel avant-vente, Meta Ads IA, automatisation, fidélisation. Cas client V8-Equipment.",
-                author: { "@type": "Person", name: "Gaëtan Fizero" },
+                author: { "@type": "Person", name: "Gaëtan Fizero", url: "https://www.batemark.com/a-propos", sameAs: ["https://www.linkedin.com/in/gaetanfizero/", "https://www.malt.fr/profile/gaetanfizero"] },
                 publisher: {
                   "@type": "Organization",
                   name: "Batemark",

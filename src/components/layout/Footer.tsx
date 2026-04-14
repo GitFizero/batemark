@@ -9,6 +9,12 @@ const navLinks = [
   { label: "Simulateur", href: "/simulateur-ia" },
 ];
 
+const expertiseLinks = [
+  { label: "Consultant n8n", href: "/consultant-n8n" },
+  { label: "Consultant Make", href: "/consultant-make" },
+  { label: "Consultant Zapier", href: "/consultant-zapier" },
+];
+
 const legalLinks = [
   { label: "Mentions légales", href: "/mentions-legales" },
   { label: "Confidentialité", href: "/confidentialite" },
@@ -28,11 +34,20 @@ export const Footer = () => {
             <a
               href="https://www.linkedin.com/in/gaetanfizero/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer me"
               className="text-white/40 hover:text-[#c4956e] transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin className="w-4 h-4" aria-hidden="true" />
+            </a>
+            <a
+              href="https://www.malt.fr/profile/gaetanfizero"
+              target="_blank"
+              rel="noopener noreferrer me"
+              className="text-[11px] text-white/40 hover:text-[#c4956e] transition-colors uppercase tracking-wider"
+              aria-label="Profil Malt"
+            >
+              Malt
             </a>
           </div>
 
@@ -59,6 +74,25 @@ export const Footer = () => {
             ))}
           </nav>
         </div>
+
+        {/* Expertise links — internal SEO mesh */}
+        <nav
+          aria-label="Expertise"
+          className="mt-6 pt-6 border-t border-white/5 flex flex-wrap items-center gap-x-5 gap-y-2"
+        >
+          <span className="text-[11px] uppercase tracking-wider text-white/30">
+            Expertise outils
+          </span>
+          {expertiseLinks.map((link) => (
+            <Link
+              key={link.href}
+              to={link.href}
+              className="text-xs text-white/40 hover:text-white transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
 
         <p className="text-[11px] text-white/25 mt-6">
           © {new Date().getFullYear()} BATEMARK — Gaëtan Fizero. Consultant IA & Automatisation.

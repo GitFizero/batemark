@@ -2,7 +2,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Linkedin, Mail, MapPin } from "lucide-react";
+import { ArrowLeft, Linkedin, Mail, MapPin, ExternalLink } from "lucide-react";
 import profilePhoto from "@/assets/gaetan-profile.jpg";
 
 const APropos = () => {
@@ -42,7 +42,10 @@ const APropos = () => {
               "Data analytics",
               "Marketing digital"
             ],
-            "sameAs": ["https://www.linkedin.com/in/gaetanfizero/"],
+            "sameAs": [
+              "https://www.linkedin.com/in/gaetanfizero/",
+              "https://www.malt.fr/profile/gaetanfizero"
+            ],
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Aubagne",
@@ -133,6 +136,17 @@ const APropos = () => {
                     className="hover:text-primary"
                   >
                     linkedin.com/in/gaetanfizero
+                  </a>
+                </li>
+                <li className="flex items-center gap-2">
+                  <ExternalLink className="w-4 h-4 text-primary" />
+                  <a
+                    href="https://www.malt.fr/profile/gaetanfizero"
+                    target="_blank"
+                    rel="noopener noreferrer me"
+                    className="hover:text-primary"
+                  >
+                    malt.fr/profile/gaetanfizero
                   </a>
                 </li>
               </ul>

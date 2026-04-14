@@ -19,7 +19,7 @@ const BlogArticleChatbot = () => {
         "@type": "Article",
         "headline": "Chatbot IA pour site web : comment multiplier par 3 vos conversions sans recruter",
         "description": "Guide complet : comment un chatbot IA conversationnel installé sur votre site peut tripler votre taux de conversion. Cas client, outils, méthode et ROI concrets.",
-        "author": { "@type": "Person", "name": "Gaëtan Fizero" },
+        "author": { "@type": "Person", "name": "Gaëtan Fizero", "url": "https://www.batemark.com/a-propos", "sameAs": ["https://www.linkedin.com/in/gaetanfizero/", "https://www.malt.fr/profile/gaetanfizero"] },
         "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://www.batemark.com", "logo": { "@type": "ImageObject", "url": "https://www.batemark.com/favicon.svg" } },
         "datePublished": "2026-03-08", "dateModified": "2026-04-06",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.batemark.com/blog/chatbot-ia-site-web-conversion" },

@@ -19,7 +19,7 @@ const BlogArticleCabinetComptable = () => {
         "@type": "Article",
         "headline": "IA pour cabinet comptable : automatiser saisie, suivi client et relance en 2026",
         "description": "Guide complet pour intégrer l'IA dans un cabinet comptable : automatisation de la saisie, relance documentaire, suivi client et productivité. Outils, méthode et résultats.",
-        "author": { "@type": "Person", "name": "Gaëtan Fizero" },
+        "author": { "@type": "Person", "name": "Gaëtan Fizero", "url": "https://www.batemark.com/a-propos", "sameAs": ["https://www.linkedin.com/in/gaetanfizero/", "https://www.malt.fr/profile/gaetanfizero"] },
         "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://www.batemark.com", "logo": { "@type": "ImageObject", "url": "https://www.batemark.com/favicon.svg" } },
         "datePublished": "2026-03-08", "dateModified": "2026-03-08",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.batemark.com/blog/ia-cabinet-comptable" },

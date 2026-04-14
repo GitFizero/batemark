@@ -24,7 +24,7 @@ const BlogArticleProspectionB2B = () => {
         "@type": "Article",
         "headline": "Comment automatiser la prospection B2B avec l'IA en 2026 — guide complet",
         "description": "Guide complet pour automatiser votre prospection B2B grâce à l'IA : séquences email, enrichissement de données, scoring de leads et workflows. Méthode + outils + résultats concrets.",
-        "author": { "@type": "Person", "name": "Gaëtan Fizero" },
+        "author": { "@type": "Person", "name": "Gaëtan Fizero", "url": "https://www.batemark.com/a-propos", "sameAs": ["https://www.linkedin.com/in/gaetanfizero/", "https://www.malt.fr/profile/gaetanfizero"] },
         "publisher": {
           "@type": "Organization",
           "name": "BATEMARK",

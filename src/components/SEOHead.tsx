@@ -76,6 +76,7 @@ export const SEOHead = ({
 
       {/* Social profiles */}
       <link rel="me" href="https://www.linkedin.com/in/gaetanfizero/" />
+      <link rel="me" href="https://www.malt.fr/profile/gaetanfizero" />
 
       {children}
     </Helmet>

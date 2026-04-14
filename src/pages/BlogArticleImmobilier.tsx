@@ -19,7 +19,7 @@ const BlogArticleImmobilier = () => {
         "@type": "Article",
         "headline": "IA pour agence immobilière : automatiser relances, estimations et suivi client en 2026",
         "description": "Guide complet pour intégrer l'intelligence artificielle dans une agence immobilière : automatisation des relances, estimation prédictive, suivi acquéreur et vendeur.",
-        "author": { "@type": "Person", "name": "Gaëtan Fizero" },
+        "author": { "@type": "Person", "name": "Gaëtan Fizero", "url": "https://www.batemark.com/a-propos", "sameAs": ["https://www.linkedin.com/in/gaetanfizero/", "https://www.malt.fr/profile/gaetanfizero"] },
         "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://www.batemark.com", "logo": { "@type": "ImageObject", "url": "https://www.batemark.com/favicon.svg" } },
         "datePublished": "2026-03-08",
         "dateModified": "2026-03-08",

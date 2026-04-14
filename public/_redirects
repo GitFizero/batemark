@@ -11,7 +11,10 @@ http://batemark.vercel.app/* https://www.batemark.com/:splat 301!
 /feed/ /blog 301
 /comments/feed/ /blog 301
 /home/ / 301
-/biography/ / 301
+/biography/ /a-propos 301
+/biography /a-propos 301
+/about/ /a-propos 301
+/about /a-propos 301
 /wp-admin/* /admin 301
 /wp-login.php /admin/login 301
 

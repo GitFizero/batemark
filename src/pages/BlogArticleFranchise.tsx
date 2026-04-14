@@ -19,7 +19,7 @@ const BlogArticleFranchise = () => {
         "@type": "Article",
         "headline": "IA pour franchise : standardiser et automatiser vos process multi-sites",
         "description": "Comment piloter un réseau de franchise avec l'IA : standardisation des process, reporting multi-sites automatisé, onboarding franchisé. Retour d'expérience terrain de 8 à 14 centres.",
-        "author": { "@type": "Person", "name": "Gaëtan Fizero" },
+        "author": { "@type": "Person", "name": "Gaëtan Fizero", "url": "https://www.batemark.com/a-propos", "sameAs": ["https://www.linkedin.com/in/gaetanfizero/", "https://www.malt.fr/profile/gaetanfizero"] },
         "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://www.batemark.com", "logo": { "@type": "ImageObject", "url": "https://www.batemark.com/favicon.svg" } },
         "datePublished": "2026-03-08", "dateModified": "2026-04-06",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.batemark.com/blog/ia-franchise-multi-sites" },

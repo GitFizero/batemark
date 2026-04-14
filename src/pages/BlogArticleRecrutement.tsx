@@ -19,7 +19,7 @@ const BlogArticleRecrutement = () => {
         "@type": "Article",
         "headline": "Automatiser le recrutement en PME avec l'IA — guide complet 2026",
         "description": "Comment automatiser le tri de CV, la pré-qualification et la planification des entretiens grâce à l'IA. Méthode et outils concrets pour PME.",
-        "author": { "@type": "Person", "name": "Gaëtan Fizero" },
+        "author": { "@type": "Person", "name": "Gaëtan Fizero", "url": "https://www.batemark.com/a-propos", "sameAs": ["https://www.linkedin.com/in/gaetanfizero/", "https://www.malt.fr/profile/gaetanfizero"] },
         "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://www.batemark.com", "logo": { "@type": "ImageObject", "url": "https://www.batemark.com/favicon.svg" } },
         "datePublished": "2026-03-08", "dateModified": "2026-03-08",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.batemark.com/blog/ia-recrutement-pme" },

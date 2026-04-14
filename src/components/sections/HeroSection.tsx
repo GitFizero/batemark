@@ -78,6 +78,10 @@ export const HeroSection = () => {
             src={s.image}
             alt=""
             className="w-full h-full object-cover"
+            loading={i === 0 ? "eager" : "lazy"}
+            // @ts-ignore — fetchpriority is a valid HTML attribute (LCP optimisation)
+            fetchpriority={i === 0 ? "high" : "low"}
+            decoding={i === 0 ? "sync" : "async"}
           />
         </motion.div>
       ))}

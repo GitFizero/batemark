@@ -50,6 +50,9 @@ const BlogArticleAutoEcole = lazy(() => import("./pages/BlogArticleAutoEcole"));
 const BlogArticleGestionLocative = lazy(() => import("./pages/BlogArticleGestionLocative"));
 const SecteurBienEtre = lazy(() => import("./pages/SecteurBienEtre"));
 const APropos = lazy(() => import("./pages/APropos"));
+const ConsultantN8n = lazy(() => import("./pages/ConsultantN8n"));
+const ConsultantMake = lazy(() => import("./pages/ConsultantMake"));
+const ConsultantZapier = lazy(() => import("./pages/ConsultantZapier"));
 
 const queryClient = new QueryClient();
 
@@ -103,6 +106,9 @@ const App = () => (
               <Route path="/blog/ia-gestion-locative" element={<BlogArticleGestionLocative />} />
               <Route path="/secteur/bien-etre" element={<SecteurBienEtre />} />
               <Route path="/a-propos" element={<APropos />} />
+              <Route path="/consultant-n8n" element={<ConsultantN8n />} />
+              <Route path="/consultant-make" element={<ConsultantMake />} />
+              <Route path="/consultant-zapier" element={<ConsultantZapier />} />
               <Route path="/cgv" element={<CGV />} />
               <Route path="/confidentialite" element={<Confidentialite />} />
               <Route path="/mentions-legales" element={<MentionsLegales />} />

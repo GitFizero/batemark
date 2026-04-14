@@ -19,7 +19,7 @@ const BlogArticleReporting = () => {
         "@type": "Article",
         "headline": "Comment réduire de 60 % le temps de reporting avec l'IA",
         "description": "Guide complet pour automatiser vos reportings grâce à l'IA : collecte de données, génération de rapports et alertes automatiques. Méthode pour PME et managers.",
-        "author": { "@type": "Person", "name": "Gaëtan Fizero" },
+        "author": { "@type": "Person", "name": "Gaëtan Fizero", "url": "https://www.batemark.com/a-propos", "sameAs": ["https://www.linkedin.com/in/gaetanfizero/", "https://www.malt.fr/profile/gaetanfizero"] },
         "publisher": { "@type": "Organization", "name": "BATEMARK", "url": "https://www.batemark.com", "logo": { "@type": "ImageObject", "url": "https://www.batemark.com/favicon.svg" } },
         "datePublished": "2026-03-08", "dateModified": "2026-04-06",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.batemark.com/blog/ia-automatiser-reporting" },

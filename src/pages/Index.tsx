@@ -39,7 +39,7 @@ const Index = () => {
             "name": "BATEMARK — Intégrer l'IA en entreprise",
             "description": "Consultant spécialisé pour intégrer l'IA et automatiser les process des entreprises.",
             "url": "https://www.batemark.com",
-            "founder": { "@type": "Person", "name": "Gaëtan Fizero" },
+            "founder": { "@type": "Person", "name": "Gaëtan Fizero", "url": "https://www.batemark.com/a-propos", "sameAs": ["https://www.linkedin.com/in/gaetanfizero/", "https://www.malt.fr/profile/gaetanfizero"] },
             "areaServed": { "@type": "Country", "name": "France" },
           })}
         </script>

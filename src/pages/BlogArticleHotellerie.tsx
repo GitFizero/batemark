@@ -47,7 +47,7 @@ const BlogArticleHotellerie = () => {
                 headline: "Comment l'IA transforme l'hôtellerie-restauration — guide complet 2025",
                 description: "L'IA hôtellerie-restauration permet d'automatiser l'acquisition, fidéliser vos clients et remplir vos chambres hors saison. Cas réel : +43 % de taux de remplissage.",
                 image: "https://www.batemark.com/blog/ia-hotellerie-restauration-cover.jpg",
-                author: { "@type": "Organization", name: "Batemark", url: "https://www.batemark.com" },
+                author: { "@type": "Person", name: "Gaëtan Fizero", url: "https://www.batemark.com/a-propos", sameAs: ["https://www.linkedin.com/in/gaetanfizero/", "https://www.malt.fr/profile/gaetanfizero"] },
                 publisher: {
                   "@type": "Organization",
                   name: "Batemark",

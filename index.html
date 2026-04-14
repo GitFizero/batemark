@@ -10,7 +10,7 @@
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="ai-content-declaration" content="human-assisted" />
     <meta name="google-site-verification" content="" />
-    <link rel="canonical" href="https://www.batemark.com/" />
+    <!-- Canonical is set per-route by SEOHead (react-helmet-async) -->
     <link rel="manifest" href="/manifest.json" />
     <link rel="me" href="https://www.linkedin.com/in/gaetanfizero/" />
 
@@ -48,9 +48,18 @@
       "url": "https://www.batemark.com",
       "logo": "https://www.batemark.com/favicon.svg",
       "description": "Consultant spécialisé pour intégrer l'IA et automatiser les process des entreprises en France : hôtellerie, restauration, immobilier, BTP, e-commerce, santé, juridique.",
-      "founder": { "@type": "Person", "name": "Gaëtan Fizero" },
+      "founder": {
+        "@type": "Person",
+        "name": "Gaëtan Fizero",
+        "url": "https://www.batemark.com/a-propos",
+        "sameAs": [
+          "https://www.linkedin.com/in/gaetanfizero/",
+          "https://www.malt.fr/profile/gaetanfizero"
+        ]
+      },
       "sameAs": [
-        "https://www.linkedin.com/in/gaetanfizero/"
+        "https://www.linkedin.com/in/gaetanfizero/",
+        "https://www.malt.fr/profile/gaetanfizero"
       ],
       "contactPoint": {
         "@type": "ContactPoint",
